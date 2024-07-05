@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
+  <test name="TestChrome(failed)">
+    <parameter name="browser" value="chrome"/>
+    <classes>
+      <class name="com.TimeSheet.TestRunner.TestNGTestRunner">
+        <methods>
+          <include name="runScenario" invocation-numbers="1"/>
+          <include name="defineBrowser"/>
+          <include name="tearDownClass"/>
+          <include name="setUpClass"/>
+        </methods>
+      </class> <!-- com.TimeSheet.TestRunner.TestNGTestRunner -->
+    </classes>
+  </test> <!-- TestChrome(failed) -->
+  <test name="TestEdge(failed)">
+    <parameter name="browser" value="edge"/>
+    <classes>
+      <class name="com.TimeSheet.TestRunner.TestNGTestRunner">
+        <methods>
+          <include name="runScenario" invocation-numbers="1"/>
+          <include name="defineBrowser"/>
+          <include name="tearDownClass"/>
+          <include name="setUpClass"/>
+        </methods>
+      </class> <!-- com.TimeSheet.TestRunner.TestNGTestRunner -->
+    </classes>
+  </test> <!-- TestEdge(failed) -->
+</suite> <!-- Failed suite [Suite] -->
