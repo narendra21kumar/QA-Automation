@@ -45,7 +45,7 @@ public class Hooks {
 
 		}
 
-//		@AfterStep
+		@AfterStep
 		public static void tearDown(Scenario scenario) {
 				final byte[] screenshot = ((TakesScreenshot) driver).getScreenshotAs(OutputType.BYTES);
 				scenario.attach(screenshot, "image/png", scenario.getName());	
@@ -53,7 +53,11 @@ public class Hooks {
 
 		@After
 		public void quitBrow() {
+			CommonUtils.waitFor(3);
 			WebDriverManager.quitDriver();
 		}
-
+//        @After
+//        public void waitBrow() {
+//        	CommonUtils.waitFor(3);
+//        }
 }

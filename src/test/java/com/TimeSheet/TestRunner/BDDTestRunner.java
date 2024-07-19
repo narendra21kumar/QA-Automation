@@ -8,9 +8,9 @@ import io.cucumber.junit.CucumberOptions;
 @RunWith(Cucumber.class)
 @CucumberOptions(
 		
-	features = {"src/test/resources/EmployeeViewfeatures"}, 
+	features = {"src/test/resources/EmployeeViewFeatures", "src/test/resources/AdminFeatureFiles"}, 
 	tags =   "@employee", 
-	glue = {"com.EmployeeView.stepDefinitions"}, 
+	glue = {"com.EmployeeView.stepDefinitions", "com.AdminView.stepDefinitions" }, 
 	plugin = {"pretty", "com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:"}
 		
 )

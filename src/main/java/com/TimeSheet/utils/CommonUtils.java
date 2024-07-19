@@ -114,6 +114,11 @@ public class CommonUtils {
 		waitFor(3);
 		WebElement element = driver.findElement(By.xpath("//*[text()='" + i + "']"));
 		explicitlyWaitForElementandClick(element, 2);
+//		WebElement start=driver.findElement(By.xpath("//*[@aria-label='Select Week']/following::label[2]"));
+//		WebElement end=driver.findElement(By.xpath("//*[@aria-label='Select Week']/following::label[4]"));
+//		String startdate=start.getText();
+//		String enddate=end.getText();
+//		System.out.println("printing the selected start week date "+" : "+startdate+" and end date is "+" : "+enddate);
 		waitFor(3);
 	}
 
@@ -142,7 +147,8 @@ public class CommonUtils {
 		FileInputStream file = new FileInputStream("TestData/TestData.xlsx");
 		Workbook workbook = new XSSFWorkbook(file);
 		Sheet sheet = workbook.getSheet(Sheet);
-		for (int a = 1; a <= 19; a++) {
+		int size=sheet.getLastRowNum();
+		for (int a = 1; a <= size; a++) {
 			Row row = sheet.getRow(a);
 			for (int x = 1; x <= 1; x++) {
 				String Tasktitle = row.getCell(x).getStringCellValue();
@@ -241,7 +247,31 @@ public class CommonUtils {
 	    return destination;
 	}
 
-	
+	public static void selectAnyWeek(int weekOffSet) throws InterruptedException {
+        Calendar cal = Calendar.getInstance();
+        cal.add(Calendar.WEEK_OF_YEAR, weekOffSet);
+        int targetDay = cal.get(Calendar.DAY_OF_MONTH);
+        int targetMonth = cal.get(Calendar.MONTH);
+        int currentMonth = Calendar.getInstance().get(Calendar.MONTH);
+
+        // Click on the date picker to open it
+        WebElement datePicker = driver.findElement(By.className("rdp-cell"));
+        datePicker.click();
+
+        // If the target month is before the current month, click the previous month arrow
+        if (targetMonth < currentMonth) {
+            WebElement prevMonthArrow = driver.findElement(By.xpath("//*[@name='previous-month']"));
+            prevMonthArrow.click();
+        }
+
+        else if (targetMonth > currentMonth) {
+            WebElement nextMonthArrow = driver.findElement(By.xpath("//*[@name='next-month']"));
+            nextMonthArrow.click();
+        }
+        // Select the target day
+        WebElement dayToSelect = driver.findElement(By.xpath("//*[text()='" + targetDay + "']"));
+        dayToSelect.click();
+    }
 	
 		
 

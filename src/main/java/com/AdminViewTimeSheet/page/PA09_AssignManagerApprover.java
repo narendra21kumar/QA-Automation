@@ -7,6 +7,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.testng.Assert;
 
 import com.TimeSheet.utils.CommonUtils;
 
@@ -36,9 +37,13 @@ public class PA09_AssignManagerApprover {
 	
 	@FindBy(xpath = "//button[@title='Save']")
 	WebElement saveButton;
-
+	
+	@FindBy(xpath = "//div[@title='Assign Manager/Approver']")
+    WebElement AssignManagerPage;
+	
 	public void clickAssignManagerIcon() {
 		CommonUtils.explicitlyWaitForElementandClick(assignMangerIcon, 5);
+		System.out.println("The Name of the Page is :" +AssignManagerPage);
 	}
 
 	// One Common Method for Selecting Drop down
@@ -85,6 +90,13 @@ public class PA09_AssignManagerApprover {
 	   CommonUtils.explicitlyWaitForElementandClick(saveButton, 5);
    }
 
+   public void printAssignManagerTitle() {
+		String ActualText = AssignManagerPage.getText();
+		String ExpectedText = "Assign Manager/Approver";
+       Assert.assertTrue(ActualText.contains(ExpectedText));
+		System.out.println("Name of the Page is "+ ActualText );
+		
+	}
    
 }
 //	

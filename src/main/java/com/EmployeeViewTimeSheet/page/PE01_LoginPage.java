@@ -3,6 +3,7 @@ package com.EmployeeViewTimeSheet.page;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
@@ -47,40 +48,25 @@ public class PE01_LoginPage {
 	@FindBy(xpath = "//input[contains(@type,'submit')]")
 	private WebElement staySigned;
 
-	private void getmanagerUsername() {
-		String username = ConfigReader.getUsername();
 
-		CommonUtils.explicitlyWaitForElementandClick(emailId, 10);
-		CommonUtils.sendKeysToElement(emailId, username);
-
-	}
-
-	private void emailNext() {
-		CommonUtils.explicitlyWaitForElementandClick(emailNext, 10);
-	}
+	
 
 	private void clickOnContinueWithMicrosoft() {
 		CommonUtils.explicitlyWaitForElementandClick(ContinueWithMicrosoft, 10);
 
 	}
-
-	private void getManagerPassword() {
-		String password = ConfigReader.getPassword();
-		CommonUtils.explicitlyWaitForElementandClick(pwdText, 10);
-		CommonUtils.sendKeysToElement(pwdText, password);
-
+	private void emailNext() {
+		CommonUtils.explicitlyWaitForElementandClick(emailNext, 10);
 	}
-
 	private void clickSignIn() {
 		CommonUtils.explicitlyWaitForElementandClick(emailNext, 10);
 	}
-
 	private void staySigned() {
+	
 		CommonUtils.explicitlyWaitForElementandClick(staySigned, 10);
-
 	}
 
-	public void doLogIn()  {
+	public void doLogIn() {
 //        CommonUtils.waitFor(3);
 //	//	clickOnContinueWithMicrosoft();
 //		CommonUtils.waitFor(3);
@@ -90,39 +76,37 @@ public class PE01_LoginPage {
 		clickSignIn();
 		staySigned();
 		CommonUtils.waitFor(3);
-		
 
 	}
 
 	private void getEmpUsername() {
-
 		String username = ConfigReader.getUsername();
+		CommonUtils.explicitlyWaitForElementandClick(emailId, 10);
+		CommonUtils.sendKeysToElement(emailId, username);
+        System.out.println(username);
+	}
+	private void getEmpPassword() {
+		String password = ConfigReader.getPassword();
+		CommonUtils.explicitlyWaitForElementandClick(pwdText, 10);
+		CommonUtils.sendKeysToElement(pwdText, password);
+		System.out.println(password);
+	}
+
+
+	
+	private void getmanagerUsername() {
+		String username = ConfigReader.getmanagerUsername();
 		CommonUtils.explicitlyWaitForElementandClick(emailId, 10);
 		CommonUtils.sendKeysToElement(emailId, username);
 
 	}
-
-	private void getEmpPassword() {
-
-		String password = ConfigReader.getPassword();
+	private void getManagerPassword() {
+		String password = ConfigReader.getManagerPassword();
 		CommonUtils.explicitlyWaitForElementandClick(pwdText, 10);
 		CommonUtils.sendKeysToElement(pwdText, password);
 
 	}
 
-	public void doLogInAsEmp() {
-
-//	        CommonUtils.waitFor(3);
-//			//clickOnContinueWithMicrosoft();
-//			CommonUtils.waitFor(3);
-		getEmpUsername();
-		emailNext();
-		getEmpPassword();
-		clickSignIn();
-		staySigned();
-		CommonUtils.waitFor(3);
-
-	}
 
 	private void getManUsername() {
 
@@ -143,7 +127,7 @@ public class PE01_LoginPage {
 	public void doLogInAsMananger() {
 
 //	        CommonUtils.waitFor(3);
-//		//	clickOnContinueWithMicrosoft();
+//			clickOnContinueWithMicrosoft();
 //			CommonUtils.waitFor(3);
 		getManUsername();
 		emailNext();
@@ -153,33 +137,45 @@ public class PE01_LoginPage {
 		CommonUtils.waitFor(3);
 
 	}
+	public void doLogInAsEmp() {
 
-	public void verifyAccessAccordingToLogin()  {
+//        CommonUtils.waitFor(3);
+//		  clickOnContinueWithMicrosoft();
+//		  CommonUtils.waitFor(3);
+	getEmpUsername();
+	emailNext();
+	getEmpPassword();
+	clickSignIn();
+	CommonUtils.waitFor(3);
+	staySigned();
+	CommonUtils.waitFor(3);
+
+}
+
+	public void verifyAccessAccordingToLogin() throws InterruptedException {
 		WebElement usersName = driver.findElement(By.xpath("//*[@class='MuiStack-root css-vb6e92']//h5"));
-	    String getName = usersName.getText();
-	    
-	    if (getName.contains("APPROVER")) {
-	        System.out.println("User Access to Approver as " +getName);
-	    }
-	    if (getName.contains("ADMIN")) {
-	        System.out.println("User Access to Admin as " +getName);
-	    }
-	    if (getName.contains("REPORTING_MANAGER")) {
-	        System.out.println("User Access to Reporting Manager as " +getName);
-	    } else {
-	        System.out.println("User Access to Employee View as " +getName);
-	    }
-	}
-	
-	public void checkTitle(String titleOfPage) {
-	    String actualTitle = driver.getTitle();
-	    if (actualTitle.startsWith(titleOfPage)) {
-	        System.out.println("Page title matches the expected prefix: " + actualTitle);
-	    } else {
-	        System.out.println("Page title does not match the expected prefix.");
-	    }
-	}
-	
-		
+		String getName = usersName.getText();
+        Thread.sleep(3000);
+		if (getName.contains("APPROVER")) {
+			System.out.println("User Access to Approver as " + getName);
+		}
+		else if (getName.contains("ADMIN")) {
+			System.out.println("User Access to Admin as " + getName);
+		}
+		else if (getName.contains("REPORTING_MANAGER")) {
+			System.out.println("User Access to Reporting Manager as " + getName);
+		} else {
+			System.out.println("User Access to Employee View as " + getName);
+		}
 	}
 
+	public void checkTitle(String titleOfPage) {
+		String actualTitle = driver.getTitle();
+		if (actualTitle.startsWith(titleOfPage)) {
+			System.out.println("Page title matches the expected prefix: " + actualTitle);
+		} else {
+			System.out.println("Page title does not match the expected prefix.");
+		}
+	}
+
+}

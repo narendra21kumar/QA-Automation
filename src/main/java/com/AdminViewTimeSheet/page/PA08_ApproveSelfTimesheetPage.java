@@ -73,6 +73,12 @@ public class PA08_ApproveSelfTimesheetPage {
 	@FindBy(xpath = "//*[contains(@class,'MuiTableBody-root css-1xnox0e')]//td[8]")
 	List<WebElement> subDateOfEmp;
 	
+	@FindBy(xpath ="(//input[@class='PrivateSwitchBase-input css-1m9pwf3'])[1]")
+	WebElement checkbox;
+	
+	@FindBy(xpath ="//button[text()='Approve']")
+	WebElement approvebtn;
+	
 //------------------------------------------------------------------------------------	
 	
 	public void enableToggle() {
@@ -185,6 +191,14 @@ public class PA08_ApproveSelfTimesheetPage {
 				System.out.println("Employee Submission date is  not matched");
 			}
 		}
+	}
+	
+	public void bulkapprove()
+	{
+		CommonUtils.waitFor(3);
+		CommonUtils.JavaScriptExecutorClick(driver, checkbox);
+		CommonUtils.waitFor(6);
+		CommonUtils.explicitlyWaitForElementandClick(approvebtn, 2);
 	}
 	
 }

@@ -99,22 +99,21 @@ public class PA01_LoginPage {
 
 	}
 	
-	public void verifyAccessAccordingToLogin()  {
-		WebElement usersName = driver.findElement(By.xpath("//*[@class='MuiStack-root css-vb6e92']//h5"));
+	public void verifyAccessAccordingToLogin() {
+	    WebElement usersName = driver.findElement(By.xpath("//*[@class='MuiStack-root css-vb6e92']//h5"));
 	    String getName = usersName.getText();
 	    
 	    if (getName.contains("Approver")) {
-	        System.out.println("User Access to Approver as " +getName);
-	    }
-	    if (getName.contains("ADMIN")) {
-	        System.out.println("User Access to Admin as " +getName);
-	    }
-	    if (getName.contains("Reporting_Manager")) {
-	        System.out.println("User Access to Reporting Manager as " +getName);
+	        System.out.println("User Access to Approver as " + getName);
+	    } else if (getName.contains("ADMIN")) {
+	        System.out.println("User Access to Admin as " + getName);
+	    } else if (getName.contains("Reporting_Manager")) {
+	        System.out.println("User Access to Reporting Manager as " + getName);
 	    } else {
-	        System.out.println("User Access to Employee View as " +getName);
+	        System.out.println("User Access to Employee View as " + getName);
 	    }
 	}
+
 	
 	public void checkTitle(String titleOfPage) {
 	    String actualTitle = driver.getTitle();
@@ -124,4 +123,5 @@ public class PA01_LoginPage {
 	        System.out.println("Page title does not match the expected prefix.");
 	    }
 	}
+
 }

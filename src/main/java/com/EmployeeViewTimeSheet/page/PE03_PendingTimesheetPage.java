@@ -26,10 +26,12 @@ public class PE03_PendingTimesheetPage {
 	public void pendingApprovalIconClick() throws InterruptedException {
 		pendingApprovalIcon.click();
 	}
-	public void ExpandArrowtoVerify() throws InterruptedException {
+	public void ExpandArrowtoVerify(String pending) throws InterruptedException {
 		CommonUtils.explicitlyWaitForElementandClick(arrowIcontoExpandRecord, 10);
+		Thread.sleep(2000);
 		String PendingText = driver.findElement(By.xpath("//*[@title='Pending']")).getText();
-		Assert.assertEquals(PendingText, "Pending");
+		Assert.assertEquals(PendingText,pending);
+		Thread.sleep(2000);
 	}
 
 }

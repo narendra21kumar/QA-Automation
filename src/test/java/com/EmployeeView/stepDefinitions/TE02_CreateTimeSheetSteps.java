@@ -13,53 +13,51 @@ import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 
 public class TE02_CreateTimeSheetSteps {
+		public WebDriver driver;
+		private PE01_LoginPage loginPage;
+		public PE02_CreateTimeSheetPage CreateTimeSheetPage;
+		
+		@Given("Login As Employee Role")
+		public void Employeelogin() throws InterruptedException {
+			driver = WebDriverManager.getDriver();
+			loginPage = new PE01_LoginPage(driver);
+			CreateTimeSheetPage = new PE02_CreateTimeSheetPage(driver);
+			loginPage.doLogInAsEmp();
+			loginPage.verifyAccessAccordingToLogin();
+			loginPage.checkTitle("Automation");
+		}
+		@And("Click on Create TimeSheetPage")
+		public void CreateTimesheetIcon() throws Exception {
+			CreateTimeSheetPage.CreateTimesheetIcon();
+		}
+	
+		@And("Enter the Task Description,Category & SubCategory and Hours Details {string}")
+		public void EnterTaskDiscriptionCategorySubcategory(String SheetName) throws Exception {
+			CreateTimeSheetPage.enterTaskDiscriptionCategorySubcategory(SheetName);
+		}
 
-	private WebDriver driver;
-	private PE01_LoginPage loginPage;
-	public PE02_CreateTimeSheetPage CreateTimeSheetPage;
+		@And("Click On Save, Submit & confirm button to Create the Timesheet")
+		public void ClickOnSaveSubmitConfirm() {
+			CreateTimeSheetPage.saveSubmitConfirm();
+		}
 
-	@When("Click on Create TimeSheet Master page")
-	public void click_on_create_time_sheet_master_page() {
-		CreateTimeSheetPage.CreateTimeSheetIconClick();
-	}
-
-	@Then("^Select the current week date$")
-	public void select_the_current_week_date() throws InterruptedException {
-		CreateTimeSheetPage.selectcalendar();
-		CreateTimeSheetPage.selectCurrentWeek();
-	   // CreateTimeSheetPage.futureWeekSelect();
-		// PE02_CreateTimeSheetPage.datePickerAutomaticFuture();
-	}
-
-	@And("select and Enter the task disc,hours and category for Employee")
-	public void select_and_enter_the_task_disc_hours_and_category_for_employee() throws Exception {
-		CommonUtils.taskDesccategoryandEnteringHours(driver, "14th Week");
-		CreateTimeSheetPage.saveAll();
-		CreateTimeSheetPage.submit();
-		CreateTimeSheetPage.confirm();
-	}
-
-	@When("Enter task Description and Click On save")
-	public void enter_task_description_and_click_on_save() throws Exception {
-		CreateTimeSheetPage.CreateTimeSheetIconClick();
-		CreateTimeSheetPage.selectcalendar();
-		CommonUtils.CalenderSelectWithDate(driver, 1);
-		CreateTimeSheetPage.taskdesc();
-	}
-
-	@Then("validate task Description")
-	public void validate_task_description() throws Exception {
-		// CreateTimeSheetPage.validateTaskdesc();
-	}
-
-	@Given("User login timesheet page")
-	public void user_login_timesheet_page() {
-		driver = WebDriverManager.getDriver();
-		loginPage = new PE01_LoginPage(driver);
-		CreateTimeSheetPage = new PE02_CreateTimeSheetPage(driver);
-		loginPage.doLogIn();
-		loginPage.verifyAccessAccordingToLogin();
-		loginPage.checkTitle("Automation");
-	}
-
+		//============================================//
+		@And("Select the current week date as an Employee")
+		public void selectWeek() throws Exception {
+			CreateTimeSheetPage.selectCurrentWeek();
+		}
+		@And("Select the Previous week Date from Calender Icon")
+		public void SeletionOfPreviousDate() throws InterruptedException {
+			CreateTimeSheetPage.selectPastWeekDate();
+		}
+		
+		@And("Select the Future week Date from Calender Icon")
+		public void SeletionOfFutureDate() throws InterruptedException {
+			CreateTimeSheetPage.selectfutureWeekDate();
+		}
+		//============================================//
+		@Then("Validate The TimeSheet Response As {string}")
+		public void ValidateTimesheetResponse(String string) throws Exception {
+			CreateTimeSheetPage.ValidateTimesheetResponse(string);
+		}
 }

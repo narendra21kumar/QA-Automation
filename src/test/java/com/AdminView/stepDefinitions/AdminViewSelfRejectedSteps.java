@@ -8,6 +8,7 @@ import com.AdminViewTimeSheet.page.AdminSelfRejectedTimeSheetPage;
 import com.AdminViewTimeSheet.page.PA01_LoginPage;
 import com.AdminViewTimeSheet.page.PA06_RejectedTimeSheetPage;
 import com.AdminViewTimeSheet.page.PA08_ApproveSelfTimesheetPage;
+import com.TimeSheet.utils.CommonUtils;
 import com.TimeSheet.utils.WebDriverManager;
 
 import io.cucumber.java.en.And;
@@ -20,32 +21,51 @@ public class AdminViewSelfRejectedSteps {
 	private PA01_LoginPage loginPage;
 	AdminSelfRejectedTimeSheetPage adminselfrejectedtimesheetpage;
 	
- 
-	@Given("User click on TimesheetManagementPage icon")
-	public void user_click_on_timesheet_management_page_icon() {
-		adminselfrejectedtimesheetpage.timesheetmanagement();
-	}
- 
-	@When("Enabel the showself toggle timesheet")
-	public void enabel_the_showself_toggle_timesheet() {
-		adminselfrejectedtimesheetpage.selftogggle();
-	}
- 
-	@When("Click on check box based on the weekStart Month {string}")
-	public void click_on_check_box_based_on_the_week_start_month(String WeekStartDate) {
-		adminselfrejectedtimesheetpage.checkbox(WeekStartDate);
-	}
- 
-	@When("User click on Reject button and add the {string}")
-	public void user_click_on_reject_button_and_add_the(String Remarks) {
-		adminselfrejectedtimesheetpage.rejected(Remarks);
-	}
- 
-	@Given("User should be able to login Admin View of Timesheet and reject the self created timesheet")
-	public void user_should_be_able_to_login_admin_view_of_timesheet_and_reject_the_self_created_timesheet() {
+	@Given("Login as Admin for Self Reject Timesheet")
+	public void login_to_admin_for_self_reject_timesheet() {
 		driver = WebDriverManager.getDriver();
 		loginPage = new PA01_LoginPage(driver);
 		adminselfrejectedtimesheetpage = new AdminSelfRejectedTimeSheetPage(driver);
 		loginPage.doLogIn();
+		loginPage.verifyAccessAccordingToLogin();
+		loginPage.checkTitle("Automation");
 	}
+	
+ 
+	@When("Click on Timesheet Management Page icon for self Reject Timesheet")
+	public void user_click_on_timesheet_management_page_icon() {
+		adminselfrejectedtimesheetpage.timesheetmanagement();
+	}
+ 
+	@And("Enable the Show Self Timesheet toggle button")
+	public void enabel_the_showself_toggle_timesheet() {
+		CommonUtils.waitFor(3);
+		adminselfrejectedtimesheetpage.selftogggle();
+		CommonUtils.waitFor(3);
+	}
+	
+	@And("Reject Self Timesheet record for given employee id: {string}")
+	 public void click_on_reject_for_selected_employee_by_providing_remarks(String empid) {
+		adminselfrejectedtimesheetpage.rejectTimesheet(empid);
+		}
+	
+ 
+	@And("Validate the rejected record")
+	public void navigate_to_reject_timesheet_page_and_verify_remarks() {
+		adminselfrejectedtimesheetpage.EmpRejectedTimesheetandVerify();
+	}
+	
+//	
+//	@Then("Click on check box based on the weekStart Month {string}")
+//	public void click_on_check_box_based_on_the_week_start_month(String WeekStartDate) {
+//		adminselfrejectedtimesheetpage.checkbox(WeekStartDate);
+//	}
+// 
+//	
+//	@Then("User click on Reject button and add the {string}")
+//	public void user_click_on_reject_button_and_add_the(String Remarks) {
+//		adminselfrejectedtimesheetpage.rejected(Remarks);
+//	}
+// 
+
 }

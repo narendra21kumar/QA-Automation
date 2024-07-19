@@ -25,13 +25,19 @@ public class PA03_PendingTimeSheetPage {
 		CommonUtils.explicitlyWaitForElementandClick(pendingApprovalIcon, 10);
 		CommonUtils.waitFor(3);
 	}
-	public void ExpandArrowtoVerify(String WeekStartDate) {
-		WebElement weekstartdateArrowIcon=driver.findElement(By.xpath("(//*[text()='" + WeekStartDate+ "']//preceding-sibling::td)[1]"));
-		weekstartdateArrowIcon.click();
-		CommonUtils.waitFor(3);
+//	public void ExpandArrowtoVerify(String WeekStartDate) {
+//		WebElement weekstartdateArrowIcon=driver.findElement(By.xpath("(//*[text()='" + WeekStartDate+ "']//preceding-sibling::td)[1]"));
+//		weekstartdateArrowIcon.click();
+//		CommonUtils.waitFor(3);
+//		CommonUtils.explicitlyWaitForElementandClick(arrowIcontoExpandRecord, 10);
+//		String PendingText = driver.findElement(By.xpath("(//*[text()='" + WeekStartDate+ "']//preceding-sibling::td)[6]")).getText();
+//		Assert.assertEquals(PendingText, "Pending");
+//		CommonUtils.waitFor(3);
+//	}
+	
+	public void ExpandArrowtoVerify() throws InterruptedException {
 		CommonUtils.explicitlyWaitForElementandClick(arrowIcontoExpandRecord, 10);
-		String PendingText = driver.findElement(By.xpath("(//*[text()='" + WeekStartDate+ "']//preceding-sibling::td)[6]")).getText();
+		String PendingText = driver.findElement(By.xpath("//*[@title='Pending']")).getText();
 		Assert.assertEquals(PendingText, "Pending");
-		CommonUtils.waitFor(3);
 	}
 }

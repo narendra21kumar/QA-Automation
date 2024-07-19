@@ -20,6 +20,13 @@ public class WebDriverManager {
             }
             driver = new ChromeDriver(options);
             driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+            CommonUtils.waitFor(2);
+            driver.manage().deleteAllCookies();
+            if (driver.manage().getCookies().isEmpty()) {
+                System.out.println("All cookies are cleared.");
+            } else {
+                System.out.println("Cookies are not cleared.");
+            }
         }
         return driver;
     }

@@ -20,30 +20,30 @@ public class TA04_ApprovedTimesheetSteps {
 	private PA01_LoginPage loginPage;
 	private PA05_ApprovedTimeSheetPage approvedTimesheetPage;
 
-	@Given("^Click on TimesheetManagementPage icon for Admin View$")
+	@When("^Click on TimesheetManagementPage icon for Admin View$")
 	public void Click_on_TimesheetManagementPage_icon_for_Admin_View() throws IOException {
 		approvedTimesheetPage.TimeSheetSubmitted();
 	}
 	
-	@When("^user Enter Start Month \"(.*)\" and Enter Start date \"(.*)\" is$")
+	@Then("^User Enter Start Month \"(.*)\" and Enter Start date \"(.*)\" is$")
 	public void user_Enter_Start_Month_and_Enter_Start_date_is(String Startmonth, String Startdate) {
 		approvedTimesheetPage.startCalendar();
 		approvedTimesheetPage.selectStartDateandMonthforSubmitted(Startmonth,Startdate);
 	}
 	
-	@When("^user Enter End Month \"(.*)\" and Enter End date \"(.*)\" is$")
+	@And("^User Enter End Month \"(.*)\" and Enter End date \"(.*)\" is$")
 	public void user_enter_end_month_and_enter_end_date_is(String EndMonth, String EndDate) {
 		approvedTimesheetPage.endCalendar();
 		approvedTimesheetPage.selectEndDateandMonthforSubmitted(EndMonth, EndDate);
 		
 	}
 	
-	@And("^Enter Emp Id \"(.*)\" for Approval of Approved Timesheet Page$")
+	@Then("^Enter Emp Id \"(.*)\" for Approval of Approved Timesheet Page$")
 	public void enter_EmpId_for_Approve(String empid) {
 		approvedTimesheetPage.approveTimesheet(empid);
 	}
 	
-	@When("click on Approved TimesheetIcon In AdminView")
+	@And("Click on Approved TimesheetIcon In AdminView")
 	public void click_on_approved_timesheet_icon_in_admin_view() {
 		approvedTimesheetPage.clickonapprovedIcon();
 	}
