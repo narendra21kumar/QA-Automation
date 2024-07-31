@@ -1,7 +1,6 @@
 package com.AdminViewTimeSheet.page;
 
 import java.util.Calendar;
-import java.util.Date;
 import java.util.List;
 
 import org.openqa.selenium.By;
@@ -12,6 +11,7 @@ import org.openqa.selenium.support.PageFactory;
 import org.testng.Assert;
 
 import com.TimeSheet.utils.CommonUtils;
+import com.TimeSheet.utils.Logs;
 
 public class PA11_DeleteTimesheetRecords {
 	WebDriver driver;
@@ -41,23 +41,27 @@ public class PA11_DeleteTimesheetRecords {
 	@FindBy(xpath = "//*[@name='next-month']")
 	WebElement FutureMonthArrowIcon;
  
-	public void CreateTimesheetIcon() throws Exception 
+	public void createTimesheetIcon() throws Exception 
 	{
 		CommonUtils.explicitlyWaitForElementandClick(createTimesheetIcon,5);
+		Logs.info("clicked on CreateTime sheet Icon");
 	}
 	
-	public void EditIcon() throws Exception 
+	public void editIcon() throws Exception 
 	{
 		CommonUtils.explicitlyWaitForElementandClick(EditIcon, 5);
+		Logs.info("clicked on edit Icon");
 	}
 	
 	public void addARow() throws Exception 
 	{
 		CommonUtils.explicitlyWaitForElementandClick(clickAddRowIcon, 5);
+		Logs.info("clicked on Add A row  Icon");
 	}
 	
 	public void clickCalendor() {
 		CommonUtils.explicitlyWaitForElementandClick(calendarStartIcon, 5);
+		Logs.info("clicked on calender Icon");
 	}
 	public void deleteTimesheet() throws Exception 
 	{
@@ -76,6 +80,7 @@ public class PA11_DeleteTimesheetRecords {
 	    		Thread.sleep(2000);
 	    	}
 	    }
+		Logs.info("Timesheet Deleted successfully");
 	}
 	
 	
@@ -94,11 +99,13 @@ public class PA11_DeleteTimesheetRecords {
         if (targetMonth < currentMonth) {
             WebElement prevMonthArrow = driver.findElement(By.xpath("//*[@name='previous-month']"));
             prevMonthArrow.click();
+            Logs.info("clicked on Previous Month Arrow");
         }
 
         else if (targetMonth > currentMonth) {
             WebElement nextMonthArrow = driver.findElement(By.xpath("//*[@name='next-month']"));
             nextMonthArrow.click();
+            Logs.info("clicked on nextMonth Arrow");
         }
         // Select the target day
         WebElement dayToSelect = driver.findElement(By.xpath("//*[text()='" + targetDay + "']"));
@@ -108,13 +115,15 @@ public class PA11_DeleteTimesheetRecords {
 		String startdate=start.getText();
 		String enddate=end.getText();
 		System.out.println("printing the selected start week date "+" : "+startdate+" and end date is "+" : "+enddate);
+		 Logs.info("selected the Current Week");
     }
 	
 	
-	public void ValidateTimesheetResponse(String DeletionText) throws Exception 
+	public void validateTimesheetResponse(String DeletionText) throws Exception 
 	{
 			String TaskDeletionText = driver.findElement(By.xpath("//*[text()='Task deleted successfully!']")).getText();
-			Assert.assertEquals(TaskDeletionText, DeletionText);	
+			Assert.assertEquals(TaskDeletionText, DeletionText);
+			Logs.info("successFully Verified for deletion");
 	}
  
 }

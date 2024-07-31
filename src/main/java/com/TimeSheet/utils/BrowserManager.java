@@ -5,6 +5,7 @@ import java.time.Duration;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
+
 import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class BrowserManager {
@@ -13,7 +14,7 @@ public class BrowserManager {
 
 	public static WebDriver driver;
 
-	public WebDriver startBrowser(String browser) {
+	public  WebDriver startBrowser(String browser) {
        String browserName = browser;
        if(browserName.equalsIgnoreCase("chrome")) {
     	   WebDriverManager.chromedriver().setup();

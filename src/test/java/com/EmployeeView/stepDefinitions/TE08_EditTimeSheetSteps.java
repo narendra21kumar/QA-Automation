@@ -5,6 +5,7 @@ import org.openqa.selenium.WebDriver;
 import com.EmployeeViewTimeSheet.page.PE01_LoginPage;
 import com.EmployeeViewTimeSheet.page.PE02_CreateTimeSheetPage;
 import com.TimeSheet.utils.CommonUtils;
+import com.TimeSheet.utils.Logs;
 import com.TimeSheet.utils.WebDriverManager;
 
 import io.cucumber.java.en.And;
@@ -19,6 +20,8 @@ public class TE08_EditTimeSheetSteps {
 
 	@Given("Log In as Employee Role")
 	public void user_login_timesheet_page() throws InterruptedException {
+		Logs.initLogs(TE08_EditTimeSheetSteps.class.getName());
+		Logs.startTestCase(this.getClass().getSimpleName());
 		driver = WebDriverManager.getDriver();
 		loginPage = new PE01_LoginPage(driver);
 		CreateTimeSheetPage = new PE02_CreateTimeSheetPage(driver);
@@ -50,7 +53,8 @@ public class TE08_EditTimeSheetSteps {
 
 		@And("Validate The TimeSheet Response as {string}")
 		public void Validating(String SuccessText) throws Exception {
-			CreateTimeSheetPage.ValidateTimesheetResponse(SuccessText);
+			CreateTimeSheetPage.validateTimesheetResponse(SuccessText);
+			Logs.endTestCase(this.getClass().getSimpleName());
 	}
 
 

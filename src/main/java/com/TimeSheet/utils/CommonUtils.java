@@ -9,10 +9,13 @@ import java.time.Month;
 import java.util.Calendar;
 import java.util.Date;
 
+import org.apache.poi.ss.usermodel.Row;
+import org.apache.poi.ss.usermodel.Sheet;
+import org.apache.poi.ss.usermodel.Workbook;
+import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
@@ -21,13 +24,10 @@ import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.io.FileHandler;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
-import org.apache.poi.ss.usermodel.*;
-import org.apache.poi.xssf.usermodel.XSSFWorkbook;
-import org.joda.time.LocalDate;
 
 public class CommonUtils {
-    private static WebDriver driver;
-	private static int timeoutInSeconds = 30;
+	private static WebDriver driver;
+	int timeoutInSeconds = 30;
 	static Actions act;
 
 	public static void clickElement(WebElement element) {
@@ -142,12 +142,12 @@ public class CommonUtils {
 		}
 		return message;
 	}
-	
+
 	public static void taskDesccategoryandEnteringHours(WebDriver driver, String Sheet) throws Exception {
 		FileInputStream file = new FileInputStream("TestData/TestData.xlsx");
 		Workbook workbook = new XSSFWorkbook(file);
 		Sheet sheet = workbook.getSheet(Sheet);
-		int size=sheet.getLastRowNum();
+		int size = sheet.getLastRowNum();
 		for (int a = 1; a <= size; a++) {
 			Row row = sheet.getRow(a);
 			for (int x = 1; x <= 1; x++) {
@@ -163,11 +163,11 @@ public class CommonUtils {
 				int d = y + 1;
 				WebElement catsubgry = driver.findElement(
 						By.xpath("//*[@class='MuiTableBody-root']//tr[" + a + "]/td[" + d + "]//div//div"));
-			
+
 				catsubgry.click();
-				
+
 				ConvertStringToWebElementAndClick(driver, CateSub);
-			
+
 			}
 			for (int c = 4; c <= 10; c++) {
 				double res1 = row.getCell(c).getNumericCellValue();
@@ -177,9 +177,9 @@ public class CommonUtils {
 				if (res != 0) {
 					WebElement timehours = driver.findElement(
 							By.xpath("//*[@class='MuiTableBody-root']//tr[" + a + "]/td[" + x + "]/div/div/input"));
-				
+
 					// timehours.clear();
-				
+
 					timehours.sendKeys(hours);
 				}
 			}
@@ -212,7 +212,7 @@ public class CommonUtils {
 				ConvertStringToWebElementAndClick(driver, CateSub);
 				CommonUtils.waitFor(1);
 			}
-		
+
 		}
 		workbook.close();
 	}
@@ -235,44 +235,67 @@ public class CommonUtils {
 			}
 		}
 	}
-	
+
 	public static String takeScreenshotAtEndOfTest() throws IOException {
-	    String dateName = new SimpleDateFormat("yyyyMMddhhmmss").format(new Date());
-	    TakesScreenshot ts = (TakesScreenshot)driver;
-	    File source = ts.getScreenshotAs(OutputType.FILE);
-	    String destination = System.getProperty("user.dir") + "/screenshots/" +  dateName
-	            + ".png";
-	    File finalDestination = new File(destination);
-	    FileHandler.copy(source, finalDestination);
-	    return destination;
+		String dateName = new SimpleDateFormat("yyyyMMddhhmmss").format(new Date());
+		TakesScreenshot ts = (TakesScreenshot) driver;
+		File source = ts.getScreenshotAs(OutputType.FILE);
+		String destination = System.getProperty("user.dir") + "/screenshots/" + dateName + ".png";
+		File finalDestination = new File(destination);
+		FileHandler.copy(source, finalDestination);
+		return destination;
 	}
 
-	public static void selectAnyWeek(int weekOffSet) throws InterruptedException {
-        Calendar cal = Calendar.getInstance();
-        cal.add(Calendar.WEEK_OF_YEAR, weekOffSet);
-        int targetDay = cal.get(Calendar.DAY_OF_MONTH);
-        int targetMonth = cal.get(Calendar.MONTH);
-        int currentMonth = Calendar.getInstance().get(Calendar.MONTH);
+	public static void selectAnyWeek(WebDriver driver, int weekOffSet) throws InterruptedException {
+		Calendar cal = Calendar.getInstance();
+		cal.add(Calendar.WEEK_OF_YEAR, weekOffSet);
+		int targetDay = cal.get(Calendar.DAY_OF_MONTH);
+		int targetMonth = cal.get(Calendar.MONTH);
+		int currentMonth = Calendar.getInstance().get(Calendar.MONTH);
 
-        // Click on the date picker to open it
-        WebElement datePicker = driver.findElement(By.className("rdp-cell"));
-        datePicker.click();
+		// Click on the date picker to open it
+		WebElement datePicker = driver.findElement(By.className("rdp-cell"));
+		datePicker.click();
 
-        // If the target month is before the current month, click the previous month arrow
-        if (targetMonth < currentMonth) {
-            WebElement prevMonthArrow = driver.findElement(By.xpath("//*[@name='previous-month']"));
-            prevMonthArrow.click();
-        }
+		// If the target month is before the current month, click the previous month
+		// arrow
+		if (targetMonth < currentMonth) {
+			WebElement prevMonthArrow = driver.findElement(By.xpath("//*[@name='previous-month']"));
+			prevMonthArrow.click();
+		}
 
-        else if (targetMonth > currentMonth) {
-            WebElement nextMonthArrow = driver.findElement(By.xpath("//*[@name='next-month']"));
-            nextMonthArrow.click();
-        }
-        // Select the target day
-        WebElement dayToSelect = driver.findElement(By.xpath("//*[text()='" + targetDay + "']"));
-        dayToSelect.click();
-    }
-	
-		
+		else if (targetMonth > currentMonth) {
+			WebElement nextMonthArrow = driver.findElement(By.xpath("//*[@name='next-month']"));
+			nextMonthArrow.click();
+		}
+		// Select the target day
+		WebElement dayToSelect = driver.findElement(By.xpath("//*[text()='" + targetDay + "']"));
+		dayToSelect.click();
+		WebElement start = driver.findElement(By.xpath("//*[@aria-label='Select Week']/following::label[2]"));
+		WebElement end = driver.findElement(By.xpath("//*[@aria-label='Select Week']/following::label[4]"));
+		String startdate = start.getText();
+		String enddate = end.getText();
+		System.out.println(
+				"printing the selected start week date " + " : " + startdate + " and end date is " + " : " + enddate);
+	}
+
+	public static void printNameOfPages(WebDriver driver) {
+		// Array of URLs to visit
+		String[] pages = { "https://192.168.1.5/timesheet/list", "https://192.168.1.5/timesheet/pending",
+				"https://192.168.1.5/timesheet/detail", "https://192.168.1.5/timesheet/approved",
+				"https://192.168.1.5/timesheet/rejected", "https://192.168.1.5/timesheet/reports",
+				"https://192.168.1.5/timesheet/mapping", "https://192.168.1.5/timesheet/category",
+				"https://192.168.1.5/timesheet/employee", "https://192.168.1.5/timesheet/delete-employee" };
+
+		// Loop through each URL
+		for (String page : pages) {
+			// Navigate to the page
+			driver.get(page);
+
+			// Print the title of the current page
+			System.out.println("Page Title: " + driver.getTitle());
+			break;
+		}
+	}
 
 }

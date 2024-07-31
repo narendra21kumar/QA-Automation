@@ -4,10 +4,8 @@ import org.openqa.selenium.WebDriver;
  
 import com.EmployeeViewTimeSheet.page.PE08_ManagerLoginForApprovalPage;
 import com.EmployeeViewTimeSheet.page.PE01_LoginPage;
-import com.EmployeeViewTimeSheet.page.PE02_CreateTimeSheetPage;
-import com.TimeSheet.utils.CommonUtils;
+import com.TimeSheet.utils.Logs;
 import com.TimeSheet.utils.WebDriverManager;
- 
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
@@ -21,6 +19,8 @@ public class TE04_ManagerLogInForApprovalSteps {
  
 	@Given("Login as Manager Role")
 	public void login_as_manager_credentials() {
+		Logs.initLogs(TE04_ManagerLogInForApprovalSteps.class.getName());
+		Logs.startTestCase(this.getClass().getSimpleName());
 		 driver = WebDriverManager.getDriver();
 		 loginPage = new PE01_LoginPage(driver);
 		 loginPage.doLogInAsMananger();
@@ -45,12 +45,14 @@ public class TE04_ManagerLogInForApprovalSteps {
  
 	@Then("Click on Approved Timesheet Icon in Manager View and Verify the status, Approved date {string} , {string}")
 	public void VerifyApprovedDate(String Empid,String approvedText) throws InterruptedException {
-		managerLoginForApproval.EmpApprovedTimesheetandVerify(Empid,approvedText);
+		managerLoginForApproval.empApprovedTimesheetandVerify(Empid,approvedText);
+		Logs.endTestCase(this.getClass().getSimpleName());
 	}
 	////////////////////Reject The Timesheet//////////////
 	@Then("Reject the timesheet {string} for employeeDeletion for the selected week {string}")
 	public void RejectTimeSheet(String Empid,String rejectText) throws InterruptedException {
-		managerLoginForApproval.RejectTimesheet(Empid,rejectText);
+		managerLoginForApproval.rejectTimesheet(Empid,rejectText);
+		Logs.endTestCase(this.getClass().getSimpleName());
 	}
 
 }

@@ -7,6 +7,7 @@ import org.openqa.selenium.support.PageFactory;
 import org.testng.Assert;
 
 import com.TimeSheet.utils.CommonUtils;
+import com.TimeSheet.utils.Logs;
 
 public class PA14_AdminManageDeletePage {
 	WebDriver driver;
@@ -24,6 +25,7 @@ public class PA14_AdminManageDeletePage {
 	
 	public void clickManageDeleteIcon() {
 		CommonUtils.explicitlyWaitForElementandClick(ManageDeleteIcon, 5);
+		Logs.info("clicked on ManageDelete Page");
 	}
 	
 	public void printManageDeleteTitle() {
@@ -31,6 +33,7 @@ public class PA14_AdminManageDeletePage {
 		String ExpectedText = "Manage Delete Employees";
         Assert.assertTrue(ActualText.contains(ExpectedText));
 		System.out.println("Name of the Page is "+ ActualText );
+		 Logs.info("Verified Successfully Title of the page in ManageDelete");
 		
 	}
 }

@@ -12,5 +12,5 @@ Feature:Verify Employee Timesheet having less than 40 hours for complete week
    	 Then Validate error is displaying for less then 40 hours per week "<Error Message>"
    	 
    	 Examples:
-      |              Error Message                                | SheetName           |
-      |  Minimum 40 hours required to submit the timesheet        |  LessThen40Hours    |
+      |              Error Message                                | SheetName                        |
+      |  Minimum 40 hours required to submit the timesheet        |  EmployeeView_LessThen40Hours    |

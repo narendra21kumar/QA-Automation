@@ -7,6 +7,7 @@ import org.openqa.selenium.support.PageFactory;
 import org.testng.Assert;
 
 import com.TimeSheet.utils.CommonUtils;
+import com.TimeSheet.utils.Logs;
 
 public class PA13_AdminManageEmployeePage {
 	WebDriver driver;
@@ -24,6 +25,7 @@ public class PA13_AdminManageEmployeePage {
 	
 	public void clickManageEmpIcon() {
 		CommonUtils.explicitlyWaitForElementandClick(ManageEmployeeIcon, 5);
+		 Logs.info("clicked on ManageEmployee Page");
 	}
 	
 	public void printManageEmpTitle() {
@@ -31,6 +33,6 @@ public class PA13_AdminManageEmployeePage {
 		String ExpectedText = "Manage Employees";
         Assert.assertTrue(ActualText.contains(ExpectedText));
 		System.out.println("Name of the Page is "+ ActualText );
-		
+		 Logs.info("Verified Successfully Title of the page in ManageEmployee");
 	}
 }

@@ -1,7 +1,6 @@
 package com.AdminViewTimeSheet.page;
 
 import java.util.Calendar;
-import java.util.Date;
 import java.util.List;
 
 import org.openqa.selenium.By;
@@ -12,9 +11,10 @@ import org.openqa.selenium.support.PageFactory;
 import org.testng.Assert;
 
 import com.TimeSheet.utils.CommonUtils;
+import com.TimeSheet.utils.Logs;
 
 public class PA09_AdminReportsPage {
-	static WebDriver driver;
+	WebDriver driver;
 
 	public PA09_AdminReportsPage(WebDriver driver) {
 		this.driver = driver;
@@ -60,57 +60,59 @@ public class PA09_AdminReportsPage {
 	@FindBy(xpath = "//*[contains(@class,'MuiTableBody-root css-1xnox0e')]//tr[*]//td[1]")
 	List<WebElement> listOfEmployeeNames;
 
-//	@FindBy(xpath = "//*[contains(@class,'MuiTableBody-root css-1xnox0e')]//tr[*]//td[5]")
-//	List <WebElement>  statusOfEmployeeFromeReports;
-
-//	@FindBy(xpath = "//*[contains(@class,'MuiTableBody-root css-1xnox0e')]//tr[*]//td[@value= '" + nameOfemployee + "']")
-//	WebElement  statusOfEmployeeFromeReports;
 	@FindBy(xpath = "//td[@class='MuiTableCell-root' and @value='\" + value + \"']")
 	WebElement nameOfEmp;
 
 	@FindBy(xpath = "//td[@class='MuiTableCell-root' and @value='\" + value + \"']")
 	WebElement nameOfEmpStatus;
-	
+
 	@FindBy(xpath = "//*[@class='MuiTypography-root MuiTypography-h5 css-1hh6ei4']")
-    WebElement AdminReportName;
+	WebElement AdminReportName;
 
 	// One Common Method for Selecting Drop down
 	public void selectValuesFromDrop(String value) {
 		for (WebElement options : dropValues) {
 			if (options.getText().equalsIgnoreCase(value)) {
 				options.click();
+				
 				break;
 			}
 		}
+		Logs.info("selected the value form dropdown");
 	}
 
 	/////////////////////////////////////////////////////////////////////////////////////////////////
 	public void clickonReportsIcon() {
 		CommonUtils.explicitlyWaitForElementandClick(reportsIcon, 5);
+		Logs.info("clicked on Reports icon");
 
 	}
 
-	public void selecttimeSheetSubmittReportDropDown(String selectValueFromDrop) {
+	public void selectTimeSheetSubmittReportDropDown(String selectValueFromDrop) {
 		CommonUtils.explicitlyWaitForElementandClick(timeSheetSubmittReportDropDown, 10);
 		selectValuesFromDrop(selectValueFromDrop);
+		Logs.info("selected the timeSheetSubmittReport form Dropdown");
 
 	}
 
 	public void selectClient(String nameOfClient) {
 		CommonUtils.explicitlyWaitForElementandClick(clientDropdown, 10);
 		selectValuesFromDrop(nameOfClient);
-	
+		Logs.info("selected the client form Dropdown");
+
 	}
 
 	public void selectTeam(String nameOfTeam) {
 		CommonUtils.explicitlyWaitForElementandClick(teamDropdown, 10);
 		selectValuesFromDrop(nameOfTeam);
-	
+		Logs.info("selected the Team form Dropdown");
+
 	}
 
 	public void selectStatus(String nameOfStatus) {
 		CommonUtils.explicitlyWaitForElementandClick(statusDropdown, 10);
 		selectValuesFromDrop(nameOfStatus);
+		Logs.info("selected the status form Dropdown");
 
 	}
 
@@ -125,6 +127,7 @@ public class PA09_AdminReportsPage {
 		WebElement reqDate = driver.findElement(By.xpath("//*[text()='" + Startdate + "']"));
 		reqDate.click();
 		CommonUtils.waitFor(3);
+		Logs.info("Selected the start Week and month In reports page");
 	}
 
 	public void selectEndDateandMonthforSubmitted(String EndMonth, String EndDate) {
@@ -138,20 +141,21 @@ public class PA09_AdminReportsPage {
 		WebElement reqDate = driver.findElement(By.xpath("//*[text()='" + EndDate + "']"));
 		reqDate.click();
 		CommonUtils.waitFor(3);
+		Logs.info("Selected the End Week and month In reports page");
 	}
 	///////////////////////////////////////////////////////////////////////////////
 
 	public void clickOnCalendorStartIcon() {
 		CommonUtils.explicitlyWaitForElementandClick(startDateSelectDrop, 10);
-
+		Logs.info("clicked on Calender Start Icon");
 	}
-	
+
 	public void clickOnCalendorEndIcon() {
 		CommonUtils.explicitlyWaitForElementandClick(endDateSelectDrop, 10);
-
+		Logs.info("clicked on Calender End Icon");
 	}
 
-	public void DatebackWard(WebDriver driver, int i) {
+	public void dateBackward(WebDriver driver, int i) {
 		WebElement element = driver.findElement(By.xpath("//*[text()='" + i + "']"));
 		if (element.isEnabled()) {
 			System.out.println("Element is Displayed easy to select the Data in a given month");
@@ -160,9 +164,10 @@ public class PA09_AdminReportsPage {
 		}
 		CommonUtils.explicitlyWaitForElementandClick(element, 10);
 		System.out.println("Selected Successfully!!!!!!!!!!!!");
+		Logs.info("selected the Week successfully");
 	}
 
-	public void DateForward(WebDriver driver, int i) {
+	public void dateForward(WebDriver driver, int i) {
 		WebElement element = driver.findElement(By.xpath("//*[text()='" + i + "']"));
 		if (element.isEnabled()) {
 			System.out.println("Element is Displayed easy to select the Data in a given month");
@@ -171,37 +176,19 @@ public class PA09_AdminReportsPage {
 		}
 		CommonUtils.explicitlyWaitForElementandClick(element, 10);
 		System.out.println("Selected Successfully!!!!!!!!!!!!");
+		Logs.info("selected the Week successfully");
 	}
 
-	public void selectStartDateInCal() throws InterruptedException {
-		Calendar cal = Calendar.getInstance();
-		cal.set(Calendar.DAY_OF_WEEK, Calendar.SUNDAY);
-		cal.add(Calendar.WEEK_OF_MONTH, -2);
-		Date pastDate = cal.getTime();
-		int date = pastDate.getDate();
-		DatebackWard(driver, date);
-		System.out.println(pastDate);
-	}
 
-	public void selectEndDateInCal() throws InterruptedException {
-		Calendar cal = Calendar.getInstance();
-		cal.set(Calendar.DAY_OF_WEEK, Calendar.SATURDAY);
-		cal.add(Calendar.WEEK_OF_MONTH, 1);
-		Date future = cal.getTime();
-		int date = future.getDate();
-		DateForward(driver, date);
-		System.out.println(future);
-	}
-
-/////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 	public void searchByOption(String text) {
 		CommonUtils.sendKeysToElement(searchText, text);
 		List<WebElement> getAllStatus = driver
 				.findElements(By.xpath("//*[contains(@class,'MuiTableBody-root css-1xnox0e')]//tr[*]//td[5]"));
 		for (WebElement getStatus : getAllStatus) {
 			System.out.println(getStatus.getText());
-
+			
 		}
+		Logs.info("Fetched all status");
 	}
 
 	public void verifyAccordingToSelectedDrop() {
@@ -219,12 +206,13 @@ public class PA09_AdminReportsPage {
 			System.out.println(nameOfEmp.getText());
 			if (statusOfEmp.getText().equalsIgnoreCase(Status)) {
 				System.out.println(statusOfEmp.getText());
+				Logs.info("Verified status successfully");
 				if (dateOfSub.getText().equalsIgnoreCase(SubDate)) {
 					System.out.println(dateOfSub.getText());
+					Logs.info("Verified dateof Submission successfully");
 				}
 			}
 		}
-
 	}
 
 	public void VerifyEmpRecordExist(String VerifyempName) throws InterruptedException {
@@ -234,47 +222,55 @@ public class PA09_AdminReportsPage {
 			String empName = names.getText();
 			if (empName.equalsIgnoreCase(VerifyempName)) {
 				System.out.println("Employee Exist in Selected Status");
+				Logs.info("Employee Exist in Selected Status");
 			} else {
 				System.out.println("Employee not Exist in Selected Status");
+				Logs.info("Employee not Exist in Selected Status");
 			}
 			break;
 		}
+		
+	}
+
+	public void selectAnyWeek(int weekOffSet, int dayOfWeek) throws InterruptedException {
+		Calendar cal = Calendar.getInstance();
+		cal.add(Calendar.WEEK_OF_YEAR, weekOffSet);
+		cal.set(Calendar.DAY_OF_WEEK, dayOfWeek);
+		int targetDay = cal.get(Calendar.DAY_OF_MONTH);
+		int targetMonth = cal.get(Calendar.MONTH);
+		int currentMonth = Calendar.getInstance().get(Calendar.MONTH);
+
+		// Click on the date picker to open it
+		WebElement datePicker = driver.findElement(By.className("rdp-cell"));
+		datePicker.click();
+
+		// If the target month is before the current month, click the previous month
+		// arrow
+		if (targetMonth < currentMonth) {
+			WebElement prevMonthArrow = driver.findElement(By.xpath("//*[@name='previous-month']"));
+			prevMonthArrow.click();
+			Logs.info("clicked on Previous month arrow");
+		}
+
+		else if (targetMonth > currentMonth) {
+			WebElement nextMonthArrow = driver.findElement(By.xpath("//*[@name='next-month']"));
+			nextMonthArrow.click();
+			Logs.info("clicked on next month arrow");
+		}
+		// Select the target day
+		WebElement dayToSelect = driver.findElement(By.xpath("//*[text()='" + targetDay + "']"));
+		dayToSelect.click();
+		Logs.info("selected the week from calender");
 
 	}
-	public void selectAnyWeek(int weekOffSet,int dayOfWeek) throws InterruptedException {
-        Calendar cal = Calendar.getInstance();
-        cal.add(Calendar.WEEK_OF_YEAR, weekOffSet);
-        cal.set(Calendar.DAY_OF_WEEK, dayOfWeek);
-        int targetDay = cal.get(Calendar.DAY_OF_MONTH);
-        int targetMonth = cal.get(Calendar.MONTH);
-        int currentMonth = Calendar.getInstance().get(Calendar.MONTH);
 
-        // Click on the date picker to open it
-        WebElement datePicker = driver.findElement(By.className("rdp-cell"));
-        datePicker.click();
+	public void printAdminReportNames() {
+		String ActualText = AdminReportName.getText();
+		String ExpectedText = "Reports";
+		Assert.assertTrue(ActualText.contains(ExpectedText));
+		Logs.info("verified the Admin Report Name");
+		System.out.println("Name of the Page is " + ActualText);
+		
+	}
 
-        // If the target month is before the current month, click the previous month arrow
-        if (targetMonth < currentMonth) {
-            WebElement prevMonthArrow = driver.findElement(By.xpath("//*[@name='previous-month']"));
-            prevMonthArrow.click();
-        }
-
-        else if (targetMonth > currentMonth) {
-            WebElement nextMonthArrow = driver.findElement(By.xpath("//*[@name='next-month']"));
-            nextMonthArrow.click();
-        }
-        // Select the target day
-        WebElement dayToSelect = driver.findElement(By.xpath("//*[text()='" + targetDay + "']"));
-        dayToSelect.click();
-
-    }
-	
-	 public void printAdminReportNames() {
-			String ActualText = AdminReportName.getText();
-			String ExpectedText = "Reports";
-	       Assert.assertTrue(ActualText.contains(ExpectedText));
-			System.out.println("Name of the Page is "+ ActualText );
-			
-		}
-	
 }

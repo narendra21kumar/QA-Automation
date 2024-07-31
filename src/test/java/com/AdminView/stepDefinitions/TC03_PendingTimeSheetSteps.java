@@ -4,6 +4,8 @@ import org.openqa.selenium.WebDriver;
 
 import com.AdminViewTimeSheet.page.PA01_LoginPage;
 import com.AdminViewTimeSheet.page.PA03_PendingTimeSheetPage;
+import com.TimeSheet.utils.CommonUtils;
+import com.TimeSheet.utils.Logs;
 import com.TimeSheet.utils.WebDriverManager;
 
 import io.cucumber.java.en.Given;
@@ -18,13 +20,15 @@ public class TC03_PendingTimeSheetSteps {
 	
 	@Given("Login to Timesheet as admin for pending records")
 	public void user_login_for_pending_for_managerview() {
+		Logs.initLogs(TC03_PendingTimeSheetSteps.class.getName());
+		Logs.startTestCase(this.getClass().getSimpleName());
 		driver = WebDriverManager.getDriver();
 		//driver = BrowserManager.getDriver();
         loginPage = new PA01_LoginPage(driver);
         pendingTimesheet  = new PA03_PendingTimeSheetPage(driver);
 		loginPage.doLogIn();
 		loginPage.verifyAccessAccordingToLogin();
-		loginPage.checkTitle("Automation");
+		CommonUtils.printNameOfPages(driver);
 	}
 
 	@When("Click on Pending Icon for Admin View")
@@ -35,7 +39,7 @@ public class TC03_PendingTimeSheetSteps {
 	
 	@Then("Validate Pending records for Admin View")
 	public void verify_the_pending_status() throws InterruptedException {
-		pendingTimesheet.ExpandArrowtoVerify();
+		pendingTimesheet.expandArrowtoVerify();
 	}
 	
 

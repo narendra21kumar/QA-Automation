@@ -4,13 +4,12 @@ import org.openqa.selenium.WebDriver;
 
 import com.EmployeeViewTimeSheet.page.PE01_LoginPage;
 import com.EmployeeViewTimeSheet.page.PE02_CreateTimeSheetPage;
-import com.TimeSheet.utils.CommonUtils;
+import com.TimeSheet.utils.Logs;
 import com.TimeSheet.utils.WebDriverManager;
-
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
-import io.cucumber.java.en.When;
+
 
 public class TE02_CreateTimeSheetSteps {
 		public WebDriver driver;
@@ -19,6 +18,8 @@ public class TE02_CreateTimeSheetSteps {
 		
 		@Given("Login As Employee Role")
 		public void Employeelogin() throws InterruptedException {
+			Logs.initLogs(TE02_CreateTimeSheetSteps.class.getName());
+			Logs.startTestCase(this.getClass().getSimpleName());
 			driver = WebDriverManager.getDriver();
 			loginPage = new PE01_LoginPage(driver);
 			CreateTimeSheetPage = new PE02_CreateTimeSheetPage(driver);
@@ -53,11 +54,12 @@ public class TE02_CreateTimeSheetSteps {
 		
 		@And("Select the Future week Date from Calender Icon")
 		public void SeletionOfFutureDate() throws InterruptedException {
-			CreateTimeSheetPage.selectfutureWeekDate();
+			CreateTimeSheetPage.selectFutureWeekDate();
 		}
 		//============================================//
 		@Then("Validate The TimeSheet Response As {string}")
 		public void ValidateTimesheetResponse(String string) throws Exception {
-			CreateTimeSheetPage.ValidateTimesheetResponse(string);
+			CreateTimeSheetPage.validateTimesheetResponse(string);
+			Logs.endTestCase(this.getClass().getSimpleName());
 		}
 }

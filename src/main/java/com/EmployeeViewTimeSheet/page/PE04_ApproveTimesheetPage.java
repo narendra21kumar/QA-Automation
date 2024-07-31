@@ -8,6 +8,7 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 import com.TimeSheet.utils.CommonUtils;
+import com.TimeSheet.utils.Logs;
 
 public class PE04_ApproveTimesheetPage {
 	WebDriver driver;
@@ -27,9 +28,10 @@ public class PE04_ApproveTimesheetPage {
 	public void clickOnApprovedIcon() {
 		CommonUtils.explicitlyWaitForElementandClick(approvedIcon, 10);
 		CommonUtils.waitFor(2);
+		Logs.info("clicked on Approved page");
 	}
 	
-	public void ExpandArrowForVerify(String approvedText) {
+	public void expandArrowForVerify(String approvedText) {
 		CommonUtils.explicitlyWaitForElementandClick(approvedIcon, 10);
 		CommonUtils.waitFor(2);
 		CommonUtils.explicitlyWaitForElementandClick(ExpandArrowIcon, 10);
@@ -37,6 +39,8 @@ public class PE04_ApproveTimesheetPage {
 		Assert.assertEquals(ApprovedText, "Approved");
 		String ApprovedOn = driver.findElement(By.xpath("(//*[text()='Approved On'])[1]")).getText();
 		Assert.assertEquals(ApprovedOn, "Approved On");
+		Logs.info("sucessFully done the validation of approved Timesheet");
+		
 	}
 
 

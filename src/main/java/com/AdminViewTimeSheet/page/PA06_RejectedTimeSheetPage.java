@@ -1,7 +1,5 @@
 package com.AdminViewTimeSheet.page;
 
-import java.util.List;
-
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -9,9 +7,10 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 import com.TimeSheet.utils.CommonUtils;
+import com.TimeSheet.utils.Logs;
 
 public class PA06_RejectedTimeSheetPage {
-	static WebDriver driver;
+	WebDriver driver;
 	String empid;
 
 	public PA06_RejectedTimeSheetPage(WebDriver driver) {
@@ -19,154 +18,107 @@ public class PA06_RejectedTimeSheetPage {
 		PageFactory.initElements(driver, this);
 	}
 
-	@FindBy(xpath = "//a[contains(@class, '_2esG8N9N5-Q9Ui8vVn5gZt') and @title='Rejected']")
-	WebElement rejectedIcon;
+	@FindBy(xpath = "//*[@title=\"Submitted\"]")
+	WebElement submitted;
 
-	@FindBy(xpath = "//div[contains(@class, '_1PlWXS4_EMHgqB5ngxCevb')][1]")
-	WebElement startDateSelectDrop;
+	@FindBy(xpath = "//*[@class='MuiSwitch-root MuiSwitch-sizeMedium css-ecvcn9']")
+	WebElement showselftoggle;
 
-	@FindBy(xpath = "//div[contains(@class, '_1PlWXS4_EMHgqB5ngxCevb')][2]")
-	WebElement endDateSelectDrop;
+	@FindBy(xpath = "//button[text()='Reject']")
+	WebElement rejected;
 
-	@FindBy(xpath = "(//input[@type='text'])[1]")
-	WebElement searchClient;
+	@FindBy(xpath = "//*[contains(@class,'_17CUqmCextOqfytuhqZlM') and @rows='4']")
+	WebElement remarks;
 
-	@FindBy(xpath = "//button[contains(@title, 'Clear')]")
-	WebElement disSelectClientFromDrpdwn;
-
-	@FindBy(xpath = "(//input[@type='text'])[2]")
-	WebElement searchByName;
-
-	@FindBy(xpath = "//button[contains(@class, 'MuiIconButton-sizeMedium') and @aria-label='Detail panel visibility toggle']")
-	WebElement arrowIcontoExpandRecord;
-
-	@FindBy(xpath = "//button[contains(@class, 'MuiIconButton-sizeMedium') and @aria-label='Approve Timesheet']")
-	WebElement approveTimeSheetIcon;
-
-	@FindBy(xpath = "//button[contains(@class, 'MuiIconButton-sizeMedium') and @aria-label='Reject Timesheet']")
-	WebElement rejectTimeSheetIcon;
-
-	@FindBy(xpath = "//input[contains(@id, 'checkbox_397')]")
-	WebElement selectCheckBox;
-
-	@FindBy(xpath = "//div[@class='rdp-caption_label']")
-	WebElement monthYear;
-
-	@FindBy(xpath = "//button[@name='previous-month']")
-	WebElement previousmonthArrow;
-
-	@FindBy(xpath = "//button[@name='next-month']")
-	WebElement nextmonthArrow;
-	
-	@FindBy(xpath = "(//button[contains(@class, 'MuiIconButton-sizeMedium') and @aria-label='Detail panel visibility toggle'])[1]")
-	WebElement ExpandArrowIcon;
-	
-	@FindBy(xpath = "//a[contains(@class, '_2esG8N9N5-Q9Ui8vVn5gZt') and @title='Submitted']")
-	WebElement submittedIcon;
-	
-	@FindBy(xpath = "//*[contains(@class,'MuiTableBody-root css-1xnox0e')]//td[2]//div")
-	List<WebElement> listOfEmpIds;
-	
-	@FindBy(xpath = "//*[@rows='4']")
-	WebElement RemarksText;
-	
 	@FindBy(xpath = "//*[text()='Confirm']")
-	WebElement ConformButton;
-	
-//------------------------------------------------------------------------------------	
-	public void TimeSheetSubmitted() {
+	WebElement confirm;
+
+	@FindBy(xpath = "//a[contains(@class, '_2esG8N9N5-Q9Ui8vVn5gZt') and @title='Rejected']")
+	WebElement RejectedIcon;
+
+	@FindBy(xpath = "(//*[@title='188']/ancestor::td//preceding-sibling::td)[1]")
+	WebElement ExpandArrowIcon;
+
+	@FindBy(xpath = "(//input[@type='checkbox'])[2]")
+	WebElement checkbox;
+
+	@FindBy(xpath = "//button[text()='Approve']")
+	WebElement approvebtn;
+
+	@FindBy(xpath = "(//*[text()='Reject'])[1]")
+	WebElement RejectButton;
+
+	@FindBy(xpath = "//*[@class='_17CUqmCextOqfytuhqZlM']")
+	WebElement RemarksTextArea;
+
+	@FindBy(xpath = "//*[text()='Confirm']")
+	WebElement confirmButton;
+
+	public void timesheetmanagement() {
+		submitted.click();
+		Logs.info("Clicked on Timesheet Management page");
+	}
+
+	public void selfTogggle() {
+		showselftoggle.click();
+		Logs.info("Clicked on self toggle icon");
+	}
+
+	public void checkbox(String WeekStartDate) {
+		driver.findElement(By.xpath("//*[text()='" + WeekStartDate
+				+ "']//ancestor::td//preceding-sibling::td[6]/span/input[@id='checkbox_411']")).click();
+		Logs.info("selected the Record to self Reject the Timesheet");
+	}
+
+	public void rejected(String Remarks) {
+		rejected.click();
+		Logs.info("clicked on Reject Icon");
+		CommonUtils.sendKeysToElement(remarks, Remarks);
+		Logs.info("Entered Remarks");
+		CommonUtils.explicitlyWaitForElementandClick(confirm, 3);
+		Logs.info("Rejected Successfully");
+	}
+
+	public void rejectTimesheet(String empid) {
+		WebElement element = driver.findElement(By.xpath(
+				"//*[@title='" + empid + "']/following::td[8]/div[1]/button[2][@aria-label='Reject Timesheet']"));
+		Logs.info("selected the Record to Reject the Timesheet");
+		CommonUtils.explicitlyWaitForElementandClick(element, 10);
+		CommonUtils.waitFor(2);
+		CommonUtils.sendKeysToElement(remarks, "Test");
+		Logs.info("Entered Remarks");
+		CommonUtils.waitFor(2);
+		CommonUtils.explicitlyWaitForElementandClick(confirm, 10);
+		CommonUtils.waitFor(2);
+		Logs.info("Rejected Successfully");
+	}
+
+	public void empRejectedTimesheetandVerify() {
+		CommonUtils.waitFor(2);
+		CommonUtils.explicitlyWaitForElementandClick(RejectedIcon, 10);
+		Logs.info("Clicked on Rejected Page");
 		CommonUtils.waitFor(3);
-		CommonUtils.explicitlyWaitForElementandClick(submittedIcon, 10);
+		CommonUtils.explicitlyWaitForElementandClick(showselftoggle, 10);
+		Logs.info("Clicked on show Self Toggle");
+		CommonUtils.waitFor(2);//
+		CommonUtils.explicitlyWaitForElementandClick(ExpandArrowIcon, 10);
+		CommonUtils.waitFor(2);
+		Logs.info("verified and Expanded the arrow");
 	}
-	
-	public void selectStartDateandMonthforSubmitted(String Startmonth, String Startdate) {
-		CommonUtils.waitFor(3); 
-		String monthNm = Startmonth.split(" ")[0].trim();
-		System.out.println("Req value :" + monthNm);
+
+	public void bulkReject() {
+		CommonUtils.explicitlyWaitForElementandClick(checkbox, 10);
 		CommonUtils.waitFor(2);
-		CommonUtils.clickMonthTab(monthNm, nextmonthArrow, previousmonthArrow, monthYear);
-		CommonUtils.waitFor(2);
-		WebElement reqDate = driver.findElement(By.xpath("//*[text()='" + Startdate + "']"));
-		reqDate.click();
+		Logs.info("Clicked on CheckBox in Header for Bulk Reject");
 	}
- 
-	public void selectEndDateandMonthforSubmitted(String EndMonth, String EndDate) {
-		CommonUtils.waitFor(3); 
-		String monthNm = EndMonth.split(" ")[0].trim();
-		System.out.println("Req value :" + monthNm);
-		CommonUtils.waitFor(2);
-		CommonUtils.clickMonthTab(monthNm, nextmonthArrow, previousmonthArrow, monthYear);
-		CommonUtils.waitFor(2);
-		WebElement reqDate = driver.findElement(By.xpath("//*[text()='" + EndDate + "']"));
-		reqDate.click();
-		CommonUtils.waitFor(3); 
+
+	public void rejectTimesheetByGivingRemarks(String Remarks) {
+		CommonUtils.explicitlyWaitForElementandClick(RejectButton, 2);
+		Logs.info("clicked on RejectedIcon To Reject the Timesheet");
+		CommonUtils.sendKeysToElement(RemarksTextArea, Remarks);
+		Logs.info("Entered Remarks");
+		CommonUtils.explicitlyWaitForElementandClick(confirmButton, 2);
+		Logs.info("Rejected Successfully");
 	}
-	
-	public void rejectTimesheet(String empid, String remarks) {		
-		this.empid = empid;
-		WebElement rejectEmpId = driver.findElement(By
-				.xpath("//*[@title='" + empid + "']/following::td[8]/div[1]/button[@aria-label='Reject Timesheet']"));
-		CommonUtils.explicitlyWaitForElementandClick(rejectEmpId, 10);
-		CommonUtils.waitFor(2);
-		CommonUtils.sendKeysToElement(RemarksText, remarks);
-		CommonUtils.waitFor(2);
-		CommonUtils.explicitlyWaitForElementandClick(ConformButton, 10);
-		CommonUtils.waitFor(2);
-	}
-	
-	
-//---------------------------------------------------------------------------------	
-	public void clickonrejectedIcon() {
-		CommonUtils.waitFor(3);
-		CommonUtils.explicitlyWaitForElementandClick(rejectedIcon, 10);
-	}
-	
-	public void startCalendar() {
-		CommonUtils.waitFor(3);
-		CommonUtils.explicitlyWaitForElementandClick(startDateSelectDrop, 10);
-	}
-	
-	public void endCalendar() {
-		CommonUtils.waitFor(3);
-		CommonUtils.explicitlyWaitForElementandClick(endDateSelectDrop, 10);
-	}
-	
-	public void selectStartDateandMonth(String Startmonth, String Startdate) {
-		CommonUtils.waitFor(3); 
-		String monthNm = Startmonth.split(" ")[0].trim();
-		System.out.println("Req value :" + monthNm);
-		CommonUtils.waitFor(2);
-		CommonUtils.clickMonthTab(monthNm, nextmonthArrow, previousmonthArrow, monthYear);
-		CommonUtils.waitFor(2);
-		WebElement reqDate = driver.findElement(By.xpath("//*[text()='" + Startdate + "']"));
-		reqDate.click();
-	}
- 
-	public void selectEndDateandMonth(String EndMonth, String EndDate) {
-		CommonUtils.waitFor(3); 
-		String monthNm = EndMonth.split(" ")[0].trim();
-		System.out.println("Req value :" + monthNm);
-		CommonUtils.waitFor(2);
-		CommonUtils.clickMonthTab(monthNm, nextmonthArrow, previousmonthArrow, monthYear);
-		CommonUtils.waitFor(2);
-		WebElement reqDate = driver.findElement(By.xpath("//*[text()='" + EndDate + "']"));
-		reqDate.click();
-	}
-	
-	public void verifyRejectedEmployees() {
-		for(WebElement List : listOfEmpIds ) {
-			
-			String ListRetreived = List.getText();
-			//System.out.println("required employee id : " + ListRetreived);
-			System.out.println(empid);
-			if(ListRetreived.equals(empid)) {
-			System.out.println("Verify Rejected Employee id: "+ ListRetreived);
-			break;
-			}
-			else {
-				
-				System.out.println("Employee ID not matched");
-			}
-		}
-	}
+
 }

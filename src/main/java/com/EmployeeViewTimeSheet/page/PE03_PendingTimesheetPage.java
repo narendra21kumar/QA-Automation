@@ -8,6 +8,7 @@ import org.openqa.selenium.support.PageFactory;
 import org.testng.Assert;
 
 import com.TimeSheet.utils.CommonUtils;
+import com.TimeSheet.utils.Logs;
 
 public class PE03_PendingTimesheetPage {
 	WebDriver driver;
@@ -25,12 +26,14 @@ public class PE03_PendingTimesheetPage {
 
 	public void pendingApprovalIconClick() throws InterruptedException {
 		pendingApprovalIcon.click();
+		Logs.info("clicked on pending icon");
 	}
-	public void ExpandArrowtoVerify(String pending) throws InterruptedException {
+	public void expandArrowtoVerify(String pending) throws InterruptedException {
 		CommonUtils.explicitlyWaitForElementandClick(arrowIcontoExpandRecord, 10);
 		Thread.sleep(2000);
 		String PendingText = driver.findElement(By.xpath("//*[@title='Pending']")).getText();
 		Assert.assertEquals(PendingText,pending);
+		Logs.info("SuccessFully done validation of pending Timesheet");
 		Thread.sleep(2000);
 	}
 

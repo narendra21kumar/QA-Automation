@@ -5,6 +5,7 @@ import org.openqa.selenium.WebDriver;
 import com.AdminViewTimeSheet.page.PA01_LoginPage;
 import com.AdminViewTimeSheet.page.PA04_CreateTimeSheetPage;
 import com.TimeSheet.utils.CommonUtils;
+import com.TimeSheet.utils.Logs;
 import com.TimeSheet.utils.WebDriverManager;
 
 import io.cucumber.java.en.And;
@@ -19,39 +20,42 @@ public class TC02_CreateTimesheetSteps {
 	
 	@Given("Access Timesheet as Admin for Current Week")
 	public void user_login_to_managerview() {
+		Logs.initLogs(TC02_CreateTimesheetSteps.class.getName());
+		Logs.startTestCase(this.getClass().getSimpleName());
 		driver = WebDriverManager.getDriver();
 		loginPage = new PA01_LoginPage(driver);
 		createTimesheet = new PA04_CreateTimeSheetPage(driver);
 		loginPage.doLogIn();
 		loginPage.verifyAccessAccordingToLogin();
-		loginPage.checkTitle("Automation");
+		CommonUtils.printNameOfPages(driver);
 	}
 	
 
 	@When("Click on Create TimeSheetPage of Admin View")
 	public void CreateTimesheetIcon() throws Exception {
-		createTimesheet.CreateTimesheetIcon();
+		createTimesheet.createTimesheetIcon();
 		CommonUtils.waitFor(3);
 	}
 	
 	@And("Select the current week date of Admin View")
 	public void select_the_current_week_date_of_admin_view() throws InterruptedException {
 		createTimesheet.selectcalendar();
-		createTimesheet.selectAnyWeek(0);
+		CommonUtils.selectAnyWeek(driver, 0);
+		//createTimesheet.selectAnyWeek(0);
 	}
 	
 	@And("Select the Previous Week Date In Admin View")
 	public void SeletionOfPreviousDate() throws InterruptedException {
 		createTimesheet.selectcalendar();
 		//createTimesheet.selectPastWeekDate();
-		createTimesheet.selectAnyWeek(-1);
+		CommonUtils.selectAnyWeek(driver, -1);
 	}
 
 	@And("Select the Future Week Date In Admin View")
 	public void SeletionOfFutureDate() throws InterruptedException {
 		createTimesheet.selectcalendar();
 		//createTimesheet.selectfutureWeekDate();
-		createTimesheet.selectAnyWeek(1);
+		CommonUtils.selectAnyWeek(driver, 1);
 	}
 	
 
@@ -67,7 +71,7 @@ public class TC02_CreateTimesheetSteps {
 
 	@Then("Validate the Message TimeSheet Already Submitted Is Displayed in Admin View")
 	public void ValidateTimesheetResponse() throws Exception {
-		createTimesheet.ValidateTimesheetResponse();
+		createTimesheet.validateTimesheetResponse();
 		CommonUtils.waitFor(3);
 	}
 

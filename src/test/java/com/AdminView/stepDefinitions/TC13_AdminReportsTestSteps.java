@@ -8,6 +8,7 @@ import com.AdminViewTimeSheet.page.PA01_LoginPage;
 import com.AdminViewTimeSheet.page.PA04_CreateTimeSheetPage;
 import com.AdminViewTimeSheet.page.PA09_AdminReportsPage;
 import com.TimeSheet.utils.CommonUtils;
+import com.TimeSheet.utils.Logs;
 import com.TimeSheet.utils.WebDriverManager;
 
 import io.cucumber.java.en.And;
@@ -24,11 +25,15 @@ public class TC13_AdminReportsTestSteps {
 	
 	@Given("Login as Admin for Reports")
 	public void user_login_to_adminview() {
+		Logs.initLogs(TC13_AdminReportsTestSteps.class.getName());
+		Logs.startTestCase(this.getClass().getSimpleName());
 		driver = WebDriverManager.getDriver();
 		loginPage = new PA01_LoginPage(driver);
 		adminReportsPage = new PA09_AdminReportsPage(driver);
 		createTimesheetPage = new PA04_CreateTimeSheetPage(driver);
 		loginPage.doLogIn();
+		loginPage.verifyAccessAccordingToLogin();
+		CommonUtils.printNameOfPages(driver);
 	}
 	
 	@When("^Click on Reports Icon$")
@@ -38,7 +43,7 @@ public class TC13_AdminReportsTestSteps {
 
 	@And("^Select values from Timesheet Submission Report Dropdown \"(.*)\"$")
 	public void select_the_values_in_timesheet_submission_report_dropdown(String nameOfValue)  {
-		adminReportsPage.selecttimeSheetSubmittReportDropDown(nameOfValue);
+		adminReportsPage.selectTimeSheetSubmittReportDropDown(nameOfValue);
 		CommonUtils.waitFor(3);
 	}
 

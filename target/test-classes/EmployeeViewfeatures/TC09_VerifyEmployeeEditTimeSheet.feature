@@ -13,7 +13,7 @@ Feature: Login as Employee Role to verify the Edit Functionality
     
   Examples:
       |       Successfully Submitted Message | SheetName                  |
-      |   Timesheet already submitted!       |  EmployeeCreateTimeSheet   |
+      |   Timesheet already submitted!       |  EmployeeView_Edit_Hours   |
    	
    	
    	

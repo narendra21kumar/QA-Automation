@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Test</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>1/0/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>19/2/0</td>
 </tr><tr>
-<td>Started on:</td><td>Mon May 27 08:52:25 IST 2024</td>
+<td>Started on:</td><td>Mon Jul 22 11:25:18 IST 2024</td>
 </tr>
-<tr><td>Total time:</td><td>40 seconds (40723 ms)</td>
+<tr><td>Total time:</td><td>1208 seconds (1208858 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -67,6 +67,148 @@ function toggleAllBoxes() {
 </tr>
 </table><p/>
 <small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='com.TimeSheet.TestRunner.TestngRunner.runScenario()'><b>runScenario</b><br>Test class: com.TimeSheet.TestRunner.TestngRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Edit Employee Rejected Timesheet for Previous Week", "Edit Employee Rejected Timesheet record"</td>
+<td><div><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//input[contains(@name,&apos;loginfmt&apos;)]&quot;}
+  (Session info: chrome=126.0.6478.128)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: &apos;4.18.1&apos;, revision: &apos;b1d3319b48&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.10&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [7969b60be802a12c6980df99e0cdbe44, findElement {value=//input[contains(@name,&apos;loginfmt&apos;)], using=xpath}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 126.0.6478.128, chrome: {chromedriverVersion: 126.0.6478.182 (5b5d8292ddf..., userDataDir: C:\Users\NAVEEN~1.KUM\AppDa...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:51927}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:51927/devtoo..., se:cdpVersion: 126.0.6478.128, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 7969b60be802a12c6980df99e0cdbe44
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:519)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:356)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:350)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at jdk.proxy2/jdk.proxy2.$Proxy29.clear(Unknown Source)
+	at com.TimeSheet.utils.CommonUtils.sendKeysToElement(CommonUtils.java:38)
+	at com.AdminViewTimeSheet.page.PA01_LoginPage.getUsername(PA01_LoginPage.java:50)
+	at com.AdminViewTimeSheet.page.PA01_LoginPage.doLogIn(PA01_LoginPage.java:92)
+	at com.AdminView.stepDefinitions.TC08_EditTimeSheet.user_login_to_admin_timesheet_for_edit_functioanlity(TC08_EditTimeSheet.java:27)
+	at ✽.login as Admin Timesheet for edit functioanlity(file:///C:/Users/Naveen.Kumar/Downloads/TimeSheetManagement_New/src/test/resources/AdminFeatureFiles/TC08_AdminEditTimeSheet.feature:4)
+... Removed 5 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1011254112", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1011254112'><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//input[contains(@name,&apos;loginfmt&apos;)]&quot;}
+  (Session info: chrome=126.0.6478.128)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: &apos;4.18.1&apos;, revision: &apos;b1d3319b48&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.10&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [7969b60be802a12c6980df99e0cdbe44, findElement {value=//input[contains(@name,&apos;loginfmt&apos;)], using=xpath}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 126.0.6478.128, chrome: {chromedriverVersion: 126.0.6478.182 (5b5d8292ddf..., userDataDir: C:\Users\NAVEEN~1.KUM\AppDa...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:51927}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:51927/devtoo..., se:cdpVersion: 126.0.6478.128, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 7969b60be802a12c6980df99e0cdbe44
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:519)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:356)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:350)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at jdk.proxy2/jdk.proxy2.$Proxy29.clear(Unknown Source)
+	at com.TimeSheet.utils.CommonUtils.sendKeysToElement(CommonUtils.java:38)
+	at com.AdminViewTimeSheet.page.PA01_LoginPage.getUsername(PA01_LoginPage.java:50)
+	at com.AdminViewTimeSheet.page.PA01_LoginPage.doLogIn(PA01_LoginPage.java:92)
+	at com.AdminView.stepDefinitions.TC08_EditTimeSheet.user_login_to_admin_timesheet_for_edit_functioanlity(TC08_EditTimeSheet.java:27)
+	at ✽.login as Admin Timesheet for edit functioanlity(file:///C:/Users/Naveen.Kumar/Downloads/TimeSheetManagement_New/src/test/resources/AdminFeatureFiles/TC08_AdminEditTimeSheet.feature:4)
+</pre></div></td>
+<td>40</td>
+<td>com.TimeSheet.TestRunner.TestngRunner@383bfa16</td></tr>
+<tr>
+<td title='com.TimeSheet.TestRunner.TestngRunner.runScenario()'><b>runScenario</b><br>Test class: com.TimeSheet.TestRunner.TestngRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Duplicate Task Description in Admin", "Admin View Duplicate Task Description"</td>
+<td><div><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//input[contains(@name,&apos;loginfmt&apos;)]&quot;}
+  (Session info: chrome=126.0.6478.128)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: &apos;4.18.1&apos;, revision: &apos;b1d3319b48&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.10&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [0e1e7a19aa131f9585f9d2386bacdd44, findElement {value=//input[contains(@name,&apos;loginfmt&apos;)], using=xpath}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 126.0.6478.128, chrome: {chromedriverVersion: 126.0.6478.182 (5b5d8292ddf..., userDataDir: C:\Users\NAVEEN~1.KUM\AppDa...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:51963}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:51963/devtoo..., se:cdpVersion: 126.0.6478.128, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 0e1e7a19aa131f9585f9d2386bacdd44
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:519)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:356)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:350)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at jdk.proxy2/jdk.proxy2.$Proxy29.clear(Unknown Source)
+	at com.TimeSheet.utils.CommonUtils.sendKeysToElement(CommonUtils.java:38)
+	at com.AdminViewTimeSheet.page.PA01_LoginPage.getUsername(PA01_LoginPage.java:50)
+	at com.AdminViewTimeSheet.page.PA01_LoginPage.doLogIn(PA01_LoginPage.java:92)
+	at com.AdminView.stepDefinitions.TC10_DuplicateTaskDesc.user_login_to_managerview(TC10_DuplicateTaskDesc.java:26)
+	at ✽.Login as Admin for Duplicate Task Desc functionality(file:///C:/Users/Naveen.Kumar/Downloads/TimeSheetManagement_New/src/test/resources/AdminFeatureFiles/TC09_AdminDuplicateTaskDesc.feature:5)
+... Removed 5 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace884899579", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace884899579'><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//input[contains(@name,&apos;loginfmt&apos;)]&quot;}
+  (Session info: chrome=126.0.6478.128)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: &apos;4.18.1&apos;, revision: &apos;b1d3319b48&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.10&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [0e1e7a19aa131f9585f9d2386bacdd44, findElement {value=//input[contains(@name,&apos;loginfmt&apos;)], using=xpath}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 126.0.6478.128, chrome: {chromedriverVersion: 126.0.6478.182 (5b5d8292ddf..., userDataDir: C:\Users\NAVEEN~1.KUM\AppDa...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:51963}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:51963/devtoo..., se:cdpVersion: 126.0.6478.128, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 0e1e7a19aa131f9585f9d2386bacdd44
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:519)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:356)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:350)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at jdk.proxy2/jdk.proxy2.$Proxy29.clear(Unknown Source)
+	at com.TimeSheet.utils.CommonUtils.sendKeysToElement(CommonUtils.java:38)
+	at com.AdminViewTimeSheet.page.PA01_LoginPage.getUsername(PA01_LoginPage.java:50)
+	at com.AdminViewTimeSheet.page.PA01_LoginPage.doLogIn(PA01_LoginPage.java:92)
+	at com.AdminView.stepDefinitions.TC10_DuplicateTaskDesc.user_login_to_managerview(TC10_DuplicateTaskDesc.java:26)
+	at ✽.Login as Admin for Duplicate Task Desc functionality(file:///C:/Users/Naveen.Kumar/Downloads/TimeSheetManagement_New/src/test/resources/AdminFeatureFiles/TC09_AdminDuplicateTaskDesc.feature:5)
+</pre></div></td>
+<td>40</td>
+<td>com.TimeSheet.TestRunner.TestngRunner@383bfa16</td></tr>
+</table><p>
 <table width='100%' border='1' class='invocation-passed'>
 <tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
 <tr><td><b>Test method</b></td>
@@ -75,10 +217,100 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='com.TimeSheet.TestRunner.TestNGTestRunner.runScenario()'><b>runScenario</b><br>Test class: com.TimeSheet.TestRunner.TestNGTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Access website with Unsafe URL and login with valid credentials", "Login to Website with Unsafe URL and Launch Page Using Microsoft Account"</td>
+<td title='com.TimeSheet.TestRunner.TestngRunner.runScenario()'><b>runScenario</b><br>Test class: com.TimeSheet.TestRunner.TestngRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Navigate to Timesheet URL and Login as Admin", "Login to Timesheet as Admin"</td>
 <td></td>
 <td>36</td>
-<td>com.TimeSheet.TestRunner.TestNGTestRunner@3232a28a</td></tr>
+<td>com.TimeSheet.TestRunner.TestngRunner@383bfa16</td></tr>
+<tr>
+<td title='com.TimeSheet.TestRunner.TestngRunner.runScenario()'><b>runScenario</b><br>Test class: com.TimeSheet.TestRunner.TestngRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Admin should be able to Create Timesheet for Current Week for Admin View", "Admin Should be Able to Create Timesheet for Current Week"</td>
+<td></td>
+<td>121</td>
+<td>com.TimeSheet.TestRunner.TestngRunner@383bfa16</td></tr>
+<tr>
+<td title='com.TimeSheet.TestRunner.TestngRunner.runScenario()'><b>runScenario</b><br>Test class: com.TimeSheet.TestRunner.TestngRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Pending Timesheet as Admin for the Current week", "Admin view PendingTimesheet and Verify"</td>
+<td></td>
+<td>38</td>
+<td>com.TimeSheet.TestRunner.TestngRunner@383bfa16</td></tr>
+<tr>
+<td title='com.TimeSheet.TestRunner.TestngRunner.runScenario()'><b>runScenario</b><br>Test class: com.TimeSheet.TestRunner.TestngRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Admin should self approve Admin Timesheet", "Navigate to Admin View for Self Approve Timesheet Record"</td>
+<td></td>
+<td>45</td>
+<td>com.TimeSheet.TestRunner.TestngRunner@383bfa16</td></tr>
+<tr>
+<td title='com.TimeSheet.TestRunner.TestngRunner.runScenario()'><b>runScenario</b><br>Test class: com.TimeSheet.TestRunner.TestngRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Admin should be able to Create Timesheet for Previous Week", "Admin Should be Able to Create Timesheet for Previous Week"</td>
+<td></td>
+<td>120</td>
+<td>com.TimeSheet.TestRunner.TestngRunner@383bfa16</td></tr>
+<tr>
+<td title='com.TimeSheet.TestRunner.TestngRunner.runScenario()'><b>runScenario</b><br>Test class: com.TimeSheet.TestRunner.TestngRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Reject Admin Self Timesheet record", "Admin Rejects Self Timesheet Record"</td>
+<td></td>
+<td>52</td>
+<td>com.TimeSheet.TestRunner.TestngRunner@383bfa16</td></tr>
+<tr>
+<td title='com.TimeSheet.TestRunner.TestngRunner.runScenario()'><b>runScenario</b><br>Test class: com.TimeSheet.TestRunner.TestngRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Admin Record is in Draft after being self rejected", "Admin Draft Timesheet Functionality"</td>
+<td></td>
+<td>37</td>
+<td>com.TimeSheet.TestRunner.TestngRunner@383bfa16</td></tr>
+<tr>
+<td title='com.TimeSheet.TestRunner.TestngRunner.runScenario()'><b>runScenario</b><br>Test class: com.TimeSheet.TestRunner.TestngRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Exceed Hours Validation in Admin View", "Exceed 24hrs Validation in Admin View"</td>
+<td></td>
+<td>106</td>
+<td>com.TimeSheet.TestRunner.TestngRunner@383bfa16</td></tr>
+<tr>
+<td title='com.TimeSheet.TestRunner.TestngRunner.runScenario()'><b>runScenario</b><br>Test class: com.TimeSheet.TestRunner.TestngRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Admin should be able to Create Timesheet for Current Week for Admin View", "Admin Should be Able to Create Timesheet for Current Week"</td>
+<td></td>
+<td>116</td>
+<td>com.TimeSheet.TestRunner.TestngRunner@383bfa16</td></tr>
+<tr>
+<td title='com.TimeSheet.TestRunner.TestngRunner.runScenario()'><b>runScenario</b><br>Test class: com.TimeSheet.TestRunner.TestngRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Admin should be able to Approve self Timesheet records in bulk", "Approve Admin self Timesheet Record in Bulk"</td>
+<td></td>
+<td>50</td>
+<td>com.TimeSheet.TestRunner.TestngRunner@383bfa16</td></tr>
+<tr>
+<td title='com.TimeSheet.TestRunner.TestngRunner.runScenario()'><b>runScenario</b><br>Test class: com.TimeSheet.TestRunner.TestngRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Reject Admin Self Timesheet records from Approved Page in Timesheet", "Reject Timesheet Records from Approved Page in Admin"</td>
+<td></td>
+<td>51</td>
+<td>com.TimeSheet.TestRunner.TestngRunner@383bfa16</td></tr>
+<tr>
+<td title='com.TimeSheet.TestRunner.TestngRunner.runScenario()'><b>runScenario</b><br>Test class: com.TimeSheet.TestRunner.TestngRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Admin Delete Timesheet record For Previous Week", "Delete Admin Timesheet record For Previous Week"</td>
+<td></td>
+<td>52</td>
+<td>com.TimeSheet.TestRunner.TestngRunner@383bfa16</td></tr>
+<tr>
+<td title='com.TimeSheet.TestRunner.TestngRunner.runScenario()'><b>runScenario</b><br>Test class: com.TimeSheet.TestRunner.TestngRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Admin Delete Timesheet record For Current Week", "Delete Admin Timesheet record For Current Week"</td>
+<td></td>
+<td>54</td>
+<td>com.TimeSheet.TestRunner.TestngRunner@383bfa16</td></tr>
+<tr>
+<td title='com.TimeSheet.TestRunner.TestngRunner.runScenario()'><b>runScenario</b><br>Test class: com.TimeSheet.TestRunner.TestngRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Admin Delete Timesheet record For Future Week", "Delete Admin Timesheet record For Future Week"</td>
+<td></td>
+<td>55</td>
+<td>com.TimeSheet.TestRunner.TestngRunner@383bfa16</td></tr>
+<tr>
+<td title='com.TimeSheet.TestRunner.TestngRunner.runScenario()'><b>runScenario</b><br>Test class: com.TimeSheet.TestRunner.TestngRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Assign/Manager Page In Admin", "Admin Assign/Manager Page"</td>
+<td></td>
+<td>32</td>
+<td>com.TimeSheet.TestRunner.TestngRunner@383bfa16</td></tr>
+<tr>
+<td title='com.TimeSheet.TestRunner.TestngRunner.runScenario()'><b>runScenario</b><br>Test class: com.TimeSheet.TestRunner.TestngRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Reports Page in Admin View", "Admin Reports Page"</td>
+<td></td>
+<td>54</td>
+<td>com.TimeSheet.TestRunner.TestngRunner@383bfa16</td></tr>
+<tr>
+<td title='com.TimeSheet.TestRunner.TestngRunner.runScenario()'><b>runScenario</b><br>Test class: com.TimeSheet.TestRunner.TestngRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Admin Category Dashboard Page", "Category Dashboard Page in Admin View"</td>
+<td></td>
+<td>27</td>
+<td>com.TimeSheet.TestRunner.TestngRunner@383bfa16</td></tr>
+<tr>
+<td title='com.TimeSheet.TestRunner.TestngRunner.runScenario()'><b>runScenario</b><br>Test class: com.TimeSheet.TestRunner.TestngRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Admin Manage Employee Page", "Manage Employee Page in Admin View"</td>
+<td></td>
+<td>30</td>
+<td>com.TimeSheet.TestRunner.TestngRunner@383bfa16</td></tr>
+<tr>
+<td title='com.TimeSheet.TestRunner.TestngRunner.runScenario()'><b>runScenario</b><br>Test class: com.TimeSheet.TestRunner.TestngRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Admin View Manage Delete Employee Page", "Manage Delete Employee Page in Admin View"</td>
+<td></td>
+<td>34</td>
+<td>com.TimeSheet.TestRunner.TestngRunner@383bfa16</td></tr>
 </table><p>
 </body>
 </html>

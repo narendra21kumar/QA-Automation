@@ -9,9 +9,10 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 import com.TimeSheet.utils.CommonUtils;
+import com.TimeSheet.utils.Logs;
 
 public class PA08_ApproveSelfTimesheetPage {
-	static WebDriver driver;
+	WebDriver driver;
 	String empid;
 
 	public PA08_ApproveSelfTimesheetPage(WebDriver driver) {
@@ -84,15 +85,96 @@ public class PA08_ApproveSelfTimesheetPage {
 	public void enableToggle() {
 		CommonUtils.waitFor(3);
 		CommonUtils.clickElement(enableToggle);
-	 	
+		Logs.info("clicked on enable Toggle");
 	}
 	
-	public void TimeSheetSubmitted() {
+	public void timeSheetSubmitted() {
 		CommonUtils.waitFor(3);
 		CommonUtils.explicitlyWaitForElementandClick(submittedIcon, 10);
+		Logs.info("clicked on Timesheet Management page");
 	}
 	
-	public void selectStartDateandMonthforSubmitted(String Startmonth, String Startdate) {
+
+	
+	public void approveTimesheet(String empid) {		
+		this.empid = empid;
+		WebElement ApprovedEmpId = driver.findElement(By
+				.xpath("//*[@title='" + empid + "']/following::td[8]/div[1]/button[@aria-label='Approve Timesheet']"));
+		CommonUtils.explicitlyWaitForElementandClick(ApprovedEmpId, 10);
+		Logs.info("clicked on approve icon to Approve the timesheet");
+	}
+	
+	
+//---------------------------------------------------------------------------------	
+	public void clickonapprovedIcon() {
+		CommonUtils.waitFor(3);
+		CommonUtils.explicitlyWaitForElementandClick(approvedIcon, 10);
+		Logs.info("clicked on Approved Page");
+	}
+	
+	public void startCalendar() {
+		CommonUtils.waitFor(3);
+		CommonUtils.explicitlyWaitForElementandClick(startDateSelectDrop, 10);
+		Logs.info("clicked on Start Calender Icon");
+	}
+	
+	public void endCalendar() {
+		CommonUtils.waitFor(3);
+		CommonUtils.explicitlyWaitForElementandClick(endDateSelectDrop, 10);
+		Logs.info("clicked on End Calender Icon");
+	}
+	
+	public void verifyApprovedEmployees() {
+		for(WebElement List : listOfEmpIds ) {
+			
+			String ListRetreived = List.getText();
+			//System.out.println("required employee id : " + ListRetreived);
+			if(ListRetreived.equals(empid)) {
+			System.out.println("Verify Approved Employee id: "+ ListRetreived);
+			Logs.info("Successfully Verified the Approve Timesheet in approved page");
+			break;
+			}   
+			else {
+				
+				System.out.println("Employee ID not matched");
+				Logs.info("Approved employee id is not Present in approved page");
+			}
+		}
+	}
+	
+	public void verifyApprovedEmployeDate(String Date) {
+		for(WebElement subDateList : subDateOfEmp ) {
+			String listOfSubDate = subDateList.getText();
+			//System.out.println("required employee id : " + ListRetreived);
+			if(listOfSubDate.equals(Date)) {
+			System.out.println("Verify Approved Employee id: "+ listOfSubDate);
+			Logs.info("Successfully Verified the Approve Timesheet in approved page");
+			break;
+			}   
+			else {
+				
+				System.out.println("Employee Submission date is  not matched");
+				Logs.info("Approved employee id is not Present in approved page");
+			}
+		}
+	}
+	
+	public void bulkApprove()
+	{
+		CommonUtils.waitFor(3);
+		CommonUtils.JavaScriptExecutorClick(driver, checkbox);
+		Logs.info("Selected the checkbox for bulkApprove");
+		CommonUtils.waitFor(6);
+		CommonUtils.explicitlyWaitForElementandClick(approvebtn, 2);
+		Logs.info("SuccessFully Bulk approved the timesheets");
+	}
+	
+}
+
+/*
+ 
+ 
+ 	public void selectStartDateandMonthforSubmitted(String Startmonth, String Startdate) {
 		CommonUtils.waitFor(3); 
 		String monthNm = Startmonth.split(" ")[0].trim();
 		System.out.println("Req value :" + monthNm);
@@ -101,6 +183,7 @@ public class PA08_ApproveSelfTimesheetPage {
 		CommonUtils.waitFor(2);
 		WebElement reqDate = driver.findElement(By.xpath("//*[text()='" + Startdate + "']"));
 		reqDate.click();
+		Logs.info("Selected the start Week and month to Approve");
 	}
  
 	public void selectEndDateandMonthforSubmitted(String EndMonth, String EndDate) {
@@ -113,34 +196,9 @@ public class PA08_ApproveSelfTimesheetPage {
 		WebElement reqDate = driver.findElement(By.xpath("//*[text()='" + EndDate + "']"));
 		reqDate.click();
 		CommonUtils.waitFor(3); 
+		Logs.info("Selected the End Week and month to Approve");
 	}
-	
-	public void approveTimesheet(String empid) {		
-		this.empid = empid;
-		WebElement ApprovedEmpId = driver.findElement(By
-				.xpath("//*[@title='" + empid + "']/following::td[8]/div[1]/button[@aria-label='Approve Timesheet']"));
-		CommonUtils.explicitlyWaitForElementandClick(ApprovedEmpId, 10);
-		
-	}
-	
-	
-//---------------------------------------------------------------------------------	
-	public void clickonapprovedIcon() {
-		CommonUtils.waitFor(3);
-		CommonUtils.explicitlyWaitForElementandClick(approvedIcon, 10);
-	}
-	
-	public void startCalendar() {
-		CommonUtils.waitFor(3);
-		CommonUtils.explicitlyWaitForElementandClick(startDateSelectDrop, 10);
-	}
-	
-	public void endCalendar() {
-		CommonUtils.waitFor(3);
-		CommonUtils.explicitlyWaitForElementandClick(endDateSelectDrop, 10);
-	}
-	
-	public void selectStartDateandMonth(String Startmonth, String Startdate) {
+		public void selectStartDateandMonth(String Startmonth, String Startdate) {
 		CommonUtils.waitFor(3); 
 		String monthNm = Startmonth.split(" ")[0].trim();
 		System.out.println("Req value :" + monthNm);
@@ -149,6 +207,7 @@ public class PA08_ApproveSelfTimesheetPage {
 		CommonUtils.waitFor(2);
 		WebElement reqDate = driver.findElement(By.xpath("//*[text()='" + Startdate + "']"));
 		reqDate.click();
+		Logs.info("Selected the start Week and month to Approve");
 	}
  
 	public void selectEndDateandMonth(String EndMonth, String EndDate) {
@@ -160,45 +219,7 @@ public class PA08_ApproveSelfTimesheetPage {
 		CommonUtils.waitFor(2);
 		WebElement reqDate = driver.findElement(By.xpath("//*[text()='" + EndDate + "']"));
 		reqDate.click();
+		Logs.info("Selected the End Week and month to approve");
 	}
 	
-	public void verifyApprovedEmployees() {
-		for(WebElement List : listOfEmpIds ) {
-			
-			String ListRetreived = List.getText();
-			//System.out.println("required employee id : " + ListRetreived);
-			if(ListRetreived.equals(empid)) {
-			System.out.println("Verify Approved Employee id: "+ ListRetreived);
-			break;
-			}   
-			else {
-				
-				System.out.println("Employee ID not matched");
-			}
-		}
-	}
-	
-	public void verifyApprovedEmployeDate(String Date) {
-		for(WebElement subDateList : subDateOfEmp ) {
-			String listOfSubDate = subDateList.getText();
-			//System.out.println("required employee id : " + ListRetreived);
-			if(listOfSubDate.equals(Date)) {
-			System.out.println("Verify Approved Employee id: "+ listOfSubDate);
-			break;
-			}   
-			else {
-				
-				System.out.println("Employee Submission date is  not matched");
-			}
-		}
-	}
-	
-	public void bulkapprove()
-	{
-		CommonUtils.waitFor(3);
-		CommonUtils.JavaScriptExecutorClick(driver, checkbox);
-		CommonUtils.waitFor(6);
-		CommonUtils.explicitlyWaitForElementandClick(approvebtn, 2);
-	}
-	
-}
+ */

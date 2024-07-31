@@ -4,6 +4,7 @@ import org.openqa.selenium.WebDriver;
 
 import com.EmployeeViewTimeSheet.page.PE09_DeleteFutureWeekTimesheetPage;
 import com.EmployeeViewTimeSheet.page.PE01_LoginPage;
+import com.TimeSheet.utils.Logs;
 import com.TimeSheet.utils.WebDriverManager;
 
 import io.cucumber.java.en.*;
@@ -15,6 +16,8 @@ public class TE12_DeleteFutureWeekTimeSheet {
 
 	@Given("Log in As a Employee Role")
 	public void user_login_timesheet_page() throws InterruptedException {
+		Logs.initLogs(TE12_DeleteFutureWeekTimeSheet.class.getName());
+		Logs.startTestCase(this.getClass().getSimpleName());
 		driver = WebDriverManager.getDriver();
 		loginPage = new PE01_LoginPage(driver);
 		DeleteTimeSheetPage = new PE09_DeleteFutureWeekTimesheetPage(driver);
@@ -41,7 +44,7 @@ public class TE12_DeleteFutureWeekTimeSheet {
 	}
 	@And("Click On Edit Icon And Add A Row Icon")
 	public void clickOnEditIcon() throws Exception {
-		DeleteTimeSheetPage.EditIcon();
+		DeleteTimeSheetPage.editIcon();
 		//DeleteTimeSheetPage.addARow();
 	}
 	
@@ -52,7 +55,8 @@ public class TE12_DeleteFutureWeekTimeSheet {
 
 	@Then("Validation of Deletion of TimeSheet Response As {string}")
 	public void Validating(String draftText) throws Exception {
-		DeleteTimeSheetPage.ValidateTimesheetResponse(draftText);
+		DeleteTimeSheetPage.validateTimesheetResponse(draftText);
+		Logs.endTestCase(this.getClass().getSimpleName());
 	}
 	
 

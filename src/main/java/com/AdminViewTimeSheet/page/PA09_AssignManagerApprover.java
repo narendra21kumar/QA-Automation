@@ -10,6 +10,7 @@ import org.openqa.selenium.support.PageFactory;
 import org.testng.Assert;
 
 import com.TimeSheet.utils.CommonUtils;
+import com.TimeSheet.utils.Logs;
 
 public class PA09_AssignManagerApprover {
 	WebDriver driver;
@@ -44,6 +45,7 @@ public class PA09_AssignManagerApprover {
 	public void clickAssignManagerIcon() {
 		CommonUtils.explicitlyWaitForElementandClick(assignMangerIcon, 5);
 		System.out.println("The Name of the Page is :" +AssignManagerPage);
+		Logs.info("Clicked on Assign Manager icon");
 	}
 
 	// One Common Method for Selecting Drop down
@@ -54,17 +56,20 @@ public class PA09_AssignManagerApprover {
 				break;
 			}
 		}
+		Logs.info("selected the values form dropdown");
 	}
 
 	public void selectClient(String nameOfClient) {
 		CommonUtils.explicitlyWaitForElementandClick(selectClient, 10);
 		selectValuesFromDrop(nameOfClient);
+		Logs.info("Selected the client name");
 	}
 
 	public void selectTeam(String nameOfTeam) throws InterruptedException {
 		CommonUtils.explicitlyWaitForElementandClick(selectTeam, 5);
 		Thread.sleep(3000);
 		selectValuesFromDrop(nameOfTeam);
+		Logs.info("Selected the Team name");
 	}
 
 	public void selectValuesFromManager() throws InterruptedException {
@@ -81,6 +86,7 @@ public class PA09_AssignManagerApprover {
 
 			}
 		}
+		Logs.info("Selected the Manager name");
 	}
 
 
@@ -88,65 +94,16 @@ public class PA09_AssignManagerApprover {
    public void  saveRecord() {
 	   CommonUtils.waitFor(3);
 	   CommonUtils.explicitlyWaitForElementandClick(saveButton, 5);
+	   Logs.info("clicked on save icon");
    }
 
    public void printAssignManagerTitle() {
 		String ActualText = AssignManagerPage.getText();
 		String ExpectedText = "Assign Manager/Approver";
+		Logs.info("Verified Assign Manager Successfully");
        Assert.assertTrue(ActualText.contains(ExpectedText));
 		System.out.println("Name of the Page is "+ ActualText );
 		
 	}
    
 }
-//	
-//	public static List<String> getDropdownValues() {
-//        List<String> values = new ArrayList<>();
-//        try (FileInputStream fis = new FileInputStream("TestData/TestData.xlsx");
-//             Workbook workbook = new XSSFWorkbook(fis)) {
-//
-//            Sheet sheet = workbook.getSheet("AssignManager"); // Replace with actual sheet name
-//            for (int rowIndex = 1; rowIndex <= sheet.getLastRowNum(); rowIndex++) {
-//                Row row = sheet.getRow(rowIndex);
-//                Cell searchStringCell = row.getCell(0); // Column A (SearchString)
-//                if (searchStringCell != null) {
-//                    String searchString = searchStringCell.getStringCellValue();
-//                    values.add(searchString);
-//                }
-//            }
-//        } catch (IOException e) {
-//            e.printStackTrace();
-//        }
-//        return values;
-//    }
-//	
-//	public void selectValuesFromManager() throws InterruptedException {
-//	    for (int a = 1; a <= 5; a++) {
-//	        for (int b = 3; b <= 5; b++) {
-//	            WebElement taskdesc = driver.findElement(
-//	                    By.xpath("//*[@class='MuiTableBody-root css-1xnox0e']//tr[" + a + "]/td[" + b + "]"));
-//	            taskdesc.click();
-//
-//	            // Read dropdown values from Excel (using your utility class)
-//	            List<String> dropdownValues = getDropdownValues(); 
-//
-//	            // Select the options sequentially
-//	            for (String value : dropdownValues) {
-//	                System.out.println("Selecting value: " + value);
-//	                // Locate the option and click it
-//	                // Optionally, wait for dropdown animation
-//	            }
-//	        }
-//	    }
-//	}
-//	
-//	
-//}
-//	
-//	
-
-//Random random = new Random();
-//int index = random.nextInt(dropValues.size());
-//System.out.println("Count of Values in dropdown" + index);
-//Thread.sleep(2000);
-//dropValues.get(index).click();

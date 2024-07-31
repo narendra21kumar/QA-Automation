@@ -8,6 +8,7 @@ import org.openqa.selenium.support.PageFactory;
 import org.testng.Assert;
 
 import com.TimeSheet.utils.CommonUtils;
+import com.TimeSheet.utils.Logs;
 
 public class PA03_PendingTimeSheetPage {
 	WebDriver driver;
@@ -23,6 +24,7 @@ public class PA03_PendingTimeSheetPage {
 	
 	public void clickOnPendingTimesheetIcon() {
 		CommonUtils.explicitlyWaitForElementandClick(pendingApprovalIcon, 10);
+		Logs.info("clicked on Pending Page");
 		CommonUtils.waitFor(3);
 	}
 //	public void ExpandArrowtoVerify(String WeekStartDate) {
@@ -35,9 +37,10 @@ public class PA03_PendingTimeSheetPage {
 //		CommonUtils.waitFor(3);
 //	}
 	
-	public void ExpandArrowtoVerify() throws InterruptedException {
+	public void expandArrowtoVerify() throws InterruptedException {
 		CommonUtils.explicitlyWaitForElementandClick(arrowIcontoExpandRecord, 10);
 		String PendingText = driver.findElement(By.xpath("//*[@title='Pending']")).getText();
 		Assert.assertEquals(PendingText, "Pending");
+		Logs.info("validation of Pending status");
 	}
 }

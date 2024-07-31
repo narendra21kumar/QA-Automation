@@ -5,6 +5,8 @@ import org.openqa.selenium.WebDriver;
 import com.AdminViewTimeSheet.page.PA01_LoginPage;
 import com.AdminViewTimeSheet.page.PA04_CreateTimeSheetPage;
 import com.AdminViewTimeSheet.page.PA09_AssignManagerApprover;
+import com.TimeSheet.utils.CommonUtils;
+import com.TimeSheet.utils.Logs;
 import com.TimeSheet.utils.WebDriverManager;
 
 import io.cucumber.java.en.And;
@@ -20,10 +22,14 @@ public class TC14_AdminAssignManagerSteps {
 	
 	@Given("Login to Timesheet for Assign Manager")
 	public void user_login_to_adminview() {
+		Logs.initLogs(TC14_AdminAssignManagerSteps.class.getName());
+		Logs.startTestCase(this.getClass().getSimpleName());
 		driver = WebDriverManager.getDriver();
 		loginPage = new PA01_LoginPage(driver);
 		assignMangerPage = new PA09_AssignManagerApprover(driver);
 		loginPage.doLogIn();
+		loginPage.verifyAccessAccordingToLogin();
+		CommonUtils.printNameOfPages(driver);
 	}
 	
 	@When("Click on Assign Manager Icon")

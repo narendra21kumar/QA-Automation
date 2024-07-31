@@ -4,6 +4,8 @@ import org.openqa.selenium.WebDriver;
 
 import com.AdminViewTimeSheet.page.PA01_LoginPage;
 import com.AdminViewTimeSheet.page.PA04_CreateTimeSheetPage;
+import com.TimeSheet.utils.CommonUtils;
+import com.TimeSheet.utils.Logs;
 import com.TimeSheet.utils.WebDriverManager;
 
 import io.cucumber.java.en.And;
@@ -18,22 +20,24 @@ public class TC09_AdminDraftTimesheet {
 
 	@Given("Login as Admin for Draft Functionality")
 	public void user_login_timesheet_page() {
+		Logs.initLogs(TC09_AdminDraftTimesheet.class.getName());
+		Logs.startTestCase(this.getClass().getSimpleName());
 		driver = WebDriverManager.getDriver();
 		loginPage = new PA01_LoginPage(driver);
 		CreateTimeSheetPage = new PA04_CreateTimeSheetPage(driver);
 		loginPage.doLogIn();
 		loginPage.verifyAccessAccordingToLogin();
-		loginPage.checkTitle("Automation");
+		CommonUtils.printNameOfPages(driver);
 	}
 	
 	@When("Click on Create timesheet icon for draft functionality")
 	public void click_on_create_timesheet_icon_for_draft_functionality() throws Exception {
-		CreateTimeSheetPage.CreateTimesheetIcon();
+		CreateTimeSheetPage.createTimesheetIcon();
 	}
 	@And("Select the Past week date for Admin draft functionality")
 	public void select_the_past_week_date_of_Admin_view_to_verify_draft_functionality() throws InterruptedException {
 		CreateTimeSheetPage.selectcalendar();
-		CreateTimeSheetPage.selectAnyWeek(-1);
+		CommonUtils.selectAnyWeek(driver, -1);
 		//CreateTimeSheetPage.selectPastWeekDate();
 	}
 

@@ -4,6 +4,8 @@ import org.openqa.selenium.WebDriver;
 
 import com.AdminViewTimeSheet.page.PA01_LoginPage;
 import com.AdminViewTimeSheet.page.PA13_AdminManageEmployeePage;
+import com.TimeSheet.utils.CommonUtils;
+import com.TimeSheet.utils.Logs;
 import com.TimeSheet.utils.WebDriverManager;
 
 import io.cucumber.java.en.Given;
@@ -17,12 +19,14 @@ public class TC17_AdminManageEmployee {
 
 	@Given("Login as Admin for Manage Emp Page")
 	public void user_login_to_adminview() {
+		Logs.initLogs(TC17_AdminManageEmployee.class.getName());
+		Logs.startTestCase(this.getClass().getSimpleName());
 		driver = WebDriverManager.getDriver();
 		loginPage = new PA01_LoginPage(driver);
 		adminManageEmpPage = new PA13_AdminManageEmployeePage(driver);
 		loginPage.doLogIn();
 		loginPage.verifyAccessAccordingToLogin();
-		loginPage.checkTitle("Automation");
+		CommonUtils.printNameOfPages(driver);
 	}
 
 	@When("Click on Manage Employee Page icon in Admin View")

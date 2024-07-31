@@ -10,7 +10,7 @@ Feature:Login as Employee Role and Create Timesheet for Future Week
  
     
   Examples:
-      |       Successfully Submitted Message | SheetName            |
-      |   Timesheet already submitted!       |  DuplicateTaskDisc   |
+      |       Successfully Submitted Message | SheetName                         |
+      |   Timesheet already submitted!       |  EmployeeView_DuplicateTaskDisc   |
 
 

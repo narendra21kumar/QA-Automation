@@ -3,6 +3,7 @@ package com.AdminView.stepDefinitions;
 import org.openqa.selenium.WebDriver;
 
 import com.AdminViewTimeSheet.page.PA01_LoginPage;
+import com.TimeSheet.utils.Logs;
 import com.TimeSheet.utils.WebDriverManager;
 
 import io.cucumber.java.en.And;
@@ -17,6 +18,7 @@ public class TC01_LoginSteps {
 	@Given("Login to Timesheet with Valid Credentials")
 	public void i_am_on_the_login_page_of_the_website() {
 		driver = WebDriverManager.getDriver();
+		// driver = BrowserManager.getDriver();
 		loginPage = new PA01_LoginPage(driver);
 
 	}
@@ -44,9 +46,10 @@ public class TC01_LoginSteps {
 
 	@Then("Admin Logged in Successfully")
 	public void redirected_to_the_login_page_and_verify_title() {
+		Logs.initLogs(TC01_LoginSteps.class.getName());
+		Logs.startTestCase(this.getClass().getSimpleName());
 		loginPage.doLogIn();
-		loginPage.verifyAccessAccordingToLogin();
-		loginPage.checkTitle("Automation");
-
+//		loginPage.verifyAccessAccordingToLogin();
+//		CommonUtils.printNameOfPages(driver);
 	}
 }

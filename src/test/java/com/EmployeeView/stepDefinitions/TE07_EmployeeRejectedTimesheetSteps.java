@@ -4,6 +4,7 @@ import org.openqa.selenium.WebDriver;
 
 import com.EmployeeViewTimeSheet.page.PE01_LoginPage;
 import com.EmployeeViewTimeSheet.page.PE05_RejectedTimesheetPage;
+import com.TimeSheet.utils.Logs;
 import com.TimeSheet.utils.WebDriverManager;
 
 import io.cucumber.java.en.Given;
@@ -17,6 +18,8 @@ public class TE07_EmployeeRejectedTimesheetSteps {
 
 	@Given("User login timesheet page with Username and Passwords")
 	public void user_login_timesheet_page_with_username_and_password() throws InterruptedException {
+		Logs.initLogs(TE07_EmployeeRejectedTimesheetSteps.class.getName());
+		Logs.startTestCase(this.getClass().getSimpleName());
 		driver = WebDriverManager.getDriver();
 		loginPage = new PE01_LoginPage(driver);
 		ApprovedTimesheet = new PE05_RejectedTimesheetPage(driver);
@@ -26,12 +29,13 @@ public class TE07_EmployeeRejectedTimesheetSteps {
 	}
 	@When("Click on  Rejected TimesheetIcon")
 	public void click_on_rejected_timesheet_icon() {
-		ApprovedTimesheet.ClickOnRejectIcon();
+		ApprovedTimesheet.clickOnRejectIcon();
 	}
 
 	@Then("Validate the outcomes for Rejection")
 	public void i_validate_the_outcomes_for_rejection() {
-		ApprovedTimesheet.ExpandArrowForVerify();
+		ApprovedTimesheet.expandArrowForVerify();
+		Logs.endTestCase(this.getClass().getSimpleName());
 	}
 
 

@@ -4,6 +4,7 @@ import org.openqa.selenium.WebDriver;
 
 import com.EmployeeViewTimeSheet.page.PE01_LoginPage;
 import com.EmployeeViewTimeSheet.page.PE02_CreateTimeSheetPage;
+import com.TimeSheet.utils.Logs;
 import com.TimeSheet.utils.WebDriverManager;
 
 import io.cucumber.java.en.Given;
@@ -18,6 +19,8 @@ public class TE10_AlreadySubmittedTimesheetSteps {
 	
 	@Given("Log in as Employee Role")
 	public void user_login_timesheet_page() throws InterruptedException {
+		Logs.initLogs(TE10_AlreadySubmittedTimesheetSteps.class.getName());
+		Logs.startTestCase(this.getClass().getSimpleName());
 		driver = WebDriverManager.getDriver();
 		loginPage = new PE01_LoginPage(driver);
 		CreateTimeSheetPage = new PE02_CreateTimeSheetPage(driver);
@@ -34,7 +37,8 @@ public class TE10_AlreadySubmittedTimesheetSteps {
 
 	@Then("Validate the timesheet Response As {string}")
 	public void i_validate_the_outcomes(String AlreadySubmittedText) throws Exception {
-		CreateTimeSheetPage.ValidateTimesheetResponse(AlreadySubmittedText);
+		CreateTimeSheetPage.validateTimesheetResponse(AlreadySubmittedText);
+		Logs.endTestCase(this.getClass().getSimpleName());
 	}
 
 }

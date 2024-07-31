@@ -4,6 +4,7 @@ import org.openqa.selenium.WebDriver;
 
 import com.EmployeeViewTimeSheet.page.PE01_LoginPage;
 import com.EmployeeViewTimeSheet.page.PE02_CreateTimeSheetPage;
+import com.TimeSheet.utils.Logs;
 import com.TimeSheet.utils.WebDriverManager;
 
 import io.cucumber.java.en.*;
@@ -15,6 +16,8 @@ public class TE09_EmployeeDraftTimesheetSteps {
 
 	@Given("Log In as the Employee Role")
 	public void user_login_timesheet_page() throws InterruptedException {
+		Logs.initLogs(TE09_EmployeeDraftTimesheetSteps.class.getName());
+		Logs.startTestCase(this.getClass().getSimpleName());
 		driver = WebDriverManager.getDriver();
 		loginPage = new PE01_LoginPage(driver);
 		CreateTimeSheetPage = new PE02_CreateTimeSheetPage(driver);
@@ -30,7 +33,8 @@ public class TE09_EmployeeDraftTimesheetSteps {
 
 	@Then("Verify the Draft Functionlity by page Title as view Timesheet {string}")
 	public void click_on_peding_icon_for_verify_the_draft_functionlity(String draftText) throws Exception {
-		CreateTimeSheetPage.VerifydraftFunctionality(draftText);
+		CreateTimeSheetPage.verifyDraftFunctionality(draftText);
+		Logs.endTestCase(this.getClass().getSimpleName());
 
 	}
 }

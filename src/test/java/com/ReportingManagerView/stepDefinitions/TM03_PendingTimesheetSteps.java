@@ -1,29 +1,35 @@
 package com.ReportingManagerView.stepDefinitions;
- 
+
 import org.openqa.selenium.WebDriver;
 import io.cucumber.java.en.Given;
+import io.cucumber.java.en.Then;
+import io.cucumber.java.en.When;
+
 import com.ReportingManagerViewTimeSheet.page.PM01_LoginPage;
 import com.ReportingManagerViewTimeSheet.page.PM03_PendingTimesheetPage;
-import com.TimeSheet.utils.BrowserManager;
 import com.TimeSheet.utils.WebDriverManager;
- 
-public class TM03_PendingTimesheetSteps {
-	private WebDriver driver;
-	private PM01_LoginPage loginPage;
-	private PM03_PendingTimesheetPage pendingTimesheet;
 
- 
-	@Given("click pending Timesheet page and Verify for manager view")
-	public void verify_pending_timesheet_page() {
-		pendingTimesheet.PendingIconClick();
-	//	pendingTimesheet.ExpandArrowtoVerify();
-	}
-	@Given("user login for pending for Managerview for manager view")
-	public void user_login_for_pending_for_managerview() {
+public class TM03_PendingTimesheetSteps {
+	public WebDriver driver;
+	public PM01_LoginPage loginPage;
+	public PM03_PendingTimesheetPage pendingTimesheet;
+
+	@Given("User login into the manager view for verifying the pending timesheet")
+	public void user_login_into_the_manager_view_for_verifying_the_pending_timesheet() {
 		driver = WebDriverManager.getDriver();
-		//driver = BrowserManager.getDriver();
-        loginPage = new PM01_LoginPage(driver);
-        pendingTimesheet  = new PM03_PendingTimesheetPage(driver);
+		loginPage = new PM01_LoginPage(driver);
 		loginPage.doLogIn();
+		pendingTimesheet = new PM03_PendingTimesheetPage(driver);
 	}
+
+	@When("Click on pending approval icon")
+	public void click_on_pending_approval_icon() {
+		pendingTimesheet.pendingIconClick();
+	}
+
+	@Then("Verify the pending timesheet status {string}")
+	public void verify_the_pending_timesheet_status(String status) {
+		pendingTimesheet.validateStatus(status);
+	}
+
 }

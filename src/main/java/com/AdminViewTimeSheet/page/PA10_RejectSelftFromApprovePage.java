@@ -6,6 +6,7 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 import com.TimeSheet.utils.CommonUtils;
+import com.TimeSheet.utils.Logs;
 
 public class PA10_RejectSelftFromApprovePage {
 	WebDriver driver;
@@ -33,14 +34,16 @@ public class PA10_RejectSelftFromApprovePage {
 	@FindBy(xpath = "//*[text()='Confirm']")
 	WebElement confirmButton;
 
-	public void clickonapprovedIcon() {
+	public void clickonApprovedIcon() {
 		CommonUtils.waitFor(3);
 		CommonUtils.explicitlyWaitForElementandClick(approvedIcon, 10);
+		Logs.info("clicked on Approved icon");
 	}
 
 	public void enableToggle() {
 		CommonUtils.waitFor(3);
 		CommonUtils.clickElement(enableToggle);
+		Logs.info("clicked on enable Toggle icon");
 
 	}
 
@@ -48,12 +51,14 @@ public class PA10_RejectSelftFromApprovePage {
 		CommonUtils.waitFor(3);
 		CommonUtils.JavaScriptExecutorClick(driver, checkbox);
 		CommonUtils.waitFor(5);
+		Logs.info("clicked on checkBox for bulk Reject");
 	}
 
-	public void RejectTimesheetByGivingRemarks(String Remarks) {
+	public void rejectTimesheetByGivingRemarks(String Remarks) {
 		CommonUtils.explicitlyWaitForElementandClick(RejectButton, 2);
 		CommonUtils.sendKeysToElement(RemarksTextArea, Remarks);
 		CommonUtils.explicitlyWaitForElementandClick(confirmButton, 2);
+		Logs.info("SuccessFully Rejected the Timesheet");
 	}
 
 }

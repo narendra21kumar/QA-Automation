@@ -8,11 +8,10 @@ import io.cucumber.junit.CucumberOptions;
 @RunWith(Cucumber.class)
 @CucumberOptions(
 		
-	features = {"src/test/resources/EmployeeViewFeatures", "src/test/resources/AdminFeatureFiles"}, 
-	tags =   "@employee", 
-	glue = {"com.EmployeeView.stepDefinitions", "com.AdminView.stepDefinitions" }, 
-	plugin = {"pretty", "com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:"}
-		
+	features = {"src/test/resources/EmployeeViewFeatures", "src/test/resources/AdminFeatureFiles","src/test/resources/ReportingManagerViewfeatures"}, 
+	tags =   "@admin1", 
+	glue = {"com.EmployeeView.stepDefinitions", "com.AdminView.stepDefinitions","com.ReportingManagerView.stepDefinitions"}, 
+	plugin = {"pretty", "com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:","rerun:target/failedScripts.txt"}
 )
 public class BDDTestRunner {
 	

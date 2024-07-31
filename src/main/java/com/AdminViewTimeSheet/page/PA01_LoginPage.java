@@ -8,12 +8,13 @@ import org.openqa.selenium.support.PageFactory;
 
 import com.TimeSheet.utils.CommonUtils;
 import com.TimeSheet.utils.ConfigReader;
+import com.TimeSheet.utils.Logs;
 
 public class PA01_LoginPage {
 	public WebDriver driver;
 	// private static ExtentTest logger;
-	private static final String TEST_DATA = "TestData/TestData.xlsx";
-	private static By unsafeURL_locater = By.xpath("//body[@id='body']");
+//	private static final String TEST_DATA = "TestData/TestData.xlsx";
+//	private static By unsafeURL_locater = By.xpath("//body[@id='body']");
 
 	public PA01_LoginPage(WebDriver driver) {
 		this.driver = driver;
@@ -48,41 +49,44 @@ public class PA01_LoginPage {
 		String username = ConfigReader.getAdminUsername();
 		CommonUtils.explicitlyWaitForElementandClick(emailId, 10);
 		CommonUtils.sendKeysToElement(emailId, username);
-
+		Logs.info("Entered username");
 	}
 
 	private void emailNext() {
 		CommonUtils.explicitlyWaitForElementandClick(emailNext, 10);
+		Logs.info("click on emailNext");
 	}
 
-	private void clickUnsafeURL() {
-		CommonUtils.explicitlyWaitForElementandClick(unsafeURL, 10);
-
-	}
-
-	private void clickproceedlink() {
-		CommonUtils.explicitlyWaitForElementandClick(proceedlink, 10);
-
-	}
-
-	private void clickOnContinueWithMicrosoft() {
-		CommonUtils.explicitlyWaitForElementandClick(ContinueWithMicrosoft, 10);
-
-	}
+//	private void clickUnsafeURL() {
+//		CommonUtils.explicitlyWaitForElementandClick(unsafeURL, 10);
+//		Logs.info("click on unsafeURL");
+//	}
+//
+//	private void clickproceedlink() {
+//		CommonUtils.explicitlyWaitForElementandClick(proceedlink, 10);
+//		Logs.info("click on proceedlink");
+//	}
+//
+//	private void clickOnContinueWithMicrosoft() {
+//		CommonUtils.explicitlyWaitForElementandClick(ContinueWithMicrosoft, 10);
+//		Logs.info("click on ContinueWithMicrosoft");
+//	}
 
 	private void getPassword() {
 		String password = ConfigReader.getAdminPassword();
 		CommonUtils.explicitlyWaitForElementandClick(pwdText, 10);
 		CommonUtils.sendKeysToElement(pwdText, password);
-
+		Logs.info("Entered password");
 	}
 
 	private void clickSignIn() {
 		CommonUtils.explicitlyWaitForElementandClick(emailNext, 10);
+		Logs.info("click on emailNext");
 	}
 
 	private void staySigned() {
 		CommonUtils.explicitlyWaitForElementandClick(staySigned, 10);
+		Logs.info("logIn successFully into admin view");
 	}
 
 	public void doLogIn() {
@@ -102,7 +106,7 @@ public class PA01_LoginPage {
 	public void verifyAccessAccordingToLogin() {
 	    WebElement usersName = driver.findElement(By.xpath("//*[@class='MuiStack-root css-vb6e92']//h5"));
 	    String getName = usersName.getText();
-	    
+	 
 	    if (getName.contains("Approver")) {
 	        System.out.println("User Access to Approver as " + getName);
 	    } else if (getName.contains("ADMIN")) {
@@ -112,16 +116,21 @@ public class PA01_LoginPage {
 	    } else {
 	        System.out.println("User Access to Employee View as " + getName);
 	    }
+	    Logs.info("Verified Names according to the Access");
 	}
 
 	
 	public void checkTitle(String titleOfPage) {
 	    String actualTitle = driver.getTitle();
-	    if (actualTitle.startsWith(titleOfPage)) {
+	    
+	    if (actualTitle.startsWith(titleOfPage))
+	    {
 	        System.out.println("Page title matches the expected prefix: " + actualTitle);
-	    } else {
+	    } else 
+	    {
 	        System.out.println("Page title does not match the expected prefix.");
 	    }
+	    Logs.info("Verified Title of the page");
 	}
 
 }

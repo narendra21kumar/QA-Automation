@@ -5,8 +5,9 @@ import org.openqa.selenium.edge.EdgeOptions;
 import org.openqa.selenium.remote.DesiredCapabilities;
 
 public class OptionManager {
+	
+	
 	public ChromeOptions getChromeOptions() {
-
 		ChromeOptions options = new ChromeOptions();
 
 		options.addArguments("--remote-allow-origins=*");

@@ -4,14 +4,12 @@ import org.openqa.selenium.WebDriver;
 
 import com.AdminViewTimeSheet.page.PA01_LoginPage;
 import com.AdminViewTimeSheet.page.PA04_CreateTimeSheetPage;
-import com.EmployeeViewTimeSheet.page.PE01_LoginPage;
-import com.EmployeeViewTimeSheet.page.PE02_CreateTimeSheetPage;
 import com.TimeSheet.utils.CommonUtils;
+import com.TimeSheet.utils.Logs;
 import com.TimeSheet.utils.WebDriverManager;
 
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
-import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 
 public class TC08_EditTimeSheet {
@@ -21,20 +19,22 @@ public class TC08_EditTimeSheet {
 
 	@Given("login as Admin Timesheet for edit functioanlity")
 	public void user_login_to_admin_timesheet_for_edit_functioanlity() {
+		Logs.initLogs(TC08_EditTimeSheet.class.getName());
+		Logs.startTestCase(this.getClass().getSimpleName());
 		driver = WebDriverManager.getDriver();
 		loginPage = new PA01_LoginPage(driver);
 		CreateTimeSheetPage = new PA04_CreateTimeSheetPage(driver);
 		loginPage.doLogIn();
 		loginPage.verifyAccessAccordingToLogin();
-		loginPage.checkTitle("Automation");
+		CommonUtils.printNameOfPages(driver);
 	}
 
 	@When("Click on Create TimeSheet icon and select the previous week in calendor for admin edit")
 	public void click_on_create_time_sheet_icon_and_select_the_draft_timesheet_date() throws Exception {
-		CreateTimeSheetPage.CreateTimesheetIcon();
+		CreateTimeSheetPage.createTimesheetIcon();
 		CreateTimeSheetPage.selectcalendar();
-		CreateTimeSheetPage.selectAnyWeek(-1);
-		//CreateTimeSheetPage.selectPastWeekDate();
+		CommonUtils.selectAnyWeek(driver, -1);
+		// CreateTimeSheetPage.selectPastWeekDate();
 	}
 
 	@And("Click on Edit Icon in Edit Page")
@@ -48,5 +48,5 @@ public class TC08_EditTimeSheet {
 		CreateTimeSheetPage.saveSubmitConfirm();
 
 	}
-	
+
 }

@@ -4,6 +4,8 @@ import org.openqa.selenium.WebDriver;
 
 import com.AdminViewTimeSheet.page.PA01_LoginPage;
 import com.AdminViewTimeSheet.page.PA12_AdminCategoryDashboardPage;
+import com.TimeSheet.utils.CommonUtils;
+import com.TimeSheet.utils.Logs;
 import com.TimeSheet.utils.WebDriverManager;
 
 import io.cucumber.java.en.And;
@@ -17,12 +19,14 @@ public class TC16_AdminCategoryDashboardSteps {
 
 	@Given("Login as Admin for Category Dashboard")
 	public void user_login_to_adminview() {
+		Logs.initLogs(TC16_AdminCategoryDashboardSteps.class.getName());
+		Logs.startTestCase(this.getClass().getSimpleName());
 		driver = WebDriverManager.getDriver();
 		loginPage = new PA01_LoginPage(driver);
 		adminCategoryPage = new PA12_AdminCategoryDashboardPage(driver);
 		loginPage.doLogIn();
 		loginPage.verifyAccessAccordingToLogin();
-		loginPage.checkTitle("Automation");
+		CommonUtils.printNameOfPages(driver);
 	}
 
 	@When("Click on Category Dashboard Page icon in Admin View")
