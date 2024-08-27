@@ -83,42 +83,7 @@ public class PA11_DeleteTimesheetRecords {
 		Logs.info("Timesheet Deleted successfully");
 	}
 	
-	
-	public void selectAnyWeek(int weekOffSet) throws InterruptedException {
-        Calendar cal = Calendar.getInstance();
-        cal.add(Calendar.WEEK_OF_YEAR, weekOffSet);
-        int targetDay = cal.get(Calendar.DAY_OF_MONTH);
-        int targetMonth = cal.get(Calendar.MONTH);
-        int currentMonth = Calendar.getInstance().get(Calendar.MONTH);
 
-        // Click on the date picker to open it
-        WebElement datePicker = driver.findElement(By.className("rdp-cell"));
-        datePicker.click();
-
-        // If the target month is before the current month, click the previous month arrow
-        if (targetMonth < currentMonth) {
-            WebElement prevMonthArrow = driver.findElement(By.xpath("//*[@name='previous-month']"));
-            prevMonthArrow.click();
-            Logs.info("clicked on Previous Month Arrow");
-        }
-
-        else if (targetMonth > currentMonth) {
-            WebElement nextMonthArrow = driver.findElement(By.xpath("//*[@name='next-month']"));
-            nextMonthArrow.click();
-            Logs.info("clicked on nextMonth Arrow");
-        }
-        // Select the target day
-        WebElement dayToSelect = driver.findElement(By.xpath("//*[text()='" + targetDay + "']"));
-        dayToSelect.click();
-        WebElement start=driver.findElement(By.xpath("//*[@aria-label='Select Week']/following::label[2]"));
-		WebElement end=driver.findElement(By.xpath("//*[@aria-label='Select Week']/following::label[4]"));
-		String startdate=start.getText();
-		String enddate=end.getText();
-		System.out.println("printing the selected start week date "+" : "+startdate+" and end date is "+" : "+enddate);
-		 Logs.info("selected the Current Week");
-    }
-	
-	
 	public void validateTimesheetResponse(String DeletionText) throws Exception 
 	{
 			String TaskDeletionText = driver.findElement(By.xpath("//*[text()='Task deleted successfully!']")).getText();

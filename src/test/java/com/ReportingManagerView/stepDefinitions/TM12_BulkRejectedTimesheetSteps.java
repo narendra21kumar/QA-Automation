@@ -5,6 +5,7 @@ import org.openqa.selenium.WebDriver;
 
 import com.ReportingManagerViewTimeSheet.page.PM01_LoginPage;
 import com.ReportingManagerViewTimeSheet.page.PM12_BulkRejectedTimesheetPage;
+import com.TimeSheet.utils.Logs;
 import com.TimeSheet.utils.WebDriverManager;
 
 import io.cucumber.java.en.And;
@@ -19,6 +20,8 @@ public class TM12_BulkRejectedTimesheetSteps {
  
 	@Given("User login into the manager view for bulk rejected timesheets in timesheet management page")
 	public void user_login_into_the_manager_view_for_bulk_rejected_timesheets_in_timesheet_management_page() {
+		Logs.initLogs(TM12_BulkRejectedTimesheetSteps.class.getName());
+		Logs.startTestCase(this.getClass().getSimpleName());
 		driver = WebDriverManager.getDriver();
         loginPage = new PM01_LoginPage(driver);
         bulkReject    = new PM12_BulkRejectedTimesheetPage(driver);

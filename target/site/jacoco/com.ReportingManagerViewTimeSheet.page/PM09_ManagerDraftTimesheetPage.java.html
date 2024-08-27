@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>PM09_ManagerDraftTimesheetPage.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">QA-Automation</a> &gt; <a href="index.source.html" class="el_package">com.ReportingManagerViewTimeSheet.page</a> &gt; <span class="el_source">PM09_ManagerDraftTimesheetPage.java</span></div><h1>PM09_ManagerDraftTimesheetPage.java</h1><pre class="source lang-java linenums">package com.ReportingManagerViewTimeSheet.page;
+
+import java.util.Calendar;
+import java.util.Date;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
+import org.testng.Assert;
+
+import com.TimeSheet.utils.CommonUtils;
+import com.TimeSheet.utils.Logs;
+
+public class PM09_ManagerDraftTimesheetPage {
+	public WebDriver driver;
+
+<span class="nc" id="L18">	public PM09_ManagerDraftTimesheetPage(WebDriver driver) {</span>
+<span class="nc" id="L19">		this.driver = driver;</span>
+<span class="nc" id="L20">		PageFactory.initElements(driver, this);</span>
+<span class="nc" id="L21">	}</span>
+
+	@FindBy(xpath = &quot;//a[contains(@class, '_2esG8N9N5-Q9Ui8vVn5gZt') and @title='Create Timesheet']&quot;)
+	WebElement createTimesheetIcon;
+
+	@FindBy(xpath = &quot;//*[@class='MuiSvgIcon-root']&quot;)
+	WebElement calendarStartIcon;
+
+	@FindBy(xpath = &quot;//*[@name='previous-month']&quot;)
+	WebElement PreviousMonthArrowIcon;
+
+	@FindBy(xpath = &quot;//*[@aria-label='Edit']&quot;)
+	WebElement editicon;
+
+	@FindBy(xpath = &quot;//*[text()='View Timesheet']&quot;)
+	WebElement viewTimesheetHeader;
+
+	public void createTimesheetIcon() throws Exception {
+<span class="nc" id="L39">		CommonUtils.explicitlyWaitForElementandClick(createTimesheetIcon, 10);</span>
+<span class="nc" id="L40">		Logs.info(&quot;Clicked on create timesheet page icon&quot;);</span>
+<span class="nc" id="L41">	}</span>
+
+	public void selectPastWeekDate() throws InterruptedException {
+<span class="nc" id="L44">		CommonUtils.explicitlyWaitForElementandClick(calendarStartIcon, 5);</span>
+<span class="nc" id="L45">		Calendar cal = Calendar.getInstance();</span>
+<span class="nc" id="L46">		cal.set(Calendar.DAY_OF_WEEK, Calendar.SUNDAY);</span>
+<span class="nc" id="L47">		cal.add(Calendar.DATE, -7);</span>
+<span class="nc" id="L48">		Date pastDate = cal.getTime();</span>
+<span class="nc" id="L49">		int date = pastDate.getDate();</span>
+<span class="nc" id="L50">		boolean availableDate = true;</span>
+<span class="nc bnc" id="L51" title="All 2 branches missed.">		if (availableDate) {</span>
+<span class="nc" id="L52">			CommonUtils.CalenderSelectWithDate(driver, date);</span>
+<span class="nc" id="L53">			Thread.sleep(3000);</span>
+<span class="nc" id="L54">			Logs.info(&quot;Selected the past week date from calendar&quot;);</span>
+		} else {
+<span class="nc" id="L56">			CommonUtils.explicitlyWaitForElementandClick(PreviousMonthArrowIcon, 10);</span>
+<span class="nc" id="L57">			Thread.sleep(3000);</span>
+<span class="nc" id="L58">			System.out.println(pastDate);</span>
+<span class="nc" id="L59">			Logs.info(&quot;Clicked on previous month arrow icon and selected the past week date from calendar&quot;);</span>
+		}
+<span class="nc" id="L61">	}</span>
+
+	public void verifyDraftFunctionality(String draftText) throws Exception {
+<span class="nc bnc" id="L64" title="All 2 branches missed.">		if (editicon.isDisplayed()) {</span>
+<span class="nc" id="L65">			System.out.println(&quot;Edit icon is displayed and verified the draft functionality &quot;);</span>
+<span class="nc" id="L66">			Logs.info(&quot;Edit icon is displayed&quot;);</span>
+		} else {
+<span class="nc" id="L68">			System.out.println(&quot;Edit is not displayed on view timesheet&quot;);</span>
+<span class="nc" id="L69">			Logs.info(&quot;Edit icon is not displayed&quot;);</span>
+		}
+<span class="nc" id="L71">		String viewTimesheetText = viewTimesheetHeader.getText();</span>
+<span class="nc" id="L72">		Assert.assertEquals(viewTimesheetText, draftText);</span>
+<span class="nc" id="L73">		Logs.info(&quot;Validated the view timesheet text&quot;);</span>
+<span class="nc" id="L74">	}</span>
+
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.12.202403310830</span></div></body></html>

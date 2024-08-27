@@ -75,30 +75,6 @@ public class PA02_TimeSheetManagementPage {
 		Logs.info("clicked on End calender Icon");
 	}
 
-	public void selectStartDateandMonth(String Startmonth, String Startdate) {
-		CommonUtils.waitFor(3);
-		String monthNm = Startmonth.split(" ")[0].trim();
-		System.out.println("Req value :" + monthNm);
-		CommonUtils.waitFor(2);
-		CommonUtils.clickMonthTab(monthNm, nextmonthArrow, previousmonthArrow, monthYear);
-		CommonUtils.waitFor(2);
-		WebElement reqDate = driver.findElement(By.xpath("//*[text()='" + Startdate + "']"));
-		reqDate.click();
-		Logs.info("Selected the Start date And Month from calender");
-	}
-
-	public void selectEndDateandMonth(String EndMonth, String EndDate) {
-		CommonUtils.waitFor(3);
-		String monthNm = EndMonth.split(" ")[0].trim();
-		System.out.println("Req value :" + monthNm);
-		CommonUtils.waitFor(2);
-		CommonUtils.clickMonthTab(monthNm, nextmonthArrow, previousmonthArrow, monthYear);
-		CommonUtils.waitFor(2);
-		WebElement reqDate = driver.findElement(By.xpath("//*[text()='" + EndDate + "']"));
-		reqDate.click();
-		Logs.info("Selected the End date and Month from calender");
-	}
-
 	public void approveTimesheet(String empid) {
 		WebElement element = driver.findElement(By
 				.xpath("//*[@title='" + empid + "']/following::td[8]/div[1]/button[@aria-label='Approve Timesheet']"));

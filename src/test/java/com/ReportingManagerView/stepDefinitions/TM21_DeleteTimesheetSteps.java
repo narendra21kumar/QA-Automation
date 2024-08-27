@@ -4,6 +4,7 @@ import org.openqa.selenium.WebDriver;
 
 import com.ReportingManagerViewTimeSheet.page.PM01_LoginPage;
 import com.ReportingManagerViewTimeSheet.page.PM21_DeleteTimesheetPage;
+import com.TimeSheet.utils.Logs;
 import com.TimeSheet.utils.WebDriverManager;
 
 import io.cucumber.java.en.And;
@@ -20,6 +21,8 @@ public class TM21_DeleteTimesheetSteps {
 	
 	@Given("Manager login into the timesheet application")
 	public void manager_login_into_the_timesheet_application() {
+		Logs.initLogs(TM21_DeleteTimesheetSteps.class.getName());
+		Logs.startTestCase(this.getClass().getSimpleName());
 		driver = WebDriverManager.getDriver();
 	    loginPage = new PM01_LoginPage(driver);
 	    deleteTimesheetPage=new PM21_DeleteTimesheetPage(driver);

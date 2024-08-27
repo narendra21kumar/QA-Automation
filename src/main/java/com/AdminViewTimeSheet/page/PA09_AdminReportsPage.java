@@ -116,33 +116,6 @@ public class PA09_AdminReportsPage {
 
 	}
 
-	public void selectStartDateandMonthforSubmitted(String Startmonth, String Startdate) {
-		CommonUtils.explicitlyWaitForElementandClick(startDateSelectDrop, 10);
-		CommonUtils.waitFor(3);
-		String monthNm = Startmonth.split(" ")[0].trim();
-		System.out.println("Req value :" + monthNm);
-		CommonUtils.waitFor(2);
-		CommonUtils.clickMonthTab(monthNm, nextmonthArrow, previousmonthArrow, monthYear);
-		CommonUtils.waitFor(2);
-		WebElement reqDate = driver.findElement(By.xpath("//*[text()='" + Startdate + "']"));
-		reqDate.click();
-		CommonUtils.waitFor(3);
-		Logs.info("Selected the start Week and month In reports page");
-	}
-
-	public void selectEndDateandMonthforSubmitted(String EndMonth, String EndDate) {
-		CommonUtils.explicitlyWaitForElementandClick(endDateSelectDrop, 10);
-		CommonUtils.waitFor(3);
-		String monthNm = EndMonth.split(" ")[0].trim();
-		System.out.println("Req value :" + monthNm);
-		CommonUtils.waitFor(2);
-		CommonUtils.clickMonthTab(monthNm, nextmonthArrow, previousmonthArrow, monthYear);
-		CommonUtils.waitFor(2);
-		WebElement reqDate = driver.findElement(By.xpath("//*[text()='" + EndDate + "']"));
-		reqDate.click();
-		CommonUtils.waitFor(3);
-		Logs.info("Selected the End Week and month In reports page");
-	}
 	///////////////////////////////////////////////////////////////////////////////
 
 	public void clickOnCalendorStartIcon() {
@@ -154,31 +127,6 @@ public class PA09_AdminReportsPage {
 		CommonUtils.explicitlyWaitForElementandClick(endDateSelectDrop, 10);
 		Logs.info("clicked on Calender End Icon");
 	}
-
-	public void dateBackward(WebDriver driver, int i) {
-		WebElement element = driver.findElement(By.xpath("//*[text()='" + i + "']"));
-		if (element.isEnabled()) {
-			System.out.println("Element is Displayed easy to select the Data in a given month");
-		} else {
-			CommonUtils.explicitlyWaitForElementandClick(previousmonthArrow, 10);
-		}
-		CommonUtils.explicitlyWaitForElementandClick(element, 10);
-		System.out.println("Selected Successfully!!!!!!!!!!!!");
-		Logs.info("selected the Week successfully");
-	}
-
-	public void dateForward(WebDriver driver, int i) {
-		WebElement element = driver.findElement(By.xpath("//*[text()='" + i + "']"));
-		if (element.isEnabled()) {
-			System.out.println("Element is Displayed easy to select the Data in a given month");
-		} else {
-			CommonUtils.explicitlyWaitForElementandClick(nextmonthArrow, 10);
-		}
-		CommonUtils.explicitlyWaitForElementandClick(element, 10);
-		System.out.println("Selected Successfully!!!!!!!!!!!!");
-		Logs.info("selected the Week successfully");
-	}
-
 
 	public void searchByOption(String text) {
 		CommonUtils.sendKeysToElement(searchText, text);
@@ -274,3 +222,56 @@ public class PA09_AdminReportsPage {
 	}
 
 }
+
+
+//public void selectStartDateandMonthforSubmitted(String Startmonth, String Startdate) {
+//CommonUtils.explicitlyWaitForElementandClick(startDateSelectDrop, 10);
+//CommonUtils.waitFor(3);
+//String monthNm = Startmonth.split(" ")[0].trim();
+//System.out.println("Req value :" + monthNm);
+//CommonUtils.waitFor(2);
+//CommonUtils.clickMonthTab(monthNm, nextmonthArrow, previousmonthArrow, monthYear);
+//CommonUtils.waitFor(2);
+//WebElement reqDate = driver.findElement(By.xpath("//*[text()='" + Startdate + "']"));
+//reqDate.click();
+//CommonUtils.waitFor(3);
+//Logs.info("Selected the start Week and month In reports page");
+//}
+//
+//public void selectEndDateandMonthforSubmitted(String EndMonth, String EndDate) {
+//CommonUtils.explicitlyWaitForElementandClick(endDateSelectDrop, 10);
+//CommonUtils.waitFor(3);
+//String monthNm = EndMonth.split(" ")[0].trim();
+//System.out.println("Req value :" + monthNm);
+//CommonUtils.waitFor(2);
+//CommonUtils.clickMonthTab(monthNm, nextmonthArrow, previousmonthArrow, monthYear);
+//CommonUtils.waitFor(2);
+//WebElement reqDate = driver.findElement(By.xpath("//*[text()='" + EndDate + "']"));
+//reqDate.click();
+//CommonUtils.waitFor(3);
+//Logs.info("Selected the End Week and month In reports page");
+//}
+
+//public void dateBackward(WebDriver driver, int i) {
+//WebElement element = driver.findElement(By.xpath("//*[text()='" + i + "']"));
+//if (element.isEnabled()) {
+//	System.out.println("Element is Displayed easy to select the Data in a given month");
+//} else {
+//	CommonUtils.explicitlyWaitForElementandClick(previousmonthArrow, 10);
+//}
+//CommonUtils.explicitlyWaitForElementandClick(element, 10);
+//System.out.println("Selected Successfully!!!!!!!!!!!!");
+//Logs.info("selected the Week successfully");
+//}
+//
+//public void dateForward(WebDriver driver, int i) {
+//WebElement element = driver.findElement(By.xpath("//*[text()='" + i + "']"));
+//if (element.isEnabled()) {
+//	System.out.println("Element is Displayed easy to select the Data in a given month");
+//} else {
+//	CommonUtils.explicitlyWaitForElementandClick(nextmonthArrow, 10);
+//}
+//CommonUtils.explicitlyWaitForElementandClick(element, 10);
+//System.out.println("Selected Successfully!!!!!!!!!!!!");
+//Logs.info("selected the Week successfully");
+//}

@@ -65,6 +65,13 @@ public class PE02_CreateTimeSheetPage {
 
 	@FindBy(xpath = "(//*[@class='MuiSvgIcon-root'])[2]")
 	WebElement editicon;
+	
+	@FindBy(xpath = "(//*[@class=\"_3HctNa4SpoWtFT9b3gCxL\"])[1]")
+	WebElement managerName;
+
+	@FindBy(xpath = "(//*[@class=\"_3HctNa4SpoWtFT9b3gCxL\"])[2]")
+	WebElement approverName;
+
 
 	public void CreateTimesheetIcon() throws Exception {
 		createTimesheetIcon.click();
@@ -174,5 +181,19 @@ public class PE02_CreateTimeSheetPage {
 		Assert.assertEquals(viewTimesheetText, draftText);
 		editicon.isDisplayed();
 		Logs.info("Successfully validation of DraftFunctionality");
+	}
+
+	public void managerName(String managername) {
+
+		String managernametext = managerName.getText();
+		System.out.println("manager name is : " + managernametext);
+		Assert.assertEquals(managernametext, managername);
+	}
+
+	public void approverName(String approvername) {
+
+		String approvernametext = approverName.getText();
+		System.out.println("approver name is : " + approvernametext);
+		Assert.assertEquals(approvernametext, approvername);
 	}
 }

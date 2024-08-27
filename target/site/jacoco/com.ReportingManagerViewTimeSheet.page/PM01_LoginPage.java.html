@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>PM01_LoginPage.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">QA-Automation</a> &gt; <a href="index.source.html" class="el_package">com.ReportingManagerViewTimeSheet.page</a> &gt; <span class="el_source">PM01_LoginPage.java</span></div><h1>PM01_LoginPage.java</h1><pre class="source lang-java linenums">package com.ReportingManagerViewTimeSheet.page;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
+import org.testng.Assert;
+
+import com.TimeSheet.utils.CommonUtils;
+import com.TimeSheet.utils.ConfigReader;
+import com.TimeSheet.utils.Logs;
+
+public class PM01_LoginPage {
+	public WebDriver driver;
+
+<span class="nc" id="L17">	public PM01_LoginPage(WebDriver driver) {</span>
+<span class="nc" id="L18">		this.driver = driver;</span>
+<span class="nc" id="L19">		PageFactory.initElements(driver, this);</span>
+<span class="nc" id="L20">	}</span>
+
+	@FindBy(xpath = &quot;//div[text()='Continue with Microsoft']&quot;)
+	WebElement ContinueWithMicrosoft;
+
+	@FindBy(xpath = &quot;//div/button[@id ='details-button']&quot;)
+	WebElement advanceButton;
+
+	@FindBy(xpath = &quot;//body[@id='body']&quot;)
+	WebElement unsafeURL;
+
+	@FindBy(xpath = &quot;//a[@id='proceed-link']&quot;)
+	WebElement proceedlink;
+
+	@FindBy(xpath = &quot;//input[contains(@name,'loginfmt')]&quot;)
+	WebElement emailId;
+
+	@FindBy(xpath = &quot;//input[@type='submit']&quot;)
+	WebElement emailNext;
+
+	@FindBy(xpath = &quot;//input[@name='passwd']&quot;)
+	WebElement pwdText;
+
+	@FindBy(id = &quot;idSIButton9&quot;)
+	WebElement signIn;
+
+	@FindBy(xpath = &quot;//input[contains(@type,'submit')]&quot;)
+	WebElement staySigned;
+
+	public void clickOnContinueWithMicrosoft() {
+<span class="nc" id="L50">		CommonUtils.explicitlyWaitForElementandClick(ContinueWithMicrosoft, 10);</span>
+<span class="nc" id="L51">		Logs.info(&quot;Clicked on continue mirosoft&quot;);</span>
+<span class="nc" id="L52">	}</span>
+	public void clickAdvance() {
+<span class="nc" id="L54">		System.out.println(&quot;Click Advance&quot;);</span>
+<span class="nc" id="L55">		CommonUtils.explicitlyWaitForElementandClick(advanceButton, 10);</span>
+<span class="nc" id="L56">		Logs.info(&quot;Clicked on advanced button&quot;);</span>
+<span class="nc" id="L57">	}</span>
+	public void clickUnsafeURL() {
+<span class="nc" id="L59">		CommonUtils.explicitlyWaitForElementandClick(unsafeURL, 10);</span>
+<span class="nc" id="L60">		Logs.info(&quot;Clicked on unsafeurl&quot;);</span>
+<span class="nc" id="L61">	}</span>
+	public void getUsername() {
+<span class="nc" id="L63">		String username = ConfigReader.getmanagerUsername();</span>
+<span class="nc" id="L64">		CommonUtils.explicitlyWaitForElementandClick(emailId, 10);</span>
+<span class="nc" id="L65">		CommonUtils.sendKeysToElement(emailId, username);</span>
+<span class="nc" id="L66">		Logs.info(&quot;Entered the username&quot;);</span>
+<span class="nc" id="L67">		CommonUtils.explicitlyWaitForElementandClick(emailNext, 10);</span>
+<span class="nc" id="L68">		Logs.info(&quot;Clicked on emailnext&quot;);</span>
+<span class="nc" id="L69">	}</span>
+	public void getPassword() {
+<span class="nc" id="L71">		String password = ConfigReader.getManagerPassword();</span>
+<span class="nc" id="L72">		CommonUtils.explicitlyWaitForElementandClick(pwdText, 10);</span>
+<span class="nc" id="L73">		CommonUtils.sendKeysToElement(pwdText, password);</span>
+<span class="nc" id="L74">		Logs.info(&quot;Entered the password&quot;);</span>
+<span class="nc" id="L75">		CommonUtils.waitFor(2);</span>
+<span class="nc" id="L76">		CommonUtils.explicitlyWaitForElementandClick(emailNext, 10);</span>
+<span class="nc" id="L77">		Logs.info(&quot;Clicked on email next&quot;);</span>
+<span class="nc" id="L78">		CommonUtils.waitFor(20);</span>
+<span class="nc" id="L79">	}</span>
+	public void staySigned() {
+<span class="nc" id="L81">		CommonUtils.explicitlyWaitForElementandClick(staySigned, 10);</span>
+<span class="nc" id="L82">		Logs.info(&quot;Clicked on staysigned&quot;);</span>
+<span class="nc" id="L83">	}</span>
+	public void clickProceedLink() {
+<span class="nc" id="L85">		CommonUtils.explicitlyWaitForElementandClick(proceedlink, 10);</span>
+<span class="nc" id="L86">		Logs.info(&quot;Click on proceedlink&quot;);</span>
+<span class="nc" id="L87">	}</span>
+	public void validateTitle(String title) {
+<span class="nc" id="L89">		WebElement titleelement = driver.findElement(By.xpath(&quot;//*[@title='Timesheet Management']&quot;));</span>
+<span class="nc" id="L90">		String titletext = titleelement.getText();</span>
+<span class="nc" id="L91">		Assert.assertEquals(titletext, title);</span>
+<span class="nc" id="L92">		Logs.info(&quot;Successfully validated the title&quot;);</span>
+<span class="nc" id="L93">	}</span>
+	public void getAdminUsername() {
+<span class="nc" id="L95">		String username = ConfigReader.getAdminUsername();</span>
+<span class="nc" id="L96">		CommonUtils.explicitlyWaitForElementandClick(emailId, 10);</span>
+<span class="nc" id="L97">		Logs.info(&quot;Clicked on emailid&quot;);</span>
+<span class="nc" id="L98">		CommonUtils.sendKeysToElement(emailId, username);</span>
+<span class="nc" id="L99">		Logs.info(&quot;Entered the username&quot;);</span>
+<span class="nc" id="L100">		CommonUtils.explicitlyWaitForElementandClick(emailNext, 10);</span>
+<span class="nc" id="L101">		Logs.info(&quot;Clicked on emailnext&quot;);</span>
+<span class="nc" id="L102">	}</span>
+	public void getAdminPassword() {
+<span class="nc" id="L104">		String password = ConfigReader.getAdminPassword();</span>
+<span class="nc" id="L105">		CommonUtils.explicitlyWaitForElementandClick(pwdText, 10);</span>
+		try {
+<span class="nc" id="L107">			CommonUtils.sendKeysToElement(pwdText, password);</span>
+<span class="nc" id="L108">			Logs.info(&quot;Entered the password&quot;);</span>
+<span class="nc" id="L109">			CommonUtils.explicitlyWaitForElementandClick(emailNext, 10);</span>
+<span class="nc" id="L110">			Logs.info(&quot;Clicked on email next&quot;);</span>
+<span class="nc" id="L111">		} catch (Exception e) {</span>
+<span class="nc" id="L112">		}</span>
+<span class="nc" id="L113">	}</span>
+	public void doLogIn() {
+<span class="nc" id="L115">		CommonUtils.waitFor(3);</span>
+<span class="nc" id="L116">		getUsername();</span>
+<span class="nc" id="L117">		getPassword();</span>
+<span class="nc" id="L118">		staySigned();</span>
+<span class="nc" id="L119">		CommonUtils.waitFor(3);</span>
+<span class="nc" id="L120">	}</span>
+	public void doLogInAsAdmin() {
+<span class="nc" id="L122">		CommonUtils.waitFor(3);</span>
+		// clickOnContinueWithMicrosoft();
+<span class="nc" id="L124">		getAdminUsername();</span>
+		// emailNext();
+<span class="nc" id="L126">		getAdminPassword();</span>
+<span class="nc" id="L127">		staySigned();</span>
+<span class="nc" id="L128">		CommonUtils.waitFor(3);</span>
+<span class="nc" id="L129">	}</span>
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.12.202403310830</span></div></body></html>

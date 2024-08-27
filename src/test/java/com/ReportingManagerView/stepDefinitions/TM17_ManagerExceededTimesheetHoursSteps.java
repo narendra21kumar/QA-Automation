@@ -4,6 +4,7 @@ import org.openqa.selenium.WebDriver;
 
 import com.ReportingManagerViewTimeSheet.page.PM01_LoginPage;
 import com.ReportingManagerViewTimeSheet.page.PM17_ManagerExceededTimesheetHoursPage;
+import com.TimeSheet.utils.Logs;
 import com.TimeSheet.utils.WebDriverManager;
 
 import io.cucumber.java.en.And;
@@ -18,6 +19,8 @@ public class TM17_ManagerExceededTimesheetHoursSteps {
 
 	@Given("Manager login into the timesheet for time validation")
 	public void manager_login_into_the_timesheet_for_time_validation() {
+		Logs.initLogs(TM17_ManagerExceededTimesheetHoursSteps.class.getName());
+		Logs.startTestCase(this.getClass().getSimpleName());
 		driver = WebDriverManager.getDriver();
 		loginPage = new PM01_LoginPage(driver);
 		managerExceededTimesheetHoursPage = new PM17_ManagerExceededTimesheetHoursPage(driver);

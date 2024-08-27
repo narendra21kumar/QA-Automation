@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>PA04_CreateTimeSheetPage.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">QA-Automation</a> &gt; <a href="index.source.html" class="el_package">com.AdminViewTimeSheet.page</a> &gt; <span class="el_source">PA04_CreateTimeSheetPage.java</span></div><h1>PA04_CreateTimeSheetPage.java</h1><pre class="source lang-java linenums">package com.AdminViewTimeSheet.page;
+
+import java.util.List;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
+import org.testng.Assert;
+
+import com.TimeSheet.utils.CommonUtils;
+import com.TimeSheet.utils.Logs;
+
+public class PA04_CreateTimeSheetPage {
+	WebDriver driver;
+
+<span class="nc" id="L18">	public PA04_CreateTimeSheetPage(WebDriver driver) {</span>
+<span class="nc" id="L19">		this.driver = driver;</span>
+<span class="nc" id="L20">		PageFactory.initElements(driver, this);</span>
+<span class="nc" id="L21">	}</span>
+
+	@FindBy(xpath = &quot;//*[@class='MuiSvgIcon-root']&quot;)
+	WebElement calendarStartIcon;
+
+	@FindBy(xpath = &quot;//a[contains(@class, '_2esG8N9N5-Q9Ui8vVn5gZt') and @title='Create Timesheet']&quot;)
+	WebElement createTimesheetIcon;
+
+	@FindBy(xpath = &quot;//div[@class='MuiBox-root jss5']//*[name()='svg']&quot;)
+	WebElement clickAddRowIcon;
+
+	@FindBy(xpath = &quot;(//div[@class='MuiBox-root jss5']//*[name()='svg'])[2]&quot;)
+	WebElement clickSaveIcon;
+
+	@FindBy(xpath = &quot;(//div[@class='MuiBox-root jss5']//*[name()='svg'])[3]&quot;)
+	WebElement clickCancelIcon;
+
+	@FindBy(css = &quot;//tbody/tr[1]/td[12]//*[name()='svg']//*[name()='path' and contains(@d,'M6 19c0 1.')]&quot;)
+	WebElement clickDeleteIcon;
+	@FindBy(xpath = &quot;//*[@aria-label='Save all']&quot;)
+	WebElement saveall;
+
+	@FindBy(xpath = &quot;//*[text()='Submit']&quot;)
+	WebElement submit;
+	@FindBy(xpath = &quot;//*[text()='Confirm']&quot;)
+	WebElement confirm;
+	@FindBy(xpath = &quot;//*[@name='previous-month']&quot;)
+	WebElement PreviousMonthArrowIcon;
+	@FindBy(xpath = &quot;//*[@name='next-month']&quot;)
+	WebElement FutureMonthArrowIcon;
+
+	@FindBy(xpath = &quot;//*[contains(@class,'MuiTableBody-root css-1xnox0e')]//tr[*]//td[1]&quot;)
+	List&lt;WebElement&gt; listOfEmployeeNames;
+
+	@FindBy(xpath = &quot;//*[contains(@class,'MuiTableBody-root css-1xnox0e')]//tr[*]//td[5]&quot;)
+	List&lt;WebElement&gt; statusOfEmployeeFromeReports;
+
+	@FindBy(xpath = &quot;(//*[@class=\&quot;MuiSvgIcon-root\&quot;])[2]&quot;)
+	WebElement editicon;
+
+	@FindBy(xpath = &quot;//*[text()='Duplicate task']&quot;)
+	WebElement DuplicateTask;
+
+	@FindBy(xpath = &quot;//div[text()='Summation of hours in mon exceeded 24!!!']&quot;)
+	WebElement Timevalidation;
+
+	@FindBy(xpath = &quot;//div[@class='MuiAlert-message css-1xsto0d']&quot;)
+	WebElement lessThanHrsValidation;
+
+	public void createTimesheetIcon() throws Exception {
+<span class="nc" id="L71">		createTimesheetIcon.click();</span>
+<span class="nc" id="L72">		Logs.info(&quot;clicked on TimesheetManagement Page&quot;);</span>
+<span class="nc" id="L73">	}</span>
+
+	public void selectcalendar() {
+<span class="nc" id="L76">		CommonUtils.waitFor(3);</span>
+<span class="nc" id="L77">		CommonUtils.explicitlyWaitForElementandClick(calendarStartIcon, 10);</span>
+<span class="nc" id="L78">		CommonUtils.waitFor(3);</span>
+<span class="nc" id="L79">		Logs.info(&quot;Clicked on calender start icon&quot;);</span>
+<span class="nc" id="L80">	}</span>
+
+//	public void selectAnyWeek(int weekOffSet) throws InterruptedException {
+//		CommonUtils.selectAnyWeek(driver, weekOffSet);
+//	}
+
+	public void draftSubmitBtnEnabled() {
+<span class="nc bnc" id="L87" title="All 2 branches missed.">		if (submit.isEnabled()) {</span>
+<span class="nc" id="L88">			System.out.println(&quot;Record is exist in Draft&quot;);</span>
+<span class="nc" id="L89">			Logs.info(&quot;successfully verified Draft Functionality&quot;);</span>
+		} else {
+<span class="nc" id="L91">			System.err.println(&quot;Record is not exist hence it failed&quot;);</span>
+<span class="nc" id="L92">			Logs.info(&quot;Record is not present in draft&quot;);</span>
+		}
+<span class="nc" id="L94">	}</span>
+
+	public void editicon() {
+<span class="nc" id="L97">		editicon.click();</span>
+<span class="nc" id="L98">		Logs.info(&quot;clicked on edit Icon&quot;);</span>
+<span class="nc" id="L99">	}</span>
+
+	public void enterTaskDiscriptionCategorySubcategory(String SheetName) throws Exception {
+<span class="nc" id="L102">		CommonUtils.taskDesccategoryandEnteringHours(driver, SheetName);</span>
+<span class="nc" id="L103">		Logs.info(&quot;Entered Task description and hours&quot;);</span>
+<span class="nc" id="L104">	}</span>
+
+	public void saveSubmitConfirm() {
+<span class="nc" id="L107">		CommonUtils.waitFor(2);</span>
+<span class="nc" id="L108">		saveall.click();</span>
+<span class="nc" id="L109">		CommonUtils.waitFor(2);</span>
+<span class="nc" id="L110">		submit.click();</span>
+<span class="nc" id="L111">		CommonUtils.waitFor(2);</span>
+<span class="nc" id="L112">		confirm.click();</span>
+<span class="nc" id="L113">		Logs.info(&quot;clicked on save,submit and confirm button&quot;);</span>
+<span class="nc" id="L114">	}</span>
+
+	public void validateTaskdesc() throws Exception {
+<span class="nc" id="L117">		saveall.click();</span>
+<span class="nc" id="L118">		CommonUtils.waitFor(2);</span>
+<span class="nc" id="L119">		String duplicateTask = DuplicateTask.getText();</span>
+<span class="nc" id="L120">		Assert.assertEquals(duplicateTask, &quot;Duplicate task&quot;);</span>
+<span class="nc" id="L121">		Logs.info(&quot;successfully verified duplicate task&quot;);</span>
+<span class="nc" id="L122">	}</span>
+//////////////////////////////////////////////////////////////////
+
+	public void validateTimesheetResponse() throws Exception {
+<span class="nc" id="L126">		String alreadysubmittedtext = driver.findElement(By.xpath(&quot;//*[text()='Timesheet already submitted!']&quot;))</span>
+<span class="nc" id="L127">				.getText();</span>
+<span class="nc" id="L128">		Assert.assertEquals(alreadysubmittedtext, &quot;Timesheet already submitted!&quot;);</span>
+<span class="nc" id="L129">		Logs.info(&quot;successfully verified Timesheet already submitted&quot;);</span>
+<span class="nc" id="L130">	}</span>
+
+	public void verifyFromReports(String EmpName, String result) {
+<span class="nc bnc" id="L133" title="All 2 branches missed.">		for (WebElement NamesOfEmployee : listOfEmployeeNames) {</span>
+<span class="nc" id="L134">			String nameOfEmployees = NamesOfEmployee.getText();</span>
+<span class="nc" id="L135">			System.out.println(nameOfEmployees);</span>
+<span class="nc bnc" id="L136" title="All 2 branches missed.">			if (nameOfEmployees.equalsIgnoreCase(EmpName)) {</span>
+<span class="nc bnc" id="L137" title="All 2 branches missed.">				for (WebElement getStatusOfEmp : statusOfEmployeeFromeReports) {</span>
+<span class="nc" id="L138">					String getEmpStatus = getStatusOfEmp.getText();</span>
+<span class="nc bnc" id="L139" title="All 2 branches missed.">					if (getEmpStatus.equalsIgnoreCase(result)) {</span>
+<span class="nc" id="L140">						System.out.println(getEmpStatus);</span>
+					}
+<span class="nc" id="L142">				}</span>
+			}
+<span class="nc" id="L144">		}</span>
+<span class="nc" id="L145">	}</span>
+
+	//////////////////////////// 24Hrs Validation//////////////////////////////////
+
+	public void exceedHoursPerDay() throws Exception {
+<span class="nc" id="L150">		CommonUtils.taskDesccategoryandEnteringHours(driver, &quot;24hrs Validation@Admin&quot;);</span>
+<span class="nc" id="L151">		Logs.info(&quot;Entered task description and hours for exceeding hours per day&quot;);</span>
+<span class="nc" id="L152">	}</span>
+
+	public void moreThan40Hrs() throws Exception {
+<span class="nc" id="L155">		CommonUtils.taskDesccategoryandEnteringHours(driver, &quot;lessThan40Hours@Admin&quot;);</span>
+<span class="nc" id="L156">		Logs.info(&quot;Entered task description and hours for minimum 40 hours&quot;);</span>
+<span class="nc" id="L157">	}</span>
+
+	public void validateHoursvalidation() throws Exception {
+<span class="nc" id="L160">		CommonUtils.explicitlyWaitForElementandClick(saveall, 10);</span>
+<span class="nc" id="L161">		String TimeValidation = Timevalidation.getText();</span>
+<span class="nc" id="L162">		Assert.assertEquals(TimeValidation, &quot;Summation of hours in mon exceeded 24!!!&quot;);</span>
+<span class="nc" id="L163">		Logs.info(&quot;successfully verified for exceeding hours per day&quot;);</span>
+<span class="nc" id="L164">	}</span>
+
+	public void validationFor40hrs() throws Exception {
+<span class="nc" id="L167">		CommonUtils.explicitlyWaitForElementandClick(saveall, 10);</span>
+<span class="nc" id="L168">		Thread.sleep(3000);</span>
+<span class="nc" id="L169">		CommonUtils.explicitlyWaitForElementandClick(submit, 10);</span>
+<span class="nc" id="L170">		String LessThan40Hrs = lessThanHrsValidation.getText();</span>
+<span class="nc" id="L171">		Assert.assertEquals(LessThan40Hrs, &quot;Minimum 40 hours required to submit the timesheet&quot;);</span>
+<span class="nc" id="L172">		Logs.info(&quot;successfully verified for minimum 40 hours per week&quot;);</span>
+<span class="nc" id="L173">	}</span>
+//////////////////////////////////////////////////////////////////////////////////////	
+
+}
+
+/*
+ * public void selectCurrentWeek() {
+ * 
+ * // CommonUtils.CalenderSelectWithDate(driver, 1); Calendar cal =
+ * Calendar.getInstance(); cal.set(Calendar.DAY_OF_WEEK, Calendar.SUNDAY);
+ * cal.add(Calendar.DATE, 0); Date currentDate = cal.getTime(); int date =
+ * currentDate.getDate(); CommonUtils.CalenderSelectWithDate(driver, date);
+ * System.out.println(currentDate); }
+ * 
+ * 
+ * public void selectfutureWeekDate() throws InterruptedException {
+ * CommonUtils.explicitlyWaitForElementandClick(calendarStartIcon, 5); Calendar
+ * cal = Calendar.getInstance(); cal.set(Calendar.DAY_OF_WEEK, Calendar.SUNDAY);
+ * cal.add(Calendar.DATE, 7); Date future = cal.getTime(); int date =
+ * future.getDate(); System.out.println(future); if
+ * (FutureMonthArrowIcon.isEnabled()) {
+ * CommonUtils.explicitlyWaitForElementandClick(FutureMonthArrowIcon, 10);
+ * Thread.sleep(3000); } else {
+ * System.out.println(&quot;Future Month Button is not Enabled&quot;); }
+ * CommonUtils.CalenderSelectWithDate(driver, date); System.out.println(future);
+ * }
+ * 
+ * public void selectPastWeekDate() throws InterruptedException { //
+ * CommonUtils.explicitlyWaitForElementandClick(calendarStartIcon, 5); Calendar
+ * cal = Calendar.getInstance(); cal.set(Calendar.DAY_OF_WEEK, Calendar.SUNDAY);
+ * cal.add(Calendar.WEEK_OF_MONTH, -2); Date pastDate = cal.getTime(); int date
+ * = pastDate.getDate(); if (PreviousMonthArrowIcon.isEnabled()) {
+ * CommonUtils.explicitlyWaitForElementandClick(PreviousMonthArrowIcon, 10);
+ * Thread.sleep(3000); } else {
+ * System.out.println(&quot;Previous Month Button is not Enabled&quot;); }
+ * CommonUtils.CalenderSelectWithDate(driver, date);
+ * System.out.println(pastDate); }
+ */
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.12.202403310830</span></div></body></html>

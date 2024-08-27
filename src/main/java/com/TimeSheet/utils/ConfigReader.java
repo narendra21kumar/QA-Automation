@@ -58,6 +58,13 @@ package com.TimeSheet.utils;
 	    public static String getAdminPassword() {
 	        return properties.getProperty("Adminpw");
 	    }
+	    public static String getHrUsername() {
+	        return properties.getProperty("HrUname");
+	    }
+ 
+	    public static String getHrPassword() {
+	        return properties.getProperty("HrPwd");
+	    }
 	  //-----------------------------------------------------------
 	    
 		private static String browserType = null;

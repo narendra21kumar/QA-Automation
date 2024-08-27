@@ -4,6 +4,7 @@ import org.openqa.selenium.WebDriver;
 import com.ReportingManagerViewTimeSheet.page.PM01_LoginPage;
 import com.ReportingManagerViewTimeSheet.page.PM06_CreatePreviousWeekTimesheetPage;
 import com.TimeSheet.utils.CommonUtils;
+import com.TimeSheet.utils.Logs;
 import com.TimeSheet.utils.WebDriverManager;
 
 import io.cucumber.java.en.And;
@@ -19,6 +20,8 @@ public class TM06_CreatePreviousWeekTimesheetSteps {
 
 	@Given("User can able to login into the manager view for previous create timesheet")
 	public void user_can_able_to_login_into_the_manager_view_for_previous_create_timesheet() {
+		Logs.initLogs(PM06_CreatePreviousWeekTimesheetPage.class.getName());
+		Logs.startTestCase(this.getClass().getSimpleName());
 		driver = WebDriverManager.getDriver();
 		loginPage = new PM01_LoginPage(driver);
 		CreatePreviousWeekTimesheetPage = new PM06_CreatePreviousWeekTimesheetPage(driver);

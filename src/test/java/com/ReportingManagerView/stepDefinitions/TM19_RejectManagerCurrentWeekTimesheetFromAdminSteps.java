@@ -4,6 +4,7 @@ import org.openqa.selenium.WebDriver;
 
 import com.ReportingManagerViewTimeSheet.page.PM01_LoginPage;
 import com.ReportingManagerViewTimeSheet.page.PM19_RejectManagerCurrentWeekTimesheetFromAdminPage;
+import com.TimeSheet.utils.Logs;
 import com.TimeSheet.utils.WebDriverManager;
 
 import io.cucumber.java.en.And;
@@ -18,6 +19,8 @@ public class TM19_RejectManagerCurrentWeekTimesheetFromAdminSteps {
 
 	@Given("Admin login into the timesheet and reject the manager approved timesheet")
 	public void admin_login_into_the_timesheet_and_reject_the_manager_approved_timesheet() {
+		Logs.initLogs(TM19_RejectManagerCurrentWeekTimesheetFromAdminSteps.class.getName());
+		Logs.startTestCase(this.getClass().getSimpleName());
 		driver = WebDriverManager.getDriver();
 		loginPage = new PM01_LoginPage(driver);
 		rejectManagerCurrentWeekTimesheetFromAdminPage = new PM19_RejectManagerCurrentWeekTimesheetFromAdminPage(

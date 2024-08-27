@@ -4,6 +4,7 @@ import org.openqa.selenium.WebDriver;
 
 import com.ReportingManagerViewTimeSheet.page.PM01_LoginPage;
 import com.ReportingManagerViewTimeSheet.page.PM10_ManagerEditTimesheetPage;
+import com.TimeSheet.utils.Logs;
 import com.TimeSheet.utils.WebDriverManager;
 
 import io.cucumber.java.en.And;
@@ -18,6 +19,8 @@ public class TM10_ManagerEditTimesheetSteps {
 
 	@Given("User login to the timesheet page for edit timesheet")
 	public void user_login_to_the_timesheet_page_for_edit_timesheet() {
+		Logs.initLogs(TM10_ManagerEditTimesheetSteps.class.getName());
+		Logs.startTestCase(this.getClass().getSimpleName());
 		driver = WebDriverManager.getDriver();
 		loginPage = new PM01_LoginPage(driver);
 		managerEditTimesheetPage = new PM10_ManagerEditTimesheetPage(driver);

@@ -4,6 +4,7 @@ import org.openqa.selenium.WebDriver;
 
 import com.ReportingManagerViewTimeSheet.page.PM01_LoginPage;
 import com.ReportingManagerViewTimeSheet.page.PM04_VerifyManagerSubmittedTimesheetandApproveinAdminViewPage;
+import com.TimeSheet.utils.Logs;
 import com.TimeSheet.utils.WebDriverManager;
 
 import io.cucumber.java.en.And;
@@ -18,6 +19,8 @@ public class TM04_VerifyManagerSubmittedTimesheetandApproveinAdminViewSteps {
 
 	@Given("verify the manager submitted timesheet and approve from admin view")
 	public void verify_the_manager_submitted_timesheet_and_approve_from_admin_view() {
+		Logs.initLogs(TM04_VerifyManagerSubmittedTimesheetandApproveinAdminViewSteps.class.getName());
+		Logs.startTestCase(this.getClass().getSimpleName());
 		driver = WebDriverManager.getDriver();
 		loginPage = new PM01_LoginPage(driver);
 		managersubmittedtimesheet = new PM04_VerifyManagerSubmittedTimesheetandApproveinAdminViewPage(driver);

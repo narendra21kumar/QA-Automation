@@ -33,6 +33,12 @@ public class PM02_CreateCurrentWeekTimeSheetPage {
 	@FindBy(xpath = ("//*[@aria-label='Select Week']/following::label[4]"))
 	WebElement enddate;
 
+	@FindBy(xpath = "(//*[@class=\"_3HctNa4SpoWtFT9b3gCxL\"])[1]")
+	WebElement managerName;
+	
+	@FindBy(xpath = "(//*[@class=\"_3HctNa4SpoWtFT9b3gCxL\"])[2]")
+	WebElement approverName;
+
 	@FindBy(xpath = "//*[@aria-label='Save all']")
 	WebElement saveall;
 
@@ -42,11 +48,11 @@ public class PM02_CreateCurrentWeekTimeSheetPage {
 	@FindBy(xpath = "//*[text()='Confirm']")
 	WebElement confirm;
 
-
 	public void createTimesheetIcon() throws Exception {
 		CommonUtils.explicitlyWaitForElementandClick(createTimesheetIcon, 10);
 		Logs.info("Clicked on create timesheet icon");
 	}
+
 	public void selectCurrentWeek() {
 		Calendar cal = Calendar.getInstance();
 		cal.set(Calendar.DAY_OF_WEEK, Calendar.SUNDAY);
@@ -57,17 +63,29 @@ public class PM02_CreateCurrentWeekTimeSheetPage {
 		Logs.info("Selected the currrent date from calendar");
 	}
 
+	public void managerName(String managername) {
+ 
+		String managernametext = managerName.getText();
+		System.out.println("manager name is : " + managernametext);
+		Assert.assertEquals(managernametext, managername);
+	}
+
+	public void approverName(String approvername) {
+
+		String approvernametext = approverName.getText();
+		System.out.println("approver name is : " + approvernametext);
+		Assert.assertEquals(approvernametext, approvername);
+	}
+
 	public void enterTaskDescriptionCategorySubcategory(String SheetName) throws Exception {
 		startdatetext = startdate.getText();
 		enddatetext = enddate.getText();
-		System.out.println(
-				"printing the selected start week date " + " : " + startdatetext + " and end date is " + " : " + enddatetext);
+		System.out.println("printing the selected start week date " + " : " + startdatetext + " and end date is "
+				+ " : " + enddatetext);
 		CommonUtils.waitFor(2);
 		CommonUtils.taskDesccategoryandEnteringHours(driver, SheetName);
 		Logs.info("Entered the task description,category and hours");
 	}
-
-	
 
 	public void saveIcon() {
 		CommonUtils.waitFor(2);

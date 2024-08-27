@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>PA08_ApproveSelfTimesheetPage.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">QA-Automation</a> &gt; <a href="index.source.html" class="el_package">com.AdminViewTimeSheet.page</a> &gt; <span class="el_source">PA08_ApproveSelfTimesheetPage.java</span></div><h1>PA08_ApproveSelfTimesheetPage.java</h1><pre class="source lang-java linenums">package com.AdminViewTimeSheet.page;
+
+import java.util.List;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
+
+import com.TimeSheet.utils.CommonUtils;
+import com.TimeSheet.utils.Logs;
+
+public class PA08_ApproveSelfTimesheetPage {
+	WebDriver driver;
+	String empid;
+
+<span class="nc" id="L18">	public PA08_ApproveSelfTimesheetPage(WebDriver driver) {</span>
+<span class="nc" id="L19">		this.driver = driver;</span>
+<span class="nc" id="L20">		PageFactory.initElements(driver, this);</span>
+<span class="nc" id="L21">	}</span>
+    
+	@FindBy(xpath = &quot;//input[@class='PrivateSwitchBase-input MuiSwitch-input css-1m9pwf3']&quot;)
+    WebElement enableToggle;
+	
+	@FindBy(xpath = &quot;//a[contains(@class, '_2esG8N9N5-Q9Ui8vVn5gZt') and @title='Approved']&quot;)
+	WebElement approvedIcon;
+
+	@FindBy(xpath = &quot;//div[contains(@class, '_1PlWXS4_EMHgqB5ngxCevb')][1]&quot;)
+	WebElement startDateSelectDrop;
+
+	@FindBy(xpath = &quot;//div[contains(@class, '_1PlWXS4_EMHgqB5ngxCevb')][2]&quot;)
+	WebElement endDateSelectDrop;
+
+	@FindBy(xpath = &quot;(//input[@type='text'])[1]&quot;)
+	WebElement searchClient;
+
+	@FindBy(xpath = &quot;//button[contains(@title, 'Clear')]&quot;)
+	WebElement disSelectClientFromDrpdwn;
+
+	@FindBy(xpath = &quot;(//input[@type='text'])[2]&quot;)
+	WebElement searchByName;
+
+	@FindBy(xpath = &quot;//button[contains(@class, 'MuiIconButton-sizeMedium') and @aria-label='Detail panel visibility toggle']&quot;)
+	WebElement arrowIcontoExpandRecord;
+
+	@FindBy(xpath = &quot;//button[contains(@class, 'MuiIconButton-sizeMedium') and @aria-label='Approve Timesheet']&quot;)
+	WebElement approveTimeSheetIcon;
+
+	@FindBy(xpath = &quot;//button[contains(@class, 'MuiIconButton-sizeMedium') and @aria-label='Reject Timesheet']&quot;)
+	WebElement rejectTimeSheetIcon;
+
+	@FindBy(xpath = &quot;//input[contains(@id, 'checkbox_397')]&quot;)
+	WebElement selectCheckBox;
+
+	@FindBy(xpath = &quot;//div[@class='rdp-caption_label']&quot;)
+	WebElement monthYear;
+
+	@FindBy(xpath = &quot;//button[@name='previous-month']&quot;)
+	WebElement previousmonthArrow;
+
+	@FindBy(xpath = &quot;//button[@name='next-month']&quot;)
+	WebElement nextmonthArrow;
+	
+	@FindBy(xpath = &quot;(//button[contains(@class, 'MuiIconButton-sizeMedium') and @aria-label='Detail panel visibility toggle'])[1]&quot;)
+	WebElement ExpandArrowIcon;
+	
+	@FindBy(xpath = &quot;//a[contains(@class, '_2esG8N9N5-Q9Ui8vVn5gZt') and @title='Submitted']&quot;)
+	WebElement submittedIcon;
+	
+	@FindBy(xpath = &quot;//*[contains(@class,'MuiTableBody-root css-1xnox0e')]//td[3]//div&quot;)
+	List&lt;WebElement&gt; listOfEmpIds;
+	
+	@FindBy(xpath = &quot;//*[contains(@class,'MuiTableBody-root css-1xnox0e')]//td[8]&quot;)
+	List&lt;WebElement&gt; subDateOfEmp;
+	
+	@FindBy(xpath =&quot;(//input[@class='PrivateSwitchBase-input css-1m9pwf3'])[1]&quot;)
+	WebElement checkbox;
+	
+	@FindBy(xpath =&quot;//button[text()='Approve']&quot;)
+	WebElement approvebtn;
+	
+//------------------------------------------------------------------------------------	
+	
+	public void enableToggle() {
+<span class="nc" id="L86">		CommonUtils.waitFor(3);</span>
+<span class="nc" id="L87">		CommonUtils.explicitlyWaitForElementandClick(enableToggle,10);</span>
+<span class="nc" id="L88">		Logs.info(&quot;clicked on enable Toggle&quot;);</span>
+<span class="nc" id="L89">	}</span>
+	
+	public void timeSheetSubmitted() {
+<span class="nc" id="L92">		CommonUtils.waitFor(3);</span>
+<span class="nc" id="L93">		CommonUtils.explicitlyWaitForElementandClick(submittedIcon, 10);</span>
+<span class="nc" id="L94">		Logs.info(&quot;clicked on Timesheet Management page&quot;);</span>
+<span class="nc" id="L95">	}</span>
+	
+
+	
+	public void approveTimesheet(String empid) {		
+<span class="nc" id="L100">		this.empid = empid;</span>
+<span class="nc" id="L101">		WebElement ApprovedEmpId = driver.findElement(By</span>
+<span class="nc" id="L102">				.xpath(&quot;//*[@title='&quot; + empid + &quot;']/following::td[8]/div[1]/button[@aria-label='Approve Timesheet']&quot;));</span>
+<span class="nc" id="L103">		CommonUtils.explicitlyWaitForElementandClick(ApprovedEmpId, 10);</span>
+<span class="nc" id="L104">		Logs.info(&quot;clicked on approve icon to Approve the timesheet&quot;);</span>
+<span class="nc" id="L105">	}</span>
+	
+	
+//---------------------------------------------------------------------------------	
+	public void clickonapprovedIcon() {
+<span class="nc" id="L110">		CommonUtils.waitFor(3);</span>
+<span class="nc" id="L111">		CommonUtils.explicitlyWaitForElementandClick(approvedIcon, 10);</span>
+<span class="nc" id="L112">		Logs.info(&quot;clicked on Approved Page&quot;);</span>
+<span class="nc" id="L113">	}</span>
+	
+	public void startCalendar() {
+<span class="nc" id="L116">		CommonUtils.waitFor(3);</span>
+<span class="nc" id="L117">		CommonUtils.explicitlyWaitForElementandClick(startDateSelectDrop, 10);</span>
+<span class="nc" id="L118">		Logs.info(&quot;clicked on Start Calender Icon&quot;);</span>
+<span class="nc" id="L119">	}</span>
+	
+	public void endCalendar() {
+<span class="nc" id="L122">		CommonUtils.waitFor(3);</span>
+<span class="nc" id="L123">		CommonUtils.explicitlyWaitForElementandClick(endDateSelectDrop, 10);</span>
+<span class="nc" id="L124">		Logs.info(&quot;clicked on End Calender Icon&quot;);</span>
+<span class="nc" id="L125">	}</span>
+	
+	public void verifyApprovedEmployees() {
+<span class="nc bnc" id="L128" title="All 2 branches missed.">		for(WebElement List : listOfEmpIds ) {</span>
+			
+<span class="nc" id="L130">			String ListRetreived = List.getText();</span>
+			//System.out.println(&quot;required employee id : &quot; + ListRetreived);
+<span class="nc bnc" id="L132" title="All 2 branches missed.">			if(ListRetreived.equals(empid)) {</span>
+<span class="nc" id="L133">			System.out.println(&quot;Verify Approved Employee id: &quot;+ ListRetreived);</span>
+<span class="nc" id="L134">			Logs.info(&quot;Successfully Verified the Approve Timesheet in approved page&quot;);</span>
+<span class="nc" id="L135">			break;</span>
+			}   
+			else {
+				
+<span class="nc" id="L139">				System.out.println(&quot;Employee ID not matched&quot;);</span>
+<span class="nc" id="L140">				Logs.info(&quot;Approved employee id is not Present in approved page&quot;);</span>
+			}
+<span class="nc" id="L142">		}</span>
+<span class="nc" id="L143">	}</span>
+	
+	public void verifyApprovedEmployeDate(String Date) {
+<span class="nc bnc" id="L146" title="All 2 branches missed.">		for(WebElement subDateList : subDateOfEmp ) {</span>
+<span class="nc" id="L147">			String listOfSubDate = subDateList.getText();</span>
+			//System.out.println(&quot;required employee id : &quot; + ListRetreived);
+<span class="nc bnc" id="L149" title="All 2 branches missed.">			if(listOfSubDate.equals(Date)) {</span>
+<span class="nc" id="L150">			System.out.println(&quot;Verify Approved Employee id: &quot;+ listOfSubDate);</span>
+<span class="nc" id="L151">			Logs.info(&quot;Successfully Verified the Approve Timesheet in approved page&quot;);</span>
+<span class="nc" id="L152">			break;</span>
+			}   
+			else {
+				
+<span class="nc" id="L156">				System.out.println(&quot;Employee Submission date is  not matched&quot;);</span>
+<span class="nc" id="L157">				Logs.info(&quot;Approved employee id is not Present in approved page&quot;);</span>
+			}
+<span class="nc" id="L159">		}</span>
+<span class="nc" id="L160">	}</span>
+	
+	public void bulkApprove()
+	{
+<span class="nc" id="L164">		CommonUtils.waitFor(3);</span>
+<span class="nc" id="L165">		CommonUtils.JavaScriptExecutorClick(driver, checkbox);</span>
+<span class="nc" id="L166">		Logs.info(&quot;Selected the checkbox for bulkApprove&quot;);</span>
+<span class="nc" id="L167">		CommonUtils.waitFor(6);</span>
+<span class="nc" id="L168">		CommonUtils.explicitlyWaitForElementandClick(approvebtn, 2);</span>
+<span class="nc" id="L169">		Logs.info(&quot;SuccessFully Bulk approved the timesheets&quot;);</span>
+<span class="nc" id="L170">	}</span>
+	
+}
+
+/*
+ 
+ 
+ 	public void selectStartDateandMonthforSubmitted(String Startmonth, String Startdate) {
+		CommonUtils.waitFor(3); 
+		String monthNm = Startmonth.split(&quot; &quot;)[0].trim();
+		System.out.println(&quot;Req value :&quot; + monthNm);
+		CommonUtils.waitFor(2);
+		CommonUtils.clickMonthTab(monthNm, nextmonthArrow, previousmonthArrow, monthYear);
+		CommonUtils.waitFor(2);
+		WebElement reqDate = driver.findElement(By.xpath(&quot;//*[text()='&quot; + Startdate + &quot;']&quot;));
+		reqDate.click();
+		Logs.info(&quot;Selected the start Week and month to Approve&quot;);
+	}
+ 
+	public void selectEndDateandMonthforSubmitted(String EndMonth, String EndDate) {
+		CommonUtils.waitFor(3); 
+		String monthNm = EndMonth.split(&quot; &quot;)[0].trim();
+		System.out.println(&quot;Req value :&quot; + monthNm);
+		CommonUtils.waitFor(2);
+		CommonUtils.clickMonthTab(monthNm, nextmonthArrow, previousmonthArrow, monthYear);
+		CommonUtils.waitFor(2);
+		WebElement reqDate = driver.findElement(By.xpath(&quot;//*[text()='&quot; + EndDate + &quot;']&quot;));
+		reqDate.click();
+		CommonUtils.waitFor(3); 
+		Logs.info(&quot;Selected the End Week and month to Approve&quot;);
+	}
+		public void selectStartDateandMonth(String Startmonth, String Startdate) {
+		CommonUtils.waitFor(3); 
+		String monthNm = Startmonth.split(&quot; &quot;)[0].trim();
+		System.out.println(&quot;Req value :&quot; + monthNm);
+		CommonUtils.waitFor(2);
+		CommonUtils.clickMonthTab(monthNm, nextmonthArrow, previousmonthArrow, monthYear);
+		CommonUtils.waitFor(2);
+		WebElement reqDate = driver.findElement(By.xpath(&quot;//*[text()='&quot; + Startdate + &quot;']&quot;));
+		reqDate.click();
+		Logs.info(&quot;Selected the start Week and month to Approve&quot;);
+	}
+ 
+	public void selectEndDateandMonth(String EndMonth, String EndDate) {
+		CommonUtils.waitFor(3); 
+		String monthNm = EndMonth.split(&quot; &quot;)[0].trim();
+		System.out.println(&quot;Req value :&quot; + monthNm);
+		CommonUtils.waitFor(2);
+		CommonUtils.clickMonthTab(monthNm, nextmonthArrow, previousmonthArrow, monthYear);
+		CommonUtils.waitFor(2);
+		WebElement reqDate = driver.findElement(By.xpath(&quot;//*[text()='&quot; + EndDate + &quot;']&quot;));
+		reqDate.click();
+		Logs.info(&quot;Selected the End Week and month to approve&quot;);
+	}
+	
+ */
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.12.202403310830</span></div></body></html>

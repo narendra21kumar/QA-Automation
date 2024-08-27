@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>PA02_TimeSheetManagementPage.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">QA-Automation</a> &gt; <a href="index.source.html" class="el_package">com.AdminViewTimeSheet.page</a> &gt; <span class="el_source">PA02_TimeSheetManagementPage.java</span></div><h1>PA02_TimeSheetManagementPage.java</h1><pre class="source lang-java linenums">package com.AdminViewTimeSheet.page;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
+
+import com.TimeSheet.utils.CommonUtils;
+import com.TimeSheet.utils.Logs;
+
+public class PA02_TimeSheetManagementPage {
+	WebDriver driver;
+
+<span class="nc" id="L15">	public PA02_TimeSheetManagementPage(WebDriver driver) {</span>
+<span class="nc" id="L16">		this.driver = driver;</span>
+<span class="nc" id="L17">		PageFactory.initElements(driver, this);</span>
+<span class="nc" id="L18">	}</span>
+
+	@FindBy(xpath = &quot;//a[contains(@class, '_2esG8N9N5-Q9Ui8vVn5gZt') and @title='Submitted']&quot;)
+	WebElement submittedIcon;
+
+	@FindBy(xpath = &quot;//div[contains(@class, '_1PlWXS4_EMHgqB5ngxCevb')][1]&quot;)
+	WebElement startDateSelectDrop;
+
+	@FindBy(xpath = &quot;//div[contains(@class, '_1PlWXS4_EMHgqB5ngxCevb')][2]&quot;)
+	WebElement endDateSelectDrop;
+
+	@FindBy(xpath = &quot;(//input[@type='text'])[1]&quot;)
+	WebElement searchClient;
+
+	@FindBy(xpath = &quot;//button[contains(@title, 'Clear')]&quot;)
+	WebElement disSelectClientFromDrpdwn;
+
+	@FindBy(xpath = &quot;(//input[@type='text'])[2]&quot;)
+	WebElement searchByName;
+
+	@FindBy(xpath = &quot;//button[contains(@class, 'MuiIconButton-sizeMedium') and @aria-label='Detail panel visibility toggle']&quot;)
+	WebElement arrowIcontoExpandRecord;
+
+	@FindBy(xpath = &quot;//button[contains(@class, 'MuiIconButton-sizeMedium') and @aria-label='Approve Timesheet']&quot;)
+	WebElement approveTimeSheetIcon;
+
+	@FindBy(xpath = &quot;//button[contains(@class, 'MuiIconButton-sizeMedium') and @aria-label='Reject Timesheet']&quot;)
+	WebElement rejectTimeSheetIcon;
+
+	@FindBy(xpath = &quot;//input[contains(@id, 'checkbox_397')]&quot;)
+	WebElement selectCheckBox;
+
+	@FindBy(xpath = &quot;//div[@class='rdp-caption_label']&quot;)
+	WebElement monthYear;
+
+	@FindBy(xpath = &quot;//button[@name='previous-month']&quot;)
+	WebElement previousmonthArrow;
+
+	// button[@name='previous-month']
+	@FindBy(xpath = &quot;//button[@name='next-month']&quot;)
+	WebElement nextmonthArrow;
+
+	public void clickonTimeSheetMaangementIcon() {
+<span class="nc" id="L61">		CommonUtils.waitFor(3);</span>
+<span class="nc" id="L62">		CommonUtils.explicitlyWaitForElementandClick(submittedIcon, 10);</span>
+<span class="nc" id="L63">		Logs.info(&quot;clicked on TimesheetManagement Icon&quot;);</span>
+<span class="nc" id="L64">	}</span>
+
+	public void startCalendar() {
+<span class="nc" id="L67">		CommonUtils.waitFor(3);</span>
+<span class="nc" id="L68">		CommonUtils.explicitlyWaitForElementandClick(startDateSelectDrop, 10);</span>
+<span class="nc" id="L69">		Logs.info(&quot;clicked on Start Calender Icon&quot;);</span>
+<span class="nc" id="L70">	}</span>
+
+	public void endCalendar() {
+<span class="nc" id="L73">		CommonUtils.waitFor(3);</span>
+<span class="nc" id="L74">		CommonUtils.explicitlyWaitForElementandClick(endDateSelectDrop, 10);</span>
+<span class="nc" id="L75">		Logs.info(&quot;clicked on End calender Icon&quot;);</span>
+<span class="nc" id="L76">	}</span>
+
+	public void approveTimesheet(String empid) {
+<span class="nc" id="L79">		WebElement element = driver.findElement(By</span>
+<span class="nc" id="L80">				.xpath(&quot;//*[@title='&quot; + empid + &quot;']/following::td[8]/div[1]/button[@aria-label='Approve Timesheet']&quot;));</span>
+<span class="nc" id="L81">		CommonUtils.explicitlyWaitForElementandClick(element, 10);</span>
+<span class="nc" id="L82">		Logs.info(&quot;Approved the Timesheet&quot;);</span>
+
+<span class="nc" id="L84">	}</span>
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.12.202403310830</span></div></body></html>

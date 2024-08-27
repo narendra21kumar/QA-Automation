@@ -62,4 +62,10 @@ public class TE02_CreateTimeSheetSteps {
 			CreateTimeSheetPage.validateTimesheetResponse(string);
 			Logs.endTestCase(this.getClass().getSimpleName());
 		}
+		@Then("Verify the manager name {string} and approver name {string} for employee view in create timesheet page")
+		public void verify_the_manager_name_and_approver_name_for_employee_view_in_create_timesheet_page(String managername, String approvername) {
+			CreateTimeSheetPage.managerName(managername);
+			CreateTimeSheetPage.approverName(approvername);
+		}
+
 }

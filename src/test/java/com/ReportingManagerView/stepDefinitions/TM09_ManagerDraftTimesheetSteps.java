@@ -4,6 +4,7 @@ import org.openqa.selenium.WebDriver;
 
 import com.ReportingManagerViewTimeSheet.page.PM01_LoginPage;
 import com.ReportingManagerViewTimeSheet.page.PM09_ManagerDraftTimesheetPage;
+import com.TimeSheet.utils.Logs;
 import com.TimeSheet.utils.WebDriverManager;
 
 import io.cucumber.java.en.And;
@@ -18,6 +19,8 @@ public class TM09_ManagerDraftTimesheetSteps {
 
 	@Given("Manager login into the timesheet for Draft Timesheet")
 	public void manager_login_into_the_timesheet_for_draft_timesheet() {
+		Logs.initLogs(TM09_ManagerDraftTimesheetSteps.class.getName());
+		Logs.startTestCase(this.getClass().getSimpleName());
 		driver = WebDriverManager.getDriver();
 		loginPage = new PM01_LoginPage(driver);
 		managerDraftTimesheetPage = new PM09_ManagerDraftTimesheetPage(driver);

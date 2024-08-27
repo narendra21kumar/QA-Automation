@@ -4,6 +4,7 @@ import org.openqa.selenium.WebDriver;
 
 import com.ReportingManagerViewTimeSheet.page.PM01_LoginPage;
 import com.ReportingManagerViewTimeSheet.page.PM14_VerifyManagerRejectedTimesheetForEmployeePage;
+import com.TimeSheet.utils.Logs;
 import com.TimeSheet.utils.WebDriverManager;
 
 import io.cucumber.java.en.And;
@@ -18,6 +19,8 @@ public class TM14_VerifyManagerRejectedTimesheetForEmployeeSteps {
 
 	@Given("Manager login into the timesheet for verifying the rejected timesheet for employee")
 	public void manager_login_into_the_timesheet_for_verifying_the_rejected_timesheet_for_employee() {
+		Logs.initLogs(TM14_VerifyManagerRejectedTimesheetForEmployeeSteps.class.getName());
+		Logs.startTestCase(this.getClass().getSimpleName());
 		driver = WebDriverManager.getDriver();
 		loginPage = new PM01_LoginPage(driver);
 		verifyManagerRejectedTimesheetForEmployeePage = new PM14_VerifyManagerRejectedTimesheetForEmployeePage(driver);

@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>PM20_RejectManagerPreviousWeekTimesheetFromAdminPage.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">QA-Automation</a> &gt; <a href="index.source.html" class="el_package">com.ReportingManagerViewTimeSheet.page</a> &gt; <span class="el_source">PM20_RejectManagerPreviousWeekTimesheetFromAdminPage.java</span></div><h1>PM20_RejectManagerPreviousWeekTimesheetFromAdminPage.java</h1><pre class="source lang-java linenums">package com.ReportingManagerViewTimeSheet.page;
+
+import java.util.Calendar;
+import java.util.Date;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
+
+import com.TimeSheet.utils.CommonUtils;
+import com.TimeSheet.utils.Logs;
+
+public class PM20_RejectManagerPreviousWeekTimesheetFromAdminPage {
+
+	
+	public WebDriver driver;
+
+<span class="nc" id="L20">	public PM20_RejectManagerPreviousWeekTimesheetFromAdminPage(WebDriver driver) {</span>
+<span class="nc" id="L21">		this.driver = driver;</span>
+<span class="nc" id="L22">		PageFactory.initElements(driver, this);</span>
+<span class="nc" id="L23">	}</span>
+	
+	@FindBy(xpath =&quot;//*[@title=\&quot;Submitted\&quot;]&quot;)
+	WebElement timesheetmanagementicon;
+	
+	@FindBy(xpath = &quot;//*[@class='MuiSvgIcon-root']&quot;)
+	WebElement calendarStartIcon;
+	
+	@FindBy(xpath = &quot;//*[@name='previous-month']&quot;)
+	WebElement PreviousMonthArrowIcon;
+	
+	@FindBy(xpath =&quot;//*[@rows='4']&quot;)
+	WebElement remarkstext;
+	
+	@FindBy(xpath =&quot;//*[text()='Confirm']&quot;)
+	WebElement confirm;
+
+	
+	public void submittedPage() {
+<span class="nc" id="L42">		CommonUtils.explicitlyWaitForElementandClick(timesheetmanagementicon, 10);</span>
+<span class="nc" id="L43">		Logs.info(&quot;Clicked on timesheet management page icon&quot;);</span>
+<span class="nc" id="L44">	}</span>
+	public void selectPastWeekDate() throws InterruptedException {
+<span class="nc" id="L46">		CommonUtils.explicitlyWaitForElementandClick(calendarStartIcon, 5);</span>
+<span class="nc" id="L47">		Calendar cal = Calendar.getInstance();</span>
+<span class="nc" id="L48">		cal.set(Calendar.DAY_OF_WEEK, Calendar.SUNDAY);</span>
+<span class="nc" id="L49">		cal.add(Calendar.DATE, -7);</span>
+<span class="nc" id="L50">		Date pastDate = cal.getTime();</span>
+<span class="nc" id="L51">		int date = pastDate.getDate();</span>
+<span class="nc" id="L52">        boolean availableDate = true;</span>
+<span class="nc bnc" id="L53" title="All 2 branches missed.">		if(availableDate) {</span>
+<span class="nc" id="L54">			CommonUtils.CalenderSelectWithDate(driver, date);	</span>
+<span class="nc" id="L55">			Logs.info(&quot;Selected the past week date from calendar&quot;);</span>
+<span class="nc" id="L56">			Thread.sleep(3000);</span>
+		}
+		else {
+<span class="nc" id="L59">			CommonUtils.explicitlyWaitForElementandClick(PreviousMonthArrowIcon, 10);</span>
+<span class="nc" id="L60">			Logs.info(&quot;Clicked on previous month arrow icon and selected the past week date from calendar&quot;);</span>
+<span class="nc" id="L61">			Thread.sleep(3000);</span>
+<span class="nc" id="L62">			System.out.println(pastDate);</span>
+		}
+<span class="nc" id="L64">	}</span>
+	
+	public void rejectTimesheet(String empid,String remarks) {
+<span class="nc" id="L67">		WebElement reject=driver.findElement(By.xpath(&quot;//*[@title='&quot; + empid + &quot;']/following::td[8]/div[1]/button[2][@aria-label='Reject Timesheet']&quot;));</span>
+<span class="nc" id="L68">		CommonUtils.explicitlyWaitForElementandClick(reject, 10);</span>
+<span class="nc" id="L69">		Logs.info(&quot;Clicked on reject icon&quot;);</span>
+<span class="nc" id="L70">		CommonUtils.waitFor(2);</span>
+<span class="nc" id="L71">		CommonUtils.sendKeysToElement(remarkstext,remarks);</span>
+<span class="nc" id="L72">		Logs.info(&quot;Entered the remarks in text filed&quot;);</span>
+<span class="nc" id="L73">		CommonUtils.waitFor(2);</span>
+<span class="nc" id="L74">		CommonUtils.explicitlyWaitForElementandClick(confirm, 10);</span>
+<span class="nc" id="L75">		Logs.info(&quot;Clicked on confirm button&quot;);</span>
+<span class="nc" id="L76">		CommonUtils.waitFor(2);</span>
+<span class="nc" id="L77">	}</span>
+	
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.12.202403310830</span></div></body></html>

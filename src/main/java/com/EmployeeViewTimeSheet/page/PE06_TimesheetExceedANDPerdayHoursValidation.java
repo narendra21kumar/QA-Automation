@@ -128,10 +128,6 @@ public class PE06_TimesheetExceedANDPerdayHoursValidation {
 		Logs.info("Successfully done the validation of PerDay exceeding Hours");
 	}
 
-	public void validationFor40hrs(String HoursValidation) throws Exception {
-		String TimeValidation = LesshoursTimevalidation.getText();
-		Assert.assertEquals(TimeValidation, HoursValidation);
-		Logs.info("Successfully done the validation of PerWeek minimun 40 hours");
-	}
+	
 
 }

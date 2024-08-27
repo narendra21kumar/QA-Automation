@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>PM10_ManagerEditTimesheetPage.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">QA-Automation</a> &gt; <a href="index.source.html" class="el_package">com.ReportingManagerViewTimeSheet.page</a> &gt; <span class="el_source">PM10_ManagerEditTimesheetPage.java</span></div><h1>PM10_ManagerEditTimesheetPage.java</h1><pre class="source lang-java linenums">package com.ReportingManagerViewTimeSheet.page;
+
+import java.util.Calendar;
+import java.util.Date;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
+import org.testng.Assert;
+
+import com.TimeSheet.utils.CommonUtils;
+import com.TimeSheet.utils.Logs;
+
+public class PM10_ManagerEditTimesheetPage {
+
+	public WebDriver driver;
+
+<span class="nc" id="L20">	public PM10_ManagerEditTimesheetPage(WebDriver driver) {</span>
+<span class="nc" id="L21">		this.driver = driver;</span>
+<span class="nc" id="L22">		PageFactory.initElements(driver, this);</span>
+<span class="nc" id="L23">	}</span>
+
+	@FindBy(xpath = &quot;//a[contains(@class, '_2esG8N9N5-Q9Ui8vVn5gZt') and @title='Create Timesheet']&quot;)
+	WebElement createTimesheetIcon;
+
+	@FindBy(xpath = &quot;//*[@class='MuiSvgIcon-root']&quot;)
+	WebElement calendarStartIcon;
+
+	@FindBy(xpath = &quot;//*[@name='previous-month']&quot;)
+	WebElement PreviousMonthArrowIcon;
+
+	@FindBy(xpath = &quot;//*[@aria-label='Edit']&quot;)
+	WebElement editicon;
+
+	@FindBy(xpath = &quot;//*[@aria-label='Save all']&quot;)
+	WebElement saveall;
+
+	@FindBy(xpath = &quot;//*[text()='Submit']&quot;)
+	WebElement submit;
+
+	@FindBy(xpath = &quot;//*[text()='Confirm']&quot;)
+	WebElement confirm;
+
+	public void createTimesheetIcon() throws Exception {
+<span class="nc" id="L47">		CommonUtils.explicitlyWaitForElementandClick(createTimesheetIcon, 10);</span>
+<span class="nc" id="L48">		Logs.info(&quot;Clicked on create timesheet icon&quot;);</span>
+<span class="nc" id="L49">	}</span>
+
+	public void selectPastWeekDate() throws InterruptedException {
+<span class="nc" id="L52">		CommonUtils.explicitlyWaitForElementandClick(calendarStartIcon, 5);</span>
+<span class="nc" id="L53">		Calendar cal = Calendar.getInstance();</span>
+<span class="nc" id="L54">		cal.set(Calendar.DAY_OF_WEEK, Calendar.SUNDAY);</span>
+<span class="nc" id="L55">		cal.add(Calendar.DATE, -7);</span>
+<span class="nc" id="L56">		Date pastDate = cal.getTime();</span>
+<span class="nc" id="L57">		int date = pastDate.getDate();</span>
+<span class="nc" id="L58">		boolean availableDate = true;</span>
+<span class="nc bnc" id="L59" title="All 2 branches missed.">		if (availableDate) {</span>
+<span class="nc" id="L60">			CommonUtils.CalenderSelectWithDate(driver, date);</span>
+<span class="nc" id="L61">			Thread.sleep(3000);</span>
+<span class="nc" id="L62">			Logs.info(&quot;Selected the past week date from calendar&quot;);</span>
+		} else {
+<span class="nc" id="L64">			CommonUtils.explicitlyWaitForElementandClick(PreviousMonthArrowIcon, 10);</span>
+<span class="nc" id="L65">			Thread.sleep(3000);</span>
+<span class="nc" id="L66">			System.out.println(pastDate);</span>
+<span class="nc" id="L67">			Logs.info(&quot;Clicked on previous arrow icon and selected the past week date from calendar&quot;);</span>
+		}
+<span class="nc" id="L69">	}</span>
+
+	public void editIcon() {
+<span class="nc" id="L72">		CommonUtils.explicitlyWaitForElementandClick(editicon, 10);</span>
+<span class="nc" id="L73">		Logs.info(&quot;Clicked on edit icon&quot;);</span>
+<span class="nc" id="L74">	}</span>
+
+	public void editTimesheetDetails(String sheetName) throws Exception {
+<span class="nc" id="L77">		CommonUtils.edittaskDesccategoryandEnteringHours(driver, sheetName);</span>
+<span class="nc" id="L78">		Logs.info(&quot;Edited the timesheet details&quot;);</span>
+<span class="nc" id="L79">	}</span>
+
+	public void saveAndSubmit() {
+<span class="nc" id="L82">		CommonUtils.explicitlyWaitForElementandClick(saveall, 10);</span>
+<span class="nc" id="L83">		Logs.info(&quot;Clicked on saveall icon&quot;);</span>
+<span class="nc" id="L84">		CommonUtils.explicitlyWaitForElementandClick(submit, 10);</span>
+<span class="nc" id="L85">		Logs.info(&quot;Clicked on submit button&quot;);</span>
+<span class="nc" id="L86">	}</span>
+
+	public void confirmButton() {
+<span class="nc" id="L89">		CommonUtils.explicitlyWaitForElementandClick(confirm, 10);</span>
+<span class="nc" id="L90">		Logs.info(&quot;Clicked on confirm button&quot;);</span>
+<span class="nc" id="L91">	}</span>
+
+	public void validateTimesheetResponse() throws Exception {
+<span class="nc" id="L94">		String alreadysubmittedtext = driver.findElement(By.xpath(&quot;//*[text()='Timesheet already submitted!']&quot;))</span>
+<span class="nc" id="L95">				.getText();</span>
+<span class="nc" id="L96">		Assert.assertEquals(alreadysubmittedtext, &quot;Timesheet already submitted!&quot;);</span>
+<span class="nc" id="L97">		Logs.info(&quot;Validated the response as timesheet already submitted&quot;);</span>
+<span class="nc" id="L98">	}</span>
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.12.202403310830</span></div></body></html>

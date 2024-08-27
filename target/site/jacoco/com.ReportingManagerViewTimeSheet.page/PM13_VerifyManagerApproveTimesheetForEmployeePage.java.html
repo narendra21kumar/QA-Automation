@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>PM13_VerifyManagerApproveTimesheetForEmployeePage.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">QA-Automation</a> &gt; <a href="index.source.html" class="el_package">com.ReportingManagerViewTimeSheet.page</a> &gt; <span class="el_source">PM13_VerifyManagerApproveTimesheetForEmployeePage.java</span></div><h1>PM13_VerifyManagerApproveTimesheetForEmployeePage.java</h1><pre class="source lang-java linenums">package com.ReportingManagerViewTimeSheet.page;
+
+import java.util.Calendar;
+import java.util.Date;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
+import org.testng.Assert;
+
+import com.TimeSheet.utils.CommonUtils;
+import com.TimeSheet.utils.Logs;
+
+public class PM13_VerifyManagerApproveTimesheetForEmployeePage {
+	
+	public WebDriver driver;
+<span class="nc" id="L19">	public PM13_VerifyManagerApproveTimesheetForEmployeePage(WebDriver driver) {</span>
+<span class="nc" id="L20">		this.driver = driver;</span>
+<span class="nc" id="L21">		PageFactory.initElements(driver, this);</span>
+<span class="nc" id="L22">	}</span>
+
+	
+	@FindBy(xpath = &quot;//a[contains(@class, '_2esG8N9N5-Q9Ui8vVn5gZt') and @title='Approved']&quot;)
+	WebElement approvedIcon;
+	
+	@FindBy(xpath = &quot;(//*[@class='MuiSvgIcon-root'])[1]&quot;)
+	WebElement calendarStart;
+	
+	@FindBy(xpath=&quot;//*[text()='No records to display']&quot;)
+	WebElement norecords;
+	
+	public void approvedPage() {
+<span class="nc" id="L35">		CommonUtils.explicitlyWaitForElementandClick(approvedIcon, 10);</span>
+<span class="nc" id="L36">		Logs.info(&quot;Clicked on approved page icon&quot;);</span>
+<span class="nc" id="L37">	}</span>
+ 
+	public void selectCurrentWeek() {
+<span class="nc" id="L40">		Calendar cal = Calendar.getInstance();</span>
+<span class="nc" id="L41">		cal.set(Calendar.DAY_OF_WEEK, Calendar.SUNDAY);</span>
+<span class="nc" id="L42">		cal.add(Calendar.DATE, 1);</span>
+<span class="nc" id="L43">		Date currentDate = cal.getTime();</span>
+<span class="nc" id="L44">		int date = currentDate.getDate();</span>
+<span class="nc" id="L45">		System.out.println(currentDate);</span>
+<span class="nc" id="L46">		Logs.info(&quot;Selected the current week date from calendar&quot;);</span>
+<span class="nc" id="L47">	}</span>
+
+	
+	public void validatesStatusText(String empid,String Approvedtext) throws InterruptedException {
+		try {
+<span class="nc bnc" id="L52" title="All 2 branches missed.">			if(norecords.isDisplayed()) {</span>
+<span class="nc" id="L53">				System.out.println(&quot;there is no timesheet record for verifying the employee timesheet status&quot;);</span>
+<span class="nc" id="L54">				Logs.info(&quot;There is no timesheet record for verifying the employee timesheet status&quot;);</span>
+			}
+<span class="nc bnc" id="L56" title="All 2 branches missed.">			else if(empid.isEmpty()) {</span>
+<span class="nc" id="L57">				System.out.println(&quot;there is no employee id for current week to check the status&quot;);</span>
+<span class="nc" id="L58">				Logs.info(&quot;There is no employee id for current week to check the status&quot;);</span>
+			}
+			else {
+<span class="nc" id="L61">			WebElement	expandIcon=driver.findElement(By.xpath(&quot;(//*[@title='&quot;+empid+&quot;']/ancestor::td//preceding-sibling::td)[1]&quot;));</span>
+<span class="nc" id="L62">			CommonUtils.explicitlyWaitForElementandClick(expandIcon, 10);</span>
+<span class="nc" id="L63">			Logs.info(&quot;Clicked on expand arrow&quot;);</span>
+<span class="nc" id="L64">			CommonUtils.waitFor(2);				</span>
+<span class="nc" id="L65">			String ApprovedText = driver.findElement(By.xpath(&quot;//*[@title='&quot;+empid+&quot;']/following::td[4]/div[@title='Approved']&quot;)).getText();</span>
+<span class="nc" id="L66">			Assert.assertEquals(ApprovedText,Approvedtext);</span>
+<span class="nc" id="L67">			CommonUtils.waitFor(2);</span>
+<span class="nc" id="L68">			Logs.info(&quot;Validated the approved timesheet record status&quot;);</span>
+			}
+<span class="nc" id="L70">		} catch (Exception e) {</span>
+<span class="nc" id="L71">			e.getMessage();</span>
+<span class="nc" id="L72">		}</span>
+<span class="nc" id="L73">	}</span>
+
+	
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.12.202403310830</span></div></body></html>

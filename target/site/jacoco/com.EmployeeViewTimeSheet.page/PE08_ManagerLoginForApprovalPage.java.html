@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>PE08_ManagerLoginForApprovalPage.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">QA-Automation</a> &gt; <a href="index.source.html" class="el_package">com.EmployeeViewTimeSheet.page</a> &gt; <span class="el_source">PE08_ManagerLoginForApprovalPage.java</span></div><h1>PE08_ManagerLoginForApprovalPage.java</h1><pre class="source lang-java linenums">package com.EmployeeViewTimeSheet.page;
+
+import java.time.Duration;
+import java.util.Calendar;
+import java.util.Date;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.Assert;
+
+import com.TimeSheet.utils.CommonUtils;
+import com.TimeSheet.utils.Logs;
+
+public class PE08_ManagerLoginForApprovalPage {
+
+	WebDriver driver;
+<span class="nc" id="L22">	WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));</span>
+	Actions act;
+	String WeekStartDate;
+
+<span class="nc" id="L26">	public PE08_ManagerLoginForApprovalPage(WebDriver driver) {</span>
+<span class="nc" id="L27">		this.driver = driver;</span>
+<span class="nc" id="L28">		PageFactory.initElements(driver, this);</span>
+<span class="nc" id="L29">	}</span>
+
+	@FindBy(xpath = &quot;//a[contains(@title,'Submitted')]&quot;)
+	WebElement SubmittedIcon;
+	@FindBy(xpath = &quot;(//*[@class='MuiSvgIcon-root'])[1]&quot;)
+	WebElement calendarStart;
+
+	@FindBy(xpath = &quot;//button[@name='previous-month']&quot;)
+	WebElement previousmonthArrow;
+
+	@FindBy(xpath = &quot;//button[@name='next-month']&quot;)
+	WebElement nextmonthArrow;
+
+	@FindBy(xpath = &quot;//button[contains(@aria-label,'Approve Timesheet')]&quot;)
+	WebElement ApprovedOKTimeSheet;
+
+	@FindBy(xpath = &quot;//a[contains(@class, '_2esG8N9N5-Q9Ui8vVn5gZt') and @title='Approved']&quot;)
+	WebElement approvedIcon;
+
+	@FindBy(xpath = &quot;(//*[@class='_2pnfWKxpUmAwFEMKV33FOI'])[1]&quot;)
+	WebElement getEmpId;
+
+	@FindBy(xpath = &quot;//*[@name='previous-month']&quot;)
+	WebElement PreviousMonthArrowIcon;
+
+	@FindBy(xpath = &quot;//*[@name='next-month']&quot;)
+	WebElement FutureMonthArrowIcon;
+
+	@FindBy(xpath = &quot;//*[@rows='4']&quot;)
+	WebElement RemarksText;
+
+	@FindBy(xpath = &quot;//*[text()='Confirm']&quot;)
+	WebElement ConformButton;
+
+	public void clickonTimeSheetMangementIcon() {
+<span class="nc" id="L64">		CommonUtils.explicitlyWaitForElementandClick(SubmittedIcon, 10);</span>
+<span class="nc" id="L65">		Logs.info(&quot;Clicked on Timesheet management page&quot;);</span>
+<span class="nc" id="L66">	}</span>
+
+	public void startWeek() throws InterruptedException {
+<span class="nc" id="L69">		CommonUtils.waitFor(3);</span>
+<span class="nc" id="L70">		selectCurrentWeek();</span>
+<span class="nc" id="L71">		Logs.info(&quot;Selected the CurrentWeek&quot;);</span>
+<span class="nc" id="L72">	}</span>
+
+	// ---------------------------//
+
+	public void selectCurrentWeek() throws InterruptedException {
+<span class="nc" id="L77">		CommonUtils.explicitlyWaitForElementandClick(calendarStart, 5);</span>
+<span class="nc" id="L78">		Calendar cal = Calendar.getInstance();</span>
+<span class="nc" id="L79">		cal.set(Calendar.DAY_OF_WEEK, Calendar.SUNDAY);</span>
+<span class="nc" id="L80">		cal.add(Calendar.DATE, 1);</span>
+<span class="nc" id="L81">		Date currentDate = cal.getTime();</span>
+<span class="nc" id="L82">		int date = currentDate.getDate();</span>
+<span class="nc" id="L83">		System.out.println(currentDate);</span>
+<span class="nc" id="L84">		CommonUtils.CalenderSelectWithDate(driver, date);</span>
+<span class="nc" id="L85">		Logs.info(&quot;Selected the current week&quot;);</span>
+<span class="nc" id="L86">		Thread.sleep(3000);</span>
+<span class="nc" id="L87">	}</span>
+
+	// ------------------------------------//
+	public void getAttribute() {
+<span class="nc" id="L91">		String empid = getEmpId.getText();</span>
+<span class="nc" id="L92">		approveTimesheet(empid);</span>
+<span class="nc" id="L93">	}</span>
+
+	public void approveTimesheet(String empid) {
+<span class="nc" id="L96">		WebElement element = driver.findElement(By</span>
+<span class="nc" id="L97">				.xpath(&quot;//*[@title='&quot; + empid + &quot;']/following::td[8]/div[1]/button[@aria-label='Approve Timesheet']&quot;));</span>
+<span class="nc" id="L98">		CommonUtils.explicitlyWaitForElementandClick(element, 10);</span>
+<span class="nc" id="L99">		Logs.info(&quot;Approved the Timesheet&quot;);</span>
+<span class="nc" id="L100">	}</span>
+
+	public void empApprovedTimesheetandVerify(String empid, String Approvedtext) throws InterruptedException {
+<span class="nc" id="L103">		CommonUtils.waitFor(2);</span>
+<span class="nc" id="L104">		CommonUtils.explicitlyWaitForElementandClick(approvedIcon, 10);</span>
+<span class="nc" id="L105">		Logs.info(&quot;Clicked on approved Page&quot;);</span>
+<span class="nc" id="L106">		CommonUtils.waitFor(2);</span>
+<span class="nc" id="L107">		selectCurrentWeek();</span>
+<span class="nc" id="L108">		WebElement ExpandIcon = driver</span>
+<span class="nc" id="L109">				.findElement(By.xpath(&quot;(//*[@title='&quot; + empid + &quot;']/ancestor::td//preceding-sibling::td)[1]&quot;));</span>
+<span class="nc" id="L110">		ExpandIcon.click();</span>
+<span class="nc" id="L111">		Logs.info(&quot;Clicked on ExpandArrow in approved Page&quot;);</span>
+<span class="nc" id="L112">		CommonUtils.waitFor(5);</span>
+<span class="nc" id="L113">		String ApprovedText = driver</span>
+<span class="nc" id="L114">				.findElement(By.xpath(&quot;//*[@title='&quot; + empid + &quot;']/following::td[4]/div[@title='Approved']&quot;)).getText();</span>
+<span class="nc" id="L115">		Assert.assertEquals(ApprovedText, Approvedtext);</span>
+<span class="nc" id="L116">		CommonUtils.waitFor(2);</span>
+<span class="nc" id="L117">		Logs.info(&quot;successfully done the validation of Approval Timesheet&quot;);</span>
+<span class="nc" id="L118">	}</span>
+
+	public void rejectTimesheet(String empid, String RejectText) throws InterruptedException {
+<span class="nc" id="L121">		CommonUtils.explicitlyWaitForElementandClick(approvedIcon, 10);</span>
+<span class="nc" id="L122">		Logs.info(&quot;Clicked on approved Page&quot;);</span>
+<span class="nc" id="L123">		CommonUtils.waitFor(2);</span>
+<span class="nc" id="L124">		selectCurrentWeek();</span>
+<span class="nc" id="L125">		CommonUtils.waitFor(2);</span>
+<span class="nc" id="L126">		WebElement element = driver.findElement(</span>
+<span class="nc" id="L127">				By.xpath(&quot;//*[@title='&quot; + empid + &quot;']/following::td[8]/div/button[@aria-label='Reject Timesheet']&quot;));</span>
+<span class="nc" id="L128">		CommonUtils.explicitlyWaitForElementandClick(element, 10);</span>
+<span class="nc" id="L129">		Logs.info(&quot;Reject the Timesheet&quot;);</span>
+<span class="nc" id="L130">		CommonUtils.waitFor(2);</span>
+<span class="nc" id="L131">		CommonUtils.sendKeysToElement(RemarksText, RejectText);</span>
+<span class="nc" id="L132">		CommonUtils.waitFor(2);</span>
+<span class="nc" id="L133">		Logs.info(&quot;Entered Text for Rejection &quot;);</span>
+<span class="nc" id="L134">		CommonUtils.explicitlyWaitForElementandClick(ConformButton, 10);</span>
+<span class="nc" id="L135">		Logs.info(&quot;Clicked on Confirm Button&quot;);</span>
+<span class="nc" id="L136">		CommonUtils.waitFor(2);</span>
+<span class="nc" id="L137">		Logs.info(&quot;Successfully Reject the Timesheet&quot;);</span>
+<span class="nc" id="L138">	}</span>
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.12.202403310830</span></div></body></html>

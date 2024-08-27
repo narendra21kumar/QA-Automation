@@ -139,6 +139,7 @@ public class PE01_LoginPage {
 	}
 
 	public void verifyAccessAccordingToLogin() throws InterruptedException {
+		CommonUtils.waitFor(3);
 		WebElement usersName = driver.findElement(By.xpath("//*[@class='MuiStack-root css-vb6e92']//h5"));
 		String getName = usersName.getText();
 		Thread.sleep(3000);

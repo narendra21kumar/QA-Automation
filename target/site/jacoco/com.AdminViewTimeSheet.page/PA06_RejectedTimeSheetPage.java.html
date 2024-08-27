@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>PA06_RejectedTimeSheetPage.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">QA-Automation</a> &gt; <a href="index.source.html" class="el_package">com.AdminViewTimeSheet.page</a> &gt; <span class="el_source">PA06_RejectedTimeSheetPage.java</span></div><h1>PA06_RejectedTimeSheetPage.java</h1><pre class="source lang-java linenums">package com.AdminViewTimeSheet.page;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
+
+import com.TimeSheet.utils.CommonUtils;
+import com.TimeSheet.utils.Logs;
+
+public class PA06_RejectedTimeSheetPage {
+	WebDriver driver;
+	String empid;
+
+<span class="nc" id="L16">	public PA06_RejectedTimeSheetPage(WebDriver driver) {</span>
+<span class="nc" id="L17">		this.driver = driver;</span>
+<span class="nc" id="L18">		PageFactory.initElements(driver, this);</span>
+<span class="nc" id="L19">	}</span>
+
+	@FindBy(xpath = &quot;//*[@title=\&quot;Submitted\&quot;]&quot;)
+	WebElement submitted;
+
+	@FindBy(xpath = &quot;//*[@class='MuiSwitch-root MuiSwitch-sizeMedium css-ecvcn9']&quot;)
+	WebElement showselftoggle;
+
+	@FindBy(xpath = &quot;//button[text()='Reject']&quot;)
+	WebElement rejected;
+
+	@FindBy(xpath = &quot;//*[contains(@class,'_17CUqmCextOqfytuhqZlM') and @rows='4']&quot;)
+	WebElement remarks;
+
+	@FindBy(xpath = &quot;//*[text()='Confirm']&quot;)
+	WebElement confirm;
+
+	@FindBy(xpath = &quot;//a[contains(@class, '_2esG8N9N5-Q9Ui8vVn5gZt') and @title='Rejected']&quot;)
+	WebElement RejectedIcon;
+
+	@FindBy(xpath = &quot;(//*[@title='188']/ancestor::td//preceding-sibling::td)[1]&quot;)
+	WebElement ExpandArrowIcon;
+
+	@FindBy(xpath = &quot;(//input[@type='checkbox'])[2]&quot;)
+	WebElement checkbox;
+
+	@FindBy(xpath = &quot;//button[text()='Approve']&quot;)
+	WebElement approvebtn;
+
+	@FindBy(xpath = &quot;(//*[text()='Reject'])[1]&quot;)
+	WebElement RejectButton;
+
+	@FindBy(xpath = &quot;//*[@class='_17CUqmCextOqfytuhqZlM']&quot;)
+	WebElement RemarksTextArea;
+
+	@FindBy(xpath = &quot;//*[text()='Confirm']&quot;)
+	WebElement confirmButton;
+
+	public void timesheetmanagement() {
+<span class="nc" id="L58">		submitted.click();</span>
+<span class="nc" id="L59">		Logs.info(&quot;Clicked on Timesheet Management page&quot;);</span>
+<span class="nc" id="L60">	}</span>
+
+	public void selfTogggle() {
+<span class="nc" id="L63">		showselftoggle.click();</span>
+<span class="nc" id="L64">		Logs.info(&quot;Clicked on self toggle icon&quot;);</span>
+<span class="nc" id="L65">	}</span>
+
+	public void checkbox(String WeekStartDate) {
+<span class="nc" id="L68">		driver.findElement(By.xpath(&quot;//*[text()='&quot; + WeekStartDate</span>
+<span class="nc" id="L69">				+ &quot;']//ancestor::td//preceding-sibling::td[6]/span/input[@id='checkbox_411']&quot;)).click();</span>
+<span class="nc" id="L70">		Logs.info(&quot;selected the Record to self Reject the Timesheet&quot;);</span>
+<span class="nc" id="L71">	}</span>
+
+	public void rejected(String Remarks) {
+<span class="nc" id="L74">		rejected.click();</span>
+<span class="nc" id="L75">		Logs.info(&quot;clicked on Reject Icon&quot;);</span>
+<span class="nc" id="L76">		CommonUtils.sendKeysToElement(remarks, Remarks);</span>
+<span class="nc" id="L77">		Logs.info(&quot;Entered Remarks&quot;);</span>
+<span class="nc" id="L78">		CommonUtils.explicitlyWaitForElementandClick(confirm, 3);</span>
+<span class="nc" id="L79">		Logs.info(&quot;Rejected Successfully&quot;);</span>
+<span class="nc" id="L80">	}</span>
+
+	public void rejectTimesheet(String empid) {
+<span class="nc" id="L83">		WebElement element = driver.findElement(By.xpath(</span>
+				&quot;//*[@title='&quot; + empid + &quot;']/following::td[8]/div[1]/button[2][@aria-label='Reject Timesheet']&quot;));
+<span class="nc" id="L85">		Logs.info(&quot;selected the Record to Reject the Timesheet&quot;);</span>
+<span class="nc" id="L86">		CommonUtils.explicitlyWaitForElementandClick(element, 10);</span>
+<span class="nc" id="L87">		CommonUtils.waitFor(2);</span>
+<span class="nc" id="L88">		CommonUtils.sendKeysToElement(remarks, &quot;Test&quot;);</span>
+<span class="nc" id="L89">		Logs.info(&quot;Entered Remarks&quot;);</span>
+<span class="nc" id="L90">		CommonUtils.waitFor(2);</span>
+<span class="nc" id="L91">		CommonUtils.explicitlyWaitForElementandClick(confirm, 10);</span>
+<span class="nc" id="L92">		CommonUtils.waitFor(2);</span>
+<span class="nc" id="L93">		Logs.info(&quot;Rejected Successfully&quot;);</span>
+<span class="nc" id="L94">	}</span>
+
+	public void empRejectedTimesheetandVerify() {
+<span class="nc" id="L97">		CommonUtils.waitFor(2);</span>
+<span class="nc" id="L98">		CommonUtils.explicitlyWaitForElementandClick(RejectedIcon, 10);</span>
+<span class="nc" id="L99">		Logs.info(&quot;Clicked on Rejected Page&quot;);</span>
+<span class="nc" id="L100">		CommonUtils.waitFor(3);</span>
+<span class="nc" id="L101">		CommonUtils.explicitlyWaitForElementandClick(showselftoggle, 10);</span>
+<span class="nc" id="L102">		Logs.info(&quot;Clicked on show Self Toggle&quot;);</span>
+<span class="nc" id="L103">		CommonUtils.waitFor(2);//</span>
+<span class="nc" id="L104">		CommonUtils.explicitlyWaitForElementandClick(ExpandArrowIcon, 10);</span>
+<span class="nc" id="L105">		CommonUtils.waitFor(2);</span>
+<span class="nc" id="L106">		Logs.info(&quot;verified and Expanded the arrow&quot;);</span>
+<span class="nc" id="L107">	}</span>
+
+	public void bulkReject() {
+<span class="nc" id="L110">		CommonUtils.explicitlyWaitForElementandClick(checkbox, 10);</span>
+<span class="nc" id="L111">		CommonUtils.waitFor(2);</span>
+<span class="nc" id="L112">		Logs.info(&quot;Clicked on CheckBox in Header for Bulk Reject&quot;);</span>
+<span class="nc" id="L113">	}</span>
+
+	public void rejectTimesheetByGivingRemarks(String Remarks) {
+<span class="nc" id="L116">		CommonUtils.explicitlyWaitForElementandClick(RejectButton, 2);</span>
+<span class="nc" id="L117">		Logs.info(&quot;clicked on RejectedIcon To Reject the Timesheet&quot;);</span>
+<span class="nc" id="L118">		CommonUtils.sendKeysToElement(RemarksTextArea, Remarks);</span>
+<span class="nc" id="L119">		Logs.info(&quot;Entered Remarks&quot;);</span>
+<span class="nc" id="L120">		CommonUtils.explicitlyWaitForElementandClick(confirmButton, 2);</span>
+<span class="nc" id="L121">		Logs.info(&quot;Rejected Successfully&quot;);</span>
+<span class="nc" id="L122">	}</span>
+
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.12.202403310830</span></div></body></html>

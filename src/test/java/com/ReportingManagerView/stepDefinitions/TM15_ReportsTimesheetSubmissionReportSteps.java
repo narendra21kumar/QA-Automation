@@ -4,6 +4,7 @@ import org.openqa.selenium.WebDriver;
 
 import com.ReportingManagerViewTimeSheet.page.PM01_LoginPage;
 import com.ReportingManagerViewTimeSheet.page.PM15_ReportsTimesheetSubmissionReportPage;
+import com.TimeSheet.utils.Logs;
 import com.TimeSheet.utils.WebDriverManager;
 
 import io.cucumber.java.en.And;
@@ -18,6 +19,8 @@ public class TM15_ReportsTimesheetSubmissionReportSteps {
 	
 	@Given("User login into the manager view for download the timesheet submission report")
 	public void user_login_into_the_manager_view_for_download_the_timesheet_submission_report() {
+		Logs.initLogs(TM15_ReportsTimesheetSubmissionReportSteps.class.getName());
+		Logs.startTestCase(this.getClass().getSimpleName());
 		driver = WebDriverManager.getDriver();
         loginPage = new PM01_LoginPage(driver);
         reportsTimesheetSubmissionReportPage= new PM15_ReportsTimesheetSubmissionReportPage(driver);

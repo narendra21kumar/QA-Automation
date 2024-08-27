@@ -38,6 +38,10 @@ public class TE03_PendingTimeSheetSteps {
 		pendingTimesheet.expandArrowtoVerify(pendingText);
 		Logs.endTestCase(this.getClass().getSimpleName());
 	}
-
+	@Then("Verify the manager name {string} and approver name {string} for employee in pending page")
+	public void verify_the_manager_name_and_approver_name_for_employee_in_pending_page(String managername, String approvername) {
+		pendingTimesheet.managerName(managername);
+		pendingTimesheet.approverName(approvername);
+	}
 
 }

@@ -9,6 +9,7 @@ import io.cucumber.java.en.When;
 
 import com.ReportingManagerViewTimeSheet.page.PM01_LoginPage;
 import com.ReportingManagerViewTimeSheet.page.PM08_VerifyManagerRejectedTimesheetPage;
+import com.TimeSheet.utils.Logs;
 import com.TimeSheet.utils.WebDriverManager;
 
 public class TM08_VerifyManagerRejectedTimesheetSteps {
@@ -18,6 +19,8 @@ public class TM08_VerifyManagerRejectedTimesheetSteps {
 
 	@Given("User login into the manager view for verifying the rejected timesheet")
 	public void user_login_into_the_manager_view_for_verifying_the_rejected_timesheet() {
+		Logs.initLogs(TM08_VerifyManagerRejectedTimesheetSteps.class.getName());
+		Logs.startTestCase(this.getClass().getSimpleName());
 		driver = WebDriverManager.getDriver();
 		loginPage = new PM01_LoginPage(driver);
 		rejectedTimesheet = new PM08_VerifyManagerRejectedTimesheetPage(driver);

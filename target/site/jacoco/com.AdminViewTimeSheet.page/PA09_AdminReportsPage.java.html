@@ -1,0 +1,278 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>PA09_AdminReportsPage.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">QA-Automation</a> &gt; <a href="index.source.html" class="el_package">com.AdminViewTimeSheet.page</a> &gt; <span class="el_source">PA09_AdminReportsPage.java</span></div><h1>PA09_AdminReportsPage.java</h1><pre class="source lang-java linenums">package com.AdminViewTimeSheet.page;
+
+import java.util.Calendar;
+import java.util.List;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
+import org.testng.Assert;
+
+import com.TimeSheet.utils.CommonUtils;
+import com.TimeSheet.utils.Logs;
+
+public class PA09_AdminReportsPage {
+	WebDriver driver;
+
+<span class="nc" id="L19">	public PA09_AdminReportsPage(WebDriver driver) {</span>
+<span class="nc" id="L20">		this.driver = driver;</span>
+<span class="nc" id="L21">		PageFactory.initElements(driver, this);</span>
+<span class="nc" id="L22">	}</span>
+
+	@FindBy(xpath = &quot;//a[contains(@class, '_2esG8N9N5-Q9Ui8vVn5gZt') and @title='Reports']&quot;)
+	WebElement reportsIcon;
+
+	@FindBy(xpath = &quot;(//div[contains(@class,'MuiInputBase-root')])[1]&quot;)
+	WebElement timeSheetSubmittReportDropDown;
+
+	@FindBy(xpath = &quot;(//div[contains(@class,'MuiInputBase-root')])[2]&quot;)
+	WebElement clientDropdown;
+
+	@FindBy(xpath = &quot;(//div[contains(@class,'MuiInputBase-root')])[3]&quot;)
+	WebElement teamDropdown;
+
+	@FindBy(xpath = &quot;(//div[contains(@class,'MuiInputBase-root')])[4]&quot;)
+	WebElement statusDropdown;
+
+	@FindBy(xpath = &quot;//input[@placeholder='Search']&quot;)
+	WebElement searchText;
+
+	@FindBy(xpath = &quot;//div[contains(@class, '_1W58ZgnmoLYaB8WLiZ4iEN')][1]&quot;)
+	WebElement startDateSelectDrop;
+
+	@FindBy(xpath = &quot;//div[contains(@class, '_1W58ZgnmoLYaB8WLiZ4iEN')][2]&quot;)
+	WebElement endDateSelectDrop;
+
+	@FindBy(xpath = &quot;//div[@class='rdp-caption_label']&quot;)
+	WebElement monthYear;
+
+	@FindBy(xpath = &quot;//button[@name='previous-month']&quot;)
+	WebElement previousmonthArrow;
+
+	@FindBy(xpath = &quot;//button[@name='next-month']&quot;)
+	WebElement nextmonthArrow;
+
+	@FindBy(xpath = &quot;//ul[@class = 'MuiList-root MuiList-padding MuiMenu-list css-r8u8y9']//li&quot;)
+	List&lt;WebElement&gt; dropValues;
+
+	@FindBy(xpath = &quot;//*[contains(@class,'MuiTableBody-root css-1xnox0e')]//tr[*]//td[1]&quot;)
+	List&lt;WebElement&gt; listOfEmployeeNames;
+
+	@FindBy(xpath = &quot;//td[@class='MuiTableCell-root' and @value='\&quot; + value + \&quot;']&quot;)
+	WebElement nameOfEmp;
+
+	@FindBy(xpath = &quot;//td[@class='MuiTableCell-root' and @value='\&quot; + value + \&quot;']&quot;)
+	WebElement nameOfEmpStatus;
+
+	@FindBy(xpath = &quot;//*[@class='MuiTypography-root MuiTypography-h5 css-1hh6ei4']&quot;)
+	WebElement AdminReportName;
+
+	// One Common Method for Selecting Drop down
+	public void selectValuesFromDrop(String value) {
+<span class="nc bnc" id="L74" title="All 2 branches missed.">		for (WebElement options : dropValues) {</span>
+<span class="nc bnc" id="L75" title="All 2 branches missed.">			if (options.getText().equalsIgnoreCase(value)) {</span>
+<span class="nc" id="L76">				options.click();</span>
+				
+<span class="nc" id="L78">				break;</span>
+			}
+<span class="nc" id="L80">		}</span>
+<span class="nc" id="L81">		Logs.info(&quot;selected the value form dropdown&quot;);</span>
+<span class="nc" id="L82">	}</span>
+
+	/////////////////////////////////////////////////////////////////////////////////////////////////
+	public void clickonReportsIcon() {
+<span class="nc" id="L86">		CommonUtils.explicitlyWaitForElementandClick(reportsIcon, 5);</span>
+<span class="nc" id="L87">		Logs.info(&quot;clicked on Reports icon&quot;);</span>
+
+<span class="nc" id="L89">	}</span>
+
+	public void selectTimeSheetSubmittReportDropDown(String selectValueFromDrop) {
+<span class="nc" id="L92">		CommonUtils.explicitlyWaitForElementandClick(timeSheetSubmittReportDropDown, 10);</span>
+<span class="nc" id="L93">		selectValuesFromDrop(selectValueFromDrop);</span>
+<span class="nc" id="L94">		Logs.info(&quot;selected the timeSheetSubmittReport form Dropdown&quot;);</span>
+
+<span class="nc" id="L96">	}</span>
+
+	public void selectClient(String nameOfClient) {
+<span class="nc" id="L99">		CommonUtils.explicitlyWaitForElementandClick(clientDropdown, 10);</span>
+<span class="nc" id="L100">		selectValuesFromDrop(nameOfClient);</span>
+<span class="nc" id="L101">		Logs.info(&quot;selected the client form Dropdown&quot;);</span>
+
+<span class="nc" id="L103">	}</span>
+
+	public void selectTeam(String nameOfTeam) {
+<span class="nc" id="L106">		CommonUtils.explicitlyWaitForElementandClick(teamDropdown, 10);</span>
+<span class="nc" id="L107">		selectValuesFromDrop(nameOfTeam);</span>
+<span class="nc" id="L108">		Logs.info(&quot;selected the Team form Dropdown&quot;);</span>
+
+<span class="nc" id="L110">	}</span>
+
+	public void selectStatus(String nameOfStatus) {
+<span class="nc" id="L113">		CommonUtils.explicitlyWaitForElementandClick(statusDropdown, 10);</span>
+<span class="nc" id="L114">		selectValuesFromDrop(nameOfStatus);</span>
+<span class="nc" id="L115">		Logs.info(&quot;selected the status form Dropdown&quot;);</span>
+
+<span class="nc" id="L117">	}</span>
+
+	///////////////////////////////////////////////////////////////////////////////
+
+	public void clickOnCalendorStartIcon() {
+<span class="nc" id="L122">		CommonUtils.explicitlyWaitForElementandClick(startDateSelectDrop, 10);</span>
+<span class="nc" id="L123">		Logs.info(&quot;clicked on Calender Start Icon&quot;);</span>
+<span class="nc" id="L124">	}</span>
+
+	public void clickOnCalendorEndIcon() {
+<span class="nc" id="L127">		CommonUtils.explicitlyWaitForElementandClick(endDateSelectDrop, 10);</span>
+<span class="nc" id="L128">		Logs.info(&quot;clicked on Calender End Icon&quot;);</span>
+<span class="nc" id="L129">	}</span>
+
+	public void searchByOption(String text) {
+<span class="nc" id="L132">		CommonUtils.sendKeysToElement(searchText, text);</span>
+<span class="nc" id="L133">		List&lt;WebElement&gt; getAllStatus = driver</span>
+<span class="nc" id="L134">				.findElements(By.xpath(&quot;//*[contains(@class,'MuiTableBody-root css-1xnox0e')]//tr[*]//td[5]&quot;));</span>
+<span class="nc bnc" id="L135" title="All 2 branches missed.">		for (WebElement getStatus : getAllStatus) {</span>
+<span class="nc" id="L136">			System.out.println(getStatus.getText());</span>
+			
+<span class="nc" id="L138">		}</span>
+<span class="nc" id="L139">		Logs.info(&quot;Fetched all status&quot;);</span>
+<span class="nc" id="L140">	}</span>
+
+	public void verifyAccordingToSelectedDrop() {
+
+<span class="nc" id="L144">	}</span>
+
+	public void verifyFromReports(String EmpName, String Status, String SubDate) {
+<span class="nc" id="L147">		WebElement nameOfEmp = driver.findElement(By</span>
+<span class="nc" id="L148">				.xpath(&quot;//*[contains(@class,'MuiTableBody-root css-1xnox0e')]//tr[*]//td[@value= '&quot; + EmpName + &quot;']&quot;));</span>
+<span class="nc" id="L149">		WebElement statusOfEmp = driver.findElement(</span>
+<span class="nc" id="L150">				By.xpath(&quot;//*[contains(@class,'MuiTableBody-root css-1xnox0e')]//tr[*]//td[@value= '&quot; + Status + &quot;']&quot;));</span>
+<span class="nc" id="L151">		WebElement dateOfSub = driver.findElement(By</span>
+<span class="nc" id="L152">				.xpath(&quot;//*[contains(@class,'MuiTableBody-root css-1xnox0e')]//tr[*]//td[@value= '&quot; + SubDate + &quot;']&quot;));</span>
+<span class="nc bnc" id="L153" title="All 2 branches missed.">		if (nameOfEmp.isDisplayed()) {</span>
+<span class="nc" id="L154">			System.out.println(nameOfEmp.getText());</span>
+<span class="nc bnc" id="L155" title="All 2 branches missed.">			if (statusOfEmp.getText().equalsIgnoreCase(Status)) {</span>
+<span class="nc" id="L156">				System.out.println(statusOfEmp.getText());</span>
+<span class="nc" id="L157">				Logs.info(&quot;Verified status successfully&quot;);</span>
+<span class="nc bnc" id="L158" title="All 2 branches missed.">				if (dateOfSub.getText().equalsIgnoreCase(SubDate)) {</span>
+<span class="nc" id="L159">					System.out.println(dateOfSub.getText());</span>
+<span class="nc" id="L160">					Logs.info(&quot;Verified dateof Submission successfully&quot;);</span>
+				}
+			}
+		}
+<span class="nc" id="L164">	}</span>
+
+	public void VerifyEmpRecordExist(String VerifyempName) throws InterruptedException {
+<span class="nc" id="L167">		List&lt;WebElement&gt; nameOfEmp = driver</span>
+<span class="nc" id="L168">				.findElements(By.xpath(&quot;//*[@class='MuiTableBody-root css-1xnox0e']//tr//td[1]&quot;));</span>
+<span class="nc bnc" id="L169" title="All 2 branches missed.">		for (WebElement names : nameOfEmp) {</span>
+<span class="nc" id="L170">			String empName = names.getText();</span>
+<span class="nc bnc" id="L171" title="All 2 branches missed.">			if (empName.equalsIgnoreCase(VerifyempName)) {</span>
+<span class="nc" id="L172">				System.out.println(&quot;Employee Exist in Selected Status&quot;);</span>
+<span class="nc" id="L173">				Logs.info(&quot;Employee Exist in Selected Status&quot;);</span>
+			} else {
+<span class="nc" id="L175">				System.out.println(&quot;Employee not Exist in Selected Status&quot;);</span>
+<span class="nc" id="L176">				Logs.info(&quot;Employee not Exist in Selected Status&quot;);</span>
+			}
+<span class="nc" id="L178">			break;</span>
+		}
+		
+<span class="nc" id="L181">	}</span>
+
+	public void selectAnyWeek(int weekOffSet, int dayOfWeek) throws InterruptedException {
+<span class="nc" id="L184">		Calendar cal = Calendar.getInstance();</span>
+<span class="nc" id="L185">		cal.add(Calendar.WEEK_OF_YEAR, weekOffSet);</span>
+<span class="nc" id="L186">		cal.set(Calendar.DAY_OF_WEEK, dayOfWeek);</span>
+<span class="nc" id="L187">		int targetDay = cal.get(Calendar.DAY_OF_MONTH);</span>
+<span class="nc" id="L188">		int targetMonth = cal.get(Calendar.MONTH);</span>
+<span class="nc" id="L189">		int currentMonth = Calendar.getInstance().get(Calendar.MONTH);</span>
+
+		// Click on the date picker to open it
+<span class="nc" id="L192">		WebElement datePicker = driver.findElement(By.className(&quot;rdp-cell&quot;));</span>
+<span class="nc" id="L193">		datePicker.click();</span>
+
+		// If the target month is before the current month, click the previous month
+		// arrow
+<span class="nc bnc" id="L197" title="All 2 branches missed.">		if (targetMonth &lt; currentMonth) {</span>
+<span class="nc" id="L198">			WebElement prevMonthArrow = driver.findElement(By.xpath(&quot;//*[@name='previous-month']&quot;));</span>
+<span class="nc" id="L199">			prevMonthArrow.click();</span>
+<span class="nc" id="L200">			Logs.info(&quot;clicked on Previous month arrow&quot;);</span>
+<span class="nc" id="L201">		}</span>
+
+<span class="nc bnc" id="L203" title="All 2 branches missed.">		else if (targetMonth &gt; currentMonth) {</span>
+<span class="nc" id="L204">			WebElement nextMonthArrow = driver.findElement(By.xpath(&quot;//*[@name='next-month']&quot;));</span>
+<span class="nc" id="L205">			nextMonthArrow.click();</span>
+<span class="nc" id="L206">			Logs.info(&quot;clicked on next month arrow&quot;);</span>
+		}
+		// Select the target day
+<span class="nc" id="L209">		WebElement dayToSelect = driver.findElement(By.xpath(&quot;//*[text()='&quot; + targetDay + &quot;']&quot;));</span>
+<span class="nc" id="L210">		dayToSelect.click();</span>
+<span class="nc" id="L211">		Logs.info(&quot;selected the week from calender&quot;);</span>
+
+<span class="nc" id="L213">	}</span>
+
+	public void printAdminReportNames() {
+<span class="nc" id="L216">		String ActualText = AdminReportName.getText();</span>
+<span class="nc" id="L217">		String ExpectedText = &quot;Reports&quot;;</span>
+<span class="nc" id="L218">		Assert.assertTrue(ActualText.contains(ExpectedText));</span>
+<span class="nc" id="L219">		Logs.info(&quot;verified the Admin Report Name&quot;);</span>
+<span class="nc" id="L220">		System.out.println(&quot;Name of the Page is &quot; + ActualText);</span>
+		
+<span class="nc" id="L222">	}</span>
+
+}
+
+
+//public void selectStartDateandMonthforSubmitted(String Startmonth, String Startdate) {
+//CommonUtils.explicitlyWaitForElementandClick(startDateSelectDrop, 10);
+//CommonUtils.waitFor(3);
+//String monthNm = Startmonth.split(&quot; &quot;)[0].trim();
+//System.out.println(&quot;Req value :&quot; + monthNm);
+//CommonUtils.waitFor(2);
+//CommonUtils.clickMonthTab(monthNm, nextmonthArrow, previousmonthArrow, monthYear);
+//CommonUtils.waitFor(2);
+//WebElement reqDate = driver.findElement(By.xpath(&quot;//*[text()='&quot; + Startdate + &quot;']&quot;));
+//reqDate.click();
+//CommonUtils.waitFor(3);
+//Logs.info(&quot;Selected the start Week and month In reports page&quot;);
+//}
+//
+//public void selectEndDateandMonthforSubmitted(String EndMonth, String EndDate) {
+//CommonUtils.explicitlyWaitForElementandClick(endDateSelectDrop, 10);
+//CommonUtils.waitFor(3);
+//String monthNm = EndMonth.split(&quot; &quot;)[0].trim();
+//System.out.println(&quot;Req value :&quot; + monthNm);
+//CommonUtils.waitFor(2);
+//CommonUtils.clickMonthTab(monthNm, nextmonthArrow, previousmonthArrow, monthYear);
+//CommonUtils.waitFor(2);
+//WebElement reqDate = driver.findElement(By.xpath(&quot;//*[text()='&quot; + EndDate + &quot;']&quot;));
+//reqDate.click();
+//CommonUtils.waitFor(3);
+//Logs.info(&quot;Selected the End Week and month In reports page&quot;);
+//}
+
+//public void dateBackward(WebDriver driver, int i) {
+//WebElement element = driver.findElement(By.xpath(&quot;//*[text()='&quot; + i + &quot;']&quot;));
+//if (element.isEnabled()) {
+//	System.out.println(&quot;Element is Displayed easy to select the Data in a given month&quot;);
+//} else {
+//	CommonUtils.explicitlyWaitForElementandClick(previousmonthArrow, 10);
+//}
+//CommonUtils.explicitlyWaitForElementandClick(element, 10);
+//System.out.println(&quot;Selected Successfully!!!!!!!!!!!!&quot;);
+//Logs.info(&quot;selected the Week successfully&quot;);
+//}
+//
+//public void dateForward(WebDriver driver, int i) {
+//WebElement element = driver.findElement(By.xpath(&quot;//*[text()='&quot; + i + &quot;']&quot;));
+//if (element.isEnabled()) {
+//	System.out.println(&quot;Element is Displayed easy to select the Data in a given month&quot;);
+//} else {
+//	CommonUtils.explicitlyWaitForElementandClick(nextmonthArrow, 10);
+//}
+//CommonUtils.explicitlyWaitForElementandClick(element, 10);
+//System.out.println(&quot;Selected Successfully!!!!!!!!!!!!&quot;);
+//Logs.info(&quot;selected the Week successfully&quot;);
+//}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.12.202403310830</span></div></body></html>

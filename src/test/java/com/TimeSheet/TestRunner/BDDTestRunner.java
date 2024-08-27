@@ -11,7 +11,8 @@ import io.cucumber.junit.CucumberOptions;
 	features = {"src/test/resources/EmployeeViewFeatures", "src/test/resources/AdminFeatureFiles","src/test/resources/ReportingManagerViewfeatures"}, 
 	tags =   "@admin1", 
 	glue = {"com.EmployeeView.stepDefinitions", "com.AdminView.stepDefinitions","com.ReportingManagerView.stepDefinitions"}, 
-	plugin = {"pretty", "com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:","rerun:target/failedScripts.txt"}
+	plugin = {"pretty", "com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:","rerun:target/failedScripts.txt"
+			,"io.qameta.allure.cucumber7jvm.AllureCucumber7Jvm"}
 )
 public class BDDTestRunner {
 	

@@ -1,0 +1,296 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>CommonUtils.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">QA-Automation</a> &gt; <a href="index.source.html" class="el_package">com.TimeSheet.utils</a> &gt; <span class="el_source">CommonUtils.java</span></div><h1>CommonUtils.java</h1><pre class="source lang-java linenums">package com.TimeSheet.utils;
+
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.IOException;
+import java.text.SimpleDateFormat;
+import java.time.Duration;
+import java.time.Month;
+import java.util.Calendar;
+import java.util.Date;
+
+import org.apache.poi.ss.usermodel.Row;
+import org.apache.poi.ss.usermodel.Sheet;
+import org.apache.poi.ss.usermodel.Workbook;
+import org.apache.poi.xssf.usermodel.XSSFWorkbook;
+import org.openqa.selenium.Alert;
+import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.io.FileHandler;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+
+<span class="nc" id="L28">public class CommonUtils {</span>
+	private static WebDriver driver;
+<span class="nc" id="L30">	int timeoutInSeconds = 30;</span>
+	static Actions act;
+
+	public static void sendKeysToElement(WebElement element, String text) {
+<span class="fc" id="L34">		element.clear();</span>
+<span class="fc" id="L35">		element.sendKeys(text);</span>
+<span class="fc" id="L36">	}</span>
+
+	public static void scrollIntoelementAndclick(WebDriver driver, WebElement element) {
+<span class="nc" id="L39">		((JavascriptExecutor) driver).executeScript(&quot;arguments[0].scrollIntoView(true);&quot;, element);</span>
+<span class="nc" id="L40">		waitFor(30);</span>
+<span class="nc" id="L41">		explicitlyWaitForElementandClick(element,10);</span>
+<span class="nc" id="L42">	}</span>
+
+	public static void scrollUsingTextAndClick(WebDriver driver, String value) {
+<span class="nc" id="L45">		WebElement element = driver.findElement(By.xpath(&quot;//*[text()='&quot; + value + &quot;']&quot;));</span>
+<span class="nc" id="L46">		((JavascriptExecutor) driver).executeScript(&quot;arguments[0].scrollIntoView(true);&quot;, element);</span>
+<span class="nc" id="L47">		waitFor(3);</span>
+<span class="nc" id="L48">		explicitlyWaitForElementandClick(element,10);</span>
+<span class="nc" id="L49">	}</span>
+
+	public static void waitFor(int seconds) {// last
+		try {
+<span class="fc" id="L53">			Thread.sleep(seconds * 1000);</span>
+<span class="nc" id="L54">		} catch (InterruptedException e) {</span>
+<span class="nc" id="L55">			e.printStackTrace();</span>
+<span class="fc" id="L56">		}</span>
+<span class="fc" id="L57">	}</span>
+
+	public static void explicitlyWaitForElementandClick(WebElement element, long waitTimeInSeconds) {
+<span class="fc" id="L60">		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(waitTimeInSeconds));</span>
+		try {
+<span class="fc" id="L62">			wait.until(ExpectedConditions.elementToBeClickable(element));</span>
+<span class="fc" id="L63">			element.click();</span>
+<span class="nc" id="L64">		} catch (Exception e) {</span>
+<span class="nc" id="L65">			e.printStackTrace();</span>
+<span class="fc" id="L66">		}</span>
+<span class="fc" id="L67">	}</span>
+
+	public static void ConvertStringToWebElementAndClick(WebDriver driver, String value) {
+<span class="nc" id="L70">		waitFor(3);</span>
+<span class="nc" id="L71">		WebElement element = driver.findElement(By.xpath(&quot;//li[text()='&quot; + value + &quot;']&quot;));</span>
+<span class="nc" id="L72">		explicitlyWaitForElementandClick(element,10);</span>
+<span class="nc" id="L73">		waitFor(3);</span>
+<span class="nc" id="L74">	}</span>
+
+	public static void doubleClick(WebDriver driver, WebElement element) {
+<span class="nc" id="L77">		Actions act = new Actions(driver);</span>
+<span class="nc" id="L78">		act.doubleClick(element).perform();</span>
+<span class="nc" id="L79">	}</span>
+
+	public static void ScrollTillbottom(WebDriver driver) {
+<span class="nc" id="L82">		((JavascriptExecutor) driver).executeScript(&quot;window.scrollBy(0,document.body.scrollHeight)&quot;, &quot;&quot;);</span>
+<span class="nc" id="L83">	}</span>
+
+	public static void scrollTillTop(WebDriver driver) {
+<span class="nc" id="L86">		((JavascriptExecutor) driver).executeScript(&quot;window.scrollTo(document.body.scrollHeight, 0)&quot;, &quot;&quot;);</span>
+<span class="nc" id="L87">	}</span>
+
+	public static void JavaScriptExecutorClick(WebDriver driver, WebElement element) {
+<span class="nc" id="L90">		((JavascriptExecutor) driver).executeScript(&quot;arguments[0].click();&quot;, element);</span>
+<span class="nc" id="L91">	}</span>
+
+	public static void CalenderSelectWithDate(WebDriver driver, int i) {
+<span class="nc" id="L94">		waitFor(3);</span>
+<span class="nc" id="L95">		WebElement element = driver.findElement(By.xpath(&quot;//*[text()='&quot; + i + &quot;']&quot;));</span>
+<span class="nc" id="L96">		explicitlyWaitForElementandClick(element, 2);</span>
+<span class="nc" id="L97">		waitFor(3);</span>
+<span class="nc" id="L98">	}</span>
+
+	public static void taskDesccategoryandEnteringHours(WebDriver driver, String Sheet) throws Exception {
+<span class="nc" id="L101">		FileInputStream file = new FileInputStream(&quot;TestData/TestData.xlsx&quot;);</span>
+<span class="nc" id="L102">		Workbook workbook = new XSSFWorkbook(file);</span>
+<span class="nc" id="L103">		Sheet sheet = workbook.getSheet(Sheet);</span>
+<span class="nc" id="L104">		int size = sheet.getLastRowNum();</span>
+<span class="nc bnc" id="L105" title="All 2 branches missed.">		for (int a = 1; a &lt;= size; a++) {</span>
+<span class="nc" id="L106">			Row row = sheet.getRow(a);</span>
+<span class="nc bnc" id="L107" title="All 2 branches missed.">			for (int x = 1; x &lt;= 1; x++) {</span>
+<span class="nc" id="L108">				String Tasktitle = row.getCell(x).getStringCellValue();</span>
+<span class="nc" id="L109">				int b = x + 1;</span>
+<span class="nc" id="L110">				WebElement taskdesc = driver.findElement(</span>
+<span class="nc" id="L111">						By.xpath(&quot;//*[@class='MuiTableBody-root']//tr[&quot; + a + &quot;]/td[&quot; + b + &quot;]/textarea[1]&quot;));</span>
+<span class="nc" id="L112">				sendKeysToElement(taskdesc, Tasktitle);</span>
+<span class="nc" id="L113">				CommonUtils.waitFor(1);</span>
+			}
+<span class="nc bnc" id="L115" title="All 2 branches missed.">			for (int y = 2; y &lt;= 3; y++) {</span>
+<span class="nc" id="L116">				String CateSub = row.getCell(y).getStringCellValue();</span>
+<span class="nc" id="L117">				int d = y + 1;</span>
+<span class="nc" id="L118">				WebElement catsubgry = driver.findElement(</span>
+<span class="nc" id="L119">						By.xpath(&quot;//*[@class='MuiTableBody-root']//tr[&quot; + a + &quot;]/td[&quot; + d + &quot;]//div//div&quot;));</span>
+<span class="nc" id="L120">				catsubgry.click();</span>
+<span class="nc" id="L121">				ConvertStringToWebElementAndClick(driver, CateSub);</span>
+
+			}
+<span class="nc bnc" id="L124" title="All 2 branches missed.">			for (int c = 4; c &lt;= 10; c++) {</span>
+<span class="nc" id="L125">				double res1 = row.getCell(c).getNumericCellValue();</span>
+<span class="nc" id="L126">				int res = (int) (res1);</span>
+<span class="nc" id="L127">				String hours = String.valueOf(res);</span>
+<span class="nc" id="L128">				int x = c + 1;</span>
+<span class="nc bnc" id="L129" title="All 2 branches missed.">				if (res != 0) {</span>
+<span class="nc" id="L130">					WebElement timehours = driver.findElement(</span>
+<span class="nc" id="L131">							By.xpath(&quot;//*[@class='MuiTableBody-root']//tr[&quot; + a + &quot;]/td[&quot; + x + &quot;]/div/div/input&quot;));</span>
+<span class="nc" id="L132">					timehours.sendKeys(hours);</span>
+				}
+			}
+		}
+<span class="nc" id="L136">		workbook.close();</span>
+<span class="nc" id="L137">	}</span>
+
+	public static void edittaskDesccategoryandEnteringHours(WebDriver driver, String Sheet) throws Exception {
+<span class="nc" id="L140">		FileInputStream file = new FileInputStream(&quot;TestData/TestData.xlsx&quot;);</span>
+<span class="nc" id="L141">		Workbook workbook = new XSSFWorkbook(file);</span>
+<span class="nc" id="L142">		Sheet sheet = workbook.getSheet(Sheet);</span>
+<span class="nc bnc" id="L143" title="All 2 branches missed.">		for (int a = 1; a &lt;= 3; a++) {</span>
+<span class="nc" id="L144">			Row row = sheet.getRow(a);</span>
+<span class="nc bnc" id="L145" title="All 2 branches missed.">			for (int x = 1; x &lt;= 1; x++) {</span>
+<span class="nc" id="L146">				String Tasktitle = row.getCell(x).getStringCellValue();</span>
+<span class="nc" id="L147">				int b = x + 1;</span>
+<span class="nc" id="L148">				WebElement taskdesc = driver.findElement(</span>
+<span class="nc" id="L149">						By.xpath(&quot;//*[@class='MuiTableBody-root']//tr[&quot; + a + &quot;]/td[&quot; + b + &quot;]/textarea[1]&quot;));</span>
+<span class="nc" id="L150">				sendKeysToElement(taskdesc, Tasktitle);</span>
+<span class="nc" id="L151">				CommonUtils.waitFor(1);</span>
+			}
+<span class="nc bnc" id="L153" title="All 2 branches missed.">			for (int y = 2; y &lt;= 3; y++) {</span>
+<span class="nc" id="L154">				String CateSub = row.getCell(y).getStringCellValue();</span>
+<span class="nc" id="L155">				int d = y + 1;</span>
+<span class="nc" id="L156">				WebElement catsubgry = driver.findElement(</span>
+<span class="nc" id="L157">						By.xpath(&quot;//*[@class='MuiTableBody-root']//tr[&quot; + a + &quot;]/td[&quot; + d + &quot;]//div//div&quot;));</span>
+<span class="nc" id="L158">				CommonUtils.waitFor(1);</span>
+<span class="nc" id="L159">				catsubgry.click();</span>
+<span class="nc" id="L160">				CommonUtils.waitFor(2);</span>
+<span class="nc" id="L161">				ConvertStringToWebElementAndClick(driver, CateSub);</span>
+<span class="nc" id="L162">				CommonUtils.waitFor(1);</span>
+			}
+		}
+<span class="nc" id="L165">		workbook.close();</span>
+<span class="nc" id="L166">	}</span>
+
+	public static String takeScreenshotAtEndOfTest() throws IOException {
+<span class="nc" id="L169">		String dateName = new SimpleDateFormat(&quot;yyyyMMddhhmmss&quot;).format(new Date());</span>
+<span class="nc" id="L170">		TakesScreenshot ts = (TakesScreenshot) driver;</span>
+<span class="nc" id="L171">		File source = ts.getScreenshotAs(OutputType.FILE);</span>
+<span class="nc" id="L172">		String destination = System.getProperty(&quot;user.dir&quot;) + &quot;/screenshots/&quot; + dateName + &quot;.png&quot;;</span>
+<span class="nc" id="L173">		File finalDestination = new File(destination);</span>
+<span class="nc" id="L174">		FileHandler.copy(source, finalDestination);</span>
+<span class="nc" id="L175">		return destination;</span>
+	}
+
+	public static void selectAnyWeek(WebDriver driver, int weekOffSet) throws InterruptedException {
+<span class="nc" id="L179">		Calendar cal = Calendar.getInstance();</span>
+<span class="nc" id="L180">		cal.add(Calendar.WEEK_OF_YEAR, weekOffSet);</span>
+<span class="nc" id="L181">		int targetDay = cal.get(Calendar.DAY_OF_MONTH);</span>
+<span class="nc" id="L182">		int targetMonth = cal.get(Calendar.MONTH);</span>
+<span class="nc" id="L183">		int currentMonth = Calendar.getInstance().get(Calendar.MONTH);</span>
+
+		// Click on the date picker to open it
+<span class="nc" id="L186">		WebElement datePicker = driver.findElement(By.className(&quot;rdp-cell&quot;));</span>
+<span class="nc" id="L187">		datePicker.click();</span>
+
+		// If the target month is before the current month, click the previous month
+		// arrow
+<span class="nc bnc" id="L191" title="All 2 branches missed.">		if (targetMonth &lt; currentMonth) {</span>
+<span class="nc" id="L192">			WebElement prevMonthArrow = driver.findElement(By.xpath(&quot;//*[@name='previous-month']&quot;));</span>
+<span class="nc" id="L193">			prevMonthArrow.click();</span>
+<span class="nc" id="L194">		}</span>
+
+<span class="nc bnc" id="L196" title="All 2 branches missed.">		else if (targetMonth &gt; currentMonth) {</span>
+<span class="nc" id="L197">			WebElement nextMonthArrow = driver.findElement(By.xpath(&quot;//*[@name='next-month']&quot;));</span>
+<span class="nc" id="L198">			nextMonthArrow.click();</span>
+		}
+		// Select the target day
+<span class="nc" id="L201">		WebElement dayToSelect = driver.findElement(By.xpath(&quot;//*[text()='&quot; + targetDay + &quot;']&quot;));</span>
+<span class="nc" id="L202">		dayToSelect.click();</span>
+<span class="nc" id="L203">		WebElement start = driver.findElement(By.xpath(&quot;//*[@aria-label='Select Week']/following::label[2]&quot;));</span>
+<span class="nc" id="L204">		WebElement end = driver.findElement(By.xpath(&quot;//*[@aria-label='Select Week']/following::label[4]&quot;));</span>
+<span class="nc" id="L205">		String startdate = start.getText();</span>
+<span class="nc" id="L206">		String enddate = end.getText();</span>
+<span class="nc" id="L207">		System.out.println(</span>
+				&quot;printing the selected start week date &quot; + &quot; : &quot; + startdate + &quot; and end date is &quot; + &quot; : &quot; + enddate);
+<span class="nc" id="L209">	}</span>
+
+	public static void printNameOfPages(WebDriver driver) {
+		// Array of URLs to visit
+<span class="nc" id="L213">		String[] pages = { &quot;https://192.168.1.5/timesheet/list&quot;, &quot;https://192.168.1.5/timesheet/pending&quot;,</span>
+				&quot;https://192.168.1.5/timesheet/detail&quot;, &quot;https://192.168.1.5/timesheet/approved&quot;,
+				&quot;https://192.168.1.5/timesheet/rejected&quot;, &quot;https://192.168.1.5/timesheet/reports&quot;,
+				&quot;https://192.168.1.5/timesheet/mapping&quot;, &quot;https://192.168.1.5/timesheet/category&quot;,
+				&quot;https://192.168.1.5/timesheet/employee&quot;, &quot;https://192.168.1.5/timesheet/delete-employee&quot; };
+		// Loop through each URL
+<span class="nc bnc" id="L219" title="All 2 branches missed.">		for (String page : pages) {</span>
+			// Navigate to the page
+<span class="nc" id="L221">			driver.get(page);</span>
+			// Print the title of the current page
+<span class="nc" id="L223">			System.out.println(&quot;Page Title: &quot; + driver.getTitle());</span>
+<span class="nc" id="L224">			break;</span>
+		}
+<span class="nc" id="L226">	}</span>
+
+	public static void clickMonthTab(String monthName, WebElement nextArrow, WebElement previousArrow,
+	WebElement monthYearElement) {
+<span class="nc bnc" id="L230" title="All 4 branches missed.">    while (nextArrow.isEnabled() || previousArrow.isEnabled()) {</span>
+<span class="nc" id="L231">	String actualResult = monthYearElement.getText().split(&quot; &quot;)[0].trim();</span>
+<span class="nc" id="L232">	System.out.println(&quot;Actual result is: &quot; + actualResult);</span>
+<span class="nc" id="L233">	int a = Month.valueOf(monthName.toUpperCase()).getValue(); // Returns the position of the month (e.g., May =														// 5)</span>
+<span class="nc" id="L234">	int b = Month.valueOf(actualResult.toUpperCase()).getValue();</span>
+<span class="nc bnc" id="L235" title="All 2 branches missed.">	if (a &lt; b) {</span>
+<span class="nc" id="L236">		previousArrow.click();</span>
+<span class="nc bnc" id="L237" title="All 2 branches missed.">	} else if (a &gt; b) {</span>
+<span class="nc" id="L238">		nextArrow.click();</span>
+<span class="nc bnc" id="L239" title="All 2 branches missed.">	} else if (a == b) {</span>
+<span class="nc" id="L240">		System.out.println(&quot;No need to click&quot;);</span>
+<span class="nc" id="L241">		break;</span>
+	}
+<span class="nc" id="L243">}</span>
+<span class="nc" id="L244">}</span>
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+//	public static void clickElement(WebElement element) {
+//	element.click();
+//}
+	
+//	public static void actionsclasssendkeys(WebDriver driver, WebElement element, String text) {
+//	act = new Actions(driver);
+//	element.clear();
+//	act.sendKeys(element, text).perform();
+//}
+
+//ASSERTIONS
+//public static String getTextFormAlert(WebDriver driver) {
+//	WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+//	String message = null;
+//	try {
+//		wait.until(ExpectedConditions.alertIsPresent());
+//		Alert alert = driver.switchTo().alert();
+//		message = alert.getText();
+//	} catch (Exception e) {
+//		e.printStackTrace();
+//	}
+//	return message;
+//}
+
+// Accept the Dynamic Alerts
+//public static void acceptAlert(WebDriver driver) {
+//	WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));
+//	try {
+//		wait.until(ExpectedConditions.alertIsPresent());
+//		Alert alert = driver.switchTo().alert();
+//		alert.accept();
+//	} catch (Exception e) {
+//		e.printStackTrace();
+//	}
+//}
+	
+	
+	
+	
+	
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.12.202403310830</span></div></body></html>

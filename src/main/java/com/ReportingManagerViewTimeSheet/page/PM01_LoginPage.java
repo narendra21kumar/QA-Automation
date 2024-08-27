@@ -75,6 +75,7 @@ public class PM01_LoginPage {
 		CommonUtils.waitFor(2);
 		CommonUtils.explicitlyWaitForElementandClick(emailNext, 10);
 		Logs.info("Clicked on email next");
+		CommonUtils.waitFor(20);
 	}
 	public void staySigned() {
 		CommonUtils.explicitlyWaitForElementandClick(staySigned, 10);

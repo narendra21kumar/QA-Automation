@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>PA10_RejectSelftFromApprovePage.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">QA-Automation</a> &gt; <a href="index.source.html" class="el_package">com.AdminViewTimeSheet.page</a> &gt; <span class="el_source">PA10_RejectSelftFromApprovePage.java</span></div><h1>PA10_RejectSelftFromApprovePage.java</h1><pre class="source lang-java linenums">package com.AdminViewTimeSheet.page;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
+
+import com.TimeSheet.utils.CommonUtils;
+import com.TimeSheet.utils.Logs;
+
+public class PA10_RejectSelftFromApprovePage {
+	WebDriver driver;
+
+<span class="nc" id="L14">	public PA10_RejectSelftFromApprovePage(WebDriver driver) {</span>
+<span class="nc" id="L15">		this.driver = driver;</span>
+<span class="nc" id="L16">		PageFactory.initElements(driver, this);</span>
+<span class="nc" id="L17">	}</span>
+
+	@FindBy(xpath = &quot;//a[contains(@class, '_2esG8N9N5-Q9Ui8vVn5gZt') and @title='Approved']&quot;)
+	WebElement approvedIcon;
+
+	@FindBy(xpath = &quot;//input[@class='PrivateSwitchBase-input MuiSwitch-input css-1m9pwf3']&quot;)
+	WebElement enableToggle;
+
+	@FindBy(xpath = &quot;(//input[@class='PrivateSwitchBase-input css-1m9pwf3'])[1]&quot;)
+	WebElement checkbox;
+
+	@FindBy(xpath = &quot;(//*[text()='Reject'])[1]&quot;)
+	WebElement RejectButton;
+
+	@FindBy(xpath = &quot;//*[@class='_17CUqmCextOqfytuhqZlM']&quot;)
+	WebElement RemarksTextArea;
+
+	@FindBy(xpath = &quot;//*[text()='Confirm']&quot;)
+	WebElement confirmButton;
+
+	public void clickonApprovedIcon() {
+<span class="nc" id="L38">		CommonUtils.waitFor(3);</span>
+<span class="nc" id="L39">		CommonUtils.explicitlyWaitForElementandClick(approvedIcon, 10);</span>
+<span class="nc" id="L40">		Logs.info(&quot;clicked on Approved icon&quot;);</span>
+<span class="nc" id="L41">	}</span>
+
+	public void enableToggle() {
+<span class="nc" id="L44">		CommonUtils.waitFor(3);</span>
+<span class="nc" id="L45">		CommonUtils.explicitlyWaitForElementandClick(enableToggle,10);</span>
+<span class="nc" id="L46">		Logs.info(&quot;clicked on enable Toggle icon&quot;);</span>
+
+<span class="nc" id="L48">	}</span>
+
+	public void bulkReject() {
+<span class="nc" id="L51">		CommonUtils.waitFor(3);</span>
+<span class="nc" id="L52">		CommonUtils.JavaScriptExecutorClick(driver, checkbox);</span>
+<span class="nc" id="L53">		CommonUtils.waitFor(5);</span>
+<span class="nc" id="L54">		Logs.info(&quot;clicked on checkBox for bulk Reject&quot;);</span>
+<span class="nc" id="L55">	}</span>
+
+	public void rejectTimesheetByGivingRemarks(String Remarks) {
+<span class="nc" id="L58">		CommonUtils.explicitlyWaitForElementandClick(RejectButton, 2);</span>
+<span class="nc" id="L59">		CommonUtils.sendKeysToElement(RemarksTextArea, Remarks);</span>
+<span class="nc" id="L60">		CommonUtils.explicitlyWaitForElementandClick(confirmButton, 2);</span>
+<span class="nc" id="L61">		Logs.info(&quot;SuccessFully Rejected the Timesheet&quot;);</span>
+<span class="nc" id="L62">	}</span>
+
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.12.202403310830</span></div></body></html>

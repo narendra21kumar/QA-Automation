@@ -43,7 +43,12 @@ public class TE11_ExceedTimesheetValidationSteps {
 		CreateTimeSheetPage.saveAll();
 	}
 
-	////// 40hours/////////
+	@Then("Validate error is displaying for more then 24 hours per day {string}")
+	public void MoreThen24Hoursvalidation(String HoursValidate) throws Exception {
+		CreateTimeSheetPage.validateHoursvalidation(HoursValidate);
+		Logs.endTestCase(this.getClass().getSimpleName());
+	}
+
 	@When("Enter task desc and hours {string}")
 	public void EnterTaskDisc(String Sheet) throws Exception {
 		CreateTimeSheetPage.enterTaskDiscriptionCategorySubcategory(Sheet);
@@ -56,16 +61,6 @@ public class TE11_ExceedTimesheetValidationSteps {
 
 	}
 
-	@Then("Validate error is displaying for more then 24 hours per day {string}")
-	public void MoreThen24Hoursvalidation(String HoursValidate) throws Exception {
-		CreateTimeSheetPage.validateHoursvalidation(HoursValidate);
-		Logs.endTestCase(this.getClass().getSimpleName());
-	}
-
-	@Then("Validate error is displaying for less then 40 hours per week {string}")
-	public void lessThen40validation(String HoursValidate) throws Exception {
-		CreateTimeSheetPage.validationFor40hrs(HoursValidate);
-		Logs.endTestCase(this.getClass().getSimpleName());
-	}
+	
 
 }

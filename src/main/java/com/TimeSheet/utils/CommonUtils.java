@@ -30,28 +30,22 @@ public class CommonUtils {
 	int timeoutInSeconds = 30;
 	static Actions act;
 
-	public static void clickElement(WebElement element) {
-		element.click();
-	}
-
 	public static void sendKeysToElement(WebElement element, String text) {
 		element.clear();
 		element.sendKeys(text);
 	}
 
 	public static void scrollIntoelementAndclick(WebDriver driver, WebElement element) {
-
 		((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", element);
 		waitFor(30);
-		clickElement(element);
+		explicitlyWaitForElementandClick(element,10);
 	}
 
-	// getting string value from the excel sheet
 	public static void scrollUsingTextAndClick(WebDriver driver, String value) {
 		WebElement element = driver.findElement(By.xpath("//*[text()='" + value + "']"));
 		((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", element);
 		waitFor(3);
-		clickElement(element);
+		explicitlyWaitForElementandClick(element,10);
 	}
 
 	public static void waitFor(int seconds) {// last
@@ -62,13 +56,11 @@ public class CommonUtils {
 		}
 	}
 
-	// Explicitly wait operation
 	public static void explicitlyWaitForElementandClick(WebElement element, long waitTimeInSeconds) {
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(waitTimeInSeconds));
 		try {
 			wait.until(ExpectedConditions.elementToBeClickable(element));
 			element.click();
-
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
@@ -77,20 +69,8 @@ public class CommonUtils {
 	public static void ConvertStringToWebElementAndClick(WebDriver driver, String value) {
 		waitFor(3);
 		WebElement element = driver.findElement(By.xpath("//li[text()='" + value + "']"));
-		clickElement(element);
+		explicitlyWaitForElementandClick(element,10);
 		waitFor(3);
-	}
-
-	// Accept the Dynamic Alerts
-	public static void acceptAlert(WebDriver driver) {
-		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));
-		try {
-			wait.until(ExpectedConditions.alertIsPresent());
-			Alert alert = driver.switchTo().alert();
-			alert.accept();
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
 	}
 
 	public static void doubleClick(WebDriver driver, WebElement element) {
@@ -114,33 +94,7 @@ public class CommonUtils {
 		waitFor(3);
 		WebElement element = driver.findElement(By.xpath("//*[text()='" + i + "']"));
 		explicitlyWaitForElementandClick(element, 2);
-//		WebElement start=driver.findElement(By.xpath("//*[@aria-label='Select Week']/following::label[2]"));
-//		WebElement end=driver.findElement(By.xpath("//*[@aria-label='Select Week']/following::label[4]"));
-//		String startdate=start.getText();
-//		String enddate=end.getText();
-//		System.out.println("printing the selected start week date "+" : "+startdate+" and end date is "+" : "+enddate);
 		waitFor(3);
-	}
-
-	public static void actionsclasssendkeys(WebDriver driver, WebElement element, String text) {
-		act = new Actions(driver);
-		element.clear();
-		act.sendKeys(element, text).perform();
-
-	}
-
-	// ASSERTIONS
-	public static String acceptAlertText(WebDriver driver) {
-		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-		String message = null;
-		try {
-			wait.until(ExpectedConditions.alertIsPresent());
-			Alert alert = driver.switchTo().alert();
-			message = alert.getText();
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
-		return message;
 	}
 
 	public static void taskDesccategoryandEnteringHours(WebDriver driver, String Sheet) throws Exception {
@@ -155,7 +109,7 @@ public class CommonUtils {
 				int b = x + 1;
 				WebElement taskdesc = driver.findElement(
 						By.xpath("//*[@class='MuiTableBody-root']//tr[" + a + "]/td[" + b + "]/textarea[1]"));
-				actionsclasssendkeys(driver, taskdesc, Tasktitle);
+				sendKeysToElement(taskdesc, Tasktitle);
 				CommonUtils.waitFor(1);
 			}
 			for (int y = 2; y <= 3; y++) {
@@ -163,9 +117,7 @@ public class CommonUtils {
 				int d = y + 1;
 				WebElement catsubgry = driver.findElement(
 						By.xpath("//*[@class='MuiTableBody-root']//tr[" + a + "]/td[" + d + "]//div//div"));
-
 				catsubgry.click();
-
 				ConvertStringToWebElementAndClick(driver, CateSub);
 
 			}
@@ -177,9 +129,6 @@ public class CommonUtils {
 				if (res != 0) {
 					WebElement timehours = driver.findElement(
 							By.xpath("//*[@class='MuiTableBody-root']//tr[" + a + "]/td[" + x + "]/div/div/input"));
-
-					// timehours.clear();
-
 					timehours.sendKeys(hours);
 				}
 			}
@@ -198,7 +147,7 @@ public class CommonUtils {
 				int b = x + 1;
 				WebElement taskdesc = driver.findElement(
 						By.xpath("//*[@class='MuiTableBody-root']//tr[" + a + "]/td[" + b + "]/textarea[1]"));
-				actionsclasssendkeys(driver, taskdesc, Tasktitle);
+				sendKeysToElement(taskdesc, Tasktitle);
 				CommonUtils.waitFor(1);
 			}
 			for (int y = 2; y <= 3; y++) {
@@ -212,28 +161,8 @@ public class CommonUtils {
 				ConvertStringToWebElementAndClick(driver, CateSub);
 				CommonUtils.waitFor(1);
 			}
-
 		}
 		workbook.close();
-	}
-
-	public static void clickMonthTab(String monthName, WebElement nextArrow, WebElement previousArrow,
-			WebElement monthYearElement) {
-		while (nextArrow.isEnabled() || previousArrow.isEnabled()) {
-			String actualResult = monthYearElement.getText().split(" ")[0].trim();
-			System.out.println("Actual result is: " + actualResult);
-			int a = Month.valueOf(monthName.toUpperCase()).getValue(); // Returns the position of the month (e.g., May =
-																		// 5)
-			int b = Month.valueOf(actualResult.toUpperCase()).getValue();
-			if (a < b) {
-				previousArrow.click();
-			} else if (a > b) {
-				nextArrow.click();
-			} else if (a == b) {
-				System.out.println("No need to click");
-				break;
-			}
-		}
 	}
 
 	public static String takeScreenshotAtEndOfTest() throws IOException {
@@ -286,16 +215,81 @@ public class CommonUtils {
 				"https://192.168.1.5/timesheet/rejected", "https://192.168.1.5/timesheet/reports",
 				"https://192.168.1.5/timesheet/mapping", "https://192.168.1.5/timesheet/category",
 				"https://192.168.1.5/timesheet/employee", "https://192.168.1.5/timesheet/delete-employee" };
-
 		// Loop through each URL
 		for (String page : pages) {
 			// Navigate to the page
 			driver.get(page);
-
 			// Print the title of the current page
 			System.out.println("Page Title: " + driver.getTitle());
 			break;
 		}
 	}
 
+	public static void clickMonthTab(String monthName, WebElement nextArrow, WebElement previousArrow,
+	WebElement monthYearElement) {
+    while (nextArrow.isEnabled() || previousArrow.isEnabled()) {
+	String actualResult = monthYearElement.getText().split(" ")[0].trim();
+	System.out.println("Actual result is: " + actualResult);
+	int a = Month.valueOf(monthName.toUpperCase()).getValue(); // Returns the position of the month (e.g., May =														// 5)
+	int b = Month.valueOf(actualResult.toUpperCase()).getValue();
+	if (a < b) {
+		previousArrow.click();
+	} else if (a > b) {
+		nextArrow.click();
+	} else if (a == b) {
+		System.out.println("No need to click");
+		break;
+	}
+}
+}
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+//	public static void clickElement(WebElement element) {
+//	element.click();
+//}
+	
+//	public static void actionsclasssendkeys(WebDriver driver, WebElement element, String text) {
+//	act = new Actions(driver);
+//	element.clear();
+//	act.sendKeys(element, text).perform();
+//}
+
+//ASSERTIONS
+//public static String getTextFormAlert(WebDriver driver) {
+//	WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+//	String message = null;
+//	try {
+//		wait.until(ExpectedConditions.alertIsPresent());
+//		Alert alert = driver.switchTo().alert();
+//		message = alert.getText();
+//	} catch (Exception e) {
+//		e.printStackTrace();
+//	}
+//	return message;
+//}
+
+// Accept the Dynamic Alerts
+//public static void acceptAlert(WebDriver driver) {
+//	WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));
+//	try {
+//		wait.until(ExpectedConditions.alertIsPresent());
+//		Alert alert = driver.switchTo().alert();
+//		alert.accept();
+//	} catch (Exception e) {
+//		e.printStackTrace();
+//	}
+//}
+	
+	
+	
+	
+	
 }
