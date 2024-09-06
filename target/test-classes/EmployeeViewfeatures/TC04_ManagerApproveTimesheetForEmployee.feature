@@ -9,5 +9,5 @@ Feature: Manager Approve Timesheet For Employee Role
    And Approved the timesheet for employee for the selected week
    Then Click on Approved Timesheet Icon in Manager View and Verify the status, Approved date "<EmployeeId>" , "<ApprovedText>"
    Examples: 
-      | EmployeeId     |ApprovedText|
-      | 1088           |Approved    |
+      | EmployeeId       |ApprovedText|
+      | 123456           |Approved    |

@@ -2,7 +2,7 @@ Feature: Delete current week timesheet
  
 	Background:
 			Given Manager login into the timesheet application
-  @manager
+  @manager1
 	 Scenario Outline: Verify Admin Able To Delete Timesheet For Current Week
      When Click on create timesheet page in manager view
      And Select the future week from calender in manager view

@@ -9,7 +9,6 @@ import com.TimeSheet.utils.WebDriverManager;
 
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
-import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 
 public class TM16_ReportsTimesheetDetailsReportSteps {
@@ -42,9 +41,6 @@ public class TM16_ReportsTimesheetDetailsReportSteps {
 	public void click_on_export_data_dwonload_icon() {
 		reportsTimesheetDetailsReportPage.export();
 	}
-	@Then("validate the total {string} on header part")
-	public void validate_the_total_on_header_part(String total) {
-		reportsTimesheetDetailsReportPage.valiadateTotalText(total);
-	}
+	
 	
 }

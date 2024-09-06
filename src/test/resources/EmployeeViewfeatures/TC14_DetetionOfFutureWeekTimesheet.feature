@@ -2,7 +2,7 @@ Feature:Verify Employee Able To Delete Timesheet For Future Week
  
 	Background:
 			Given Log in As a Employee Role
-  @employee
+  @employeess
 	 Scenario Outline: Verify Employee Able To Delete Timesheet For Future Week
      And Click On Create Timesheet Page
      And Select the Future Week from Calender

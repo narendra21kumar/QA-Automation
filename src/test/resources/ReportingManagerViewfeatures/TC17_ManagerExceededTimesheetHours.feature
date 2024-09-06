@@ -11,5 +11,5 @@ Feature: Verify manager timesheet having more than 12 hours in each day
     And Click on saveall icon
     Then Validate error is displaying for more than twenty four hours per day "<Error Message>"
    	 Examples:
-      |              Error Message                                | sheetName         |
-      |  Summation of hours in mon tue wed thu fri exceeded 24!!! |  24HoursPerDay    |
+      |              Error Message                                | sheetName         						 |
+      |  Summation of hours in mon tue wed thu fri exceeded 24!!! |  EmployeeView_24HoursPerDay    |

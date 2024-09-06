@@ -19,13 +19,13 @@ import com.TimeSheet.utils.Logs;
 public class PE02_CreateTimeSheetPage {
 
 	WebDriver driver;
-<span class="nc" id="L22">	WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));</span>
+<span class="fc" id="L22">	WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));</span>
 	Actions act;
 
-<span class="nc" id="L25">	public PE02_CreateTimeSheetPage(WebDriver driver) {</span>
-<span class="nc" id="L26">		this.driver = driver;</span>
-<span class="nc" id="L27">		PageFactory.initElements(driver, this);</span>
-<span class="nc" id="L28">	}</span>
+<span class="fc" id="L25">	public PE02_CreateTimeSheetPage(WebDriver driver) {</span>
+<span class="fc" id="L26">		this.driver = driver;</span>
+<span class="fc" id="L27">		PageFactory.initElements(driver, this);</span>
+<span class="fc" id="L28">	}</span>
 
 	@FindBy(xpath = &quot;//*[@class='MuiSvgIcon-root']&quot;)
 	WebElement calendarStartIcon;
@@ -74,127 +74,135 @@ public class PE02_CreateTimeSheetPage {
 
 
 	public void CreateTimesheetIcon() throws Exception {
-<span class="nc" id="L77">		createTimesheetIcon.click();</span>
-<span class="nc" id="L78">		Logs.info(&quot;Clicked on TimesheetIcon&quot;);</span>
-<span class="nc" id="L79">	}</span>
+<span class="fc" id="L77">		createTimesheetIcon.click();</span>
+<span class="fc" id="L78">		Logs.info(&quot;Clicked on TimesheetIcon&quot;);</span>
+<span class="fc" id="L79">	}</span>
 
 	public void editIcon() throws Exception {
-<span class="nc" id="L82">		editicon.click();</span>
-<span class="nc" id="L83">		Logs.info(&quot;Clicked On EditIcon &quot;);</span>
-<span class="nc" id="L84">	}</span>
+<span class="fc" id="L82">		editicon.click();</span>
+<span class="fc" id="L83">		Logs.info(&quot;Clicked On EditIcon &quot;);</span>
+<span class="fc" id="L84">	}</span>
 
 	public void enterTaskDiscriptionCategorySubcategory(String SheetName) throws Exception {
-<span class="nc" id="L87">		CommonUtils.taskDesccategoryandEnteringHours(driver, SheetName);</span>
-<span class="nc" id="L88">		Logs.info(&quot;Entered Task Description and Hours&quot;);</span>
-<span class="nc" id="L89">	}</span>
+<span class="fc" id="L87">		CommonUtils.taskDesccategoryandEnteringHours(driver, SheetName);</span>
+<span class="fc" id="L88">		Logs.info(&quot;Entered Task Description and Hours&quot;);</span>
+<span class="fc" id="L89">	}</span>
 
 	public void saveSubmitConfirm() {
 		try {
-<span class="nc" id="L93">			CommonUtils.waitFor(2);</span>
-<span class="nc" id="L94">			saveall.click();</span>
-<span class="nc" id="L95">			CommonUtils.waitFor(2);</span>
-<span class="nc" id="L96">			submit.click();</span>
-<span class="nc" id="L97">			CommonUtils.waitFor(2);</span>
-<span class="nc" id="L98">			confirm.click();</span>
-<span class="nc" id="L99">			Logs.info(&quot;Clicked on save,submit and confirm button&quot;);</span>
-<span class="nc" id="L100">		} catch (Exception e) {</span>
-<span class="nc" id="L101">			Logs.warn(&quot;Duplicate Task Description&quot;);</span>
-<span class="nc" id="L102">			System.out.println(&quot;Cant able to save Because Duplicate Task Discription&quot;);</span>
+<span class="fc" id="L93">			CommonUtils.scrollTillTop(driver);</span>
+<span class="fc" id="L94">			CommonUtils.waitFor(2);</span>
+<span class="fc" id="L95">			saveall.click();</span>
+<span class="fc" id="L96">			CommonUtils.waitFor(2);</span>
+<span class="fc" id="L97">			submit.click();</span>
+<span class="fc" id="L98">			CommonUtils.waitFor(2);</span>
+<span class="fc" id="L99">			confirm.click();</span>
+<span class="fc" id="L100">			Logs.info(&quot;Clicked on save,submit and confirm button&quot;);</span>
+<span class="fc" id="L101">		} catch (Exception e) {</span>
+<span class="fc" id="L102">			Logs.warn(&quot;Duplicate Task Description&quot;);</span>
+<span class="fc" id="L103">			System.out.println(&quot;Cant able to save Because Duplicate Task Discription&quot;);</span>
 
-<span class="nc" id="L104">		}</span>
-<span class="nc" id="L105">	}</span>
+<span class="fc" id="L105">		}</span>
+<span class="fc" id="L106">	}</span>
 
 	public void saveAll() {
-<span class="nc" id="L108">		CommonUtils.waitFor(2);</span>
-<span class="nc" id="L109">		saveall.click();</span>
-<span class="nc" id="L110">		Logs.info(&quot;Clicked on save button&quot;);</span>
-<span class="nc" id="L111">	}</span>
+<span class="fc" id="L109">		CommonUtils.waitFor(2);</span>
+<span class="fc" id="L110">		saveall.click();</span>
+<span class="fc" id="L111">		Logs.info(&quot;Clicked on save button&quot;);</span>
+<span class="fc" id="L112">	}</span>
 
 	public void selectFutureWeekDate() throws InterruptedException {
-<span class="nc" id="L114">		CommonUtils.explicitlyWaitForElementandClick(calendarStartIcon, 5);</span>
-<span class="nc" id="L115">		Calendar cal = Calendar.getInstance();</span>
-<span class="nc" id="L116">		cal.set(Calendar.DAY_OF_WEEK, Calendar.SUNDAY);</span>
-<span class="nc" id="L117">		cal.add(Calendar.DATE, 7);</span>
-<span class="nc" id="L118">		Date future = cal.getTime();</span>
-<span class="nc" id="L119">		int date = future.getDate();</span>
-<span class="nc" id="L120">		System.out.println(future);</span>
+<span class="fc" id="L115">		CommonUtils.explicitlyWaitForElementandClick(calendarStartIcon, 5);</span>
+<span class="fc" id="L116">		Calendar cal = Calendar.getInstance();</span>
+<span class="fc" id="L117">		cal.set(Calendar.DAY_OF_WEEK, Calendar.SUNDAY);</span>
+<span class="fc" id="L118">		cal.add(Calendar.DATE, 7);</span>
+<span class="fc" id="L119">		Date future = cal.getTime();</span>
+<span class="fc" id="L120">		int date = future.getDate();</span>
+<span class="fc" id="L121">		System.out.println(future);</span>
 
-<span class="nc" id="L122">		boolean availableDate = true;</span>
-<span class="nc bnc" id="L123" title="All 2 branches missed.">		if (availableDate) {</span>
-<span class="nc" id="L124">			CommonUtils.CalenderSelectWithDate(driver, date);</span>
-<span class="nc" id="L125">			Logs.info(&quot;Future date has been selected&quot;);</span>
-<span class="nc" id="L126">			Thread.sleep(3000);</span>
+<span class="fc" id="L123">		boolean availableDate = true;</span>
+<span class="pc bpc" id="L124" title="1 of 2 branches missed.">		if (availableDate) {</span>
+<span class="fc" id="L125">			CommonUtils.CalenderSelectWithDate(driver, date);</span>
+<span class="fc" id="L126">			Logs.info(&quot;Future date has been selected&quot;);</span>
+<span class="fc" id="L127">			Thread.sleep(3000);</span>
 		} else {
-<span class="nc" id="L128">			CommonUtils.explicitlyWaitForElementandClick(FutureMonthArrowIcon, 10);</span>
-<span class="nc" id="L129">			CommonUtils.CalenderSelectWithDate(driver, date);</span>
-<span class="nc" id="L130">			Logs.info(&quot;clicked on arrow icon to select the Future date&quot;);</span>
-<span class="nc" id="L131">			Thread.sleep(3000);</span>
-<span class="nc" id="L132">			System.out.println(future);</span>
+<span class="nc" id="L129">			CommonUtils.explicitlyWaitForElementandClick(FutureMonthArrowIcon, 10);</span>
+<span class="nc" id="L130">			CommonUtils.CalenderSelectWithDate(driver, date);</span>
+<span class="nc" id="L131">			Logs.info(&quot;clicked on arrow icon to select the Future date&quot;);</span>
+<span class="nc" id="L132">			Thread.sleep(3000);</span>
+<span class="nc" id="L133">			System.out.println(future);</span>
 		}
-<span class="nc" id="L134">	}</span>
+<span class="fc" id="L135">	}</span>
 
 	public void selectPastWeekDate() throws InterruptedException {
-<span class="nc" id="L137">		CommonUtils.explicitlyWaitForElementandClick(calendarStartIcon, 5);</span>
-<span class="nc" id="L138">		Calendar cal = Calendar.getInstance();</span>
-<span class="nc" id="L139">		cal.set(Calendar.DAY_OF_WEEK, Calendar.SUNDAY);</span>
-<span class="nc" id="L140">		cal.add(Calendar.DATE, -7);</span>
-<span class="nc" id="L141">		Date pastDate = cal.getTime();</span>
-<span class="nc" id="L142">		int date = pastDate.getDate();</span>
-<span class="nc" id="L143">		boolean availableDate = true;</span>
-<span class="nc bnc" id="L144" title="All 2 branches missed.">		if (availableDate) {</span>
-<span class="nc" id="L145">			CommonUtils.CalenderSelectWithDate(driver, date);</span>
-<span class="nc" id="L146">			Logs.info(&quot;past week date has been selected&quot;);</span>
-<span class="nc" id="L147">			Thread.sleep(3000);</span>
-		} else {
-<span class="nc" id="L149">			CommonUtils.explicitlyWaitForElementandClick(PreviousMonthArrowIcon, 10);</span>
-<span class="nc" id="L150">			CommonUtils.CalenderSelectWithDate(driver, date);</span>
-<span class="nc" id="L151">			Logs.info(&quot;clicked on arrow icon to select the Past week date&quot;);</span>
-<span class="nc" id="L152">			Thread.sleep(3000);</span>
-<span class="nc" id="L153">			System.out.println(pastDate);</span>
+<span class="fc" id="L138">		CommonUtils.explicitlyWaitForElementandClick(calendarStartIcon, 5);</span>
+<span class="fc" id="L139">		Calendar cal = Calendar.getInstance();</span>
+<span class="fc" id="L140">		cal.set(Calendar.DAY_OF_WEEK, Calendar.SUNDAY);</span>
+<span class="fc" id="L141">		cal.add(Calendar.DATE, -7);</span>
+<span class="fc" id="L142">		Date pastDate = cal.getTime();</span>
+<span class="fc" id="L143">		int date = pastDate.getDate();</span>
+<span class="fc" id="L144">		WebElement availableDate=CommonUtils.convertIntTOWebElement(driver, date);</span>
+		//System.out.println(date);
+       // boolean availableDate = true;
+<span class="pc bpc" id="L147" title="1 of 2 branches missed.">		if(availableDate.isSelected()) {</span>
+<span class="nc" id="L148">			CommonUtils.CalenderSelectWithDate(driver, date);	</span>
+<span class="nc" id="L149">			Thread.sleep(3000);</span>
+<span class="nc" id="L150">			Logs.info(&quot;Selected the past week date from calendar&quot;);</span>
+<span class="nc" id="L151">			System.out.println(&quot;Previous data has been selected&quot;);</span>
 		}
-<span class="nc" id="L155">	}</span>
-
+<span class="pc bpc" id="L153" title="1 of 2 branches missed.">		else if(PreviousMonthArrowIcon.isEnabled()){</span>
+<span class="fc" id="L154">			CommonUtils.explicitlyWaitForElementandClick(PreviousMonthArrowIcon,10);</span>
+<span class="fc" id="L155">			Thread.sleep(3000);</span>
+<span class="fc" id="L156">			CommonUtils.CalenderSelectWithDate(driver, date);	</span>
+<span class="fc" id="L157">			Logs.info(&quot;Clicked on previous month arrow and selected the past week date from calendar&quot;);</span>
+<span class="fc" id="L158">			System.out.println(&quot;past week&quot;+pastDate);</span>
+<span class="fc" id="L159">			System.out.println(&quot;clicked on prev monthn arrow selected the date&quot;);</span>
+<span class="fc" id="L160">			Thread.sleep(3000);</span>
+		}
+<span class="fc" id="L162">	}</span>
+		
+	
 	public void selectCurrentWeek() {
-<span class="nc" id="L158">		Calendar cal = Calendar.getInstance();</span>
-<span class="nc" id="L159">		cal.set(Calendar.DAY_OF_WEEK, Calendar.SUNDAY);</span>
-<span class="nc" id="L160">		cal.add(Calendar.DATE, 1);</span>
-<span class="nc" id="L161">		Date currentDate = cal.getTime();</span>
-<span class="nc" id="L162">		int date = currentDate.getDate();</span>
-<span class="nc" id="L163">		System.out.println(currentDate);</span>
-<span class="nc" id="L164">		Logs.info(&quot;Current week has been selected&quot;);</span>
+<span class="fc" id="L166">		Calendar cal = Calendar.getInstance();</span>
+<span class="fc" id="L167">		cal.set(Calendar.DAY_OF_WEEK, Calendar.SUNDAY);</span>
+<span class="fc" id="L168">		cal.add(Calendar.DATE, 1);</span>
+<span class="fc" id="L169">		Date currentDate = cal.getTime();</span>
+<span class="fc" id="L170">		int date = currentDate.getDate();</span>
+<span class="fc" id="L171">		System.out.println(currentDate);</span>
+<span class="fc" id="L172">		Logs.info(&quot;Current week has been selected&quot;);</span>
 
-<span class="nc" id="L166">	}</span>
+<span class="fc" id="L174">	}</span>
 
 	public void validateTimesheetResponse(String SuccessText) throws Exception {
-<span class="nc" id="L169">		String alreadysubmittedtext = driver.findElement(By.xpath(&quot;//*[text()='Timesheet already submitted!']&quot;))</span>
-<span class="nc" id="L170">				.getText();</span>
-<span class="nc" id="L171">		Assert.assertEquals(alreadysubmittedtext, SuccessText);</span>
-<span class="nc" id="L172">		Logs.info(&quot;validation for Successfully submission of Timesheet&quot;);</span>
-<span class="nc" id="L173">	}</span>
+<span class="fc" id="L177">		String alreadysubmittedtext = driver.findElement(By.xpath(&quot;//*[text()='Timesheet already submitted!']&quot;))</span>
+<span class="fc" id="L178">				.getText();</span>
+<span class="fc" id="L179">		Assert.assertEquals(alreadysubmittedtext, SuccessText);</span>
+<span class="fc" id="L180">		Logs.info(&quot;validation for Successfully submission of Timesheet&quot;);</span>
+<span class="fc" id="L181">	}</span>
 
 	public void editIconEnable() throws InterruptedException {
 
-<span class="nc" id="L177">	}</span>
+<span class="nc" id="L185">	}</span>
 
 	public void verifyDraftFunctionality(String draftText) throws Exception {
-<span class="nc" id="L180">		String viewTimesheetText = viewTimesheetHeader.getText();</span>
-<span class="nc" id="L181">		Assert.assertEquals(viewTimesheetText, draftText);</span>
-<span class="nc" id="L182">		editicon.isDisplayed();</span>
-<span class="nc" id="L183">		Logs.info(&quot;Successfully validation of DraftFunctionality&quot;);</span>
-<span class="nc" id="L184">	}</span>
+<span class="fc" id="L188">		String viewTimesheetText = viewTimesheetHeader.getText();</span>
+<span class="fc" id="L189">		Assert.assertEquals(viewTimesheetText, draftText);</span>
+<span class="fc" id="L190">		editicon.isDisplayed();</span>
+<span class="fc" id="L191">		Logs.info(&quot;Successfully validation of DraftFunctionality&quot;);</span>
+<span class="fc" id="L192">	}</span>
 
 	public void managerName(String managername) {
 
-<span class="nc" id="L188">		String managernametext = managerName.getText();</span>
-<span class="nc" id="L189">		System.out.println(&quot;manager name is : &quot; + managernametext);</span>
-<span class="nc" id="L190">		Assert.assertEquals(managernametext, managername);</span>
-<span class="nc" id="L191">	}</span>
+<span class="fc" id="L196">		String managernametext = managerName.getText();</span>
+<span class="fc" id="L197">		System.out.println(&quot;manager name is : &quot; + managernametext);</span>
+<span class="fc" id="L198">		Assert.assertEquals(managernametext, managername);</span>
+<span class="fc" id="L199">	}</span>
 
 	public void approverName(String approvername) {
 
-<span class="nc" id="L195">		String approvernametext = approverName.getText();</span>
-<span class="nc" id="L196">		System.out.println(&quot;approver name is : &quot; + approvernametext);</span>
-<span class="nc" id="L197">		Assert.assertEquals(approvernametext, approvername);</span>
-<span class="nc" id="L198">	}</span>
+<span class="fc" id="L203">		String approvernametext = approverName.getText();</span>
+<span class="fc" id="L204">		System.out.println(&quot;approver name is : &quot; + approvernametext);</span>
+<span class="fc" id="L205">		Assert.assertEquals(approvernametext, approvername);</span>
+<span class="fc" id="L206">	}</span>
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.12.202403310830</span></div></body></html>

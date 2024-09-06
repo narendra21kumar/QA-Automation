@@ -1,5 +1,5 @@
 Feature: Edit Employee Rejected Timesheet record
-  @admin
+ @code
   Scenario: Edit Employee Rejected Timesheet for Previous Week
     Given  login as Admin Timesheet for edit functioanlity
     When   Click on Create TimeSheet icon and select the previous week in calendor for admin edit

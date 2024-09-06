@@ -64,7 +64,6 @@
 							<goal>report</goal>
 						</goals>
 					</execution>
-
 				</executions>
 			</plugin>
 
@@ -126,11 +125,7 @@
 			<version>4.13.2</version>
 			<scope>test</scope>
 		</dependency>
-		<!--<dependency>
-  <groupId>junit</groupId>
-  <artifactId>junit</artifactId>
-  <version>4.5</version>
-</dependency> -->
+
 		<!-- https://mvnrepository.com/artifact/org.testng/testng -->
 		<dependency>
 			<groupId>org.testng</groupId>
@@ -149,16 +144,7 @@
 			<artifactId>webdrivermanager</artifactId>
 			<version>5.8.0</version> <!-- Replace with the desired version -->
 		</dependency>
-		<!--<dependency>	
-    <groupId>org.apache.logging.log4j</groupId>
-    <artifactId>log4j-api</artifactId>
-    <version>2.6.2</version>
-</dependency>
-<dependency>
-    <groupId>org.apache.logging.log4j</groupId>
-    <artifactId>log4j-core</artifactId>
-    <version>2.6.2</version>
-</dependency>-->
+		
 		<dependency>
 			<groupId>log4j</groupId>
 			<artifactId>log4j</artifactId>

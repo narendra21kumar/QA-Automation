@@ -1,5 +1,5 @@
 Feature: Reject Timesheet Records from Approved Page in Admin
-@admin
+@code
   Scenario: Reject Admin Self Timesheet records from Approved Page in Timesheet
     Given Login as Admin for Self Reject in Approved Page
     And   Click on Approve Icon for Admin Self Reject in Approved Page

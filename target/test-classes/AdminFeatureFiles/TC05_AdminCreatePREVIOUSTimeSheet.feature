@@ -1,6 +1,6 @@
 Feature: Admin Should be Able to Create Timesheet for Previous Week
 
-@admin
+@code
   Scenario: Admin should be able to Create Timesheet for Previous Week
     Given Access Timesheet as Admin for Current Week
     When  Click on Create TimeSheetPage of Admin View

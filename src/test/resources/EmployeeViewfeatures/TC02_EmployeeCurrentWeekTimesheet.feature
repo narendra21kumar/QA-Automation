@@ -11,6 +11,6 @@ Feature: Login as Employee Role and Create Timesheet for Current Week
     Then Validate The TimeSheet Response As "<Successfully Submitted Message>"
     
   Examples:
-      |       Successfully Submitted Message | SheetName                 |managername														|   approvername														  |
-      |   Timesheet already submitted!       |  EmployeeCreateTimeSheet  |Manager Name : Naveen Kumar Mummadi	  |   Approver Name : Naveen Kumar Mummadi		  |
+      |       Successfully Submitted Message | SheetName                 |managername								|   approvername														      |
+      |   Timesheet already submitted!       |  EmployeeCreateTimeSheet  |Manager Name : Test 02	  |   Approver Name : Cavungal Reema Simon John		  |
 

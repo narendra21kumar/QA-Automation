@@ -1,43 +1,235 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+<testng-results ignored="0" total="13" passed="13" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-08-21T19:09:29 IST" name="Suite" finished-at="2024-08-21T19:11:24 IST" duration-ms="114921">
+  <suite started-at="2024-09-06T15:51:19 IST" name="Suite" finished-at="2024-09-06T16:09:19 IST" duration-ms="1080325">
     <groups>
       <group name="cucumber">
-        <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.TimeSheet.TestRunner.TestngRunner@b27b210]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
+        <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.TimeSheet.TestRunner.TestngRunner@1e886a5b]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
       </group> <!-- cucumber -->
     </groups>
-    <test started-at="2024-08-21T19:09:29 IST" name="Test" finished-at="2024-08-21T19:11:24 IST" duration-ms="114921">
+    <test started-at="2024-09-06T15:51:19 IST" name="Test" finished-at="2024-09-06T16:09:19 IST" duration-ms="1080325">
       <class name="com.TimeSheet.TestRunner.TestngRunner">
-        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:com.TimeSheet.TestRunner.TestngRunner@b27b210]" started-at="2024-08-21T19:09:29 IST" name="setUpClass" finished-at="2024-08-21T19:09:32 IST" duration-ms="2116" status="PASS">
+        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:com.TimeSheet.TestRunner.TestngRunner@1e886a5b]" started-at="2024-09-06T15:51:19 IST" name="setUpClass" finished-at="2024-09-06T15:51:20 IST" duration-ms="995" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[org.testng.TestRunner@589c58fb]]>
+                <![CDATA[org.testng.TestRunner@5f2a8a3d]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpClass -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.TimeSheet.TestRunner.TestngRunner@b27b210]" started-at="2024-08-21T19:09:32 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-08-21T19:11:20 IST" duration-ms="107927" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.TimeSheet.TestRunner.TestngRunner@1e886a5b]" started-at="2024-09-06T15:51:20 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-09-06T15:51:57 IST" duration-ms="37142" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA["Navigate to Timesheet URL and Login as Admin"]]>
+                <![CDATA["Login as Employee Role"]]>
               </value>
             </param>
             <param index="1">
               <value>
-                <![CDATA["Login to Timesheet as Admin"]]>
+                <![CDATA["Login as Employee Role"]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:com.TimeSheet.TestRunner.TestngRunner@b27b210]" started-at="2024-08-21T19:11:20 IST" name="tearDownClass" finished-at="2024-08-21T19:11:24 IST" duration-ms="4598" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.TimeSheet.TestRunner.TestngRunner@1e886a5b]" started-at="2024-09-06T15:51:57 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-09-06T15:55:43 IST" duration-ms="226739" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Login as Employee Role and Create Timesheet for Current Week"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Login as Employee Role and Create Timesheet for Current Week"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.TimeSheet.TestRunner.TestngRunner@1e886a5b]" started-at="2024-09-06T15:55:43 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-09-06T15:56:16 IST" duration-ms="32680" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Login as Employee Role to verify the Pending status of Timesheet"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Login as Employee Role to verify the Pending status of Timesheet"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.TimeSheet.TestRunner.TestngRunner@1e886a5b]" started-at="2024-09-06T15:56:16 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-09-06T15:57:08 IST" duration-ms="52079" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Manager Approve Timesheet For Employee Role"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Manager Approve Timesheet For Employee Role"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.TimeSheet.TestRunner.TestngRunner@1e886a5b]" started-at="2024-09-06T15:57:08 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-09-06T15:57:40 IST" duration-ms="32094" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Login as Employee Role to verify the Approved status of Timesheet"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Login as Employee Role to verify the Approved status of Timesheet"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.TimeSheet.TestRunner.TestngRunner@1e886a5b]" started-at="2024-09-06T15:57:40 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-09-06T16:01:40 IST" duration-ms="239306" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Login as Employee Role and Create Timesheet for Past Week"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Login as Employee Role and Create Timesheet for Past Week"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.TimeSheet.TestRunner.TestngRunner@1e886a5b]" started-at="2024-09-06T16:01:40 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-09-06T16:02:41 IST" duration-ms="61031" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Manager Reject Timesheet For Employee Role"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Manager Reject Timesheet For Employee Role"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.TimeSheet.TestRunner.TestngRunner@1e886a5b]" started-at="2024-09-06T16:02:41 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-09-06T16:03:24 IST" duration-ms="43198" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Login as Employee Role to verify the Draft Functionality"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Login as Employee Role to verify the Draft Functionality"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.TimeSheet.TestRunner.TestngRunner@1e886a5b]" started-at="2024-09-06T16:03:24 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-09-06T16:05:13 IST" duration-ms="108841" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Login as Employee Role to verify the Edit Functionality"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Login as Employee Role to verify the Edit Functionality"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.TimeSheet.TestRunner.TestngRunner@1e886a5b]" started-at="2024-09-06T16:05:13 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-09-06T16:05:42 IST" duration-ms="29128" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Login as Employee Role to verify the Already Submitted Timesheet Functionality"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Login as Employee Role to verify the Already Submitted Timesheet Functionality"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.TimeSheet.TestRunner.TestngRunner@1e886a5b]" started-at="2024-09-06T16:05:42 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-09-06T16:07:14 IST" duration-ms="92039" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Login as Employee Role and Create Timesheet for Future Week"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Login as Employee Role and Create Timesheet for Future Week"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.TimeSheet.TestRunner.TestngRunner@1e886a5b]" started-at="2024-09-06T16:07:14 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-09-06T16:08:35 IST" duration-ms="81020" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Verify Employee Timesheet having more than 12 hours per day"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Verify Employee Timesheet having more than 12 hours per day"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.TimeSheet.TestRunner.TestngRunner@1e886a5b]" started-at="2024-09-06T16:08:35 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-09-06T16:09:12 IST" duration-ms="36997" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Manager Reject Timesheet For Employee Role"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Manager Reject Timesheet For Employee Role"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:com.TimeSheet.TestRunner.TestngRunner@1e886a5b]" started-at="2024-09-06T16:09:12 IST" name="tearDownClass" finished-at="2024-09-06T16:09:19 IST" duration-ms="6976" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownClass -->

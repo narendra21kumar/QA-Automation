@@ -13,10 +13,10 @@ public class PE01_LoginPage {
 
 	private WebDriver driver;
 
-<span class="nc" id="L16">	public PE01_LoginPage(WebDriver driver) {</span>
-<span class="nc" id="L17">		this.driver = driver;</span>
-<span class="nc" id="L18">		PageFactory.initElements(driver, this);</span>
-<span class="nc" id="L19">	}</span>
+<span class="fc" id="L16">	public PE01_LoginPage(WebDriver driver) {</span>
+<span class="fc" id="L17">		this.driver = driver;</span>
+<span class="fc" id="L18">		PageFactory.initElements(driver, this);</span>
+<span class="fc" id="L19">	}</span>
 
 	@FindBy(xpath = &quot;//div[text()='Continue with Microsoft']&quot;)
 	private WebElement ContinueWithMicrosoft;
@@ -43,17 +43,17 @@ public class PE01_LoginPage {
 	private WebElement staySigned;
 
 	private void emailNext() {
-<span class="nc" id="L46">		CommonUtils.explicitlyWaitForElementandClick(emailNext, 10);</span>
-<span class="nc" id="L47">	}</span>
+<span class="fc" id="L46">		CommonUtils.explicitlyWaitForElementandClick(emailNext, 10);</span>
+<span class="fc" id="L47">	}</span>
 
 	private void clickSignIn() {
-<span class="nc" id="L50">		CommonUtils.explicitlyWaitForElementandClick(emailNext, 10);</span>
-<span class="nc" id="L51">	}</span>
+<span class="fc" id="L50">		CommonUtils.explicitlyWaitForElementandClick(emailNext, 10);</span>
+<span class="fc" id="L51">	}</span>
 
 	private void staySigned() {
 
-<span class="nc" id="L55">		CommonUtils.explicitlyWaitForElementandClick(staySigned, 10);</span>
-<span class="nc" id="L56">	}</span>
+<span class="fc" id="L55">		CommonUtils.explicitlyWaitForElementandClick(staySigned, 10);</span>
+<span class="fc" id="L56">	}</span>
 
 	public void doLogIn() {
 		
@@ -70,18 +70,18 @@ public class PE01_LoginPage {
 <span class="nc" id="L70">	}</span>
 
 	private void getEmpUsername() {
-<span class="nc" id="L73">		String username = ConfigReader.getUsername();</span>
-<span class="nc" id="L74">		CommonUtils.explicitlyWaitForElementandClick(emailId, 10);</span>
-<span class="nc" id="L75">		CommonUtils.sendKeysToElement(emailId, username);</span>
-<span class="nc" id="L76">		System.out.println(username);</span>
-<span class="nc" id="L77">	}</span>
+<span class="fc" id="L73">		String username = ConfigReader.getUsername();</span>
+<span class="fc" id="L74">		CommonUtils.explicitlyWaitForElementandClick(emailId, 10);</span>
+<span class="fc" id="L75">		CommonUtils.sendKeysToElement(emailId, username);</span>
+<span class="fc" id="L76">		System.out.println(username);</span>
+<span class="fc" id="L77">	}</span>
 
 	private void getEmpPassword() {
-<span class="nc" id="L80">		String password = ConfigReader.getPassword();</span>
-<span class="nc" id="L81">		CommonUtils.explicitlyWaitForElementandClick(pwdText, 10);</span>
-<span class="nc" id="L82">		CommonUtils.sendKeysToElement(pwdText, password);</span>
-<span class="nc" id="L83">		System.out.println(password);</span>
-<span class="nc" id="L84">	}</span>
+<span class="fc" id="L80">		String password = ConfigReader.getPassword();</span>
+<span class="fc" id="L81">		CommonUtils.explicitlyWaitForElementandClick(pwdText, 10);</span>
+<span class="fc" id="L82">		CommonUtils.sendKeysToElement(pwdText, password);</span>
+<span class="fc" id="L83">		System.out.println(password);</span>
+<span class="fc" id="L84">	}</span>
 
 	private void getmanagerUsername() {
 <span class="nc" id="L87">		String username = ConfigReader.getmanagerUsername();</span>
@@ -99,69 +99,69 @@ public class PE01_LoginPage {
 
 	private void getManUsername() {
 
-<span class="nc" id="L102">		String Manusername = ConfigReader.getmanagerUsername();</span>
-<span class="nc" id="L103">		CommonUtils.explicitlyWaitForElementandClick(emailId, 10);</span>
-<span class="nc" id="L104">		CommonUtils.sendKeysToElement(emailId, Manusername);</span>
+<span class="fc" id="L102">		String Manusername = ConfigReader.getmanagerUsername();</span>
+<span class="fc" id="L103">		CommonUtils.explicitlyWaitForElementandClick(emailId, 10);</span>
+<span class="fc" id="L104">		CommonUtils.sendKeysToElement(emailId, Manusername);</span>
 
-<span class="nc" id="L106">	}</span>
+<span class="fc" id="L106">	}</span>
 
 	private void getManPassword() {
 
-<span class="nc" id="L110">		String Manpassword = ConfigReader.getManagerPassword();</span>
-<span class="nc" id="L111">		CommonUtils.explicitlyWaitForElementandClick(pwdText, 10);</span>
-<span class="nc" id="L112">		CommonUtils.sendKeysToElement(pwdText, Manpassword);</span>
+<span class="fc" id="L110">		String Manpassword = ConfigReader.getManagerPassword();</span>
+<span class="fc" id="L111">		CommonUtils.explicitlyWaitForElementandClick(pwdText, 10);</span>
+<span class="fc" id="L112">		CommonUtils.sendKeysToElement(pwdText, Manpassword);</span>
 
-<span class="nc" id="L114">	}</span>
+<span class="fc" id="L114">	}</span>
 
 	public void doLogInAsMananger() {
-<span class="nc" id="L117">		getManUsername();</span>
-<span class="nc" id="L118">		emailNext();</span>
-<span class="nc" id="L119">		getManPassword();</span>
-<span class="nc" id="L120">		clickSignIn();</span>
-<span class="nc" id="L121">		staySigned();</span>
-<span class="nc" id="L122">		CommonUtils.waitFor(3);</span>
+<span class="fc" id="L117">		getManUsername();</span>
+<span class="fc" id="L118">		emailNext();</span>
+<span class="fc" id="L119">		getManPassword();</span>
+<span class="fc" id="L120">		clickSignIn();</span>
+<span class="fc" id="L121">		staySigned();</span>
+<span class="fc" id="L122">		CommonUtils.waitFor(3);</span>
 
-<span class="nc" id="L124">	}</span>
+<span class="fc" id="L124">	}</span>
 
 	public void doLogInAsEmp() {
-<span class="nc" id="L127">		Logs.initLogs(PE01_LoginPage.class.getName());</span>
-<span class="nc" id="L128">		Logs.startTestCase(this.getClass().getSimpleName());</span>
-<span class="nc" id="L129">		getEmpUsername();</span>
-<span class="nc" id="L130">		Logs.info(&quot;Entered Username for Employee&quot;);</span>
-<span class="nc" id="L131">		emailNext();</span>
-<span class="nc" id="L132">		getEmpPassword();</span>
-<span class="nc" id="L133">		Logs.info(&quot;Entered Password for Employee&quot;);</span>
-<span class="nc" id="L134">		clickSignIn();</span>
-<span class="nc" id="L135">		CommonUtils.waitFor(3);</span>
-<span class="nc" id="L136">		staySigned();</span>
-<span class="nc" id="L137">		Logs.info(&quot;Successfully logged into Employee View&quot;);</span>
-<span class="nc" id="L138">		CommonUtils.waitFor(3);</span>
-<span class="nc" id="L139">	}</span>
+<span class="fc" id="L127">		Logs.initLogs(PE01_LoginPage.class.getName());</span>
+<span class="fc" id="L128">		Logs.startTestCase(this.getClass().getSimpleName());</span>
+<span class="fc" id="L129">		getEmpUsername();</span>
+<span class="fc" id="L130">		Logs.info(&quot;Entered Username for Employee&quot;);</span>
+<span class="fc" id="L131">		emailNext();</span>
+<span class="fc" id="L132">		getEmpPassword();</span>
+<span class="fc" id="L133">		Logs.info(&quot;Entered Password for Employee&quot;);</span>
+<span class="fc" id="L134">		clickSignIn();</span>
+<span class="fc" id="L135">		CommonUtils.waitFor(3);</span>
+<span class="fc" id="L136">		staySigned();</span>
+<span class="fc" id="L137">		Logs.info(&quot;Successfully logged into Employee View&quot;);</span>
+<span class="fc" id="L138">		CommonUtils.waitFor(3);</span>
+<span class="fc" id="L139">	}</span>
 
 	public void verifyAccessAccordingToLogin() throws InterruptedException {
-<span class="nc" id="L142">		CommonUtils.waitFor(3);</span>
-<span class="nc" id="L143">		WebElement usersName = driver.findElement(By.xpath(&quot;//*[@class='MuiStack-root css-vb6e92']//h5&quot;));</span>
-<span class="nc" id="L144">		String getName = usersName.getText();</span>
-<span class="nc" id="L145">		Thread.sleep(3000);</span>
-<span class="nc bnc" id="L146" title="All 2 branches missed.">		if (getName.contains(&quot;APPROVER&quot;)) {</span>
+<span class="fc" id="L142">		CommonUtils.waitFor(3);</span>
+<span class="fc" id="L143">		WebElement usersName = driver.findElement(By.xpath(&quot;//*[@class='MuiStack-root css-vb6e92']//h5&quot;));</span>
+<span class="fc" id="L144">		String getName = usersName.getText();</span>
+<span class="fc" id="L145">		Thread.sleep(3000);</span>
+<span class="pc bpc" id="L146" title="1 of 2 branches missed.">		if (getName.contains(&quot;APPROVER&quot;)) {</span>
 <span class="nc" id="L147">			System.out.println(&quot;User Access to Approver as &quot; + getName);</span>
-<span class="nc bnc" id="L148" title="All 2 branches missed.">		} else if (getName.contains(&quot;ADMIN&quot;)) {</span>
+<span class="pc bpc" id="L148" title="1 of 2 branches missed.">		} else if (getName.contains(&quot;ADMIN&quot;)) {</span>
 <span class="nc" id="L149">			System.out.println(&quot;User Access to Admin as &quot; + getName);</span>
-<span class="nc bnc" id="L150" title="All 2 branches missed.">		} else if (getName.contains(&quot;REPORTING_MANAGER&quot;)) {</span>
+<span class="pc bpc" id="L150" title="1 of 2 branches missed.">		} else if (getName.contains(&quot;REPORTING_MANAGER&quot;)) {</span>
 <span class="nc" id="L151">			System.out.println(&quot;User Access to Reporting Manager as &quot; + getName);</span>
 		} else {
-<span class="nc" id="L153">			System.out.println(&quot;User Access to Employee View as &quot; + getName);</span>
+<span class="fc" id="L153">			System.out.println(&quot;User Access to Employee View as &quot; + getName);</span>
 		}
-<span class="nc" id="L155">	}</span>
+<span class="fc" id="L155">	}</span>
 
 	public void checkTitle(String titleOfPage) {
-<span class="nc" id="L158">		String actualTitle = driver.getTitle();</span>
-<span class="nc bnc" id="L159" title="All 2 branches missed.">		if (actualTitle.startsWith(titleOfPage)) {</span>
-<span class="nc" id="L160">			System.out.println(&quot;Page title matches the expected prefix: &quot; + actualTitle);</span>
+<span class="fc" id="L158">		String actualTitle = driver.getTitle();</span>
+<span class="pc bpc" id="L159" title="1 of 2 branches missed.">		if (actualTitle.startsWith(titleOfPage)) {</span>
+<span class="fc" id="L160">			System.out.println(&quot;Page title matches the expected prefix: &quot; + actualTitle);</span>
 		} else {
 <span class="nc" id="L162">			System.out.println(&quot;Page title does not match the expected prefix.&quot;);</span>
 		}
-<span class="nc" id="L164">	}</span>
+<span class="fc" id="L164">	}</span>
 
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.12.202403310830</span></div></body></html>

@@ -1,5 +1,5 @@
 Feature: Exceed 24hrs Validation in Admin View
-  @admin
+  @code
   Scenario: Exceed Hours Validation in Admin View
     Given Login as Admin with credentials for exceed hrs
     When  Click on Create Timesheet Icon for exceed hrs

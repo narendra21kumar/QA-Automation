@@ -18,13 +18,13 @@ import com.TimeSheet.utils.Logs;
 public class PE06_TimesheetExceedANDPerdayHoursValidation {
 
 	WebDriver driver;
-<span class="nc" id="L21">	WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));</span>
+<span class="fc" id="L21">	WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));</span>
 	Actions act;
 
-<span class="nc" id="L24">	public PE06_TimesheetExceedANDPerdayHoursValidation(WebDriver driver) {</span>
-<span class="nc" id="L25">		this.driver = driver;</span>
-<span class="nc" id="L26">		PageFactory.initElements(driver, this);</span>
-<span class="nc" id="L27">	}</span>
+<span class="fc" id="L24">	public PE06_TimesheetExceedANDPerdayHoursValidation(WebDriver driver) {</span>
+<span class="fc" id="L25">		this.driver = driver;</span>
+<span class="fc" id="L26">		PageFactory.initElements(driver, this);</span>
+<span class="fc" id="L27">	}</span>
 
 	@FindBy(xpath = &quot;//*[@class='MuiSvgIcon-root']&quot;)
 	WebElement calendarStartIcon;
@@ -60,14 +60,14 @@ public class PE06_TimesheetExceedANDPerdayHoursValidation {
 	WebElement LesshoursTimevalidation;
 
 	public void createTimesheetIcon() throws Exception {
-<span class="nc" id="L63">		createTimesheetIcon.click();</span>
-<span class="nc" id="L64">		Logs.info(&quot;clicked on createTimesheet page&quot;);</span>
-<span class="nc" id="L65">	}</span>
+<span class="fc" id="L63">		createTimesheetIcon.click();</span>
+<span class="fc" id="L64">		Logs.info(&quot;clicked on createTimesheet page&quot;);</span>
+<span class="fc" id="L65">	}</span>
 
 	public void enterTaskDiscriptionCategorySubcategory(String SheetName) throws Exception {
-<span class="nc" id="L68">		CommonUtils.taskDesccategoryandEnteringHours(driver, SheetName);</span>
-<span class="nc" id="L69">		Logs.info(&quot;Entered task Description and hours&quot;);</span>
-<span class="nc" id="L70">	}</span>
+<span class="fc" id="L68">		CommonUtils.taskDesccategoryandEnteringHours(driver, SheetName);</span>
+<span class="fc" id="L69">		Logs.info(&quot;Entered task Description and hours&quot;);</span>
+<span class="fc" id="L70">	}</span>
 
 	public void saveSubmitConfirm() {
 		try {
@@ -85,11 +85,11 @@ public class PE06_TimesheetExceedANDPerdayHoursValidation {
 <span class="nc" id="L85">	}</span>
 
 	public void saveAll() {
-<span class="nc" id="L88">		CommonUtils.waitFor(2);</span>
-<span class="nc" id="L89">		saveall.click();</span>
-<span class="nc" id="L90">		Logs.info(&quot;click on saveAll button&quot;);</span>
+<span class="fc" id="L88">		CommonUtils.waitFor(2);</span>
+<span class="fc" id="L89">		saveall.click();</span>
+<span class="fc" id="L90">		Logs.info(&quot;click on saveAll button&quot;);</span>
 
-<span class="nc" id="L92">	}</span>
+<span class="fc" id="L92">	}</span>
 
 	public void saveSubmit() {
 <span class="nc" id="L95">		CommonUtils.waitFor(2);</span>
@@ -100,19 +100,19 @@ public class PE06_TimesheetExceedANDPerdayHoursValidation {
 <span class="nc" id="L100">	}</span>
 
 	public void selectFutureWeekDate() throws InterruptedException {
-<span class="nc" id="L103">		CommonUtils.explicitlyWaitForElementandClick(calendarStartIcon, 5);</span>
-<span class="nc" id="L104">		Calendar cal = Calendar.getInstance();</span>
-<span class="nc" id="L105">		cal.set(Calendar.DAY_OF_WEEK, Calendar.SUNDAY);</span>
-<span class="nc" id="L106">		cal.add(Calendar.DATE, 7);</span>
-<span class="nc" id="L107">		Date future = cal.getTime();</span>
-<span class="nc" id="L108">		int date = future.getDate();</span>
-<span class="nc" id="L109">		System.out.println(future);</span>
+<span class="fc" id="L103">		CommonUtils.explicitlyWaitForElementandClick(calendarStartIcon, 5);</span>
+<span class="fc" id="L104">		Calendar cal = Calendar.getInstance();</span>
+<span class="fc" id="L105">		cal.set(Calendar.DAY_OF_WEEK, Calendar.SUNDAY);</span>
+<span class="fc" id="L106">		cal.add(Calendar.DATE, 7);</span>
+<span class="fc" id="L107">		Date future = cal.getTime();</span>
+<span class="fc" id="L108">		int date = future.getDate();</span>
+<span class="fc" id="L109">		System.out.println(future);</span>
 
-<span class="nc" id="L111">		boolean availableDate = true;</span>
-<span class="nc bnc" id="L112" title="All 2 branches missed.">		if (availableDate) {</span>
-<span class="nc" id="L113">			CommonUtils.CalenderSelectWithDate(driver, date);</span>
-<span class="nc" id="L114">			Logs.info(&quot;selected the future week date&quot;);</span>
-<span class="nc" id="L115">			Thread.sleep(3000);</span>
+<span class="fc" id="L111">		boolean availableDate = true;</span>
+<span class="pc bpc" id="L112" title="1 of 2 branches missed.">		if (availableDate) {</span>
+<span class="fc" id="L113">			CommonUtils.CalenderSelectWithDate(driver, date);</span>
+<span class="fc" id="L114">			Logs.info(&quot;selected the future week date&quot;);</span>
+<span class="fc" id="L115">			Thread.sleep(3000);</span>
 		} else {
 <span class="nc" id="L117">			CommonUtils.explicitlyWaitForElementandClick(FutureMonthArrowIcon, 10);</span>
 <span class="nc" id="L118">			CommonUtils.CalenderSelectWithDate(driver, date);</span>
@@ -120,13 +120,13 @@ public class PE06_TimesheetExceedANDPerdayHoursValidation {
 <span class="nc" id="L120">			Logs.info(&quot;clicked on arrow For future week selection&quot;);</span>
 <span class="nc" id="L121">			System.out.println(future);</span>
 		}
-<span class="nc" id="L123">	}</span>
+<span class="fc" id="L123">	}</span>
 
 	public void validateHoursvalidation(String HoursValidation) throws Exception {
-<span class="nc" id="L126">		String TimeValidation = hoursTimevalidation.getText();</span>
-<span class="nc" id="L127">		Assert.assertEquals(TimeValidation, HoursValidation);</span>
-<span class="nc" id="L128">		Logs.info(&quot;Successfully done the validation of PerDay exceeding Hours&quot;);</span>
-<span class="nc" id="L129">	}</span>
+<span class="fc" id="L126">		String TimeValidation = hoursTimevalidation.getText();</span>
+<span class="fc" id="L127">		Assert.assertEquals(TimeValidation, HoursValidation);</span>
+<span class="fc" id="L128">		Logs.info(&quot;Successfully done the validation of PerDay exceeding Hours&quot;);</span>
+<span class="fc" id="L129">	}</span>
 
 	
 

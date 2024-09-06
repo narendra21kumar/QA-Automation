@@ -1,5 +1,5 @@
 Feature: Admin Rejects Self Timesheet Record
-@admin
+@code
   Scenario Outline: Reject Admin Self Timesheet record 
     Given Login as Admin for Self Reject Timesheet
     When  Click on Timesheet Management Page icon for self Reject Timesheet
@@ -9,4 +9,4 @@ Feature: Admin Rejects Self Timesheet Record
 Examples:
  
      |empid   |
-     |188     |
+     |123450  |

@@ -2,7 +2,6 @@ package com.AdminViewTimeSheet.page;
 
 import java.util.List;
 
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -35,16 +34,16 @@ public class PA09_AssignManagerApprover {
 
 	@FindBy(xpath = "//ul[@class = 'MuiList-root MuiList-padding MuiMenu-list css-r8u8y9']//li")
 	List<WebElement> dropValues;
-	
+
 	@FindBy(xpath = "//button[@title='Save']")
 	WebElement saveButton;
-	
+
 	@FindBy(xpath = "//div[@title='Assign Manager/Approver']")
-    WebElement AssignManagerPage;
-	
+	WebElement AssignManagerPage;
+
 	public void clickAssignManagerIcon() {
 		CommonUtils.explicitlyWaitForElementandClick(assignMangerIcon, 5);
-		System.out.println("The Name of the Page is :" +AssignManagerPage);
+		System.out.println("The Name of the Page is :" + AssignManagerPage);
 		Logs.info("Clicked on Assign Manager icon");
 	}
 
@@ -72,38 +71,32 @@ public class PA09_AssignManagerApprover {
 		Logs.info("Selected the Team name");
 	}
 
-	public void selectValuesFromManager() throws InterruptedException {
-		for (int a = 1; a <= 5; a++) {
-			for (int b = 3; b <= 5; b++) {
-				WebElement taskdesc = driver.findElement(
-						By.xpath("//*[@class='MuiTableBody-root css-1xnox0e']//tr[" + a + "]/td[" + b + "]"));
-				taskdesc.click();
-				for (int index = 1; index < dropValues.size(); index++) {
-					System.out.println("Selecting value at index " + index);
-					dropValues.get(index).click();
-					// Optionally, wait for dropdown animation
-				}
-
-			}
-		}
-		Logs.info("Selected the Manager name");
-	}
-
-
-
-   public void  saveRecord() {
-	   CommonUtils.waitFor(3);
-	   CommonUtils.explicitlyWaitForElementandClick(saveButton, 5);
-	   Logs.info("clicked on save icon");
-   }
-
-   public void printAssignManagerTitle() {
+	public void printAssignManagerTitle() {
 		String ActualText = AssignManagerPage.getText();
 		String ExpectedText = "Assign Manager/Approver";
 		Logs.info("Verified Assign Manager Successfully");
-       Assert.assertTrue(ActualText.contains(ExpectedText));
-		System.out.println("Name of the Page is "+ ActualText );
-		
+		Assert.assertTrue(ActualText.contains(ExpectedText));
+		System.out.println("Name of the Page is " + ActualText);
+
 	}
-   
+
 }
+
+/*
+ * public void selectValuesFromManager() throws InterruptedException { for (int
+ * a = 1; a <= 5; a++) { for (int b = 3; b <= 5; b++) { WebElement taskdesc =
+ * driver.findElement(
+ * By.xpath("//*[@class='MuiTableBody-root css-1xnox0e']//tr[" + a + "]/td[" + b
+ * + "]")); taskdesc.click(); for (int index = 1; index < dropValues.size();
+ * index++) { System.out.println("Selecting value at index " + index);
+ * dropValues.get(index).click(); // Optionally, wait for dropdown animation }
+ * 
+ * } } Logs.info("Selected the Manager name"); }
+ * 
+ * 
+ * 
+ * public void saveRecord() { CommonUtils.waitFor(3);
+ * CommonUtils.explicitlyWaitForElementandClick(saveButton, 5);
+ * Logs.info("clicked on save icon"); }
+ * 
+ */

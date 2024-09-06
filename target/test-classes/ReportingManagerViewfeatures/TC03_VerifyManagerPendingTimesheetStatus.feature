@@ -10,6 +10,6 @@ Background:
   Then  Verify the manager name "<managername>" and approver name "<approvername>" in pending page
   
   Examples:
-  |status |				managername													|		approvername												|
-  |Pending|				Manager Name :Naveen Kumar Mummadi	|		Approver Name :Naveen Kumar Mummadi	|
+  |status |				managername													|		approvername	  |
+  |Pending|				Manager Name :0											|		Approver Name :0|
   

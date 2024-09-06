@@ -10,7 +10,7 @@ Feature: Login as Employee Role to verify the Pending status of Timesheet
     Then Verify the manager name "<managername>" and approver name "<approvername>" for employee in pending page
     
  Examples: 
-      | PendingStatus  | 	managername																|     approvername													|
-      | Pending        | Manager Name :Naveen Kumar Mummadi					|      Approver Name :Naveen Kumar Mummadi	|
+      | PendingStatus  | 	managername										|     approvername												    	|
+      | Pending        | Manager Name :Test 02					|      Approver Name :Cavungal Reema Simon John	|
       
     				   	

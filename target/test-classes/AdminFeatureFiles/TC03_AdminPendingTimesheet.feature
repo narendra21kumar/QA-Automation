@@ -1,5 +1,5 @@
 Feature: Admin view PendingTimesheet and Verify
-@admin
+@code
   
   Scenario: Pending Timesheet as Admin for the Current week
     Given Login to Timesheet as admin for pending records

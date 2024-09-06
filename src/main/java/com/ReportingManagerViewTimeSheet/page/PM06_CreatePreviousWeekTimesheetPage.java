@@ -13,6 +13,10 @@ import org.testng.Assert;
 import com.TimeSheet.utils.CommonUtils;
 import com.TimeSheet.utils.Logs;
 
+
+
+
+
 public class PM06_CreatePreviousWeekTimesheetPage {
 	public WebDriver driver;
 
@@ -57,16 +61,22 @@ public class PM06_CreatePreviousWeekTimesheetPage {
 		cal.add(Calendar.DATE, -7);
 		Date pastDate = cal.getTime();
 		int date = pastDate.getDate();
-		boolean availableDate = true;
-		if (availableDate) {
-			CommonUtils.CalenderSelectWithDate(driver, date);
+		WebElement availableDate=CommonUtils.convertIntTOWebElement(driver, date);
+		//System.out.println(date);
+       // boolean availableDate = true;
+		if(availableDate.isSelected()) {
+			CommonUtils.CalenderSelectWithDate(driver, date);	
 			Thread.sleep(3000);
 			Logs.info("Selected the past week date from calendar");
-		} else {
-			CommonUtils.explicitlyWaitForElementandClick(PreviousMonthArrowIcon, 10);
+			System.out.println("if ");
+		}
+		else if(PreviousMonthArrowIcon.isEnabled()){
+			CommonUtils.Click(PreviousMonthArrowIcon);
 			Thread.sleep(3000);
-			System.out.println(pastDate);
-			Logs.info("Clicked on previous arrow icon and selected the past week date from calendar");
+			Logs.info("Clicked on previous month arrow and selected the past week date from calendar");
+			CommonUtils.CalenderSelectWithDate(driver, date);
+			System.out.println("past week"+pastDate);
+			Thread.sleep(3000);
 		}
 	}
 

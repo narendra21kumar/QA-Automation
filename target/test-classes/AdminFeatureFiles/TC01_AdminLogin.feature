@@ -1,6 +1,6 @@
 Feature: Login to Timesheet as Admin
 
-@admin1
+@code
 Scenario Outline: Navigate to Timesheet URL and Login as Admin
   Given Login to Timesheet with Valid Credentials
   When  Click on "Advanced" options for Admin View

@@ -90,6 +90,7 @@ public class PE02_CreateTimeSheetPage {
 
 	public void saveSubmitConfirm() {
 		try {
+			CommonUtils.scrollTillTop(driver);
 			CommonUtils.waitFor(2);
 			saveall.click();
 			CommonUtils.waitFor(2);
@@ -140,20 +141,27 @@ public class PE02_CreateTimeSheetPage {
 		cal.add(Calendar.DATE, -7);
 		Date pastDate = cal.getTime();
 		int date = pastDate.getDate();
-		boolean availableDate = true;
-		if (availableDate) {
-			CommonUtils.CalenderSelectWithDate(driver, date);
-			Logs.info("past week date has been selected");
+		WebElement availableDate=CommonUtils.convertIntTOWebElement(driver, date);
+		//System.out.println(date);
+       // boolean availableDate = true;
+		if(availableDate.isSelected()) {
+			CommonUtils.CalenderSelectWithDate(driver, date);	
 			Thread.sleep(3000);
-		} else {
-			CommonUtils.explicitlyWaitForElementandClick(PreviousMonthArrowIcon, 10);
-			CommonUtils.CalenderSelectWithDate(driver, date);
-			Logs.info("clicked on arrow icon to select the Past week date");
+			Logs.info("Selected the past week date from calendar");
+			System.out.println("Previous data has been selected");
+		}
+		else if(PreviousMonthArrowIcon.isEnabled()){
+			CommonUtils.explicitlyWaitForElementandClick(PreviousMonthArrowIcon,10);
 			Thread.sleep(3000);
-			System.out.println(pastDate);
+			CommonUtils.CalenderSelectWithDate(driver, date);	
+			Logs.info("Clicked on previous month arrow and selected the past week date from calendar");
+			System.out.println("past week"+pastDate);
+			System.out.println("clicked on prev monthn arrow selected the date");
+			Thread.sleep(3000);
 		}
 	}
-
+		
+	
 	public void selectCurrentWeek() {
 		Calendar cal = Calendar.getInstance();
 		cal.set(Calendar.DAY_OF_WEEK, Calendar.SUNDAY);

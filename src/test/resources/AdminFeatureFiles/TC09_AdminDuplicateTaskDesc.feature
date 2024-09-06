@@ -1,6 +1,6 @@
 Feature: Admin View Duplicate Task Description
 
- @admin
+ @code
   Scenario: Duplicate Task Description in Admin
     Given Login as Admin for Duplicate Task Desc functionality
     When  Click on Create Timesheet Icon for DuplicateTask Desc in Admin

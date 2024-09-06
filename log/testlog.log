@@ -644,3 +644,531 @@
 2024-08-21 19:11:00,467 - com.AdminView.stepDefinitions.TC01_LoginSteps -INFO - Entered password
 2024-08-21 19:11:01,578 - com.AdminView.stepDefinitions.TC01_LoginSteps -INFO - click on emailNext
 2024-08-21 19:11:11,209 - com.AdminView.stepDefinitions.TC01_LoginSteps -INFO - logIn successFully into admin view
+2024-09-05 16:42:27,178 - com.EmployeeView.stepDefinitions.TE01_LoginSteps -INFO - *******TE01_LoginSteps TEST Execution START*******
+2024-09-05 16:42:27,273 - com.EmployeeViewTimeSheet.page.PE01_LoginPage -INFO - *******PE01_LoginPage TEST Execution START*******
+2024-09-05 16:42:35,580 - com.EmployeeViewTimeSheet.page.PE01_LoginPage -INFO - Entered Username for Employee
+2024-09-05 16:42:40,865 - com.EmployeeViewTimeSheet.page.PE01_LoginPage -INFO - Entered Password for Employee
+2024-09-05 16:42:47,929 - com.EmployeeViewTimeSheet.page.PE01_LoginPage -INFO - Successfully logged into Employee View
+2024-09-05 16:42:57,794 - com.EmployeeViewTimeSheet.page.PE01_LoginPage -INFO - *******TE01_LoginSteps TEST END*********
+2024-09-05 16:46:19,655 - com.EmployeeView.stepDefinitions.TE02_CreateTimeSheetSteps -INFO - *******TE02_CreateTimeSheetSteps TEST Execution START*******
+2024-09-05 16:46:19,740 - com.EmployeeViewTimeSheet.page.PE01_LoginPage -INFO - *******PE01_LoginPage TEST Execution START*******
+2024-09-05 16:46:28,015 - com.EmployeeViewTimeSheet.page.PE01_LoginPage -INFO - Entered Username for Employee
+2024-09-05 16:46:29,928 - com.EmployeeViewTimeSheet.page.PE01_LoginPage -INFO - Entered Password for Employee
+2024-09-05 16:46:34,583 - com.EmployeeViewTimeSheet.page.PE01_LoginPage -INFO - Successfully logged into Employee View
+2024-09-05 16:46:46,228 - com.EmployeeViewTimeSheet.page.PE01_LoginPage -INFO - Clicked on TimesheetIcon
+2024-09-05 16:46:46,336 - com.EmployeeViewTimeSheet.page.PE01_LoginPage -INFO - Current week has been selected
+2024-09-05 16:55:11,662 - com.EmployeeView.stepDefinitions.TE02_CreateTimeSheetSteps -INFO - *******TE02_CreateTimeSheetSteps TEST Execution START*******
+2024-09-05 16:55:11,715 - com.EmployeeViewTimeSheet.page.PE01_LoginPage -INFO - *******PE01_LoginPage TEST Execution START*******
+2024-09-05 16:55:17,088 - com.EmployeeViewTimeSheet.page.PE01_LoginPage -INFO - Entered Username for Employee
+2024-09-05 16:55:18,434 - com.EmployeeViewTimeSheet.page.PE01_LoginPage -INFO - Entered Password for Employee
+2024-09-05 16:55:24,050 - com.EmployeeViewTimeSheet.page.PE01_LoginPage -INFO - Successfully logged into Employee View
+2024-09-05 16:55:33,273 - com.EmployeeViewTimeSheet.page.PE01_LoginPage -INFO - Clicked on TimesheetIcon
+2024-09-05 16:55:33,374 - com.EmployeeViewTimeSheet.page.PE01_LoginPage -INFO - Current week has been selected
+2024-09-05 16:58:27,224 - com.EmployeeView.stepDefinitions.TE02_CreateTimeSheetSteps -INFO - *******TE02_CreateTimeSheetSteps TEST Execution START*******
+2024-09-05 16:58:27,299 - com.EmployeeViewTimeSheet.page.PE01_LoginPage -INFO - *******PE01_LoginPage TEST Execution START*******
+2024-09-05 16:58:39,432 - com.EmployeeViewTimeSheet.page.PE01_LoginPage -INFO - Entered Username for Employee
+2024-09-05 16:58:41,163 - com.EmployeeViewTimeSheet.page.PE01_LoginPage -INFO - Entered Password for Employee
+2024-09-05 16:58:45,109 - com.EmployeeViewTimeSheet.page.PE01_LoginPage -INFO - Successfully logged into Employee View
+2024-09-05 16:58:55,277 - com.EmployeeViewTimeSheet.page.PE01_LoginPage -INFO - Clicked on TimesheetIcon
+2024-09-05 16:58:55,378 - com.EmployeeViewTimeSheet.page.PE01_LoginPage -INFO - Current week has been selected
+2024-09-05 17:08:57,268 - com.EmployeeView.stepDefinitions.TE02_CreateTimeSheetSteps -INFO - *******TE02_CreateTimeSheetSteps TEST Execution START*******
+2024-09-05 17:08:57,349 - com.EmployeeViewTimeSheet.page.PE01_LoginPage -INFO - *******PE01_LoginPage TEST Execution START*******
+2024-09-05 17:09:06,107 - com.EmployeeViewTimeSheet.page.PE01_LoginPage -INFO - Entered Username for Employee
+2024-09-05 17:09:07,522 - com.EmployeeViewTimeSheet.page.PE01_LoginPage -INFO - Entered Password for Employee
+2024-09-05 17:09:13,786 - com.EmployeeViewTimeSheet.page.PE01_LoginPage -INFO - Successfully logged into Employee View
+2024-09-05 17:09:23,536 - com.EmployeeViewTimeSheet.page.PE01_LoginPage -INFO - Clicked on TimesheetIcon
+2024-09-05 17:09:23,640 - com.EmployeeViewTimeSheet.page.PE01_LoginPage -INFO - Current week has been selected
+2024-09-05 17:12:35,411 - com.EmployeeViewTimeSheet.page.PE01_LoginPage -INFO - Entered Task Description and Hours
+2024-09-05 17:12:41,680 - com.EmployeeViewTimeSheet.page.PE01_LoginPage -INFO - Clicked on save,submit and confirm button
+2024-09-05 17:12:42,248 - com.EmployeeViewTimeSheet.page.PE01_LoginPage -INFO - validation for Successfully submission of Timesheet
+2024-09-05 17:12:42,249 - com.EmployeeViewTimeSheet.page.PE01_LoginPage -INFO - *******TE02_CreateTimeSheetSteps TEST END*********
+2024-09-05 17:14:43,132 - com.EmployeeView.stepDefinitions.TE03_PendingTimeSheetSteps -INFO - *******TE03_PendingTimeSheetSteps TEST Execution START*******
+2024-09-05 17:14:43,177 - com.EmployeeViewTimeSheet.page.PE01_LoginPage -INFO - *******PE01_LoginPage TEST Execution START*******
+2024-09-05 17:14:48,479 - com.EmployeeViewTimeSheet.page.PE01_LoginPage -INFO - Entered Username for Employee
+2024-09-05 17:14:49,834 - com.EmployeeViewTimeSheet.page.PE01_LoginPage -INFO - Entered Password for Employee
+2024-09-05 17:14:54,455 - com.EmployeeViewTimeSheet.page.PE01_LoginPage -INFO - Successfully logged into Employee View
+2024-09-05 17:15:03,747 - com.EmployeeViewTimeSheet.page.PE01_LoginPage -INFO - clicked on pending icon
+2024-09-05 17:15:06,475 - com.EmployeeViewTimeSheet.page.PE01_LoginPage -INFO - SuccessFully done validation of pending Timesheet
+2024-09-05 17:15:08,484 - com.EmployeeViewTimeSheet.page.PE01_LoginPage -INFO - *******TE03_PendingTimeSheetSteps TEST END*********
+2024-09-05 17:16:42,950 - com.EmployeeView.stepDefinitions.TE03_PendingTimeSheetSteps -INFO - *******TE03_PendingTimeSheetSteps TEST Execution START*******
+2024-09-05 17:16:42,993 - com.EmployeeViewTimeSheet.page.PE01_LoginPage -INFO - *******PE01_LoginPage TEST Execution START*******
+2024-09-05 17:16:48,750 - com.EmployeeViewTimeSheet.page.PE01_LoginPage -INFO - Entered Username for Employee
+2024-09-05 17:16:50,090 - com.EmployeeViewTimeSheet.page.PE01_LoginPage -INFO - Entered Password for Employee
+2024-09-05 17:16:55,781 - com.EmployeeViewTimeSheet.page.PE01_LoginPage -INFO - Successfully logged into Employee View
+2024-09-05 17:17:05,065 - com.EmployeeViewTimeSheet.page.PE01_LoginPage -INFO - clicked on pending icon
+2024-09-05 17:17:07,525 - com.EmployeeViewTimeSheet.page.PE01_LoginPage -INFO - SuccessFully done validation of pending Timesheet
+2024-09-05 17:17:09,532 - com.EmployeeViewTimeSheet.page.PE01_LoginPage -INFO - *******TE03_PendingTimeSheetSteps TEST END*********
+2024-09-05 17:18:48,018 - com.EmployeeView.stepDefinitions.TE04_ManagerLogInForApprovalSteps -INFO - *******TE04_ManagerLogInForApprovalSteps TEST Execution START*******
+2024-09-05 17:20:49,642 - com.EmployeeView.stepDefinitions.TE04_ManagerLogInForApprovalSteps -INFO - *******TE04_ManagerLogInForApprovalSteps TEST Execution START*******
+2024-09-05 17:21:14,178 - com.EmployeeView.stepDefinitions.TE04_ManagerLogInForApprovalSteps -INFO - Clicked on Timesheet management page
+2024-09-05 17:21:23,518 - com.EmployeeView.stepDefinitions.TE04_ManagerLogInForApprovalSteps -INFO - Selected the current week
+2024-09-05 17:21:26,530 - com.EmployeeView.stepDefinitions.TE04_ManagerLogInForApprovalSteps -INFO - Selected the CurrentWeek
+2024-09-05 17:21:26,703 - com.EmployeeView.stepDefinitions.TE04_ManagerLogInForApprovalSteps -INFO - Approved the Timesheet
+2024-09-05 17:21:28,973 - com.EmployeeView.stepDefinitions.TE04_ManagerLogInForApprovalSteps -INFO - Clicked on approved Page
+2024-09-05 17:21:37,176 - com.EmployeeView.stepDefinitions.TE04_ManagerLogInForApprovalSteps -INFO - Selected the current week
+2024-09-05 17:21:40,250 - com.EmployeeView.stepDefinitions.TE04_ManagerLogInForApprovalSteps -INFO - Clicked on ExpandArrow in approved Page
+2024-09-05 17:21:47,294 - com.EmployeeView.stepDefinitions.TE04_ManagerLogInForApprovalSteps -INFO - successfully done the validation of Approval Timesheet
+2024-09-05 17:21:47,295 - com.EmployeeView.stepDefinitions.TE04_ManagerLogInForApprovalSteps -INFO - *******TE04_ManagerLogInForApprovalSteps TEST END*********
+2024-09-05 17:23:04,687 - com.EmployeeView.stepDefinitions.TE05_EmployeeApproveTimeSheetSteps -INFO - *******TE05_EmployeeApproveTimeSheetSteps TEST Execution START*******
+2024-09-05 17:23:04,783 - com.EmployeeViewTimeSheet.page.PE01_LoginPage -INFO - *******PE01_LoginPage TEST Execution START*******
+2024-09-05 17:23:14,686 - com.EmployeeViewTimeSheet.page.PE01_LoginPage -INFO - Entered Username for Employee
+2024-09-05 17:23:16,618 - com.EmployeeViewTimeSheet.page.PE01_LoginPage -INFO - Entered Password for Employee
+2024-09-05 17:23:21,681 - com.EmployeeViewTimeSheet.page.PE01_LoginPage -INFO - Successfully logged into Employee View
+2024-09-05 17:23:35,026 - com.EmployeeViewTimeSheet.page.PE01_LoginPage -INFO - clicked on Approved page
+2024-09-05 17:23:37,432 - com.EmployeeViewTimeSheet.page.PE01_LoginPage -INFO - sucessFully done the validation of approved Timesheet
+2024-09-05 17:23:37,433 - com.EmployeeViewTimeSheet.page.PE01_LoginPage -INFO - *******TE05_EmployeeApproveTimeSheetSteps TEST END*********
+2024-09-05 17:29:57,165 - com.EmployeeView.stepDefinitions.TE02_CreateTimeSheetSteps -INFO - *******TE02_CreateTimeSheetSteps TEST Execution START*******
+2024-09-05 17:29:57,305 - com.EmployeeViewTimeSheet.page.PE01_LoginPage -INFO - *******PE01_LoginPage TEST Execution START*******
+2024-09-05 17:30:02,587 - com.EmployeeViewTimeSheet.page.PE01_LoginPage -INFO - Entered Username for Employee
+2024-09-05 17:30:03,954 - com.EmployeeViewTimeSheet.page.PE01_LoginPage -INFO - Entered Password for Employee
+2024-09-05 17:30:07,931 - com.EmployeeViewTimeSheet.page.PE01_LoginPage -INFO - Successfully logged into Employee View
+2024-09-05 17:30:17,157 - com.EmployeeViewTimeSheet.page.PE01_LoginPage -INFO - Clicked on TimesheetIcon
+2024-09-05 17:30:25,544 - com.EmployeeViewTimeSheet.page.PE01_LoginPage -INFO - past week date has been selected
+2024-09-05 17:31:48,057 - com.EmployeeView.stepDefinitions.TE02_CreateTimeSheetSteps -INFO - *******TE02_CreateTimeSheetSteps TEST Execution START*******
+2024-09-05 17:31:48,170 - com.EmployeeViewTimeSheet.page.PE01_LoginPage -INFO - *******PE01_LoginPage TEST Execution START*******
+2024-09-05 17:32:00,020 - com.EmployeeViewTimeSheet.page.PE01_LoginPage -INFO - Entered Username for Employee
+2024-09-05 17:32:01,359 - com.EmployeeViewTimeSheet.page.PE01_LoginPage -INFO - Entered Password for Employee
+2024-09-05 17:32:09,231 - com.EmployeeViewTimeSheet.page.PE01_LoginPage -INFO - Successfully logged into Employee View
+2024-09-05 17:32:19,135 - com.EmployeeViewTimeSheet.page.PE01_LoginPage -INFO - Clicked on TimesheetIcon
+2024-09-05 17:32:27,505 - com.EmployeeViewTimeSheet.page.PE01_LoginPage -INFO - past week date has been selected
+2024-09-05 18:12:55,004 - com.EmployeeView.stepDefinitions.TE02_CreateTimeSheetSteps -INFO - *******TE02_CreateTimeSheetSteps TEST Execution START*******
+2024-09-05 18:12:55,174 - com.EmployeeViewTimeSheet.page.PE01_LoginPage -INFO - *******PE01_LoginPage TEST Execution START*******
+2024-09-05 18:13:16,128 - com.EmployeeViewTimeSheet.page.PE01_LoginPage -INFO - Entered Username for Employee
+2024-09-05 18:13:17,590 - com.EmployeeViewTimeSheet.page.PE01_LoginPage -INFO - Entered Password for Employee
+2024-09-05 18:13:28,835 - com.EmployeeViewTimeSheet.page.PE01_LoginPage -INFO - Successfully logged into Employee View
+2024-09-05 18:13:43,025 - com.EmployeeViewTimeSheet.page.PE01_LoginPage -INFO - Clicked on TimesheetIcon
+2024-09-05 18:13:54,695 - com.EmployeeViewTimeSheet.page.PE01_LoginPage -INFO - past week date has been selected
+2024-09-05 18:18:17,640 - com.EmployeeView.stepDefinitions.TE02_CreateTimeSheetSteps -INFO - *******TE02_CreateTimeSheetSteps TEST Execution START*******
+2024-09-05 18:18:17,810 - com.EmployeeViewTimeSheet.page.PE01_LoginPage -INFO - *******PE01_LoginPage TEST Execution START*******
+2024-09-05 18:18:27,230 - com.EmployeeViewTimeSheet.page.PE01_LoginPage -INFO - Entered Username for Employee
+2024-09-05 18:18:29,015 - com.EmployeeViewTimeSheet.page.PE01_LoginPage -INFO - Entered Password for Employee
+2024-09-05 18:18:33,167 - com.EmployeeViewTimeSheet.page.PE01_LoginPage -INFO - Successfully logged into Employee View
+2024-09-05 18:27:50,209 - com.EmployeeView.stepDefinitions.TE02_CreateTimeSheetSteps -INFO - *******TE02_CreateTimeSheetSteps TEST Execution START*******
+2024-09-05 18:27:50,334 - com.EmployeeViewTimeSheet.page.PE01_LoginPage -INFO - *******PE01_LoginPage TEST Execution START*******
+2024-09-05 18:27:59,634 - com.EmployeeViewTimeSheet.page.PE01_LoginPage -INFO - Entered Username for Employee
+2024-09-05 18:28:01,291 - com.EmployeeViewTimeSheet.page.PE01_LoginPage -INFO - Entered Password for Employee
+2024-09-05 18:28:13,513 - com.EmployeeViewTimeSheet.page.PE01_LoginPage -INFO - Successfully logged into Employee View
+2024-09-05 18:28:24,739 - com.EmployeeViewTimeSheet.page.PE01_LoginPage -INFO - Clicked on TimesheetIcon
+2024-09-05 18:28:36,447 - com.EmployeeViewTimeSheet.page.PE01_LoginPage -INFO - past week date has been selected
+2024-09-05 18:30:14,219 - com.EmployeeView.stepDefinitions.TE02_CreateTimeSheetSteps -INFO - *******TE02_CreateTimeSheetSteps TEST Execution START*******
+2024-09-05 18:30:14,383 - com.EmployeeViewTimeSheet.page.PE01_LoginPage -INFO - *******PE01_LoginPage TEST Execution START*******
+2024-09-05 18:30:28,392 - com.EmployeeViewTimeSheet.page.PE01_LoginPage -INFO - Entered Username for Employee
+2024-09-05 18:30:30,028 - com.EmployeeViewTimeSheet.page.PE01_LoginPage -INFO - Entered Password for Employee
+2024-09-05 18:30:35,916 - com.EmployeeViewTimeSheet.page.PE01_LoginPage -INFO - Successfully logged into Employee View
+2024-09-05 18:30:54,499 - com.EmployeeViewTimeSheet.page.PE01_LoginPage -INFO - Clicked on TimesheetIcon
+2024-09-05 18:31:06,155 - com.EmployeeViewTimeSheet.page.PE01_LoginPage -INFO - past week date has been selected
+2024-09-05 18:35:22,784 - com.EmployeeView.stepDefinitions.TE02_CreateTimeSheetSteps -INFO - *******TE02_CreateTimeSheetSteps TEST Execution START*******
+2024-09-05 18:35:22,924 - com.EmployeeViewTimeSheet.page.PE01_LoginPage -INFO - *******PE01_LoginPage TEST Execution START*******
+2024-09-05 18:35:43,628 - com.EmployeeViewTimeSheet.page.PE01_LoginPage -INFO - Entered Username for Employee
+2024-09-05 18:35:45,256 - com.EmployeeViewTimeSheet.page.PE01_LoginPage -INFO - Entered Password for Employee
+2024-09-05 18:35:58,810 - com.EmployeeViewTimeSheet.page.PE01_LoginPage -INFO - Successfully logged into Employee View
+2024-09-05 18:36:10,287 - com.EmployeeViewTimeSheet.page.PE01_LoginPage -INFO - Clicked on TimesheetIcon
+2024-09-05 18:36:21,985 - com.EmployeeViewTimeSheet.page.PE01_LoginPage -INFO - past week date has been selected
+2024-09-05 18:38:04,593 - com.EmployeeView.stepDefinitions.TE02_CreateTimeSheetSteps -INFO - *******TE02_CreateTimeSheetSteps TEST Execution START*******
+2024-09-05 18:38:04,889 - com.EmployeeViewTimeSheet.page.PE01_LoginPage -INFO - *******PE01_LoginPage TEST Execution START*******
+2024-09-05 18:38:25,106 - com.EmployeeViewTimeSheet.page.PE01_LoginPage -INFO - Entered Username for Employee
+2024-09-05 18:38:26,770 - com.EmployeeViewTimeSheet.page.PE01_LoginPage -INFO - Entered Password for Employee
+2024-09-05 18:38:38,707 - com.EmployeeViewTimeSheet.page.PE01_LoginPage -INFO - Successfully logged into Employee View
+2024-09-05 18:38:50,883 - com.EmployeeViewTimeSheet.page.PE01_LoginPage -INFO - Clicked on TimesheetIcon
+2024-09-05 18:39:02,649 - com.EmployeeViewTimeSheet.page.PE01_LoginPage -INFO - past week date has been selected
+2024-09-05 18:50:17,755 - com.EmployeeView.stepDefinitions.TE02_CreateTimeSheetSteps -INFO - *******TE02_CreateTimeSheetSteps TEST Execution START*******
+2024-09-05 18:50:17,872 - com.EmployeeViewTimeSheet.page.PE01_LoginPage -INFO - *******PE01_LoginPage TEST Execution START*******
+2024-09-05 18:50:26,978 - com.EmployeeViewTimeSheet.page.PE01_LoginPage -INFO - Entered Username for Employee
+2024-09-05 18:50:28,845 - com.EmployeeViewTimeSheet.page.PE01_LoginPage -INFO - Entered Password for Employee
+2024-09-05 18:50:36,392 - com.EmployeeViewTimeSheet.page.PE01_LoginPage -INFO - Successfully logged into Employee View
+2024-09-05 18:50:47,398 - com.EmployeeViewTimeSheet.page.PE01_LoginPage -INFO - Clicked on TimesheetIcon
+2024-09-05 18:50:59,749 - com.EmployeeViewTimeSheet.page.PE01_LoginPage -INFO - past week date has been selected
+2024-09-05 18:55:35,305 - com.EmployeeView.stepDefinitions.TE02_CreateTimeSheetSteps -INFO - *******TE02_CreateTimeSheetSteps TEST Execution START*******
+2024-09-05 18:55:35,468 - com.EmployeeViewTimeSheet.page.PE01_LoginPage -INFO - *******PE01_LoginPage TEST Execution START*******
+2024-09-05 18:55:57,835 - com.EmployeeViewTimeSheet.page.PE01_LoginPage -INFO - Entered Username for Employee
+2024-09-05 18:55:59,689 - com.EmployeeViewTimeSheet.page.PE01_LoginPage -INFO - Entered Password for Employee
+2024-09-05 18:56:10,841 - com.EmployeeViewTimeSheet.page.PE01_LoginPage -INFO - Successfully logged into Employee View
+2024-09-05 18:56:30,852 - com.EmployeeViewTimeSheet.page.PE01_LoginPage -INFO - Clicked on TimesheetIcon
+2024-09-05 18:56:46,819 - com.EmployeeViewTimeSheet.page.PE01_LoginPage -INFO - past week date has been selected
+2024-09-05 19:18:00,648 - com.EmployeeView.stepDefinitions.TE02_CreateTimeSheetSteps -INFO - *******TE02_CreateTimeSheetSteps TEST Execution START*******
+2024-09-05 19:18:00,806 - com.EmployeeViewTimeSheet.page.PE01_LoginPage -INFO - *******PE01_LoginPage TEST Execution START*******
+2024-09-05 19:18:12,336 - com.EmployeeViewTimeSheet.page.PE01_LoginPage -INFO - Entered Username for Employee
+2024-09-05 19:18:14,056 - com.EmployeeViewTimeSheet.page.PE01_LoginPage -INFO - Entered Password for Employee
+2024-09-05 19:18:23,540 - com.EmployeeViewTimeSheet.page.PE01_LoginPage -INFO - Successfully logged into Employee View
+2024-09-05 19:18:43,085 - com.EmployeeViewTimeSheet.page.PE01_LoginPage -INFO - Clicked on TimesheetIcon
+2024-09-05 19:18:57,646 - com.EmployeeViewTimeSheet.page.PE01_LoginPage -INFO - past week date has been selected
+2024-09-05 19:21:13,943 - com.EmployeeView.stepDefinitions.TE02_CreateTimeSheetSteps -INFO - *******TE02_CreateTimeSheetSteps TEST Execution START*******
+2024-09-05 19:21:14,078 - com.EmployeeViewTimeSheet.page.PE01_LoginPage -INFO - *******PE01_LoginPage TEST Execution START*******
+2024-09-05 19:21:31,595 - com.EmployeeViewTimeSheet.page.PE01_LoginPage -INFO - Entered Username for Employee
+2024-09-05 19:21:33,226 - com.EmployeeViewTimeSheet.page.PE01_LoginPage -INFO - Entered Password for Employee
+2024-09-05 19:21:37,442 - com.EmployeeViewTimeSheet.page.PE01_LoginPage -INFO - Successfully logged into Employee View
+2024-09-05 19:21:55,175 - com.EmployeeViewTimeSheet.page.PE01_LoginPage -INFO - Clicked on TimesheetIcon
+2024-09-05 19:22:06,822 - com.EmployeeViewTimeSheet.page.PE01_LoginPage -INFO - past week date has been selected
+2024-09-06 10:30:47,681 - com.EmployeeView.stepDefinitions.TE02_CreateTimeSheetSteps -INFO - *******TE02_CreateTimeSheetSteps TEST Execution START*******
+2024-09-06 10:30:47,849 - com.EmployeeViewTimeSheet.page.PE01_LoginPage -INFO - *******PE01_LoginPage TEST Execution START*******
+2024-09-06 10:30:51,299 - com.EmployeeViewTimeSheet.page.PE01_LoginPage -INFO - Entered Username for Employee
+2024-09-06 10:30:53,046 - com.EmployeeViewTimeSheet.page.PE01_LoginPage -INFO - Entered Password for Employee
+2024-09-06 10:31:00,264 - com.EmployeeViewTimeSheet.page.PE01_LoginPage -INFO - Successfully logged into Employee View
+2024-09-06 10:31:09,666 - com.EmployeeViewTimeSheet.page.PE01_LoginPage -INFO - Clicked on TimesheetIcon
+2024-09-06 10:31:21,373 - com.EmployeeViewTimeSheet.page.PE01_LoginPage -INFO - past week date has been selected
+2024-09-06 10:32:56,487 - com.EmployeeView.stepDefinitions.TE02_CreateTimeSheetSteps -INFO - *******TE02_CreateTimeSheetSteps TEST Execution START*******
+2024-09-06 10:32:56,614 - com.EmployeeViewTimeSheet.page.PE01_LoginPage -INFO - *******PE01_LoginPage TEST Execution START*******
+2024-09-06 10:32:59,164 - com.EmployeeViewTimeSheet.page.PE01_LoginPage -INFO - Entered Username for Employee
+2024-09-06 10:33:00,858 - com.EmployeeViewTimeSheet.page.PE01_LoginPage -INFO - Entered Password for Employee
+2024-09-06 10:33:05,119 - com.EmployeeViewTimeSheet.page.PE01_LoginPage -INFO - Successfully logged into Employee View
+2024-09-06 10:33:14,494 - com.EmployeeViewTimeSheet.page.PE01_LoginPage -INFO - Clicked on TimesheetIcon
+2024-09-06 10:33:26,207 - com.EmployeeViewTimeSheet.page.PE01_LoginPage -INFO - past week date has been selected
+2024-09-06 10:35:17,576 - com.EmployeeView.stepDefinitions.TE02_CreateTimeSheetSteps -INFO - *******TE02_CreateTimeSheetSteps TEST Execution START*******
+2024-09-06 10:35:17,751 - com.EmployeeViewTimeSheet.page.PE01_LoginPage -INFO - *******PE01_LoginPage TEST Execution START*******
+2024-09-06 10:35:20,518 - com.EmployeeViewTimeSheet.page.PE01_LoginPage -INFO - Entered Username for Employee
+2024-09-06 10:35:22,222 - com.EmployeeViewTimeSheet.page.PE01_LoginPage -INFO - Entered Password for Employee
+2024-09-06 10:35:26,528 - com.EmployeeViewTimeSheet.page.PE01_LoginPage -INFO - Successfully logged into Employee View
+2024-09-06 10:35:35,903 - com.EmployeeViewTimeSheet.page.PE01_LoginPage -INFO - Clicked on TimesheetIcon
+2024-09-06 10:35:47,589 - com.EmployeeViewTimeSheet.page.PE01_LoginPage -INFO - past week date has been selected
+2024-09-06 10:43:19,758 - com.EmployeeView.stepDefinitions.TE02_CreateTimeSheetSteps -INFO - *******TE02_CreateTimeSheetSteps TEST Execution START*******
+2024-09-06 10:43:19,869 - com.EmployeeViewTimeSheet.page.PE01_LoginPage -INFO - *******PE01_LoginPage TEST Execution START*******
+2024-09-06 10:43:22,829 - com.EmployeeViewTimeSheet.page.PE01_LoginPage -INFO - Entered Username for Employee
+2024-09-06 10:43:24,548 - com.EmployeeViewTimeSheet.page.PE01_LoginPage -INFO - Entered Password for Employee
+2024-09-06 10:43:48,289 - com.EmployeeViewTimeSheet.page.PE01_LoginPage -INFO - Successfully logged into Employee View
+2024-09-06 10:43:57,671 - com.EmployeeViewTimeSheet.page.PE01_LoginPage -INFO - Clicked on TimesheetIcon
+2024-09-06 10:44:09,342 - com.EmployeeViewTimeSheet.page.PE01_LoginPage -INFO - past week date has been selected
+2024-09-06 10:48:30,086 - com.EmployeeView.stepDefinitions.TE02_CreateTimeSheetSteps -INFO - *******TE02_CreateTimeSheetSteps TEST Execution START*******
+2024-09-06 10:48:30,238 - com.EmployeeViewTimeSheet.page.PE01_LoginPage -INFO - *******PE01_LoginPage TEST Execution START*******
+2024-09-06 10:48:33,277 - com.EmployeeViewTimeSheet.page.PE01_LoginPage -INFO - Entered Username for Employee
+2024-09-06 10:48:34,987 - com.EmployeeViewTimeSheet.page.PE01_LoginPage -INFO - Entered Password for Employee
+2024-09-06 10:48:39,499 - com.EmployeeViewTimeSheet.page.PE01_LoginPage -INFO - Successfully logged into Employee View
+2024-09-06 10:48:48,883 - com.EmployeeViewTimeSheet.page.PE01_LoginPage -INFO - Clicked on TimesheetIcon
+2024-09-06 10:48:58,762 - com.EmployeeViewTimeSheet.page.PE01_LoginPage -INFO - clicked on arrow icon to select the Past week date
+2024-09-06 12:18:27,488 - com.EmployeeView.stepDefinitions.TE02_CreateTimeSheetSteps -INFO - *******TE02_CreateTimeSheetSteps TEST Execution START*******
+2024-09-06 12:18:27,620 - com.EmployeeViewTimeSheet.page.PE01_LoginPage -INFO - *******PE01_LoginPage TEST Execution START*******
+2024-09-06 12:18:34,255 - com.EmployeeViewTimeSheet.page.PE01_LoginPage -INFO - Entered Username for Employee
+2024-09-06 12:18:35,886 - com.EmployeeViewTimeSheet.page.PE01_LoginPage -INFO - Entered Password for Employee
+2024-09-06 12:18:56,153 - com.EmployeeViewTimeSheet.page.PE01_LoginPage -INFO - Successfully logged into Employee View
+2024-09-06 12:19:05,474 - com.EmployeeViewTimeSheet.page.PE01_LoginPage -INFO - Clicked on TimesheetIcon
+2024-09-06 12:19:12,051 - com.EmployeeViewTimeSheet.page.PE01_LoginPage -INFO - Clicked on previous month arrow and selected the past week date from calendar
+2024-09-06 12:21:37,473 - com.EmployeeView.stepDefinitions.TE02_CreateTimeSheetSteps -INFO - *******TE02_CreateTimeSheetSteps TEST Execution START*******
+2024-09-06 12:21:37,595 - com.EmployeeViewTimeSheet.page.PE01_LoginPage -INFO - *******PE01_LoginPage TEST Execution START*******
+2024-09-06 12:21:50,717 - com.EmployeeViewTimeSheet.page.PE01_LoginPage -INFO - Entered Username for Employee
+2024-09-06 12:21:52,378 - com.EmployeeViewTimeSheet.page.PE01_LoginPage -INFO - Entered Password for Employee
+2024-09-06 12:21:56,576 - com.EmployeeViewTimeSheet.page.PE01_LoginPage -INFO - Successfully logged into Employee View
+2024-09-06 12:22:36,786 - com.EmployeeViewTimeSheet.page.PE01_LoginPage -INFO - Clicked on TimesheetIcon
+2024-09-06 12:22:49,595 - com.EmployeeViewTimeSheet.page.PE01_LoginPage -INFO - Clicked on previous month arrow and selected the past week date from calendar
+2024-09-06 12:54:33,341 - com.EmployeeView.stepDefinitions.TE02_CreateTimeSheetSteps -INFO - *******TE02_CreateTimeSheetSteps TEST Execution START*******
+2024-09-06 12:54:33,482 - com.EmployeeViewTimeSheet.page.PE01_LoginPage -INFO - *******PE01_LoginPage TEST Execution START*******
+2024-09-06 12:54:36,824 - com.EmployeeViewTimeSheet.page.PE01_LoginPage -INFO - Entered Username for Employee
+2024-09-06 12:54:38,478 - com.EmployeeViewTimeSheet.page.PE01_LoginPage -INFO - Entered Password for Employee
+2024-09-06 12:54:42,587 - com.EmployeeViewTimeSheet.page.PE01_LoginPage -INFO - Successfully logged into Employee View
+2024-09-06 12:54:51,933 - com.EmployeeViewTimeSheet.page.PE01_LoginPage -INFO - Clicked on TimesheetIcon
+2024-09-06 12:55:04,893 - com.EmployeeViewTimeSheet.page.PE01_LoginPage -INFO - Clicked on previous month arrow and selected the past week date from calendar
+2024-09-06 12:58:32,820 - com.EmployeeViewTimeSheet.page.PE01_LoginPage -INFO - Entered Task Description and Hours
+2024-09-06 12:58:40,515 - com.EmployeeViewTimeSheet.page.PE01_LoginPage -INFO - Clicked on save,submit and confirm button
+2024-09-06 12:58:44,888 - com.EmployeeViewTimeSheet.page.PE01_LoginPage -INFO - validation for Successfully submission of Timesheet
+2024-09-06 12:58:44,889 - com.EmployeeViewTimeSheet.page.PE01_LoginPage -INFO - *******TE02_CreateTimeSheetSteps TEST END*********
+2024-09-06 13:00:16,881 - com.EmployeeView.stepDefinitions.TE06_ManagerLogInForRejectedSteps -INFO - *******TE06_ManagerLogInForRejectedSteps TEST Execution START*******
+2024-09-06 13:00:45,276 - com.EmployeeView.stepDefinitions.TE06_ManagerLogInForRejectedSteps -INFO - Clicked on TimesheetManagement Page
+2024-09-06 13:00:56,842 - com.EmployeeView.stepDefinitions.TE06_ManagerLogInForRejectedSteps -INFO - selected the past week date
+2024-09-06 13:00:57,189 - com.EmployeeView.stepDefinitions.TE06_ManagerLogInForRejectedSteps -INFO - selected the checkbox to Reject Timesheet
+2024-09-06 13:00:59,435 - com.EmployeeView.stepDefinitions.TE06_ManagerLogInForRejectedSteps -INFO - Entered Remarks for Rejection
+2024-09-06 13:01:01,613 - com.EmployeeView.stepDefinitions.TE06_ManagerLogInForRejectedSteps -INFO - clicked on confirm button for rejection
+2024-09-06 13:01:03,623 - com.EmployeeView.stepDefinitions.TE06_ManagerLogInForRejectedSteps -INFO - Rejected the timesheet successfully
+2024-09-06 13:01:07,993 - com.EmployeeView.stepDefinitions.TE06_ManagerLogInForRejectedSteps -INFO - Click On Reject TimesheetPage in manager view
+2024-09-06 13:01:19,546 - com.EmployeeView.stepDefinitions.TE06_ManagerLogInForRejectedSteps -INFO - selected the past week date
+2024-09-06 13:01:21,669 - com.EmployeeView.stepDefinitions.TE06_ManagerLogInForRejectedSteps -INFO - clicked on Expand Arrow for Rejected Timesheet
+2024-09-06 13:01:27,721 - com.EmployeeView.stepDefinitions.TE06_ManagerLogInForRejectedSteps -INFO - successfully done the validation for Reject Timesheet
+2024-09-06 13:01:27,722 - com.EmployeeView.stepDefinitions.TE06_ManagerLogInForRejectedSteps -INFO - *******TE06_ManagerLogInForRejectedSteps TEST END*********
+2024-09-06 13:02:23,500 - com.EmployeeView.stepDefinitions.TE09_EmployeeDraftTimesheetSteps -INFO - *******TE09_EmployeeDraftTimesheetSteps TEST Execution START*******
+2024-09-06 13:02:23,635 - com.EmployeeViewTimeSheet.page.PE01_LoginPage -INFO - *******PE01_LoginPage TEST Execution START*******
+2024-09-06 13:02:26,407 - com.EmployeeViewTimeSheet.page.PE01_LoginPage -INFO - Entered Username for Employee
+2024-09-06 13:02:28,070 - com.EmployeeViewTimeSheet.page.PE01_LoginPage -INFO - Entered Password for Employee
+2024-09-06 13:02:52,839 - com.EmployeeViewTimeSheet.page.PE01_LoginPage -INFO - Successfully logged into Employee View
+2024-09-06 13:03:14,677 - com.EmployeeViewTimeSheet.page.PE01_LoginPage -INFO - Clicked on previous month arrow and selected the past week date from calendar
+2024-09-06 13:03:17,898 - com.EmployeeViewTimeSheet.page.PE01_LoginPage -INFO - Successfully validation of DraftFunctionality
+2024-09-06 13:03:17,899 - com.EmployeeViewTimeSheet.page.PE01_LoginPage -INFO - *******TE09_EmployeeDraftTimesheetSteps TEST END*********
+2024-09-06 13:04:29,298 - com.EmployeeView.stepDefinitions.TE10_AlreadySubmittedTimesheetSteps -INFO - *******TE10_AlreadySubmittedTimesheetSteps TEST Execution START*******
+2024-09-06 13:04:29,433 - com.EmployeeViewTimeSheet.page.PE01_LoginPage -INFO - *******PE01_LoginPage TEST Execution START*******
+2024-09-06 13:04:32,365 - com.EmployeeViewTimeSheet.page.PE01_LoginPage -INFO - Entered Username for Employee
+2024-09-06 13:04:33,965 - com.EmployeeViewTimeSheet.page.PE01_LoginPage -INFO - Entered Password for Employee
+2024-09-06 13:04:57,061 - com.EmployeeViewTimeSheet.page.PE01_LoginPage -INFO - Successfully logged into Employee View
+2024-09-06 13:05:06,259 - com.EmployeeViewTimeSheet.page.PE01_LoginPage -INFO - Current week has been selected
+2024-09-06 13:05:06,408 - com.EmployeeViewTimeSheet.page.PE01_LoginPage -INFO - validation for Successfully submission of Timesheet
+2024-09-06 13:05:06,409 - com.EmployeeViewTimeSheet.page.PE01_LoginPage -INFO - *******TE10_AlreadySubmittedTimesheetSteps TEST END*********
+2024-09-06 13:08:52,671 - com.EmployeeView.stepDefinitions.TE02_CreateTimeSheetSteps -INFO - *******TE02_CreateTimeSheetSteps TEST Execution START*******
+2024-09-06 13:08:52,807 - com.EmployeeViewTimeSheet.page.PE01_LoginPage -INFO - *******PE01_LoginPage TEST Execution START*******
+2024-09-06 13:08:55,694 - com.EmployeeViewTimeSheet.page.PE01_LoginPage -INFO - Entered Username for Employee
+2024-09-06 13:08:57,419 - com.EmployeeViewTimeSheet.page.PE01_LoginPage -INFO - Entered Password for Employee
+2024-09-06 13:09:01,644 - com.EmployeeViewTimeSheet.page.PE01_LoginPage -INFO - Successfully logged into Employee View
+2024-09-06 13:09:21,736 - com.EmployeeViewTimeSheet.page.PE01_LoginPage -INFO - Clicked on TimesheetIcon
+2024-09-06 13:09:28,213 - com.EmployeeViewTimeSheet.page.PE01_LoginPage -INFO - Future date has been selected
+2024-09-06 13:10:17,882 - com.EmployeeViewTimeSheet.page.PE01_LoginPage -INFO - Entered Task Description and Hours
+2024-09-06 13:10:32,266 - com.EmployeeViewTimeSheet.page.PE01_LoginPage -WARN - Duplicate Task Description
+2024-09-06 13:12:20,382 - com.EmployeeView.stepDefinitions.TE11_ExceedTimesheetValidationSteps -INFO - *******TE11_ExceedTimesheetValidationSteps TEST Execution START*******
+2024-09-06 13:12:20,514 - com.EmployeeViewTimeSheet.page.PE01_LoginPage -INFO - *******PE01_LoginPage TEST Execution START*******
+2024-09-06 13:12:23,339 - com.EmployeeViewTimeSheet.page.PE01_LoginPage -INFO - Entered Username for Employee
+2024-09-06 13:12:24,892 - com.EmployeeViewTimeSheet.page.PE01_LoginPage -INFO - Entered Password for Employee
+2024-09-06 13:12:45,319 - com.EmployeeViewTimeSheet.page.PE01_LoginPage -INFO - Successfully logged into Employee View
+2024-09-06 13:12:54,662 - com.EmployeeViewTimeSheet.page.PE01_LoginPage -INFO - clicked on createTimesheet page
+2024-09-06 13:13:01,150 - com.EmployeeViewTimeSheet.page.PE01_LoginPage -INFO - selected the future week date
+2024-09-06 13:13:50,236 - com.EmployeeViewTimeSheet.page.PE01_LoginPage -INFO - Entered task Description and hours
+2024-09-06 13:13:52,495 - com.EmployeeViewTimeSheet.page.PE01_LoginPage -INFO - click on saveAll button
+2024-09-06 13:13:52,674 - com.EmployeeViewTimeSheet.page.PE01_LoginPage -INFO - Successfully done the validation of PerDay exceeding Hours
+2024-09-06 13:13:52,675 - com.EmployeeViewTimeSheet.page.PE01_LoginPage -INFO - *******TE11_ExceedTimesheetValidationSteps TEST END*********
+2024-09-06 14:42:36,999 - com.EmployeeView.stepDefinitions.TE04_ManagerLogInForApprovalSteps -INFO - *******TE04_ManagerLogInForApprovalSteps TEST Execution START*******
+2024-09-06 14:43:07,279 - com.EmployeeView.stepDefinitions.TE04_ManagerLogInForApprovalSteps -INFO - Clicked on approved Page
+2024-09-06 14:43:15,634 - com.EmployeeView.stepDefinitions.TE04_ManagerLogInForApprovalSteps -INFO - Selected the current week
+2024-09-06 14:43:20,837 - com.EmployeeView.stepDefinitions.TE04_ManagerLogInForApprovalSteps -INFO - Reject the Timesheet
+2024-09-06 14:43:25,093 - com.EmployeeView.stepDefinitions.TE04_ManagerLogInForApprovalSteps -INFO - Entered Text for Rejection 
+2024-09-06 14:43:25,282 - com.EmployeeView.stepDefinitions.TE04_ManagerLogInForApprovalSteps -INFO - Clicked on Confirm Button
+2024-09-06 14:43:27,297 - com.EmployeeView.stepDefinitions.TE04_ManagerLogInForApprovalSteps -INFO - Successfully Reject the Timesheet
+2024-09-06 14:43:27,298 - com.EmployeeView.stepDefinitions.TE04_ManagerLogInForApprovalSteps -INFO - *******TE04_ManagerLogInForApprovalSteps TEST END*********
+2024-09-06 15:16:53,341 - com.AdminView.stepDefinitions.TC01_LoginSteps -INFO - *******TC01_LoginSteps TEST Execution START*******
+2024-09-06 15:16:55,379 - com.AdminView.stepDefinitions.TC01_LoginSteps -INFO - Entered username
+2024-09-06 15:16:55,438 - com.AdminView.stepDefinitions.TC01_LoginSteps -INFO - click on emailNext
+2024-09-06 15:16:56,684 - com.AdminView.stepDefinitions.TC01_LoginSteps -INFO - Entered password
+2024-09-06 15:16:57,208 - com.AdminView.stepDefinitions.TC01_LoginSteps -INFO - click on emailNext
+2024-09-06 15:17:05,999 - com.AdminView.stepDefinitions.TC01_LoginSteps -INFO - logIn successFully into admin view
+2024-09-06 15:19:52,504 - com.AdminView.stepDefinitions.TC01_LoginSteps -INFO - *******TC01_LoginSteps TEST Execution START*******
+2024-09-06 15:19:54,943 - com.AdminView.stepDefinitions.TC01_LoginSteps -INFO - Entered username
+2024-09-06 15:19:55,005 - com.AdminView.stepDefinitions.TC01_LoginSteps -INFO - click on emailNext
+2024-09-06 15:19:56,298 - com.AdminView.stepDefinitions.TC01_LoginSteps -INFO - Entered password
+2024-09-06 15:19:56,705 - com.AdminView.stepDefinitions.TC01_LoginSteps -INFO - click on emailNext
+2024-09-06 15:20:04,231 - com.AdminView.stepDefinitions.TC01_LoginSteps -INFO - logIn successFully into admin view
+2024-09-06 15:21:37,650 - com.EmployeeView.stepDefinitions.TE01_LoginSteps -INFO - *******TE01_LoginSteps TEST Execution START*******
+2024-09-06 15:21:37,690 - com.EmployeeViewTimeSheet.page.PE01_LoginPage -INFO - *******PE01_LoginPage TEST Execution START*******
+2024-09-06 15:21:39,571 - com.EmployeeViewTimeSheet.page.PE01_LoginPage -INFO - Entered Username for Employee
+2024-09-06 15:21:40,882 - com.EmployeeViewTimeSheet.page.PE01_LoginPage -INFO - Entered Password for Employee
+2024-09-06 15:21:44,835 - com.EmployeeViewTimeSheet.page.PE01_LoginPage -INFO - Successfully logged into Employee View
+2024-09-06 15:21:54,154 - com.EmployeeViewTimeSheet.page.PE01_LoginPage -INFO - *******TE01_LoginSteps TEST END*********
+2024-09-06 15:22:11,392 - com.EmployeeView.stepDefinitions.TE02_CreateTimeSheetSteps -INFO - *******TE02_CreateTimeSheetSteps TEST Execution START*******
+2024-09-06 15:22:11,413 - com.EmployeeViewTimeSheet.page.PE01_LoginPage -INFO - *******PE01_LoginPage TEST Execution START*******
+2024-09-06 15:22:13,835 - com.EmployeeViewTimeSheet.page.PE01_LoginPage -INFO - Entered Username for Employee
+2024-09-06 15:22:15,127 - com.EmployeeViewTimeSheet.page.PE01_LoginPage -INFO - Entered Password for Employee
+2024-09-06 15:22:18,876 - com.EmployeeViewTimeSheet.page.PE01_LoginPage -INFO - Successfully logged into Employee View
+2024-09-06 15:22:28,037 - com.EmployeeViewTimeSheet.page.PE01_LoginPage -INFO - Clicked on TimesheetIcon
+2024-09-06 15:22:28,134 - com.EmployeeViewTimeSheet.page.PE01_LoginPage -INFO - Current week has been selected
+2024-09-06 15:25:41,122 - com.EmployeeViewTimeSheet.page.PE01_LoginPage -INFO - Entered Task Description and Hours
+2024-09-06 15:25:47,454 - com.EmployeeViewTimeSheet.page.PE01_LoginPage -INFO - Clicked on save,submit and confirm button
+2024-09-06 15:25:47,884 - com.EmployeeViewTimeSheet.page.PE01_LoginPage -INFO - validation for Successfully submission of Timesheet
+2024-09-06 15:25:47,885 - com.EmployeeViewTimeSheet.page.PE01_LoginPage -INFO - *******TE02_CreateTimeSheetSteps TEST END*********
+2024-09-06 15:25:59,306 - com.EmployeeView.stepDefinitions.TE03_PendingTimeSheetSteps -INFO - *******TE03_PendingTimeSheetSteps TEST Execution START*******
+2024-09-06 15:25:59,325 - com.EmployeeViewTimeSheet.page.PE01_LoginPage -INFO - *******PE01_LoginPage TEST Execution START*******
+2024-09-06 15:26:01,432 - com.EmployeeViewTimeSheet.page.PE01_LoginPage -INFO - Entered Username for Employee
+2024-09-06 15:26:02,693 - com.EmployeeViewTimeSheet.page.PE01_LoginPage -INFO - Entered Password for Employee
+2024-09-06 15:26:06,596 - com.EmployeeViewTimeSheet.page.PE01_LoginPage -INFO - Successfully logged into Employee View
+2024-09-06 15:26:15,885 - com.EmployeeViewTimeSheet.page.PE01_LoginPage -INFO - clicked on pending icon
+2024-09-06 15:26:18,206 - com.EmployeeViewTimeSheet.page.PE01_LoginPage -INFO - SuccessFully done validation of pending Timesheet
+2024-09-06 15:26:20,221 - com.EmployeeViewTimeSheet.page.PE01_LoginPage -INFO - *******TE03_PendingTimeSheetSteps TEST END*********
+2024-09-06 15:26:31,262 - com.EmployeeView.stepDefinitions.TE04_ManagerLogInForApprovalSteps -INFO - *******TE04_ManagerLogInForApprovalSteps TEST Execution START*******
+2024-09-06 15:26:39,733 - com.EmployeeView.stepDefinitions.TE04_ManagerLogInForApprovalSteps -INFO - Clicked on Timesheet management page
+2024-09-06 15:26:49,004 - com.EmployeeView.stepDefinitions.TE04_ManagerLogInForApprovalSteps -INFO - Selected the current week
+2024-09-06 15:26:52,005 - com.EmployeeView.stepDefinitions.TE04_ManagerLogInForApprovalSteps -INFO - Selected the CurrentWeek
+2024-09-06 15:26:52,169 - com.EmployeeView.stepDefinitions.TE04_ManagerLogInForApprovalSteps -INFO - Approved the Timesheet
+2024-09-06 15:26:54,364 - com.EmployeeView.stepDefinitions.TE04_ManagerLogInForApprovalSteps -INFO - Clicked on approved Page
+2024-09-06 15:27:02,524 - com.EmployeeView.stepDefinitions.TE04_ManagerLogInForApprovalSteps -INFO - Selected the current week
+2024-09-06 15:27:05,606 - com.EmployeeView.stepDefinitions.TE04_ManagerLogInForApprovalSteps -INFO - Clicked on ExpandArrow in approved Page
+2024-09-06 15:27:12,654 - com.EmployeeView.stepDefinitions.TE04_ManagerLogInForApprovalSteps -INFO - successfully done the validation of Approval Timesheet
+2024-09-06 15:27:12,655 - com.EmployeeView.stepDefinitions.TE04_ManagerLogInForApprovalSteps -INFO - *******TE04_ManagerLogInForApprovalSteps TEST END*********
+2024-09-06 15:27:23,847 - com.EmployeeView.stepDefinitions.TE05_EmployeeApproveTimeSheetSteps -INFO - *******TE05_EmployeeApproveTimeSheetSteps TEST Execution START*******
+2024-09-06 15:27:23,865 - com.EmployeeViewTimeSheet.page.PE01_LoginPage -INFO - *******PE01_LoginPage TEST Execution START*******
+2024-09-06 15:27:26,255 - com.EmployeeViewTimeSheet.page.PE01_LoginPage -INFO - Entered Username for Employee
+2024-09-06 15:27:27,512 - com.EmployeeViewTimeSheet.page.PE01_LoginPage -INFO - Entered Password for Employee
+2024-09-06 15:27:31,199 - com.EmployeeViewTimeSheet.page.PE01_LoginPage -INFO - Successfully logged into Employee View
+2024-09-06 15:27:42,492 - com.EmployeeViewTimeSheet.page.PE01_LoginPage -INFO - clicked on Approved page
+2024-09-06 15:27:44,733 - com.EmployeeViewTimeSheet.page.PE01_LoginPage -INFO - sucessFully done the validation of approved Timesheet
+2024-09-06 15:27:44,733 - com.EmployeeViewTimeSheet.page.PE01_LoginPage -INFO - *******TE05_EmployeeApproveTimeSheetSteps TEST END*********
+2024-09-06 15:27:55,907 - com.EmployeeView.stepDefinitions.TE02_CreateTimeSheetSteps -INFO - *******TE02_CreateTimeSheetSteps TEST Execution START*******
+2024-09-06 15:27:55,924 - com.EmployeeViewTimeSheet.page.PE01_LoginPage -INFO - *******PE01_LoginPage TEST Execution START*******
+2024-09-06 15:27:59,127 - com.EmployeeViewTimeSheet.page.PE01_LoginPage -INFO - Entered Username for Employee
+2024-09-06 15:28:00,426 - com.EmployeeViewTimeSheet.page.PE01_LoginPage -INFO - Entered Password for Employee
+2024-09-06 15:28:06,660 - com.EmployeeViewTimeSheet.page.PE01_LoginPage -INFO - Successfully logged into Employee View
+2024-09-06 15:28:15,818 - com.EmployeeViewTimeSheet.page.PE01_LoginPage -INFO - Clicked on TimesheetIcon
+2024-09-06 15:28:28,167 - com.EmployeeViewTimeSheet.page.PE01_LoginPage -INFO - Clicked on previous month arrow and selected the past week date from calendar
+2024-09-06 15:31:42,100 - com.EmployeeViewTimeSheet.page.PE01_LoginPage -INFO - Entered Task Description and Hours
+2024-09-06 15:31:48,417 - com.EmployeeViewTimeSheet.page.PE01_LoginPage -INFO - Clicked on save,submit and confirm button
+2024-09-06 15:31:48,832 - com.EmployeeViewTimeSheet.page.PE01_LoginPage -INFO - validation for Successfully submission of Timesheet
+2024-09-06 15:31:48,832 - com.EmployeeViewTimeSheet.page.PE01_LoginPage -INFO - *******TE02_CreateTimeSheetSteps TEST END*********
+2024-09-06 15:32:00,444 - com.EmployeeView.stepDefinitions.TE06_ManagerLogInForRejectedSteps -INFO - *******TE06_ManagerLogInForRejectedSteps TEST Execution START*******
+2024-09-06 15:32:09,088 - com.EmployeeView.stepDefinitions.TE06_ManagerLogInForRejectedSteps -INFO - Clicked on TimesheetManagement Page
+2024-09-06 15:32:20,445 - com.EmployeeView.stepDefinitions.TE06_ManagerLogInForRejectedSteps -INFO - selected the past week date
+2024-09-06 15:32:20,615 - com.EmployeeView.stepDefinitions.TE06_ManagerLogInForRejectedSteps -INFO - selected the checkbox to Reject Timesheet
+2024-09-06 15:32:22,697 - com.EmployeeView.stepDefinitions.TE06_ManagerLogInForRejectedSteps -INFO - Entered Remarks for Rejection
+2024-09-06 15:32:24,769 - com.EmployeeView.stepDefinitions.TE06_ManagerLogInForRejectedSteps -INFO - clicked on confirm button for rejection
+2024-09-06 15:32:26,771 - com.EmployeeView.stepDefinitions.TE06_ManagerLogInForRejectedSteps -INFO - Rejected the timesheet successfully
+2024-09-06 15:32:31,012 - com.EmployeeView.stepDefinitions.TE06_ManagerLogInForRejectedSteps -INFO - Click On Reject TimesheetPage in manager view
+2024-09-06 15:32:42,429 - com.EmployeeView.stepDefinitions.TE06_ManagerLogInForRejectedSteps -INFO - selected the past week date
+2024-09-06 15:32:44,516 - com.EmployeeView.stepDefinitions.TE06_ManagerLogInForRejectedSteps -INFO - clicked on Expand Arrow for Rejected Timesheet
+2024-09-06 15:32:50,579 - com.EmployeeView.stepDefinitions.TE06_ManagerLogInForRejectedSteps -INFO - successfully done the validation for Reject Timesheet
+2024-09-06 15:32:50,579 - com.EmployeeView.stepDefinitions.TE06_ManagerLogInForRejectedSteps -INFO - *******TE06_ManagerLogInForRejectedSteps TEST END*********
+2024-09-06 15:33:01,621 - com.EmployeeView.stepDefinitions.TE09_EmployeeDraftTimesheetSteps -INFO - *******TE09_EmployeeDraftTimesheetSteps TEST Execution START*******
+2024-09-06 15:33:01,637 - com.EmployeeViewTimeSheet.page.PE01_LoginPage -INFO - *******PE01_LoginPage TEST Execution START*******
+2024-09-06 15:33:04,082 - com.EmployeeViewTimeSheet.page.PE01_LoginPage -INFO - Entered Username for Employee
+2024-09-06 15:33:05,291 - com.EmployeeViewTimeSheet.page.PE01_LoginPage -INFO - Entered Password for Employee
+2024-09-06 15:33:09,214 - com.EmployeeViewTimeSheet.page.PE01_LoginPage -INFO - Successfully logged into Employee View
+2024-09-06 15:33:30,608 - com.EmployeeViewTimeSheet.page.PE01_LoginPage -INFO - Clicked on previous month arrow and selected the past week date from calendar
+2024-09-06 15:33:33,744 - com.EmployeeViewTimeSheet.page.PE01_LoginPage -INFO - Successfully validation of DraftFunctionality
+2024-09-06 15:33:33,745 - com.EmployeeViewTimeSheet.page.PE01_LoginPage -INFO - *******TE09_EmployeeDraftTimesheetSteps TEST END*********
+2024-09-06 15:33:44,644 - com.EmployeeView.stepDefinitions.TE08_EditTimeSheetSteps -INFO - *******TE08_EditTimeSheetSteps TEST Execution START*******
+2024-09-06 15:33:44,662 - com.EmployeeViewTimeSheet.page.PE01_LoginPage -INFO - *******PE01_LoginPage TEST Execution START*******
+2024-09-06 15:33:46,910 - com.EmployeeViewTimeSheet.page.PE01_LoginPage -INFO - Entered Username for Employee
+2024-09-06 15:33:48,213 - com.EmployeeViewTimeSheet.page.PE01_LoginPage -INFO - Entered Password for Employee
+2024-09-06 15:33:51,989 - com.EmployeeViewTimeSheet.page.PE01_LoginPage -INFO - Successfully logged into Employee View
+2024-09-06 15:34:01,166 - com.EmployeeViewTimeSheet.page.PE01_LoginPage -INFO - Clicked on TimesheetIcon
+2024-09-06 15:34:13,483 - com.EmployeeViewTimeSheet.page.PE01_LoginPage -INFO - Clicked on previous month arrow and selected the past week date from calendar
+2024-09-06 15:34:16,768 - com.EmployeeViewTimeSheet.page.PE01_LoginPage -INFO - Clicked On EditIcon 
+2024-09-06 15:35:23,909 - com.EmployeeViewTimeSheet.page.PE01_LoginPage -INFO - Clicked on save button
+2024-09-06 15:35:34,965 - com.EmployeeView.stepDefinitions.TE10_AlreadySubmittedTimesheetSteps -INFO - *******TE10_AlreadySubmittedTimesheetSteps TEST Execution START*******
+2024-09-06 15:35:34,981 - com.EmployeeViewTimeSheet.page.PE01_LoginPage -INFO - *******PE01_LoginPage TEST Execution START*******
+2024-09-06 15:35:37,041 - com.EmployeeViewTimeSheet.page.PE01_LoginPage -INFO - Entered Username for Employee
+2024-09-06 15:35:38,280 - com.EmployeeViewTimeSheet.page.PE01_LoginPage -INFO - Entered Password for Employee
+2024-09-06 15:35:42,228 - com.EmployeeViewTimeSheet.page.PE01_LoginPage -INFO - Successfully logged into Employee View
+2024-09-06 15:35:51,355 - com.EmployeeViewTimeSheet.page.PE01_LoginPage -INFO - Current week has been selected
+2024-09-06 15:35:51,426 - com.EmployeeViewTimeSheet.page.PE01_LoginPage -INFO - validation for Successfully submission of Timesheet
+2024-09-06 15:35:51,426 - com.EmployeeViewTimeSheet.page.PE01_LoginPage -INFO - *******TE10_AlreadySubmittedTimesheetSteps TEST END*********
+2024-09-06 15:36:03,582 - com.EmployeeView.stepDefinitions.TE02_CreateTimeSheetSteps -INFO - *******TE02_CreateTimeSheetSteps TEST Execution START*******
+2024-09-06 15:36:03,609 - com.EmployeeViewTimeSheet.page.PE01_LoginPage -INFO - *******PE01_LoginPage TEST Execution START*******
+2024-09-06 15:36:05,776 - com.EmployeeViewTimeSheet.page.PE01_LoginPage -INFO - Entered Username for Employee
+2024-09-06 15:36:06,999 - com.EmployeeViewTimeSheet.page.PE01_LoginPage -INFO - Entered Password for Employee
+2024-09-06 15:36:10,874 - com.EmployeeViewTimeSheet.page.PE01_LoginPage -INFO - Successfully logged into Employee View
+2024-09-06 15:36:20,043 - com.EmployeeViewTimeSheet.page.PE01_LoginPage -INFO - Clicked on TimesheetIcon
+2024-09-06 15:36:26,264 - com.EmployeeViewTimeSheet.page.PE01_LoginPage -INFO - Future date has been selected
+2024-09-06 15:37:10,782 - com.EmployeeViewTimeSheet.page.PE01_LoginPage -INFO - Entered Task Description and Hours
+2024-09-06 15:37:25,030 - com.EmployeeViewTimeSheet.page.PE01_LoginPage -WARN - Duplicate Task Description
+2024-09-06 15:37:37,204 - com.EmployeeView.stepDefinitions.TE11_ExceedTimesheetValidationSteps -INFO - *******TE11_ExceedTimesheetValidationSteps TEST Execution START*******
+2024-09-06 15:37:37,229 - com.EmployeeViewTimeSheet.page.PE01_LoginPage -INFO - *******PE01_LoginPage TEST Execution START*******
+2024-09-06 15:37:39,500 - com.EmployeeViewTimeSheet.page.PE01_LoginPage -INFO - Entered Username for Employee
+2024-09-06 15:37:40,811 - com.EmployeeViewTimeSheet.page.PE01_LoginPage -INFO - Entered Password for Employee
+2024-09-06 15:37:45,810 - com.EmployeeViewTimeSheet.page.PE01_LoginPage -INFO - Successfully logged into Employee View
+2024-09-06 15:37:54,990 - com.EmployeeViewTimeSheet.page.PE01_LoginPage -INFO - clicked on createTimesheet page
+2024-09-06 15:38:01,214 - com.EmployeeViewTimeSheet.page.PE01_LoginPage -INFO - selected the future week date
+2024-09-06 15:38:45,836 - com.EmployeeViewTimeSheet.page.PE01_LoginPage -INFO - Entered task Description and hours
+2024-09-06 15:38:48,001 - com.EmployeeViewTimeSheet.page.PE01_LoginPage -INFO - click on saveAll button
+2024-09-06 15:38:48,123 - com.EmployeeViewTimeSheet.page.PE01_LoginPage -INFO - Successfully done the validation of PerDay exceeding Hours
+2024-09-06 15:38:48,124 - com.EmployeeViewTimeSheet.page.PE01_LoginPage -INFO - *******TE11_ExceedTimesheetValidationSteps TEST END*********
+2024-09-06 15:38:59,418 - com.EmployeeView.stepDefinitions.TE12_DeleteFutureWeekTimeSheet -INFO - *******TE12_DeleteFutureWeekTimeSheet TEST Execution START*******
+2024-09-06 15:38:59,438 - com.EmployeeViewTimeSheet.page.PE01_LoginPage -INFO - *******PE01_LoginPage TEST Execution START*******
+2024-09-06 15:39:01,788 - com.EmployeeViewTimeSheet.page.PE01_LoginPage -INFO - Entered Username for Employee
+2024-09-06 15:39:03,058 - com.EmployeeViewTimeSheet.page.PE01_LoginPage -INFO - Entered Password for Employee
+2024-09-06 15:39:06,773 - com.EmployeeViewTimeSheet.page.PE01_LoginPage -INFO - Successfully logged into Employee View
+2024-09-06 15:39:15,960 - com.EmployeeViewTimeSheet.page.PE01_LoginPage -INFO - Clicked on Create Timesheet Page
+2024-09-06 15:39:25,190 - com.EmployeeViewTimeSheet.page.PE01_LoginPage -INFO - Selected the Future Week 
+2024-09-06 15:39:46,644 - com.EmployeeView.stepDefinitions.TE04_ManagerLogInForApprovalSteps -INFO - *******TE04_ManagerLogInForApprovalSteps TEST Execution START*******
+2024-09-06 15:39:55,043 - com.EmployeeView.stepDefinitions.TE04_ManagerLogInForApprovalSteps -INFO - Clicked on approved Page
+2024-09-06 15:40:03,247 - com.EmployeeView.stepDefinitions.TE04_ManagerLogInForApprovalSteps -INFO - Selected the current week
+2024-09-06 15:40:08,339 - com.EmployeeView.stepDefinitions.TE04_ManagerLogInForApprovalSteps -INFO - Reject the Timesheet
+2024-09-06 15:40:12,439 - com.EmployeeView.stepDefinitions.TE04_ManagerLogInForApprovalSteps -INFO - Entered Text for Rejection 
+2024-09-06 15:40:12,524 - com.EmployeeView.stepDefinitions.TE04_ManagerLogInForApprovalSteps -INFO - Clicked on Confirm Button
+2024-09-06 15:40:14,536 - com.EmployeeView.stepDefinitions.TE04_ManagerLogInForApprovalSteps -INFO - Successfully Reject the Timesheet
+2024-09-06 15:40:14,536 - com.EmployeeView.stepDefinitions.TE04_ManagerLogInForApprovalSteps -INFO - *******TE04_ManagerLogInForApprovalSteps TEST END*********
+2024-09-06 15:51:29,273 - com.EmployeeView.stepDefinitions.TE01_LoginSteps -INFO - *******TE01_LoginSteps TEST Execution START*******
+2024-09-06 15:51:29,324 - com.EmployeeViewTimeSheet.page.PE01_LoginPage -INFO - *******PE01_LoginPage TEST Execution START*******
+2024-09-06 15:51:31,680 - com.EmployeeViewTimeSheet.page.PE01_LoginPage -INFO - Entered Username for Employee
+2024-09-06 15:51:33,057 - com.EmployeeViewTimeSheet.page.PE01_LoginPage -INFO - Entered Password for Employee
+2024-09-06 15:51:36,940 - com.EmployeeViewTimeSheet.page.PE01_LoginPage -INFO - Successfully logged into Employee View
+2024-09-06 15:51:46,196 - com.EmployeeViewTimeSheet.page.PE01_LoginPage -INFO - *******TE01_LoginSteps TEST END*********
+2024-09-06 15:52:03,494 - com.EmployeeView.stepDefinitions.TE02_CreateTimeSheetSteps -INFO - *******TE02_CreateTimeSheetSteps TEST Execution START*******
+2024-09-06 15:52:03,516 - com.EmployeeViewTimeSheet.page.PE01_LoginPage -INFO - *******PE01_LoginPage TEST Execution START*******
+2024-09-06 15:52:05,742 - com.EmployeeViewTimeSheet.page.PE01_LoginPage -INFO - Entered Username for Employee
+2024-09-06 15:52:07,001 - com.EmployeeViewTimeSheet.page.PE01_LoginPage -INFO - Entered Password for Employee
+2024-09-06 15:52:10,888 - com.EmployeeViewTimeSheet.page.PE01_LoginPage -INFO - Successfully logged into Employee View
+2024-09-06 15:52:20,027 - com.EmployeeViewTimeSheet.page.PE01_LoginPage -INFO - Clicked on TimesheetIcon
+2024-09-06 15:52:20,110 - com.EmployeeViewTimeSheet.page.PE01_LoginPage -INFO - Current week has been selected
+2024-09-06 15:55:32,227 - com.EmployeeViewTimeSheet.page.PE01_LoginPage -INFO - Entered Task Description and Hours
+2024-09-06 15:55:38,514 - com.EmployeeViewTimeSheet.page.PE01_LoginPage -INFO - Clicked on save,submit and confirm button
+2024-09-06 15:55:38,978 - com.EmployeeViewTimeSheet.page.PE01_LoginPage -INFO - validation for Successfully submission of Timesheet
+2024-09-06 15:55:38,980 - com.EmployeeViewTimeSheet.page.PE01_LoginPage -INFO - *******TE02_CreateTimeSheetSteps TEST END*********
+2024-09-06 15:55:50,403 - com.EmployeeView.stepDefinitions.TE03_PendingTimeSheetSteps -INFO - *******TE03_PendingTimeSheetSteps TEST Execution START*******
+2024-09-06 15:55:50,423 - com.EmployeeViewTimeSheet.page.PE01_LoginPage -INFO - *******PE01_LoginPage TEST Execution START*******
+2024-09-06 15:55:52,944 - com.EmployeeViewTimeSheet.page.PE01_LoginPage -INFO - Entered Username for Employee
+2024-09-06 15:55:54,175 - com.EmployeeViewTimeSheet.page.PE01_LoginPage -INFO - Entered Password for Employee
+2024-09-06 15:55:58,139 - com.EmployeeViewTimeSheet.page.PE01_LoginPage -INFO - Successfully logged into Employee View
+2024-09-06 15:56:07,342 - com.EmployeeViewTimeSheet.page.PE01_LoginPage -INFO - clicked on pending icon
+2024-09-06 15:56:09,724 - com.EmployeeViewTimeSheet.page.PE01_LoginPage -INFO - SuccessFully done validation of pending Timesheet
+2024-09-06 15:56:11,738 - com.EmployeeViewTimeSheet.page.PE01_LoginPage -INFO - *******TE03_PendingTimeSheetSteps TEST END*********
+2024-09-06 15:56:22,763 - com.EmployeeView.stepDefinitions.TE04_ManagerLogInForApprovalSteps -INFO - *******TE04_ManagerLogInForApprovalSteps TEST Execution START*******
+2024-09-06 15:56:30,863 - com.EmployeeView.stepDefinitions.TE04_ManagerLogInForApprovalSteps -INFO - Clicked on Timesheet management page
+2024-09-06 15:56:40,148 - com.EmployeeView.stepDefinitions.TE04_ManagerLogInForApprovalSteps -INFO - Selected the current week
+2024-09-06 15:56:43,161 - com.EmployeeView.stepDefinitions.TE04_ManagerLogInForApprovalSteps -INFO - Selected the CurrentWeek
+2024-09-06 15:56:43,330 - com.EmployeeView.stepDefinitions.TE04_ManagerLogInForApprovalSteps -INFO - Approved the Timesheet
+2024-09-06 15:56:45,538 - com.EmployeeView.stepDefinitions.TE04_ManagerLogInForApprovalSteps -INFO - Clicked on approved Page
+2024-09-06 15:56:53,702 - com.EmployeeView.stepDefinitions.TE04_ManagerLogInForApprovalSteps -INFO - Selected the current week
+2024-09-06 15:56:56,757 - com.EmployeeView.stepDefinitions.TE04_ManagerLogInForApprovalSteps -INFO - Clicked on ExpandArrow in approved Page
+2024-09-06 15:57:03,802 - com.EmployeeView.stepDefinitions.TE04_ManagerLogInForApprovalSteps -INFO - successfully done the validation of Approval Timesheet
+2024-09-06 15:57:03,802 - com.EmployeeView.stepDefinitions.TE04_ManagerLogInForApprovalSteps -INFO - *******TE04_ManagerLogInForApprovalSteps TEST END*********
+2024-09-06 15:57:15,163 - com.EmployeeView.stepDefinitions.TE05_EmployeeApproveTimeSheetSteps -INFO - *******TE05_EmployeeApproveTimeSheetSteps TEST Execution START*******
+2024-09-06 15:57:15,183 - com.EmployeeViewTimeSheet.page.PE01_LoginPage -INFO - *******PE01_LoginPage TEST Execution START*******
+2024-09-06 15:57:17,223 - com.EmployeeViewTimeSheet.page.PE01_LoginPage -INFO - Entered Username for Employee
+2024-09-06 15:57:18,446 - com.EmployeeViewTimeSheet.page.PE01_LoginPage -INFO - Entered Password for Employee
+2024-09-06 15:57:22,442 - com.EmployeeViewTimeSheet.page.PE01_LoginPage -INFO - Successfully logged into Employee View
+2024-09-06 15:57:33,710 - com.EmployeeViewTimeSheet.page.PE01_LoginPage -INFO - clicked on Approved page
+2024-09-06 15:57:35,950 - com.EmployeeViewTimeSheet.page.PE01_LoginPage -INFO - sucessFully done the validation of approved Timesheet
+2024-09-06 15:57:35,950 - com.EmployeeViewTimeSheet.page.PE01_LoginPage -INFO - *******TE05_EmployeeApproveTimeSheetSteps TEST END*********
+2024-09-06 15:57:46,847 - com.EmployeeView.stepDefinitions.TE02_CreateTimeSheetSteps -INFO - *******TE02_CreateTimeSheetSteps TEST Execution START*******
+2024-09-06 15:57:46,866 - com.EmployeeViewTimeSheet.page.PE01_LoginPage -INFO - *******PE01_LoginPage TEST Execution START*******
+2024-09-06 15:57:48,819 - com.EmployeeViewTimeSheet.page.PE01_LoginPage -INFO - Entered Username for Employee
+2024-09-06 15:57:50,057 - com.EmployeeViewTimeSheet.page.PE01_LoginPage -INFO - Entered Password for Employee
+2024-09-06 15:57:53,968 - com.EmployeeViewTimeSheet.page.PE01_LoginPage -INFO - Successfully logged into Employee View
+2024-09-06 15:58:03,172 - com.EmployeeViewTimeSheet.page.PE01_LoginPage -INFO - Clicked on TimesheetIcon
+2024-09-06 15:58:15,561 - com.EmployeeViewTimeSheet.page.PE01_LoginPage -INFO - Clicked on previous month arrow and selected the past week date from calendar
+2024-09-06 16:01:28,342 - com.EmployeeViewTimeSheet.page.PE01_LoginPage -INFO - Entered Task Description and Hours
+2024-09-06 16:01:34,631 - com.EmployeeViewTimeSheet.page.PE01_LoginPage -INFO - Clicked on save,submit and confirm button
+2024-09-06 16:01:35,197 - com.EmployeeViewTimeSheet.page.PE01_LoginPage -INFO - validation for Successfully submission of Timesheet
+2024-09-06 16:01:35,198 - com.EmployeeViewTimeSheet.page.PE01_LoginPage -INFO - *******TE02_CreateTimeSheetSteps TEST END*********
+2024-09-06 16:01:46,775 - com.EmployeeView.stepDefinitions.TE06_ManagerLogInForRejectedSteps -INFO - *******TE06_ManagerLogInForRejectedSteps TEST Execution START*******
+2024-09-06 16:01:54,984 - com.EmployeeView.stepDefinitions.TE06_ManagerLogInForRejectedSteps -INFO - Clicked on TimesheetManagement Page
+2024-09-06 16:02:06,307 - com.EmployeeView.stepDefinitions.TE06_ManagerLogInForRejectedSteps -INFO - selected the past week date
+2024-09-06 16:02:06,484 - com.EmployeeView.stepDefinitions.TE06_ManagerLogInForRejectedSteps -INFO - selected the checkbox to Reject Timesheet
+2024-09-06 16:02:08,573 - com.EmployeeView.stepDefinitions.TE06_ManagerLogInForRejectedSteps -INFO - Entered Remarks for Rejection
+2024-09-06 16:02:10,644 - com.EmployeeView.stepDefinitions.TE06_ManagerLogInForRejectedSteps -INFO - clicked on confirm button for rejection
+2024-09-06 16:02:12,657 - com.EmployeeView.stepDefinitions.TE06_ManagerLogInForRejectedSteps -INFO - Rejected the timesheet successfully
+2024-09-06 16:02:16,808 - com.EmployeeView.stepDefinitions.TE06_ManagerLogInForRejectedSteps -INFO - Click On Reject TimesheetPage in manager view
+2024-09-06 16:02:28,149 - com.EmployeeView.stepDefinitions.TE06_ManagerLogInForRejectedSteps -INFO - selected the past week date
+2024-09-06 16:02:30,198 - com.EmployeeView.stepDefinitions.TE06_ManagerLogInForRejectedSteps -INFO - clicked on Expand Arrow for Rejected Timesheet
+2024-09-06 16:02:36,250 - com.EmployeeView.stepDefinitions.TE06_ManagerLogInForRejectedSteps -INFO - successfully done the validation for Reject Timesheet
+2024-09-06 16:02:36,250 - com.EmployeeView.stepDefinitions.TE06_ManagerLogInForRejectedSteps -INFO - *******TE06_ManagerLogInForRejectedSteps TEST END*********
+2024-09-06 16:02:47,715 - com.EmployeeView.stepDefinitions.TE09_EmployeeDraftTimesheetSteps -INFO - *******TE09_EmployeeDraftTimesheetSteps TEST Execution START*******
+2024-09-06 16:02:47,732 - com.EmployeeViewTimeSheet.page.PE01_LoginPage -INFO - *******PE01_LoginPage TEST Execution START*******
+2024-09-06 16:02:50,039 - com.EmployeeViewTimeSheet.page.PE01_LoginPage -INFO - Entered Username for Employee
+2024-09-06 16:02:51,255 - com.EmployeeViewTimeSheet.page.PE01_LoginPage -INFO - Entered Password for Employee
+2024-09-06 16:02:55,062 - com.EmployeeViewTimeSheet.page.PE01_LoginPage -INFO - Successfully logged into Employee View
+2024-09-06 16:03:16,440 - com.EmployeeViewTimeSheet.page.PE01_LoginPage -INFO - Clicked on previous month arrow and selected the past week date from calendar
+2024-09-06 16:03:19,571 - com.EmployeeViewTimeSheet.page.PE01_LoginPage -INFO - Successfully validation of DraftFunctionality
+2024-09-06 16:03:19,572 - com.EmployeeViewTimeSheet.page.PE01_LoginPage -INFO - *******TE09_EmployeeDraftTimesheetSteps TEST END*********
+2024-09-06 16:03:30,431 - com.EmployeeView.stepDefinitions.TE08_EditTimeSheetSteps -INFO - *******TE08_EditTimeSheetSteps TEST Execution START*******
+2024-09-06 16:03:30,459 - com.EmployeeViewTimeSheet.page.PE01_LoginPage -INFO - *******PE01_LoginPage TEST Execution START*******
+2024-09-06 16:03:32,638 - com.EmployeeViewTimeSheet.page.PE01_LoginPage -INFO - Entered Username for Employee
+2024-09-06 16:03:33,882 - com.EmployeeViewTimeSheet.page.PE01_LoginPage -INFO - Entered Password for Employee
+2024-09-06 16:03:37,934 - com.EmployeeViewTimeSheet.page.PE01_LoginPage -INFO - Successfully logged into Employee View
+2024-09-06 16:03:47,107 - com.EmployeeViewTimeSheet.page.PE01_LoginPage -INFO - Clicked on TimesheetIcon
+2024-09-06 16:03:59,442 - com.EmployeeViewTimeSheet.page.PE01_LoginPage -INFO - Clicked on previous month arrow and selected the past week date from calendar
+2024-09-06 16:04:02,759 - com.EmployeeViewTimeSheet.page.PE01_LoginPage -INFO - Clicked On EditIcon 
+2024-09-06 16:05:09,785 - com.EmployeeViewTimeSheet.page.PE01_LoginPage -INFO - Clicked on save button
+2024-09-06 16:05:19,716 - com.EmployeeView.stepDefinitions.TE10_AlreadySubmittedTimesheetSteps -INFO - *******TE10_AlreadySubmittedTimesheetSteps TEST Execution START*******
+2024-09-06 16:05:19,734 - com.EmployeeViewTimeSheet.page.PE01_LoginPage -INFO - *******PE01_LoginPage TEST Execution START*******
+2024-09-06 16:05:22,632 - com.EmployeeViewTimeSheet.page.PE01_LoginPage -INFO - Entered Username for Employee
+2024-09-06 16:05:24,379 - com.EmployeeViewTimeSheet.page.PE01_LoginPage -INFO - Entered Password for Employee
+2024-09-06 16:05:28,248 - com.EmployeeViewTimeSheet.page.PE01_LoginPage -INFO - Successfully logged into Employee View
+2024-09-06 16:05:37,363 - com.EmployeeViewTimeSheet.page.PE01_LoginPage -INFO - Current week has been selected
+2024-09-06 16:05:37,462 - com.EmployeeViewTimeSheet.page.PE01_LoginPage -INFO - validation for Successfully submission of Timesheet
+2024-09-06 16:05:37,462 - com.EmployeeViewTimeSheet.page.PE01_LoginPage -INFO - *******TE10_AlreadySubmittedTimesheetSteps TEST END*********
+2024-09-06 16:05:48,324 - com.EmployeeView.stepDefinitions.TE02_CreateTimeSheetSteps -INFO - *******TE02_CreateTimeSheetSteps TEST Execution START*******
+2024-09-06 16:05:48,341 - com.EmployeeViewTimeSheet.page.PE01_LoginPage -INFO - *******PE01_LoginPage TEST Execution START*******
+2024-09-06 16:05:50,732 - com.EmployeeViewTimeSheet.page.PE01_LoginPage -INFO - Entered Username for Employee
+2024-09-06 16:05:51,955 - com.EmployeeViewTimeSheet.page.PE01_LoginPage -INFO - Entered Password for Employee
+2024-09-06 16:05:55,612 - com.EmployeeViewTimeSheet.page.PE01_LoginPage -INFO - Successfully logged into Employee View
+2024-09-06 16:06:04,787 - com.EmployeeViewTimeSheet.page.PE01_LoginPage -INFO - Clicked on TimesheetIcon
+2024-09-06 16:06:11,021 - com.EmployeeViewTimeSheet.page.PE01_LoginPage -INFO - Future date has been selected
+2024-09-06 16:06:55,254 - com.EmployeeViewTimeSheet.page.PE01_LoginPage -INFO - Entered Task Description and Hours
+2024-09-06 16:07:09,465 - com.EmployeeViewTimeSheet.page.PE01_LoginPage -WARN - Duplicate Task Description
+2024-09-06 16:07:21,196 - com.EmployeeView.stepDefinitions.TE11_ExceedTimesheetValidationSteps -INFO - *******TE11_ExceedTimesheetValidationSteps TEST Execution START*******
+2024-09-06 16:07:21,221 - com.EmployeeViewTimeSheet.page.PE01_LoginPage -INFO - *******PE01_LoginPage TEST Execution START*******
+2024-09-06 16:07:23,567 - com.EmployeeViewTimeSheet.page.PE01_LoginPage -INFO - Entered Username for Employee
+2024-09-06 16:07:24,799 - com.EmployeeViewTimeSheet.page.PE01_LoginPage -INFO - Entered Password for Employee
+2024-09-06 16:07:28,713 - com.EmployeeViewTimeSheet.page.PE01_LoginPage -INFO - Successfully logged into Employee View
+2024-09-06 16:07:37,891 - com.EmployeeViewTimeSheet.page.PE01_LoginPage -INFO - clicked on createTimesheet page
+2024-09-06 16:07:44,159 - com.EmployeeViewTimeSheet.page.PE01_LoginPage -INFO - selected the future week date
+2024-09-06 16:08:28,375 - com.EmployeeViewTimeSheet.page.PE01_LoginPage -INFO - Entered task Description and hours
+2024-09-06 16:08:30,554 - com.EmployeeViewTimeSheet.page.PE01_LoginPage -INFO - click on saveAll button
+2024-09-06 16:08:30,685 - com.EmployeeViewTimeSheet.page.PE01_LoginPage -INFO - Successfully done the validation of PerDay exceeding Hours
+2024-09-06 16:08:30,685 - com.EmployeeViewTimeSheet.page.PE01_LoginPage -INFO - *******TE11_ExceedTimesheetValidationSteps TEST END*********
+2024-09-06 16:08:41,514 - com.EmployeeView.stepDefinitions.TE04_ManagerLogInForApprovalSteps -INFO - *******TE04_ManagerLogInForApprovalSteps TEST Execution START*******
+2024-09-06 16:08:49,509 - com.EmployeeView.stepDefinitions.TE04_ManagerLogInForApprovalSteps -INFO - Clicked on approved Page
+2024-09-06 16:08:57,719 - com.EmployeeView.stepDefinitions.TE04_ManagerLogInForApprovalSteps -INFO - Selected the current week
+2024-09-06 16:09:02,803 - com.EmployeeView.stepDefinitions.TE04_ManagerLogInForApprovalSteps -INFO - Reject the Timesheet
+2024-09-06 16:09:06,904 - com.EmployeeView.stepDefinitions.TE04_ManagerLogInForApprovalSteps -INFO - Entered Text for Rejection 
+2024-09-06 16:09:06,966 - com.EmployeeView.stepDefinitions.TE04_ManagerLogInForApprovalSteps -INFO - Clicked on Confirm Button
+2024-09-06 16:09:08,967 - com.EmployeeView.stepDefinitions.TE04_ManagerLogInForApprovalSteps -INFO - Successfully Reject the Timesheet
+2024-09-06 16:09:08,967 - com.EmployeeView.stepDefinitions.TE04_ManagerLogInForApprovalSteps -INFO - *******TE04_ManagerLogInForApprovalSteps TEST END*********

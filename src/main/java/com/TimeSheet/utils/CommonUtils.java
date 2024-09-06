@@ -96,6 +96,14 @@ public class CommonUtils {
 		explicitlyWaitForElementandClick(element, 2);
 		waitFor(3);
 	}
+	public static WebElement convertIntTOWebElement(WebDriver driver, int i) {
+		waitFor(3);
+		WebElement element = driver.findElement(By.xpath("//*[text()='" + i + "']"));
+	     return element;
+	}
+	public static void Click(WebElement element) {
+		element.click();
+	}
 
 	public static void taskDesccategoryandEnteringHours(WebDriver driver, String Sheet) throws Exception {
 		FileInputStream file = new FileInputStream("TestData/TestData.xlsx");

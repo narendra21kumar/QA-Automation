@@ -2,7 +2,7 @@ Feature:Verify Employee Able To Delete Timesheet For Past Week
  
 	Background:
 			Given Log in As a Employee Role
-  @employee
+  @employeess
 	 Scenario Outline: Verify Employee Able To Delete Timesheet For Past Week
      And Click On Create Timesheet Page
      And Select the Past Week from Calender

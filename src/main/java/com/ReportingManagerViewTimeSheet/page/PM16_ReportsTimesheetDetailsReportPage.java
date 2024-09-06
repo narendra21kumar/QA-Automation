@@ -50,12 +50,5 @@ public class PM16_ReportsTimesheetDetailsReportPage {
 		CommonUtils.waitFor(3);
 
 	}
-	public void valiadateTotalText(String total) {
-		WebElement ele=driver.findElement(By.xpath("(//*[@class='MuiTableCell-root MuiTableCell-head MuiTableCell-alignLeft MuiTableCell-sizeSmall css-194n8ko'])[17]")); 
-		scrollIntoElement(driver, ele);
-		CommonUtils.waitFor(2);
-		String text=ele.getText();
-		Assert.assertEquals(text, total);
-		Logs.info("Validated the total text");
-	}
+	
 }

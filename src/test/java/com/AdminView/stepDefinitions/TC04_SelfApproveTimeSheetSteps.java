@@ -5,7 +5,7 @@ import java.io.IOException;
 import org.openqa.selenium.WebDriver;
 
 import com.AdminViewTimeSheet.page.PA01_LoginPage;
-import com.AdminViewTimeSheet.page.PA08_ApproveSelfTimesheetPage;
+import com.AdminViewTimeSheet.page.PA07_ApproveSelfTimesheetPage;
 import com.TimeSheet.utils.CommonUtils;
 import com.TimeSheet.utils.Logs;
 import com.TimeSheet.utils.WebDriverManager;
@@ -17,7 +17,7 @@ import io.cucumber.java.en.Then;
 public class TC04_SelfApproveTimeSheetSteps {
 	private WebDriver driver;
 	private PA01_LoginPage loginPage;
-	private PA08_ApproveSelfTimesheetPage selfapprovedTimesheetPage;
+	private PA07_ApproveSelfTimesheetPage selfapprovedTimesheetPage;
 
 	@Given("Login as Admin for self approval of Timesheet")
 	public void user_login_to_adminview() {
@@ -25,7 +25,7 @@ public class TC04_SelfApproveTimeSheetSteps {
 		Logs.startTestCase(this.getClass().getSimpleName());
 		driver = WebDriverManager.getDriver();
 		loginPage = new PA01_LoginPage(driver);
-		selfapprovedTimesheetPage = new PA08_ApproveSelfTimesheetPage(driver);
+		selfapprovedTimesheetPage = new PA07_ApproveSelfTimesheetPage(driver);
 		loginPage.doLogIn();
 		loginPage.verifyAccessAccordingToLogin();
 		CommonUtils.printNameOfPages(driver);

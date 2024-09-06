@@ -49,6 +49,7 @@ public class PM19_RejectManagerCurrentWeekTimesheetFromAdminPage {
 		Logs.info("Selected the current week date");
 		Thread.sleep(1000);
 	}
+	
 	public void rejectTimesheet(String empid,String remarks) {
 		WebElement reject=driver.findElement(By.xpath("//*[@title='"+empid+"']/following::td[8]/div/button[@aria-label='Reject Timesheet']"));
 		CommonUtils.explicitlyWaitForElementandClick(reject,10);
@@ -60,7 +61,6 @@ public class PM19_RejectManagerCurrentWeekTimesheetFromAdminPage {
 		CommonUtils.explicitlyWaitForElementandClick(ConformButton, 10);
 		Logs.info("Clicked on confirm button");
 		CommonUtils.waitFor(2);
-		
 	}
 
 }

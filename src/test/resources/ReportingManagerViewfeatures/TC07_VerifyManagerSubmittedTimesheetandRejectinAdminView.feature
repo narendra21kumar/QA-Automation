@@ -11,6 +11,6 @@ Scenario Outline: Admin can be able to verify the manager submitted timesheet an
 				  Then  validate the toast message response  as "<toastmessage>" 
 					
 					Examples:
-					|  empid  |  status			  |remarks|          toastmessage													      |
-					|    189  |  Submitted	  |Test		|			Timesheet rejected successfully!								|
+					|  empid     |  status			  |remarks|          toastmessage													      |
+					|    123451  |  Submitted	    |Test		|			Timesheet rejected successfully!								|
 					 

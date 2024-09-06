@@ -1,5 +1,7 @@
 package com.AdminViewTimeSheet.page;
 
+import java.util.Calendar;
+import java.util.Date;
 import java.util.List;
 
 import org.openqa.selenium.By;
@@ -73,7 +75,6 @@ public class PA04_CreateTimeSheetPage {
 	}
 
 	public void selectcalendar() {
-		CommonUtils.waitFor(3);
 		CommonUtils.explicitlyWaitForElementandClick(calendarStartIcon, 10);
 		CommonUtils.waitFor(3);
 		Logs.info("Clicked on calender start icon");
@@ -129,20 +130,20 @@ public class PA04_CreateTimeSheetPage {
 		Logs.info("successfully verified Timesheet already submitted");
 	}
 
-	public void verifyFromReports(String EmpName, String result) {
-		for (WebElement NamesOfEmployee : listOfEmployeeNames) {
-			String nameOfEmployees = NamesOfEmployee.getText();
-			System.out.println(nameOfEmployees);
-			if (nameOfEmployees.equalsIgnoreCase(EmpName)) {
-				for (WebElement getStatusOfEmp : statusOfEmployeeFromeReports) {
-					String getEmpStatus = getStatusOfEmp.getText();
-					if (getEmpStatus.equalsIgnoreCase(result)) {
-						System.out.println(getEmpStatus);
-					}
-				}
-			}
-		}
-	}
+//	public void verifyFromReports(String EmpName, String result) {
+//		for (WebElement NamesOfEmployee : listOfEmployeeNames) {
+//			String nameOfEmployees = NamesOfEmployee.getText();
+//			System.out.println(nameOfEmployees);
+//			if (nameOfEmployees.equalsIgnoreCase(EmpName)) {
+//				for (WebElement getStatusOfEmp : statusOfEmployeeFromeReports) {
+//					String getEmpStatus = getStatusOfEmp.getText();
+//					if (getEmpStatus.equalsIgnoreCase(result)) {
+//						System.out.println(getEmpStatus);
+//					}
+//				}
+//			}
+//		}
+//	}
 
 	//////////////////////////// 24Hrs Validation//////////////////////////////////
 
@@ -151,10 +152,10 @@ public class PA04_CreateTimeSheetPage {
 		Logs.info("Entered task description and hours for exceeding hours per day");
 	}
 
-	public void moreThan40Hrs() throws Exception {
-		CommonUtils.taskDesccategoryandEnteringHours(driver, "lessThan40Hours@Admin");
-		Logs.info("Entered task description and hours for minimum 40 hours");
-	}
+//	public void moreThan40Hrs() throws Exception {
+//		CommonUtils.taskDesccategoryandEnteringHours(driver, "lessThan40Hours@Admin");
+//		Logs.info("Entered task description and hours for minimum 40 hours");
+//	}
 
 	public void validateHoursvalidation() throws Exception {
 		CommonUtils.explicitlyWaitForElementandClick(saveall, 10);
@@ -163,14 +164,63 @@ public class PA04_CreateTimeSheetPage {
 		Logs.info("successfully verified for exceeding hours per day");
 	}
 
-	public void validationFor40hrs() throws Exception {
-		CommonUtils.explicitlyWaitForElementandClick(saveall, 10);
-		Thread.sleep(3000);
-		CommonUtils.explicitlyWaitForElementandClick(submit, 10);
-		String LessThan40Hrs = lessThanHrsValidation.getText();
-		Assert.assertEquals(LessThan40Hrs, "Minimum 40 hours required to submit the timesheet");
-		Logs.info("successfully verified for minimum 40 hours per week");
+//	public void validationFor40hrs() throws Exception {
+//		CommonUtils.explicitlyWaitForElementandClick(saveall, 10);
+//		Thread.sleep(3000);
+//		CommonUtils.explicitlyWaitForElementandClick(submit, 10);
+//		String LessThan40Hrs = lessThanHrsValidation.getText();
+//		Assert.assertEquals(LessThan40Hrs, "Minimum 40 hours required to submit the timesheet");
+//		Logs.info("successfully verified for minimum 40 hours per week");
+//	}
+
+	public void selectPastWeekDate() throws InterruptedException {
+		Calendar cal = Calendar.getInstance();
+		cal.set(Calendar.DAY_OF_WEEK, Calendar.SUNDAY);
+		cal.add(Calendar.DATE, -7);
+		Date pastDate = cal.getTime();
+		int date = pastDate.getDate();
+		WebElement availableDate = CommonUtils.convertIntTOWebElement(driver, date);
+		// System.out.println(date);
+		// boolean availableDate = true;
+		if (availableDate.isSelected()) {
+			CommonUtils.CalenderSelectWithDate(driver, date);
+			Thread.sleep(3000);
+			Logs.info("Selected the past week date from calendar");
+			System.out.println("if ");
+		} else if (PreviousMonthArrowIcon.isEnabled()) {
+			CommonUtils.explicitlyWaitForElementandClick(PreviousMonthArrowIcon, 10);
+			Thread.sleep(3000);
+			Logs.info("Clicked on previous month arrow and selected the past week date from calendar");
+			CommonUtils.CalenderSelectWithDate(driver, date);
+			System.out.println("past week" + pastDate);
+			Thread.sleep(3000);
+		}
 	}
+
+	public void selectFutureWeekDate() throws InterruptedException {
+		Calendar cal = Calendar.getInstance();
+		cal.set(Calendar.DAY_OF_WEEK, Calendar.SUNDAY);
+		cal.add(Calendar.DATE, 7);
+		Date pastDate = cal.getTime();
+		int date = pastDate.getDate();
+		WebElement availableDate = CommonUtils.convertIntTOWebElement(driver, date);
+		// System.out.println(date);
+		// boolean availableDate = true;
+		if (availableDate.isSelected()) {
+			CommonUtils.CalenderSelectWithDate(driver, date);
+			Thread.sleep(3000);
+			Logs.info("Selected the past week date from calendar");
+			System.out.println("if ");
+		} else if (PreviousMonthArrowIcon.isEnabled()) {
+			CommonUtils.explicitlyWaitForElementandClick(PreviousMonthArrowIcon, 10);
+			Thread.sleep(3000);
+			Logs.info("Clicked on previous month arrow and selected the past week date from calendar");
+			CommonUtils.CalenderSelectWithDate(driver, date);
+			System.out.println("past week" + pastDate);
+			Thread.sleep(3000);
+		}
+	}
+
 //////////////////////////////////////////////////////////////////////////////////////	
 
 }

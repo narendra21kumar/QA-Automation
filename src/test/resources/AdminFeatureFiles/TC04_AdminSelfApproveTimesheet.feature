@@ -1,5 +1,5 @@
 Feature: Navigate to Admin View for Self Approve Timesheet Record
-  @admin
+ @code
   Scenario Outline: Admin should self approve Admin Timesheet
     Given Login as Admin for self approval of Timesheet
     And   Click on Admin Timesheet Management Page Icon
@@ -10,8 +10,8 @@ Feature: Navigate to Admin View for Self Approve Timesheet Record
     #Then Verify the Approved Status based on Employee code for self timesheet "<Date>"
 
     Examples: 
-    |  empId|
-    |   188 |
+    |  empId  |
+    |  123450 |
 
     
  

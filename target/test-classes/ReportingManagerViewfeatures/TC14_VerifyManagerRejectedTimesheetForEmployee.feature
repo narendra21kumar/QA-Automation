@@ -9,4 +9,4 @@ Feature: Verify manager reject timesheet for employee view
     Then Verify the employee rejected timesheet status "<empid>" , "<RejectedText>"
    Examples:
       | empid     		 |RejectedText|
-      | 1087           |Rejected    |
+      | 123451         |Rejected    |

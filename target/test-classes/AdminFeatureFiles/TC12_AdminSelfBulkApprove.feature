@@ -1,5 +1,5 @@
 Feature: Approve Admin self Timesheet Record in Bulk
-  @admin
+  @code
   Scenario: Admin should be able to Approve self Timesheet records in bulk
     Given Login as Admin for self approval of Timesheet
     When  Click on Admin Timesheet Management Page Icon

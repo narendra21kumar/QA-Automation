@@ -10,5 +10,5 @@ Scenario Outline: Reject the manager submitted timesheet from admin view
 				
 					
 					Examples:
-					|	empid	|	remarks	|
-					|	189  	|	Test   	|
+					|	empid	    |	remarks	|
+					|	123451  	|	Test   	|

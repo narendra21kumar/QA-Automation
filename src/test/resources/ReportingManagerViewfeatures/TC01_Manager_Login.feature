@@ -1,6 +1,6 @@
 Feature: Login to Website with Unsafe URL and Launch Page Using Microsoft Account
 
-@manager1
+@manager
   Scenario Outline: User should be able to login to the manager view with valid credentials on timesheet application
   	Given User on the login page and click on continue with microsoft
     When  User click on advanced button

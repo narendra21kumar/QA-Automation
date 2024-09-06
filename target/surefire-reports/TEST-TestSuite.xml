@@ -1,103 +1,825 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" version="3.0.2" name="TestSuite" time="117.543" tests="1" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" version="3.0.2" name="TestSuite" time="1081.047" tests="13" errors="0" skipped="0" failures="0">
   <properties>
-    <property name="sun.desktop" value="windows"/>
-    <property name="awt.toolkit" value="sun.awt.windows.WToolkit"/>
-    <property name="java.specification.version" value="11"/>
+    <property name="java.specification.version" value="17"/>
     <property name="sun.cpu.isalist" value="amd64"/>
     <property name="sun.jnu.encoding" value="Cp1252"/>
-    <property name="java.class.path" value="C:\Users\upperla.sindhu\Desktop\20-08\QA-Automation\target\test-classes;C:\Users\upperla.sindhu\Desktop\20-08\QA-Automation\target\classes;C:\Users\upperla.sindhu\.m2\repository\io\cucumber\cucumber-java\7.15.0\cucumber-java-7.15.0.jar;C:\Users\upperla.sindhu\.m2\repository\org\apiguardian\apiguardian-api\1.1.2\apiguardian-api-1.1.2.jar;C:\Users\upperla.sindhu\.m2\repository\io\cucumber\cucumber-core\7.15.0\cucumber-core-7.15.0.jar;C:\Users\upperla.sindhu\.m2\repository\io\cucumber\cucumber-gherkin\7.15.0\cucumber-gherkin-7.15.0.jar;C:\Users\upperla.sindhu\.m2\repository\io\cucumber\cucumber-gherkin-messages\7.15.0\cucumber-gherkin-messages-7.15.0.jar;C:\Users\upperla.sindhu\.m2\repository\io\cucumber\messages\22.0.0\messages-22.0.0.jar;C:\Users\upperla.sindhu\.m2\repository\io\cucumber\tag-expressions\6.0.0\tag-expressions-6.0.0.jar;C:\Users\upperla.sindhu\.m2\repository\io\cucumber\cucumber-expressions\17.0.1\cucumber-expressions-17.0.1.jar;C:\Users\upperla.sindhu\.m2\repository\io\cucumber\datatable\7.15.0\datatable-7.15.0.jar;C:\Users\upperla.sindhu\.m2\repository\io\cucumber\cucumber-plugin\7.15.0\cucumber-plugin-7.15.0.jar;C:\Users\upperla.sindhu\.m2\repository\io\cucumber\docstring\7.15.0\docstring-7.15.0.jar;C:\Users\upperla.sindhu\.m2\repository\io\cucumber\html-formatter\20.4.0\html-formatter-20.4.0.jar;C:\Users\upperla.sindhu\.m2\repository\io\cucumber\junit-xml-formatter\0.2.0\junit-xml-formatter-0.2.0.jar;C:\Users\upperla.sindhu\.m2\repository\io\cucumber\ci-environment\10.0.0\ci-environment-10.0.0.jar;C:\Users\upperla.sindhu\.m2\repository\io\cucumber\cucumber-junit\7.15.0\cucumber-junit-7.15.0.jar;C:\Users\upperla.sindhu\.m2\repository\org\seleniumhq\selenium\selenium-java\4.18.1\selenium-java-4.18.1.jar;C:\Users\upperla.sindhu\.m2\repository\org\seleniumhq\selenium\selenium-api\4.18.1\selenium-api-4.18.1.jar;C:\Users\upperla.sindhu\.m2\repository\org\seleniumhq\selenium\selenium-chrome-driver\4.18.1\selenium-chrome-driver-4.18.1.jar;C:\Users\upperla.sindhu\.m2\repository\com\google\auto\service\auto-service-annotations\1.1.1\auto-service-annotations-1.1.1.jar;C:\Users\upperla.sindhu\.m2\repository\org\seleniumhq\selenium\selenium-chromium-driver\4.18.1\selenium-chromium-driver-4.18.1.jar;C:\Users\upperla.sindhu\.m2\repository\org\seleniumhq\selenium\selenium-json\4.18.1\selenium-json-4.18.1.jar;C:\Users\upperla.sindhu\.m2\repository\org\seleniumhq\selenium\selenium-manager\4.18.1\selenium-manager-4.18.1.jar;C:\Users\upperla.sindhu\.m2\repository\org\seleniumhq\selenium\selenium-devtools-v120\4.18.1\selenium-devtools-v120-4.18.1.jar;C:\Users\upperla.sindhu\.m2\repository\org\seleniumhq\selenium\selenium-devtools-v121\4.18.1\selenium-devtools-v121-4.18.1.jar;C:\Users\upperla.sindhu\.m2\repository\org\seleniumhq\selenium\selenium-devtools-v122\4.18.1\selenium-devtools-v122-4.18.1.jar;C:\Users\upperla.sindhu\.m2\repository\org\seleniumhq\selenium\selenium-devtools-v85\4.18.1\selenium-devtools-v85-4.18.1.jar;C:\Users\upperla.sindhu\.m2\repository\org\seleniumhq\selenium\selenium-edge-driver\4.18.1\selenium-edge-driver-4.18.1.jar;C:\Users\upperla.sindhu\.m2\repository\org\seleniumhq\selenium\selenium-firefox-driver\4.18.1\selenium-firefox-driver-4.18.1.jar;C:\Users\upperla.sindhu\.m2\repository\org\seleniumhq\selenium\selenium-http\4.18.1\selenium-http-4.18.1.jar;C:\Users\upperla.sindhu\.m2\repository\dev\failsafe\failsafe\3.3.2\failsafe-3.3.2.jar;C:\Users\upperla.sindhu\.m2\repository\org\seleniumhq\selenium\selenium-ie-driver\4.18.1\selenium-ie-driver-4.18.1.jar;C:\Users\upperla.sindhu\.m2\repository\org\seleniumhq\selenium\selenium-remote-driver\4.18.1\selenium-remote-driver-4.18.1.jar;C:\Users\upperla.sindhu\.m2\repository\com\google\guava\guava\33.0.0-jre\guava-33.0.0-jre.jar;C:\Users\upperla.sindhu\.m2\repository\com\google\guava\failureaccess\1.0.2\failureaccess-1.0.2.jar;C:\Users\upperla.sindhu\.m2\repository\com\google\guava\listenablefuture\9999.0-empty-to-avoid-conflict-with-guava\listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar;C:\Users\upperla.sindhu\.m2\repository\org\checkerframework\checker-qual\3.41.0\checker-qual-3.41.0.jar;C:\Users\upperla.sindhu\.m2\repository\com\google\errorprone\error_prone_annotations\2.23.0\error_prone_annotations-2.23.0.jar;C:\Users\upperla.sindhu\.m2\repository\com\google\j2objc\j2objc-annotations\2.8\j2objc-annotations-2.8.jar;C:\Users\upperla.sindhu\.m2\repository\io\opentelemetry\semconv\opentelemetry-semconv\1.23.1-alpha\opentelemetry-semconv-1.23.1-alpha.jar;C:\Users\upperla.sindhu\.m2\repository\io\opentelemetry\opentelemetry-api\1.35.0\opentelemetry-api-1.35.0.jar;C:\Users\upperla.sindhu\.m2\repository\io\opentelemetry\opentelemetry-context\1.35.0\opentelemetry-context-1.35.0.jar;C:\Users\upperla.sindhu\.m2\repository\io\opentelemetry\opentelemetry-exporter-logging\1.35.0\opentelemetry-exporter-logging-1.35.0.jar;C:\Users\upperla.sindhu\.m2\repository\io\opentelemetry\opentelemetry-sdk-common\1.35.0\opentelemetry-sdk-common-1.35.0.jar;C:\Users\upperla.sindhu\.m2\repository\io\opentelemetry\opentelemetry-sdk-extension-autoconfigure-spi\1.35.0\opentelemetry-sdk-extension-autoconfigure-spi-1.35.0.jar;C:\Users\upperla.sindhu\.m2\repository\io\opentelemetry\opentelemetry-sdk-extension-autoconfigure\1.35.0\opentelemetry-sdk-extension-autoconfigure-1.35.0.jar;C:\Users\upperla.sindhu\.m2\repository\io\opentelemetry\opentelemetry-api-events\1.35.0-alpha\opentelemetry-api-events-1.35.0-alpha.jar;C:\Users\upperla.sindhu\.m2\repository\io\opentelemetry\opentelemetry-sdk-trace\1.35.0\opentelemetry-sdk-trace-1.35.0.jar;C:\Users\upperla.sindhu\.m2\repository\io\opentelemetry\opentelemetry-extension-incubator\1.35.0-alpha\opentelemetry-extension-incubator-1.35.0-alpha.jar;C:\Users\upperla.sindhu\.m2\repository\io\opentelemetry\opentelemetry-sdk\1.35.0\opentelemetry-sdk-1.35.0.jar;C:\Users\upperla.sindhu\.m2\repository\io\opentelemetry\opentelemetry-sdk-metrics\1.35.0\opentelemetry-sdk-metrics-1.35.0.jar;C:\Users\upperla.sindhu\.m2\repository\io\opentelemetry\opentelemetry-sdk-logs\1.35.0\opentelemetry-sdk-logs-1.35.0.jar;C:\Users\upperla.sindhu\.m2\repository\net\bytebuddy\byte-buddy\1.14.12\byte-buddy-1.14.12.jar;C:\Users\upperla.sindhu\.m2\repository\org\seleniumhq\selenium\selenium-os\4.18.1\selenium-os-4.18.1.jar;C:\Users\upperla.sindhu\.m2\repository\org\apache\commons\commons-exec\1.3\commons-exec-1.3.jar;C:\Users\upperla.sindhu\.m2\repository\org\seleniumhq\selenium\selenium-safari-driver\4.18.1\selenium-safari-driver-4.18.1.jar;C:\Users\upperla.sindhu\.m2\repository\org\seleniumhq\selenium\selenium-support\4.18.1\selenium-support-4.18.1.jar;C:\Users\upperla.sindhu\.m2\repository\net\masterthought\cucumber-reporting\5.5.0\cucumber-reporting-5.5.0.jar;C:\Users\upperla.sindhu\.m2\repository\com\fasterxml\jackson\core\jackson-databind\2.12.1\jackson-databind-2.12.1.jar;C:\Users\upperla.sindhu\.m2\repository\com\fasterxml\jackson\core\jackson-annotations\2.12.1\jackson-annotations-2.12.1.jar;C:\Users\upperla.sindhu\.m2\repository\com\fasterxml\jackson\core\jackson-core\2.12.1\jackson-core-2.12.1.jar;C:\Users\upperla.sindhu\.m2\repository\com\fasterxml\jackson\datatype\jackson-datatype-jsr310\2.12.1\jackson-datatype-jsr310-2.12.1.jar;C:\Users\upperla.sindhu\.m2\repository\org\apache\velocity\velocity-engine-core\2.2\velocity-engine-core-2.2.jar;C:\Users\upperla.sindhu\.m2\repository\commons-collections\commons-collections\3.2.2\commons-collections-3.2.2.jar;C:\Users\upperla.sindhu\.m2\repository\joda-time\joda-time\2.10.9\joda-time-2.10.9.jar;C:\Users\upperla.sindhu\.m2\repository\org\apache\commons\commons-lang3\3.11\commons-lang3-3.11.jar;C:\Users\upperla.sindhu\.m2\repository\org\codehaus\plexus\plexus-utils\3.3.0\plexus-utils-3.3.0.jar;C:\Users\upperla.sindhu\.m2\repository\org\jsoup\jsoup\1.13.1\jsoup-1.13.1.jar;C:\Users\upperla.sindhu\.m2\repository\com\googlecode\owasp-java-html-sanitizer\owasp-java-html-sanitizer\20200713.1\owasp-java-html-sanitizer-20200713.1.jar;C:\Users\upperla.sindhu\.m2\repository\commons-configuration\commons-configuration\1.10\commons-configuration-1.10.jar;C:\Users\upperla.sindhu\.m2\repository\commons-lang\commons-lang\2.6\commons-lang-2.6.jar;C:\Users\upperla.sindhu\.m2\repository\commons-logging\commons-logging\1.1.1\commons-logging-1.1.1.jar;C:\Users\upperla.sindhu\.m2\repository\com\aventstack\extentreports\5.1.1\extentreports-5.1.1.jar;C:\Users\upperla.sindhu\.m2\repository\io\reactivex\rxjava3\rxjava\3.1.6\rxjava-3.1.6.jar;C:\Users\upperla.sindhu\.m2\repository\org\reactivestreams\reactive-streams\1.0.4\reactive-streams-1.0.4.jar;C:\Users\upperla.sindhu\.m2\repository\org\freemarker\freemarker\2.3.32\freemarker-2.3.32.jar;C:\Users\upperla.sindhu\.m2\repository\org\projectlombok\lombok\1.18.26\lombok-1.18.26.jar;C:\Users\upperla.sindhu\.m2\repository\com\google\code\gson\gson\2.10.1\gson-2.10.1.jar;C:\Users\upperla.sindhu\.m2\repository\tech\grasshopper\extentreports-cucumber7-adapter\1.14.0\extentreports-cucumber7-adapter-1.14.0.jar;C:\Users\upperla.sindhu\.m2\repository\tech\grasshopper\extent-pdf-report\2.12.0\extent-pdf-report-2.12.0.jar;C:\Users\upperla.sindhu\.m2\repository\tech\grasshopper\cucumber-pdf-report\2.14.0\cucumber-pdf-report-2.14.0.jar;C:\Users\upperla.sindhu\.m2\repository\org\apache\pdfbox\pdfbox\2.0.26\pdfbox-2.0.26.jar;C:\Users\upperla.sindhu\.m2\repository\org\apache\pdfbox\fontbox\2.0.26\fontbox-2.0.26.jar;C:\Users\upperla.sindhu\.m2\repository\org\knowm\xchart\xchart\3.8.0\xchart-3.8.0.jar;C:\Users\upperla.sindhu\.m2\repository\de\erichseifert\vectorgraphics2d\VectorGraphics2D\0.13\VectorGraphics2D-0.13.jar;C:\Users\upperla.sindhu\.m2\repository\de\rototor\pdfbox\graphics2d\0.30\graphics2d-0.30.jar;C:\Users\upperla.sindhu\.m2\repository\com\madgag\animated-gif-lib\1.4\animated-gif-lib-1.4.jar;C:\Users\upperla.sindhu\.m2\repository\org\yaml\snakeyaml\2.0\snakeyaml-2.0.jar;C:\Users\upperla.sindhu\.m2\repository\tech\grasshopper\table-layout\1.5.1\table-layout-1.5.1.jar;C:\Users\upperla.sindhu\.m2\repository\tech\grasshopper\rest-assured-cucumber-pdf-report\1.5.0\rest-assured-cucumber-pdf-report-1.5.0.jar;C:\Users\upperla.sindhu\.m2\repository\com\aventstack\klov-reporter\5.1.0\klov-reporter-5.1.0.jar;C:\Users\upperla.sindhu\.m2\repository\org\mongodb\mongodb-driver\3.6.4\mongodb-driver-3.6.4.jar;C:\Users\upperla.sindhu\.m2\repository\org\mongodb\mongodb-driver-core\3.6.4\mongodb-driver-core-3.6.4.jar;C:\Users\upperla.sindhu\.m2\repository\org\mongodb\bson\3.6.4\bson-3.6.4.jar;C:\Users\upperla.sindhu\.m2\repository\org\apache\httpcomponents\httpclient\4.5.13\httpclient-4.5.13.jar;C:\Users\upperla.sindhu\.m2\repository\org\apache\httpcomponents\httpcore\4.4.13\httpcore-4.4.13.jar;C:\Users\upperla.sindhu\.m2\repository\org\apache\httpcomponents\httpmime\4.5.13\httpmime-4.5.13.jar;C:\Users\upperla.sindhu\.m2\repository\tech\grasshopper\htmlextentreporter\1.1.0\htmlextentreporter-1.1.0.jar;C:\Users\upperla.sindhu\.m2\repository\tech\grasshopper\extent-excel-report\1.4.0\extent-excel-report-1.4.0.jar;C:\Users\upperla.sindhu\.m2\repository\org\apache\poi\poi\5.2.3\poi-5.2.3.jar;C:\Users\upperla.sindhu\.m2\repository\org\apache\commons\commons-collections4\4.4\commons-collections4-4.4.jar;C:\Users\upperla.sindhu\.m2\repository\org\apache\commons\commons-math3\3.6.1\commons-math3-3.6.1.jar;C:\Users\upperla.sindhu\.m2\repository\com\zaxxer\SparseBitSet\1.2\SparseBitSet-1.2.jar;C:\Users\upperla.sindhu\.m2\repository\org\apache\poi\poi-ooxml\5.2.3\poi-ooxml-5.2.3.jar;C:\Users\upperla.sindhu\.m2\repository\org\apache\poi\poi-ooxml-lite\5.2.3\poi-ooxml-lite-5.2.3.jar;C:\Users\upperla.sindhu\.m2\repository\org\apache\xmlbeans\xmlbeans\5.1.1\xmlbeans-5.1.1.jar;C:\Users\upperla.sindhu\.m2\repository\com\github\virtuald\curvesapi\1.07\curvesapi-1.07.jar;C:\Users\upperla.sindhu\.m2\repository\commons-io\commons-io\2.11.0\commons-io-2.11.0.jar;C:\Users\upperla.sindhu\.m2\repository\junit\junit\4.13.2\junit-4.13.2.jar;C:\Users\upperla.sindhu\.m2\repository\org\hamcrest\hamcrest-core\1.3\hamcrest-core-1.3.jar;C:\Users\upperla.sindhu\.m2\repository\org\testng\testng\7.6.1\testng-7.6.1.jar;C:\Users\upperla.sindhu\.m2\repository\com\google\code\findbugs\jsr305\3.0.2\jsr305-3.0.2.jar;C:\Users\upperla.sindhu\.m2\repository\org\slf4j\slf4j-api\1.7.36\slf4j-api-1.7.36.jar;C:\Users\upperla.sindhu\.m2\repository\com\beust\jcommander\1.82\jcommander-1.82.jar;C:\Users\upperla.sindhu\.m2\repository\org\webjars\jquery\3.6.0\jquery-3.6.0.jar;C:\Users\upperla.sindhu\.m2\repository\io\cucumber\cucumber-testng\7.17.0\cucumber-testng-7.17.0.jar;C:\Users\upperla.sindhu\.m2\repository\io\github\bonigarcia\webdrivermanager\5.8.0\webdrivermanager-5.8.0.jar;C:\Users\upperla.sindhu\.m2\repository\com\github\docker-java\docker-java\3.3.6\docker-java-3.3.6.jar;C:\Users\upperla.sindhu\.m2\repository\com\github\docker-java\docker-java-core\3.3.6\docker-java-core-3.3.6.jar;C:\Users\upperla.sindhu\.m2\repository\com\github\docker-java\docker-java-api\3.3.6\docker-java-api-3.3.6.jar;C:\Users\upperla.sindhu\.m2\repository\org\bouncycastle\bcpkix-jdk18on\1.76\bcpkix-jdk18on-1.76.jar;C:\Users\upperla.sindhu\.m2\repository\org\bouncycastle\bcprov-jdk18on\1.76\bcprov-jdk18on-1.76.jar;C:\Users\upperla.sindhu\.m2\repository\org\bouncycastle\bcutil-jdk18on\1.76\bcutil-jdk18on-1.76.jar;C:\Users\upperla.sindhu\.m2\repository\org\slf4j\jcl-over-slf4j\1.7.30\jcl-over-slf4j-1.7.30.jar;C:\Users\upperla.sindhu\.m2\repository\com\github\docker-java\docker-java-transport-httpclient5\3.3.6\docker-java-transport-httpclient5-3.3.6.jar;C:\Users\upperla.sindhu\.m2\repository\com\github\docker-java\docker-java-transport\3.3.6\docker-java-transport-3.3.6.jar;C:\Users\upperla.sindhu\.m2\repository\net\java\dev\jna\jna\5.13.0\jna-5.13.0.jar;C:\Users\upperla.sindhu\.m2\repository\org\brotli\dec\0.1.2\dec-0.1.2.jar;C:\Users\upperla.sindhu\.m2\repository\org\apache\commons\commons-compress\1.26.1\commons-compress-1.26.1.jar;C:\Users\upperla.sindhu\.m2\repository\commons-codec\commons-codec\1.16.1\commons-codec-1.16.1.jar;C:\Users\upperla.sindhu\.m2\repository\org\apache\httpcomponents\client5\httpclient5\5.2.1\httpclient5-5.2.1.jar;C:\Users\upperla.sindhu\.m2\repository\org\apache\httpcomponents\core5\httpcore5\5.2\httpcore5-5.2.jar;C:\Users\upperla.sindhu\.m2\repository\org\apache\httpcomponents\core5\httpcore5-h2\5.2\httpcore5-h2-5.2.jar;C:\Users\upperla.sindhu\.m2\repository\log4j\log4j\1.2.17\log4j-1.2.17.jar;C:\Users\upperla.sindhu\.m2\repository\org\apache\logging\log4j\log4j-api\2.19.0\log4j-api-2.19.0.jar;C:\Users\upperla.sindhu\.m2\repository\org\apache\logging\log4j\log4j-core\2.19.0\log4j-core-2.19.0.jar;C:\Users\upperla.sindhu\.m2\repository\io\qameta\allure\allure-cucumber7-jvm\2.28.1\allure-cucumber7-jvm-2.28.1.jar;C:\Users\upperla.sindhu\.m2\repository\io\qameta\allure\allure-java-commons\2.28.1\allure-java-commons-2.28.1.jar;C:\Users\upperla.sindhu\.m2\repository\io\qameta\allure\allure-model\2.28.1\allure-model-2.28.1.jar;C:\Users\upperla.sindhu\.m2\repository\io\cucumber\gherkin\26.2.0\gherkin-26.2.0.jar;"/>
-    <property name="java.vm.vendor" value="Oracle Corporation"/>
+    <property name="java.class.path" value="C:\Users\Jampana.Ramya\eclipse-workspace\QA-Automation\QA-Automation\target\test-classes;C:\Users\Jampana.Ramya\eclipse-workspace\QA-Automation\QA-Automation\target\classes;C:\Users\Jampana.Ramya\.m2\repository\io\cucumber\cucumber-java\7.15.0\cucumber-java-7.15.0.jar;C:\Users\Jampana.Ramya\.m2\repository\org\apiguardian\apiguardian-api\1.1.2\apiguardian-api-1.1.2.jar;C:\Users\Jampana.Ramya\.m2\repository\io\cucumber\cucumber-core\7.15.0\cucumber-core-7.15.0.jar;C:\Users\Jampana.Ramya\.m2\repository\io\cucumber\cucumber-gherkin\7.15.0\cucumber-gherkin-7.15.0.jar;C:\Users\Jampana.Ramya\.m2\repository\io\cucumber\cucumber-gherkin-messages\7.15.0\cucumber-gherkin-messages-7.15.0.jar;C:\Users\Jampana.Ramya\.m2\repository\io\cucumber\messages\22.0.0\messages-22.0.0.jar;C:\Users\Jampana.Ramya\.m2\repository\io\cucumber\tag-expressions\6.0.0\tag-expressions-6.0.0.jar;C:\Users\Jampana.Ramya\.m2\repository\io\cucumber\cucumber-expressions\17.0.1\cucumber-expressions-17.0.1.jar;C:\Users\Jampana.Ramya\.m2\repository\io\cucumber\datatable\7.15.0\datatable-7.15.0.jar;C:\Users\Jampana.Ramya\.m2\repository\io\cucumber\cucumber-plugin\7.15.0\cucumber-plugin-7.15.0.jar;C:\Users\Jampana.Ramya\.m2\repository\io\cucumber\docstring\7.15.0\docstring-7.15.0.jar;C:\Users\Jampana.Ramya\.m2\repository\io\cucumber\html-formatter\20.4.0\html-formatter-20.4.0.jar;C:\Users\Jampana.Ramya\.m2\repository\io\cucumber\junit-xml-formatter\0.2.0\junit-xml-formatter-0.2.0.jar;C:\Users\Jampana.Ramya\.m2\repository\io\cucumber\ci-environment\10.0.0\ci-environment-10.0.0.jar;C:\Users\Jampana.Ramya\.m2\repository\io\cucumber\cucumber-junit\7.15.0\cucumber-junit-7.15.0.jar;C:\Users\Jampana.Ramya\.m2\repository\org\seleniumhq\selenium\selenium-java\4.18.1\selenium-java-4.18.1.jar;C:\Users\Jampana.Ramya\.m2\repository\org\seleniumhq\selenium\selenium-api\4.18.1\selenium-api-4.18.1.jar;C:\Users\Jampana.Ramya\.m2\repository\org\seleniumhq\selenium\selenium-chrome-driver\4.18.1\selenium-chrome-driver-4.18.1.jar;C:\Users\Jampana.Ramya\.m2\repository\com\google\auto\service\auto-service-annotations\1.1.1\auto-service-annotations-1.1.1.jar;C:\Users\Jampana.Ramya\.m2\repository\org\seleniumhq\selenium\selenium-chromium-driver\4.18.1\selenium-chromium-driver-4.18.1.jar;C:\Users\Jampana.Ramya\.m2\repository\org\seleniumhq\selenium\selenium-json\4.18.1\selenium-json-4.18.1.jar;C:\Users\Jampana.Ramya\.m2\repository\org\seleniumhq\selenium\selenium-manager\4.18.1\selenium-manager-4.18.1.jar;C:\Users\Jampana.Ramya\.m2\repository\org\seleniumhq\selenium\selenium-devtools-v120\4.18.1\selenium-devtools-v120-4.18.1.jar;C:\Users\Jampana.Ramya\.m2\repository\org\seleniumhq\selenium\selenium-devtools-v121\4.18.1\selenium-devtools-v121-4.18.1.jar;C:\Users\Jampana.Ramya\.m2\repository\org\seleniumhq\selenium\selenium-devtools-v122\4.18.1\selenium-devtools-v122-4.18.1.jar;C:\Users\Jampana.Ramya\.m2\repository\org\seleniumhq\selenium\selenium-devtools-v85\4.18.1\selenium-devtools-v85-4.18.1.jar;C:\Users\Jampana.Ramya\.m2\repository\org\seleniumhq\selenium\selenium-edge-driver\4.18.1\selenium-edge-driver-4.18.1.jar;C:\Users\Jampana.Ramya\.m2\repository\org\seleniumhq\selenium\selenium-firefox-driver\4.18.1\selenium-firefox-driver-4.18.1.jar;C:\Users\Jampana.Ramya\.m2\repository\org\seleniumhq\selenium\selenium-http\4.18.1\selenium-http-4.18.1.jar;C:\Users\Jampana.Ramya\.m2\repository\dev\failsafe\failsafe\3.3.2\failsafe-3.3.2.jar;C:\Users\Jampana.Ramya\.m2\repository\org\seleniumhq\selenium\selenium-ie-driver\4.18.1\selenium-ie-driver-4.18.1.jar;C:\Users\Jampana.Ramya\.m2\repository\org\seleniumhq\selenium\selenium-remote-driver\4.18.1\selenium-remote-driver-4.18.1.jar;C:\Users\Jampana.Ramya\.m2\repository\com\google\guava\guava\33.0.0-jre\guava-33.0.0-jre.jar;C:\Users\Jampana.Ramya\.m2\repository\com\google\guava\failureaccess\1.0.2\failureaccess-1.0.2.jar;C:\Users\Jampana.Ramya\.m2\repository\com\google\guava\listenablefuture\9999.0-empty-to-avoid-conflict-with-guava\listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar;C:\Users\Jampana.Ramya\.m2\repository\org\checkerframework\checker-qual\3.41.0\checker-qual-3.41.0.jar;C:\Users\Jampana.Ramya\.m2\repository\com\google\errorprone\error_prone_annotations\2.23.0\error_prone_annotations-2.23.0.jar;C:\Users\Jampana.Ramya\.m2\repository\com\google\j2objc\j2objc-annotations\2.8\j2objc-annotations-2.8.jar;C:\Users\Jampana.Ramya\.m2\repository\io\opentelemetry\semconv\opentelemetry-semconv\1.23.1-alpha\opentelemetry-semconv-1.23.1-alpha.jar;C:\Users\Jampana.Ramya\.m2\repository\io\opentelemetry\opentelemetry-api\1.35.0\opentelemetry-api-1.35.0.jar;C:\Users\Jampana.Ramya\.m2\repository\io\opentelemetry\opentelemetry-context\1.35.0\opentelemetry-context-1.35.0.jar;C:\Users\Jampana.Ramya\.m2\repository\io\opentelemetry\opentelemetry-exporter-logging\1.35.0\opentelemetry-exporter-logging-1.35.0.jar;C:\Users\Jampana.Ramya\.m2\repository\io\opentelemetry\opentelemetry-sdk-common\1.35.0\opentelemetry-sdk-common-1.35.0.jar;C:\Users\Jampana.Ramya\.m2\repository\io\opentelemetry\opentelemetry-sdk-extension-autoconfigure-spi\1.35.0\opentelemetry-sdk-extension-autoconfigure-spi-1.35.0.jar;C:\Users\Jampana.Ramya\.m2\repository\io\opentelemetry\opentelemetry-sdk-extension-autoconfigure\1.35.0\opentelemetry-sdk-extension-autoconfigure-1.35.0.jar;C:\Users\Jampana.Ramya\.m2\repository\io\opentelemetry\opentelemetry-api-events\1.35.0-alpha\opentelemetry-api-events-1.35.0-alpha.jar;C:\Users\Jampana.Ramya\.m2\repository\io\opentelemetry\opentelemetry-sdk-trace\1.35.0\opentelemetry-sdk-trace-1.35.0.jar;C:\Users\Jampana.Ramya\.m2\repository\io\opentelemetry\opentelemetry-extension-incubator\1.35.0-alpha\opentelemetry-extension-incubator-1.35.0-alpha.jar;C:\Users\Jampana.Ramya\.m2\repository\io\opentelemetry\opentelemetry-sdk\1.35.0\opentelemetry-sdk-1.35.0.jar;C:\Users\Jampana.Ramya\.m2\repository\io\opentelemetry\opentelemetry-sdk-metrics\1.35.0\opentelemetry-sdk-metrics-1.35.0.jar;C:\Users\Jampana.Ramya\.m2\repository\io\opentelemetry\opentelemetry-sdk-logs\1.35.0\opentelemetry-sdk-logs-1.35.0.jar;C:\Users\Jampana.Ramya\.m2\repository\net\bytebuddy\byte-buddy\1.14.12\byte-buddy-1.14.12.jar;C:\Users\Jampana.Ramya\.m2\repository\org\seleniumhq\selenium\selenium-os\4.18.1\selenium-os-4.18.1.jar;C:\Users\Jampana.Ramya\.m2\repository\org\apache\commons\commons-exec\1.3\commons-exec-1.3.jar;C:\Users\Jampana.Ramya\.m2\repository\org\seleniumhq\selenium\selenium-safari-driver\4.18.1\selenium-safari-driver-4.18.1.jar;C:\Users\Jampana.Ramya\.m2\repository\org\seleniumhq\selenium\selenium-support\4.18.1\selenium-support-4.18.1.jar;C:\Users\Jampana.Ramya\.m2\repository\net\masterthought\cucumber-reporting\5.5.0\cucumber-reporting-5.5.0.jar;C:\Users\Jampana.Ramya\.m2\repository\com\fasterxml\jackson\core\jackson-databind\2.12.1\jackson-databind-2.12.1.jar;C:\Users\Jampana.Ramya\.m2\repository\com\fasterxml\jackson\core\jackson-annotations\2.12.1\jackson-annotations-2.12.1.jar;C:\Users\Jampana.Ramya\.m2\repository\com\fasterxml\jackson\core\jackson-core\2.12.1\jackson-core-2.12.1.jar;C:\Users\Jampana.Ramya\.m2\repository\com\fasterxml\jackson\datatype\jackson-datatype-jsr310\2.12.1\jackson-datatype-jsr310-2.12.1.jar;C:\Users\Jampana.Ramya\.m2\repository\org\apache\velocity\velocity-engine-core\2.2\velocity-engine-core-2.2.jar;C:\Users\Jampana.Ramya\.m2\repository\commons-collections\commons-collections\3.2.2\commons-collections-3.2.2.jar;C:\Users\Jampana.Ramya\.m2\repository\joda-time\joda-time\2.10.9\joda-time-2.10.9.jar;C:\Users\Jampana.Ramya\.m2\repository\org\apache\commons\commons-lang3\3.11\commons-lang3-3.11.jar;C:\Users\Jampana.Ramya\.m2\repository\org\codehaus\plexus\plexus-utils\3.3.0\plexus-utils-3.3.0.jar;C:\Users\Jampana.Ramya\.m2\repository\org\jsoup\jsoup\1.13.1\jsoup-1.13.1.jar;C:\Users\Jampana.Ramya\.m2\repository\com\googlecode\owasp-java-html-sanitizer\owasp-java-html-sanitizer\20200713.1\owasp-java-html-sanitizer-20200713.1.jar;C:\Users\Jampana.Ramya\.m2\repository\commons-configuration\commons-configuration\1.10\commons-configuration-1.10.jar;C:\Users\Jampana.Ramya\.m2\repository\commons-lang\commons-lang\2.6\commons-lang-2.6.jar;C:\Users\Jampana.Ramya\.m2\repository\commons-logging\commons-logging\1.1.1\commons-logging-1.1.1.jar;C:\Users\Jampana.Ramya\.m2\repository\com\aventstack\extentreports\5.1.1\extentreports-5.1.1.jar;C:\Users\Jampana.Ramya\.m2\repository\io\reactivex\rxjava3\rxjava\3.1.6\rxjava-3.1.6.jar;C:\Users\Jampana.Ramya\.m2\repository\org\reactivestreams\reactive-streams\1.0.4\reactive-streams-1.0.4.jar;C:\Users\Jampana.Ramya\.m2\repository\org\freemarker\freemarker\2.3.32\freemarker-2.3.32.jar;C:\Users\Jampana.Ramya\.m2\repository\org\projectlombok\lombok\1.18.26\lombok-1.18.26.jar;C:\Users\Jampana.Ramya\.m2\repository\com\google\code\gson\gson\2.10.1\gson-2.10.1.jar;C:\Users\Jampana.Ramya\.m2\repository\tech\grasshopper\extentreports-cucumber7-adapter\1.14.0\extentreports-cucumber7-adapter-1.14.0.jar;C:\Users\Jampana.Ramya\.m2\repository\tech\grasshopper\extent-pdf-report\2.12.0\extent-pdf-report-2.12.0.jar;C:\Users\Jampana.Ramya\.m2\repository\tech\grasshopper\cucumber-pdf-report\2.14.0\cucumber-pdf-report-2.14.0.jar;C:\Users\Jampana.Ramya\.m2\repository\org\apache\pdfbox\pdfbox\2.0.26\pdfbox-2.0.26.jar;C:\Users\Jampana.Ramya\.m2\repository\org\apache\pdfbox\fontbox\2.0.26\fontbox-2.0.26.jar;C:\Users\Jampana.Ramya\.m2\repository\org\knowm\xchart\xchart\3.8.0\xchart-3.8.0.jar;C:\Users\Jampana.Ramya\.m2\repository\de\erichseifert\vectorgraphics2d\VectorGraphics2D\0.13\VectorGraphics2D-0.13.jar;C:\Users\Jampana.Ramya\.m2\repository\de\rototor\pdfbox\graphics2d\0.30\graphics2d-0.30.jar;C:\Users\Jampana.Ramya\.m2\repository\com\madgag\animated-gif-lib\1.4\animated-gif-lib-1.4.jar;C:\Users\Jampana.Ramya\.m2\repository\org\yaml\snakeyaml\2.0\snakeyaml-2.0.jar;C:\Users\Jampana.Ramya\.m2\repository\tech\grasshopper\table-layout\1.5.1\table-layout-1.5.1.jar;C:\Users\Jampana.Ramya\.m2\repository\tech\grasshopper\rest-assured-cucumber-pdf-report\1.5.0\rest-assured-cucumber-pdf-report-1.5.0.jar;C:\Users\Jampana.Ramya\.m2\repository\com\aventstack\klov-reporter\5.1.0\klov-reporter-5.1.0.jar;C:\Users\Jampana.Ramya\.m2\repository\org\mongodb\mongodb-driver\3.6.4\mongodb-driver-3.6.4.jar;C:\Users\Jampana.Ramya\.m2\repository\org\mongodb\mongodb-driver-core\3.6.4\mongodb-driver-core-3.6.4.jar;C:\Users\Jampana.Ramya\.m2\repository\org\mongodb\bson\3.6.4\bson-3.6.4.jar;C:\Users\Jampana.Ramya\.m2\repository\org\apache\httpcomponents\httpclient\4.5.13\httpclient-4.5.13.jar;C:\Users\Jampana.Ramya\.m2\repository\org\apache\httpcomponents\httpcore\4.4.13\httpcore-4.4.13.jar;C:\Users\Jampana.Ramya\.m2\repository\org\apache\httpcomponents\httpmime\4.5.13\httpmime-4.5.13.jar;C:\Users\Jampana.Ramya\.m2\repository\tech\grasshopper\htmlextentreporter\1.1.0\htmlextentreporter-1.1.0.jar;C:\Users\Jampana.Ramya\.m2\repository\tech\grasshopper\extent-excel-report\1.4.0\extent-excel-report-1.4.0.jar;C:\Users\Jampana.Ramya\.m2\repository\org\apache\poi\poi\5.2.3\poi-5.2.3.jar;C:\Users\Jampana.Ramya\.m2\repository\org\apache\commons\commons-collections4\4.4\commons-collections4-4.4.jar;C:\Users\Jampana.Ramya\.m2\repository\org\apache\commons\commons-math3\3.6.1\commons-math3-3.6.1.jar;C:\Users\Jampana.Ramya\.m2\repository\com\zaxxer\SparseBitSet\1.2\SparseBitSet-1.2.jar;C:\Users\Jampana.Ramya\.m2\repository\org\apache\poi\poi-ooxml\5.2.3\poi-ooxml-5.2.3.jar;C:\Users\Jampana.Ramya\.m2\repository\org\apache\poi\poi-ooxml-lite\5.2.3\poi-ooxml-lite-5.2.3.jar;C:\Users\Jampana.Ramya\.m2\repository\org\apache\xmlbeans\xmlbeans\5.1.1\xmlbeans-5.1.1.jar;C:\Users\Jampana.Ramya\.m2\repository\com\github\virtuald\curvesapi\1.07\curvesapi-1.07.jar;C:\Users\Jampana.Ramya\.m2\repository\commons-io\commons-io\2.11.0\commons-io-2.11.0.jar;C:\Users\Jampana.Ramya\.m2\repository\junit\junit\4.13.2\junit-4.13.2.jar;C:\Users\Jampana.Ramya\.m2\repository\org\hamcrest\hamcrest-core\1.3\hamcrest-core-1.3.jar;C:\Users\Jampana.Ramya\.m2\repository\org\testng\testng\7.6.1\testng-7.6.1.jar;C:\Users\Jampana.Ramya\.m2\repository\com\google\code\findbugs\jsr305\3.0.2\jsr305-3.0.2.jar;C:\Users\Jampana.Ramya\.m2\repository\org\slf4j\slf4j-api\1.7.36\slf4j-api-1.7.36.jar;C:\Users\Jampana.Ramya\.m2\repository\com\beust\jcommander\1.82\jcommander-1.82.jar;C:\Users\Jampana.Ramya\.m2\repository\org\webjars\jquery\3.6.0\jquery-3.6.0.jar;C:\Users\Jampana.Ramya\.m2\repository\io\cucumber\cucumber-testng\7.17.0\cucumber-testng-7.17.0.jar;C:\Users\Jampana.Ramya\.m2\repository\io\github\bonigarcia\webdrivermanager\5.8.0\webdrivermanager-5.8.0.jar;C:\Users\Jampana.Ramya\.m2\repository\com\github\docker-java\docker-java\3.3.6\docker-java-3.3.6.jar;C:\Users\Jampana.Ramya\.m2\repository\com\github\docker-java\docker-java-core\3.3.6\docker-java-core-3.3.6.jar;C:\Users\Jampana.Ramya\.m2\repository\com\github\docker-java\docker-java-api\3.3.6\docker-java-api-3.3.6.jar;C:\Users\Jampana.Ramya\.m2\repository\org\bouncycastle\bcpkix-jdk18on\1.76\bcpkix-jdk18on-1.76.jar;C:\Users\Jampana.Ramya\.m2\repository\org\bouncycastle\bcprov-jdk18on\1.76\bcprov-jdk18on-1.76.jar;C:\Users\Jampana.Ramya\.m2\repository\org\bouncycastle\bcutil-jdk18on\1.76\bcutil-jdk18on-1.76.jar;C:\Users\Jampana.Ramya\.m2\repository\org\slf4j\jcl-over-slf4j\1.7.30\jcl-over-slf4j-1.7.30.jar;C:\Users\Jampana.Ramya\.m2\repository\com\github\docker-java\docker-java-transport-httpclient5\3.3.6\docker-java-transport-httpclient5-3.3.6.jar;C:\Users\Jampana.Ramya\.m2\repository\com\github\docker-java\docker-java-transport\3.3.6\docker-java-transport-3.3.6.jar;C:\Users\Jampana.Ramya\.m2\repository\net\java\dev\jna\jna\5.13.0\jna-5.13.0.jar;C:\Users\Jampana.Ramya\.m2\repository\org\brotli\dec\0.1.2\dec-0.1.2.jar;C:\Users\Jampana.Ramya\.m2\repository\org\apache\commons\commons-compress\1.26.1\commons-compress-1.26.1.jar;C:\Users\Jampana.Ramya\.m2\repository\commons-codec\commons-codec\1.16.1\commons-codec-1.16.1.jar;C:\Users\Jampana.Ramya\.m2\repository\org\apache\httpcomponents\client5\httpclient5\5.2.1\httpclient5-5.2.1.jar;C:\Users\Jampana.Ramya\.m2\repository\org\apache\httpcomponents\core5\httpcore5\5.2\httpcore5-5.2.jar;C:\Users\Jampana.Ramya\.m2\repository\org\apache\httpcomponents\core5\httpcore5-h2\5.2\httpcore5-h2-5.2.jar;C:\Users\Jampana.Ramya\.m2\repository\log4j\log4j\1.2.17\log4j-1.2.17.jar;C:\Users\Jampana.Ramya\.m2\repository\org\apache\logging\log4j\log4j-api\2.19.0\log4j-api-2.19.0.jar;C:\Users\Jampana.Ramya\.m2\repository\org\apache\logging\log4j\log4j-core\2.19.0\log4j-core-2.19.0.jar;C:\Users\Jampana.Ramya\.m2\repository\io\qameta\allure\allure-cucumber7-jvm\2.28.1\allure-cucumber7-jvm-2.28.1.jar;C:\Users\Jampana.Ramya\.m2\repository\io\qameta\allure\allure-java-commons\2.28.1\allure-java-commons-2.28.1.jar;C:\Users\Jampana.Ramya\.m2\repository\io\qameta\allure\allure-model\2.28.1\allure-model-2.28.1.jar;C:\Users\Jampana.Ramya\.m2\repository\io\cucumber\gherkin\26.2.0\gherkin-26.2.0.jar;"/>
+    <property name="java.vm.vendor" value="Eclipse Adoptium"/>
     <property name="sun.arch.data.model" value="64"/>
     <property name="user.variant" value=""/>
-    <property name="java.vendor.url" value="https://openjdk.java.net/"/>
+    <property name="java.vendor.url" value="https://adoptium.net/"/>
     <property name="user.timezone" value="Asia/Calcutta"/>
-    <property name="java.vm.specification.version" value="11"/>
     <property name="os.name" value="Windows 10"/>
+    <property name="java.vm.specification.version" value="17"/>
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="user.country" value="IN"/>
-    <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk-11\bin"/>
-    <property name="sun.java.command" value="C:\Users\upperla.sindhu\AppData\Local\Temp\surefire3382234011267658516\surefirebooter-20240821190925035_3.jar C:\Users\upperla.sindhu\AppData\Local\Temp\surefire3382234011267658516 2024-08-21T19-09-22_987-jvmRun1 surefire-20240821190925035_1tmp surefire_0-20240821190925035_2tmp"/>
+    <property name="sun.boot.library.path" value="C:\Users\Jampana.Ramya\.p2\pool\plugins\org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_17.0.10.v20240120-1143\jre\bin"/>
+    <property name="sun.java.command" value="C:\Users\Jampana.Ramya\AppData\Local\Temp\surefire8332716093315646120\surefirebooter-20240906155117088_3.jar C:\Users\Jampana.Ramya\AppData\Local\Temp\surefire8332716093315646120 2024-09-06T15-51-16_865-jvmRun1 surefire-20240906155117088_1tmp surefire_0-20240906155117088_2tmp"/>
     <property name="jdk.debug" value="release"/>
-    <property name="surefire.test.class.path" value="C:\Users\upperla.sindhu\Desktop\20-08\QA-Automation\target\test-classes;C:\Users\upperla.sindhu\Desktop\20-08\QA-Automation\target\classes;C:\Users\upperla.sindhu\.m2\repository\io\cucumber\cucumber-java\7.15.0\cucumber-java-7.15.0.jar;C:\Users\upperla.sindhu\.m2\repository\org\apiguardian\apiguardian-api\1.1.2\apiguardian-api-1.1.2.jar;C:\Users\upperla.sindhu\.m2\repository\io\cucumber\cucumber-core\7.15.0\cucumber-core-7.15.0.jar;C:\Users\upperla.sindhu\.m2\repository\io\cucumber\cucumber-gherkin\7.15.0\cucumber-gherkin-7.15.0.jar;C:\Users\upperla.sindhu\.m2\repository\io\cucumber\cucumber-gherkin-messages\7.15.0\cucumber-gherkin-messages-7.15.0.jar;C:\Users\upperla.sindhu\.m2\repository\io\cucumber\messages\22.0.0\messages-22.0.0.jar;C:\Users\upperla.sindhu\.m2\repository\io\cucumber\tag-expressions\6.0.0\tag-expressions-6.0.0.jar;C:\Users\upperla.sindhu\.m2\repository\io\cucumber\cucumber-expressions\17.0.1\cucumber-expressions-17.0.1.jar;C:\Users\upperla.sindhu\.m2\repository\io\cucumber\datatable\7.15.0\datatable-7.15.0.jar;C:\Users\upperla.sindhu\.m2\repository\io\cucumber\cucumber-plugin\7.15.0\cucumber-plugin-7.15.0.jar;C:\Users\upperla.sindhu\.m2\repository\io\cucumber\docstring\7.15.0\docstring-7.15.0.jar;C:\Users\upperla.sindhu\.m2\repository\io\cucumber\html-formatter\20.4.0\html-formatter-20.4.0.jar;C:\Users\upperla.sindhu\.m2\repository\io\cucumber\junit-xml-formatter\0.2.0\junit-xml-formatter-0.2.0.jar;C:\Users\upperla.sindhu\.m2\repository\io\cucumber\ci-environment\10.0.0\ci-environment-10.0.0.jar;C:\Users\upperla.sindhu\.m2\repository\io\cucumber\cucumber-junit\7.15.0\cucumber-junit-7.15.0.jar;C:\Users\upperla.sindhu\.m2\repository\org\seleniumhq\selenium\selenium-java\4.18.1\selenium-java-4.18.1.jar;C:\Users\upperla.sindhu\.m2\repository\org\seleniumhq\selenium\selenium-api\4.18.1\selenium-api-4.18.1.jar;C:\Users\upperla.sindhu\.m2\repository\org\seleniumhq\selenium\selenium-chrome-driver\4.18.1\selenium-chrome-driver-4.18.1.jar;C:\Users\upperla.sindhu\.m2\repository\com\google\auto\service\auto-service-annotations\1.1.1\auto-service-annotations-1.1.1.jar;C:\Users\upperla.sindhu\.m2\repository\org\seleniumhq\selenium\selenium-chromium-driver\4.18.1\selenium-chromium-driver-4.18.1.jar;C:\Users\upperla.sindhu\.m2\repository\org\seleniumhq\selenium\selenium-json\4.18.1\selenium-json-4.18.1.jar;C:\Users\upperla.sindhu\.m2\repository\org\seleniumhq\selenium\selenium-manager\4.18.1\selenium-manager-4.18.1.jar;C:\Users\upperla.sindhu\.m2\repository\org\seleniumhq\selenium\selenium-devtools-v120\4.18.1\selenium-devtools-v120-4.18.1.jar;C:\Users\upperla.sindhu\.m2\repository\org\seleniumhq\selenium\selenium-devtools-v121\4.18.1\selenium-devtools-v121-4.18.1.jar;C:\Users\upperla.sindhu\.m2\repository\org\seleniumhq\selenium\selenium-devtools-v122\4.18.1\selenium-devtools-v122-4.18.1.jar;C:\Users\upperla.sindhu\.m2\repository\org\seleniumhq\selenium\selenium-devtools-v85\4.18.1\selenium-devtools-v85-4.18.1.jar;C:\Users\upperla.sindhu\.m2\repository\org\seleniumhq\selenium\selenium-edge-driver\4.18.1\selenium-edge-driver-4.18.1.jar;C:\Users\upperla.sindhu\.m2\repository\org\seleniumhq\selenium\selenium-firefox-driver\4.18.1\selenium-firefox-driver-4.18.1.jar;C:\Users\upperla.sindhu\.m2\repository\org\seleniumhq\selenium\selenium-http\4.18.1\selenium-http-4.18.1.jar;C:\Users\upperla.sindhu\.m2\repository\dev\failsafe\failsafe\3.3.2\failsafe-3.3.2.jar;C:\Users\upperla.sindhu\.m2\repository\org\seleniumhq\selenium\selenium-ie-driver\4.18.1\selenium-ie-driver-4.18.1.jar;C:\Users\upperla.sindhu\.m2\repository\org\seleniumhq\selenium\selenium-remote-driver\4.18.1\selenium-remote-driver-4.18.1.jar;C:\Users\upperla.sindhu\.m2\repository\com\google\guava\guava\33.0.0-jre\guava-33.0.0-jre.jar;C:\Users\upperla.sindhu\.m2\repository\com\google\guava\failureaccess\1.0.2\failureaccess-1.0.2.jar;C:\Users\upperla.sindhu\.m2\repository\com\google\guava\listenablefuture\9999.0-empty-to-avoid-conflict-with-guava\listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar;C:\Users\upperla.sindhu\.m2\repository\org\checkerframework\checker-qual\3.41.0\checker-qual-3.41.0.jar;C:\Users\upperla.sindhu\.m2\repository\com\google\errorprone\error_prone_annotations\2.23.0\error_prone_annotations-2.23.0.jar;C:\Users\upperla.sindhu\.m2\repository\com\google\j2objc\j2objc-annotations\2.8\j2objc-annotations-2.8.jar;C:\Users\upperla.sindhu\.m2\repository\io\opentelemetry\semconv\opentelemetry-semconv\1.23.1-alpha\opentelemetry-semconv-1.23.1-alpha.jar;C:\Users\upperla.sindhu\.m2\repository\io\opentelemetry\opentelemetry-api\1.35.0\opentelemetry-api-1.35.0.jar;C:\Users\upperla.sindhu\.m2\repository\io\opentelemetry\opentelemetry-context\1.35.0\opentelemetry-context-1.35.0.jar;C:\Users\upperla.sindhu\.m2\repository\io\opentelemetry\opentelemetry-exporter-logging\1.35.0\opentelemetry-exporter-logging-1.35.0.jar;C:\Users\upperla.sindhu\.m2\repository\io\opentelemetry\opentelemetry-sdk-common\1.35.0\opentelemetry-sdk-common-1.35.0.jar;C:\Users\upperla.sindhu\.m2\repository\io\opentelemetry\opentelemetry-sdk-extension-autoconfigure-spi\1.35.0\opentelemetry-sdk-extension-autoconfigure-spi-1.35.0.jar;C:\Users\upperla.sindhu\.m2\repository\io\opentelemetry\opentelemetry-sdk-extension-autoconfigure\1.35.0\opentelemetry-sdk-extension-autoconfigure-1.35.0.jar;C:\Users\upperla.sindhu\.m2\repository\io\opentelemetry\opentelemetry-api-events\1.35.0-alpha\opentelemetry-api-events-1.35.0-alpha.jar;C:\Users\upperla.sindhu\.m2\repository\io\opentelemetry\opentelemetry-sdk-trace\1.35.0\opentelemetry-sdk-trace-1.35.0.jar;C:\Users\upperla.sindhu\.m2\repository\io\opentelemetry\opentelemetry-extension-incubator\1.35.0-alpha\opentelemetry-extension-incubator-1.35.0-alpha.jar;C:\Users\upperla.sindhu\.m2\repository\io\opentelemetry\opentelemetry-sdk\1.35.0\opentelemetry-sdk-1.35.0.jar;C:\Users\upperla.sindhu\.m2\repository\io\opentelemetry\opentelemetry-sdk-metrics\1.35.0\opentelemetry-sdk-metrics-1.35.0.jar;C:\Users\upperla.sindhu\.m2\repository\io\opentelemetry\opentelemetry-sdk-logs\1.35.0\opentelemetry-sdk-logs-1.35.0.jar;C:\Users\upperla.sindhu\.m2\repository\net\bytebuddy\byte-buddy\1.14.12\byte-buddy-1.14.12.jar;C:\Users\upperla.sindhu\.m2\repository\org\seleniumhq\selenium\selenium-os\4.18.1\selenium-os-4.18.1.jar;C:\Users\upperla.sindhu\.m2\repository\org\apache\commons\commons-exec\1.3\commons-exec-1.3.jar;C:\Users\upperla.sindhu\.m2\repository\org\seleniumhq\selenium\selenium-safari-driver\4.18.1\selenium-safari-driver-4.18.1.jar;C:\Users\upperla.sindhu\.m2\repository\org\seleniumhq\selenium\selenium-support\4.18.1\selenium-support-4.18.1.jar;C:\Users\upperla.sindhu\.m2\repository\net\masterthought\cucumber-reporting\5.5.0\cucumber-reporting-5.5.0.jar;C:\Users\upperla.sindhu\.m2\repository\com\fasterxml\jackson\core\jackson-databind\2.12.1\jackson-databind-2.12.1.jar;C:\Users\upperla.sindhu\.m2\repository\com\fasterxml\jackson\core\jackson-annotations\2.12.1\jackson-annotations-2.12.1.jar;C:\Users\upperla.sindhu\.m2\repository\com\fasterxml\jackson\core\jackson-core\2.12.1\jackson-core-2.12.1.jar;C:\Users\upperla.sindhu\.m2\repository\com\fasterxml\jackson\datatype\jackson-datatype-jsr310\2.12.1\jackson-datatype-jsr310-2.12.1.jar;C:\Users\upperla.sindhu\.m2\repository\org\apache\velocity\velocity-engine-core\2.2\velocity-engine-core-2.2.jar;C:\Users\upperla.sindhu\.m2\repository\commons-collections\commons-collections\3.2.2\commons-collections-3.2.2.jar;C:\Users\upperla.sindhu\.m2\repository\joda-time\joda-time\2.10.9\joda-time-2.10.9.jar;C:\Users\upperla.sindhu\.m2\repository\org\apache\commons\commons-lang3\3.11\commons-lang3-3.11.jar;C:\Users\upperla.sindhu\.m2\repository\org\codehaus\plexus\plexus-utils\3.3.0\plexus-utils-3.3.0.jar;C:\Users\upperla.sindhu\.m2\repository\org\jsoup\jsoup\1.13.1\jsoup-1.13.1.jar;C:\Users\upperla.sindhu\.m2\repository\com\googlecode\owasp-java-html-sanitizer\owasp-java-html-sanitizer\20200713.1\owasp-java-html-sanitizer-20200713.1.jar;C:\Users\upperla.sindhu\.m2\repository\commons-configuration\commons-configuration\1.10\commons-configuration-1.10.jar;C:\Users\upperla.sindhu\.m2\repository\commons-lang\commons-lang\2.6\commons-lang-2.6.jar;C:\Users\upperla.sindhu\.m2\repository\commons-logging\commons-logging\1.1.1\commons-logging-1.1.1.jar;C:\Users\upperla.sindhu\.m2\repository\com\aventstack\extentreports\5.1.1\extentreports-5.1.1.jar;C:\Users\upperla.sindhu\.m2\repository\io\reactivex\rxjava3\rxjava\3.1.6\rxjava-3.1.6.jar;C:\Users\upperla.sindhu\.m2\repository\org\reactivestreams\reactive-streams\1.0.4\reactive-streams-1.0.4.jar;C:\Users\upperla.sindhu\.m2\repository\org\freemarker\freemarker\2.3.32\freemarker-2.3.32.jar;C:\Users\upperla.sindhu\.m2\repository\org\projectlombok\lombok\1.18.26\lombok-1.18.26.jar;C:\Users\upperla.sindhu\.m2\repository\com\google\code\gson\gson\2.10.1\gson-2.10.1.jar;C:\Users\upperla.sindhu\.m2\repository\tech\grasshopper\extentreports-cucumber7-adapter\1.14.0\extentreports-cucumber7-adapter-1.14.0.jar;C:\Users\upperla.sindhu\.m2\repository\tech\grasshopper\extent-pdf-report\2.12.0\extent-pdf-report-2.12.0.jar;C:\Users\upperla.sindhu\.m2\repository\tech\grasshopper\cucumber-pdf-report\2.14.0\cucumber-pdf-report-2.14.0.jar;C:\Users\upperla.sindhu\.m2\repository\org\apache\pdfbox\pdfbox\2.0.26\pdfbox-2.0.26.jar;C:\Users\upperla.sindhu\.m2\repository\org\apache\pdfbox\fontbox\2.0.26\fontbox-2.0.26.jar;C:\Users\upperla.sindhu\.m2\repository\org\knowm\xchart\xchart\3.8.0\xchart-3.8.0.jar;C:\Users\upperla.sindhu\.m2\repository\de\erichseifert\vectorgraphics2d\VectorGraphics2D\0.13\VectorGraphics2D-0.13.jar;C:\Users\upperla.sindhu\.m2\repository\de\rototor\pdfbox\graphics2d\0.30\graphics2d-0.30.jar;C:\Users\upperla.sindhu\.m2\repository\com\madgag\animated-gif-lib\1.4\animated-gif-lib-1.4.jar;C:\Users\upperla.sindhu\.m2\repository\org\yaml\snakeyaml\2.0\snakeyaml-2.0.jar;C:\Users\upperla.sindhu\.m2\repository\tech\grasshopper\table-layout\1.5.1\table-layout-1.5.1.jar;C:\Users\upperla.sindhu\.m2\repository\tech\grasshopper\rest-assured-cucumber-pdf-report\1.5.0\rest-assured-cucumber-pdf-report-1.5.0.jar;C:\Users\upperla.sindhu\.m2\repository\com\aventstack\klov-reporter\5.1.0\klov-reporter-5.1.0.jar;C:\Users\upperla.sindhu\.m2\repository\org\mongodb\mongodb-driver\3.6.4\mongodb-driver-3.6.4.jar;C:\Users\upperla.sindhu\.m2\repository\org\mongodb\mongodb-driver-core\3.6.4\mongodb-driver-core-3.6.4.jar;C:\Users\upperla.sindhu\.m2\repository\org\mongodb\bson\3.6.4\bson-3.6.4.jar;C:\Users\upperla.sindhu\.m2\repository\org\apache\httpcomponents\httpclient\4.5.13\httpclient-4.5.13.jar;C:\Users\upperla.sindhu\.m2\repository\org\apache\httpcomponents\httpcore\4.4.13\httpcore-4.4.13.jar;C:\Users\upperla.sindhu\.m2\repository\org\apache\httpcomponents\httpmime\4.5.13\httpmime-4.5.13.jar;C:\Users\upperla.sindhu\.m2\repository\tech\grasshopper\htmlextentreporter\1.1.0\htmlextentreporter-1.1.0.jar;C:\Users\upperla.sindhu\.m2\repository\tech\grasshopper\extent-excel-report\1.4.0\extent-excel-report-1.4.0.jar;C:\Users\upperla.sindhu\.m2\repository\org\apache\poi\poi\5.2.3\poi-5.2.3.jar;C:\Users\upperla.sindhu\.m2\repository\org\apache\commons\commons-collections4\4.4\commons-collections4-4.4.jar;C:\Users\upperla.sindhu\.m2\repository\org\apache\commons\commons-math3\3.6.1\commons-math3-3.6.1.jar;C:\Users\upperla.sindhu\.m2\repository\com\zaxxer\SparseBitSet\1.2\SparseBitSet-1.2.jar;C:\Users\upperla.sindhu\.m2\repository\org\apache\poi\poi-ooxml\5.2.3\poi-ooxml-5.2.3.jar;C:\Users\upperla.sindhu\.m2\repository\org\apache\poi\poi-ooxml-lite\5.2.3\poi-ooxml-lite-5.2.3.jar;C:\Users\upperla.sindhu\.m2\repository\org\apache\xmlbeans\xmlbeans\5.1.1\xmlbeans-5.1.1.jar;C:\Users\upperla.sindhu\.m2\repository\com\github\virtuald\curvesapi\1.07\curvesapi-1.07.jar;C:\Users\upperla.sindhu\.m2\repository\commons-io\commons-io\2.11.0\commons-io-2.11.0.jar;C:\Users\upperla.sindhu\.m2\repository\junit\junit\4.13.2\junit-4.13.2.jar;C:\Users\upperla.sindhu\.m2\repository\org\hamcrest\hamcrest-core\1.3\hamcrest-core-1.3.jar;C:\Users\upperla.sindhu\.m2\repository\org\testng\testng\7.6.1\testng-7.6.1.jar;C:\Users\upperla.sindhu\.m2\repository\com\google\code\findbugs\jsr305\3.0.2\jsr305-3.0.2.jar;C:\Users\upperla.sindhu\.m2\repository\org\slf4j\slf4j-api\1.7.36\slf4j-api-1.7.36.jar;C:\Users\upperla.sindhu\.m2\repository\com\beust\jcommander\1.82\jcommander-1.82.jar;C:\Users\upperla.sindhu\.m2\repository\org\webjars\jquery\3.6.0\jquery-3.6.0.jar;C:\Users\upperla.sindhu\.m2\repository\io\cucumber\cucumber-testng\7.17.0\cucumber-testng-7.17.0.jar;C:\Users\upperla.sindhu\.m2\repository\io\github\bonigarcia\webdrivermanager\5.8.0\webdrivermanager-5.8.0.jar;C:\Users\upperla.sindhu\.m2\repository\com\github\docker-java\docker-java\3.3.6\docker-java-3.3.6.jar;C:\Users\upperla.sindhu\.m2\repository\com\github\docker-java\docker-java-core\3.3.6\docker-java-core-3.3.6.jar;C:\Users\upperla.sindhu\.m2\repository\com\github\docker-java\docker-java-api\3.3.6\docker-java-api-3.3.6.jar;C:\Users\upperla.sindhu\.m2\repository\org\bouncycastle\bcpkix-jdk18on\1.76\bcpkix-jdk18on-1.76.jar;C:\Users\upperla.sindhu\.m2\repository\org\bouncycastle\bcprov-jdk18on\1.76\bcprov-jdk18on-1.76.jar;C:\Users\upperla.sindhu\.m2\repository\org\bouncycastle\bcutil-jdk18on\1.76\bcutil-jdk18on-1.76.jar;C:\Users\upperla.sindhu\.m2\repository\org\slf4j\jcl-over-slf4j\1.7.30\jcl-over-slf4j-1.7.30.jar;C:\Users\upperla.sindhu\.m2\repository\com\github\docker-java\docker-java-transport-httpclient5\3.3.6\docker-java-transport-httpclient5-3.3.6.jar;C:\Users\upperla.sindhu\.m2\repository\com\github\docker-java\docker-java-transport\3.3.6\docker-java-transport-3.3.6.jar;C:\Users\upperla.sindhu\.m2\repository\net\java\dev\jna\jna\5.13.0\jna-5.13.0.jar;C:\Users\upperla.sindhu\.m2\repository\org\brotli\dec\0.1.2\dec-0.1.2.jar;C:\Users\upperla.sindhu\.m2\repository\org\apache\commons\commons-compress\1.26.1\commons-compress-1.26.1.jar;C:\Users\upperla.sindhu\.m2\repository\commons-codec\commons-codec\1.16.1\commons-codec-1.16.1.jar;C:\Users\upperla.sindhu\.m2\repository\org\apache\httpcomponents\client5\httpclient5\5.2.1\httpclient5-5.2.1.jar;C:\Users\upperla.sindhu\.m2\repository\org\apache\httpcomponents\core5\httpcore5\5.2\httpcore5-5.2.jar;C:\Users\upperla.sindhu\.m2\repository\org\apache\httpcomponents\core5\httpcore5-h2\5.2\httpcore5-h2-5.2.jar;C:\Users\upperla.sindhu\.m2\repository\log4j\log4j\1.2.17\log4j-1.2.17.jar;C:\Users\upperla.sindhu\.m2\repository\org\apache\logging\log4j\log4j-api\2.19.0\log4j-api-2.19.0.jar;C:\Users\upperla.sindhu\.m2\repository\org\apache\logging\log4j\log4j-core\2.19.0\log4j-core-2.19.0.jar;C:\Users\upperla.sindhu\.m2\repository\io\qameta\allure\allure-cucumber7-jvm\2.28.1\allure-cucumber7-jvm-2.28.1.jar;C:\Users\upperla.sindhu\.m2\repository\io\qameta\allure\allure-java-commons\2.28.1\allure-java-commons-2.28.1.jar;C:\Users\upperla.sindhu\.m2\repository\io\qameta\allure\allure-model\2.28.1\allure-model-2.28.1.jar;C:\Users\upperla.sindhu\.m2\repository\io\cucumber\gherkin\26.2.0\gherkin-26.2.0.jar;"/>
+    <property name="surefire.test.class.path" value="C:\Users\Jampana.Ramya\eclipse-workspace\QA-Automation\QA-Automation\target\test-classes;C:\Users\Jampana.Ramya\eclipse-workspace\QA-Automation\QA-Automation\target\classes;C:\Users\Jampana.Ramya\.m2\repository\io\cucumber\cucumber-java\7.15.0\cucumber-java-7.15.0.jar;C:\Users\Jampana.Ramya\.m2\repository\org\apiguardian\apiguardian-api\1.1.2\apiguardian-api-1.1.2.jar;C:\Users\Jampana.Ramya\.m2\repository\io\cucumber\cucumber-core\7.15.0\cucumber-core-7.15.0.jar;C:\Users\Jampana.Ramya\.m2\repository\io\cucumber\cucumber-gherkin\7.15.0\cucumber-gherkin-7.15.0.jar;C:\Users\Jampana.Ramya\.m2\repository\io\cucumber\cucumber-gherkin-messages\7.15.0\cucumber-gherkin-messages-7.15.0.jar;C:\Users\Jampana.Ramya\.m2\repository\io\cucumber\messages\22.0.0\messages-22.0.0.jar;C:\Users\Jampana.Ramya\.m2\repository\io\cucumber\tag-expressions\6.0.0\tag-expressions-6.0.0.jar;C:\Users\Jampana.Ramya\.m2\repository\io\cucumber\cucumber-expressions\17.0.1\cucumber-expressions-17.0.1.jar;C:\Users\Jampana.Ramya\.m2\repository\io\cucumber\datatable\7.15.0\datatable-7.15.0.jar;C:\Users\Jampana.Ramya\.m2\repository\io\cucumber\cucumber-plugin\7.15.0\cucumber-plugin-7.15.0.jar;C:\Users\Jampana.Ramya\.m2\repository\io\cucumber\docstring\7.15.0\docstring-7.15.0.jar;C:\Users\Jampana.Ramya\.m2\repository\io\cucumber\html-formatter\20.4.0\html-formatter-20.4.0.jar;C:\Users\Jampana.Ramya\.m2\repository\io\cucumber\junit-xml-formatter\0.2.0\junit-xml-formatter-0.2.0.jar;C:\Users\Jampana.Ramya\.m2\repository\io\cucumber\ci-environment\10.0.0\ci-environment-10.0.0.jar;C:\Users\Jampana.Ramya\.m2\repository\io\cucumber\cucumber-junit\7.15.0\cucumber-junit-7.15.0.jar;C:\Users\Jampana.Ramya\.m2\repository\org\seleniumhq\selenium\selenium-java\4.18.1\selenium-java-4.18.1.jar;C:\Users\Jampana.Ramya\.m2\repository\org\seleniumhq\selenium\selenium-api\4.18.1\selenium-api-4.18.1.jar;C:\Users\Jampana.Ramya\.m2\repository\org\seleniumhq\selenium\selenium-chrome-driver\4.18.1\selenium-chrome-driver-4.18.1.jar;C:\Users\Jampana.Ramya\.m2\repository\com\google\auto\service\auto-service-annotations\1.1.1\auto-service-annotations-1.1.1.jar;C:\Users\Jampana.Ramya\.m2\repository\org\seleniumhq\selenium\selenium-chromium-driver\4.18.1\selenium-chromium-driver-4.18.1.jar;C:\Users\Jampana.Ramya\.m2\repository\org\seleniumhq\selenium\selenium-json\4.18.1\selenium-json-4.18.1.jar;C:\Users\Jampana.Ramya\.m2\repository\org\seleniumhq\selenium\selenium-manager\4.18.1\selenium-manager-4.18.1.jar;C:\Users\Jampana.Ramya\.m2\repository\org\seleniumhq\selenium\selenium-devtools-v120\4.18.1\selenium-devtools-v120-4.18.1.jar;C:\Users\Jampana.Ramya\.m2\repository\org\seleniumhq\selenium\selenium-devtools-v121\4.18.1\selenium-devtools-v121-4.18.1.jar;C:\Users\Jampana.Ramya\.m2\repository\org\seleniumhq\selenium\selenium-devtools-v122\4.18.1\selenium-devtools-v122-4.18.1.jar;C:\Users\Jampana.Ramya\.m2\repository\org\seleniumhq\selenium\selenium-devtools-v85\4.18.1\selenium-devtools-v85-4.18.1.jar;C:\Users\Jampana.Ramya\.m2\repository\org\seleniumhq\selenium\selenium-edge-driver\4.18.1\selenium-edge-driver-4.18.1.jar;C:\Users\Jampana.Ramya\.m2\repository\org\seleniumhq\selenium\selenium-firefox-driver\4.18.1\selenium-firefox-driver-4.18.1.jar;C:\Users\Jampana.Ramya\.m2\repository\org\seleniumhq\selenium\selenium-http\4.18.1\selenium-http-4.18.1.jar;C:\Users\Jampana.Ramya\.m2\repository\dev\failsafe\failsafe\3.3.2\failsafe-3.3.2.jar;C:\Users\Jampana.Ramya\.m2\repository\org\seleniumhq\selenium\selenium-ie-driver\4.18.1\selenium-ie-driver-4.18.1.jar;C:\Users\Jampana.Ramya\.m2\repository\org\seleniumhq\selenium\selenium-remote-driver\4.18.1\selenium-remote-driver-4.18.1.jar;C:\Users\Jampana.Ramya\.m2\repository\com\google\guava\guava\33.0.0-jre\guava-33.0.0-jre.jar;C:\Users\Jampana.Ramya\.m2\repository\com\google\guava\failureaccess\1.0.2\failureaccess-1.0.2.jar;C:\Users\Jampana.Ramya\.m2\repository\com\google\guava\listenablefuture\9999.0-empty-to-avoid-conflict-with-guava\listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar;C:\Users\Jampana.Ramya\.m2\repository\org\checkerframework\checker-qual\3.41.0\checker-qual-3.41.0.jar;C:\Users\Jampana.Ramya\.m2\repository\com\google\errorprone\error_prone_annotations\2.23.0\error_prone_annotations-2.23.0.jar;C:\Users\Jampana.Ramya\.m2\repository\com\google\j2objc\j2objc-annotations\2.8\j2objc-annotations-2.8.jar;C:\Users\Jampana.Ramya\.m2\repository\io\opentelemetry\semconv\opentelemetry-semconv\1.23.1-alpha\opentelemetry-semconv-1.23.1-alpha.jar;C:\Users\Jampana.Ramya\.m2\repository\io\opentelemetry\opentelemetry-api\1.35.0\opentelemetry-api-1.35.0.jar;C:\Users\Jampana.Ramya\.m2\repository\io\opentelemetry\opentelemetry-context\1.35.0\opentelemetry-context-1.35.0.jar;C:\Users\Jampana.Ramya\.m2\repository\io\opentelemetry\opentelemetry-exporter-logging\1.35.0\opentelemetry-exporter-logging-1.35.0.jar;C:\Users\Jampana.Ramya\.m2\repository\io\opentelemetry\opentelemetry-sdk-common\1.35.0\opentelemetry-sdk-common-1.35.0.jar;C:\Users\Jampana.Ramya\.m2\repository\io\opentelemetry\opentelemetry-sdk-extension-autoconfigure-spi\1.35.0\opentelemetry-sdk-extension-autoconfigure-spi-1.35.0.jar;C:\Users\Jampana.Ramya\.m2\repository\io\opentelemetry\opentelemetry-sdk-extension-autoconfigure\1.35.0\opentelemetry-sdk-extension-autoconfigure-1.35.0.jar;C:\Users\Jampana.Ramya\.m2\repository\io\opentelemetry\opentelemetry-api-events\1.35.0-alpha\opentelemetry-api-events-1.35.0-alpha.jar;C:\Users\Jampana.Ramya\.m2\repository\io\opentelemetry\opentelemetry-sdk-trace\1.35.0\opentelemetry-sdk-trace-1.35.0.jar;C:\Users\Jampana.Ramya\.m2\repository\io\opentelemetry\opentelemetry-extension-incubator\1.35.0-alpha\opentelemetry-extension-incubator-1.35.0-alpha.jar;C:\Users\Jampana.Ramya\.m2\repository\io\opentelemetry\opentelemetry-sdk\1.35.0\opentelemetry-sdk-1.35.0.jar;C:\Users\Jampana.Ramya\.m2\repository\io\opentelemetry\opentelemetry-sdk-metrics\1.35.0\opentelemetry-sdk-metrics-1.35.0.jar;C:\Users\Jampana.Ramya\.m2\repository\io\opentelemetry\opentelemetry-sdk-logs\1.35.0\opentelemetry-sdk-logs-1.35.0.jar;C:\Users\Jampana.Ramya\.m2\repository\net\bytebuddy\byte-buddy\1.14.12\byte-buddy-1.14.12.jar;C:\Users\Jampana.Ramya\.m2\repository\org\seleniumhq\selenium\selenium-os\4.18.1\selenium-os-4.18.1.jar;C:\Users\Jampana.Ramya\.m2\repository\org\apache\commons\commons-exec\1.3\commons-exec-1.3.jar;C:\Users\Jampana.Ramya\.m2\repository\org\seleniumhq\selenium\selenium-safari-driver\4.18.1\selenium-safari-driver-4.18.1.jar;C:\Users\Jampana.Ramya\.m2\repository\org\seleniumhq\selenium\selenium-support\4.18.1\selenium-support-4.18.1.jar;C:\Users\Jampana.Ramya\.m2\repository\net\masterthought\cucumber-reporting\5.5.0\cucumber-reporting-5.5.0.jar;C:\Users\Jampana.Ramya\.m2\repository\com\fasterxml\jackson\core\jackson-databind\2.12.1\jackson-databind-2.12.1.jar;C:\Users\Jampana.Ramya\.m2\repository\com\fasterxml\jackson\core\jackson-annotations\2.12.1\jackson-annotations-2.12.1.jar;C:\Users\Jampana.Ramya\.m2\repository\com\fasterxml\jackson\core\jackson-core\2.12.1\jackson-core-2.12.1.jar;C:\Users\Jampana.Ramya\.m2\repository\com\fasterxml\jackson\datatype\jackson-datatype-jsr310\2.12.1\jackson-datatype-jsr310-2.12.1.jar;C:\Users\Jampana.Ramya\.m2\repository\org\apache\velocity\velocity-engine-core\2.2\velocity-engine-core-2.2.jar;C:\Users\Jampana.Ramya\.m2\repository\commons-collections\commons-collections\3.2.2\commons-collections-3.2.2.jar;C:\Users\Jampana.Ramya\.m2\repository\joda-time\joda-time\2.10.9\joda-time-2.10.9.jar;C:\Users\Jampana.Ramya\.m2\repository\org\apache\commons\commons-lang3\3.11\commons-lang3-3.11.jar;C:\Users\Jampana.Ramya\.m2\repository\org\codehaus\plexus\plexus-utils\3.3.0\plexus-utils-3.3.0.jar;C:\Users\Jampana.Ramya\.m2\repository\org\jsoup\jsoup\1.13.1\jsoup-1.13.1.jar;C:\Users\Jampana.Ramya\.m2\repository\com\googlecode\owasp-java-html-sanitizer\owasp-java-html-sanitizer\20200713.1\owasp-java-html-sanitizer-20200713.1.jar;C:\Users\Jampana.Ramya\.m2\repository\commons-configuration\commons-configuration\1.10\commons-configuration-1.10.jar;C:\Users\Jampana.Ramya\.m2\repository\commons-lang\commons-lang\2.6\commons-lang-2.6.jar;C:\Users\Jampana.Ramya\.m2\repository\commons-logging\commons-logging\1.1.1\commons-logging-1.1.1.jar;C:\Users\Jampana.Ramya\.m2\repository\com\aventstack\extentreports\5.1.1\extentreports-5.1.1.jar;C:\Users\Jampana.Ramya\.m2\repository\io\reactivex\rxjava3\rxjava\3.1.6\rxjava-3.1.6.jar;C:\Users\Jampana.Ramya\.m2\repository\org\reactivestreams\reactive-streams\1.0.4\reactive-streams-1.0.4.jar;C:\Users\Jampana.Ramya\.m2\repository\org\freemarker\freemarker\2.3.32\freemarker-2.3.32.jar;C:\Users\Jampana.Ramya\.m2\repository\org\projectlombok\lombok\1.18.26\lombok-1.18.26.jar;C:\Users\Jampana.Ramya\.m2\repository\com\google\code\gson\gson\2.10.1\gson-2.10.1.jar;C:\Users\Jampana.Ramya\.m2\repository\tech\grasshopper\extentreports-cucumber7-adapter\1.14.0\extentreports-cucumber7-adapter-1.14.0.jar;C:\Users\Jampana.Ramya\.m2\repository\tech\grasshopper\extent-pdf-report\2.12.0\extent-pdf-report-2.12.0.jar;C:\Users\Jampana.Ramya\.m2\repository\tech\grasshopper\cucumber-pdf-report\2.14.0\cucumber-pdf-report-2.14.0.jar;C:\Users\Jampana.Ramya\.m2\repository\org\apache\pdfbox\pdfbox\2.0.26\pdfbox-2.0.26.jar;C:\Users\Jampana.Ramya\.m2\repository\org\apache\pdfbox\fontbox\2.0.26\fontbox-2.0.26.jar;C:\Users\Jampana.Ramya\.m2\repository\org\knowm\xchart\xchart\3.8.0\xchart-3.8.0.jar;C:\Users\Jampana.Ramya\.m2\repository\de\erichseifert\vectorgraphics2d\VectorGraphics2D\0.13\VectorGraphics2D-0.13.jar;C:\Users\Jampana.Ramya\.m2\repository\de\rototor\pdfbox\graphics2d\0.30\graphics2d-0.30.jar;C:\Users\Jampana.Ramya\.m2\repository\com\madgag\animated-gif-lib\1.4\animated-gif-lib-1.4.jar;C:\Users\Jampana.Ramya\.m2\repository\org\yaml\snakeyaml\2.0\snakeyaml-2.0.jar;C:\Users\Jampana.Ramya\.m2\repository\tech\grasshopper\table-layout\1.5.1\table-layout-1.5.1.jar;C:\Users\Jampana.Ramya\.m2\repository\tech\grasshopper\rest-assured-cucumber-pdf-report\1.5.0\rest-assured-cucumber-pdf-report-1.5.0.jar;C:\Users\Jampana.Ramya\.m2\repository\com\aventstack\klov-reporter\5.1.0\klov-reporter-5.1.0.jar;C:\Users\Jampana.Ramya\.m2\repository\org\mongodb\mongodb-driver\3.6.4\mongodb-driver-3.6.4.jar;C:\Users\Jampana.Ramya\.m2\repository\org\mongodb\mongodb-driver-core\3.6.4\mongodb-driver-core-3.6.4.jar;C:\Users\Jampana.Ramya\.m2\repository\org\mongodb\bson\3.6.4\bson-3.6.4.jar;C:\Users\Jampana.Ramya\.m2\repository\org\apache\httpcomponents\httpclient\4.5.13\httpclient-4.5.13.jar;C:\Users\Jampana.Ramya\.m2\repository\org\apache\httpcomponents\httpcore\4.4.13\httpcore-4.4.13.jar;C:\Users\Jampana.Ramya\.m2\repository\org\apache\httpcomponents\httpmime\4.5.13\httpmime-4.5.13.jar;C:\Users\Jampana.Ramya\.m2\repository\tech\grasshopper\htmlextentreporter\1.1.0\htmlextentreporter-1.1.0.jar;C:\Users\Jampana.Ramya\.m2\repository\tech\grasshopper\extent-excel-report\1.4.0\extent-excel-report-1.4.0.jar;C:\Users\Jampana.Ramya\.m2\repository\org\apache\poi\poi\5.2.3\poi-5.2.3.jar;C:\Users\Jampana.Ramya\.m2\repository\org\apache\commons\commons-collections4\4.4\commons-collections4-4.4.jar;C:\Users\Jampana.Ramya\.m2\repository\org\apache\commons\commons-math3\3.6.1\commons-math3-3.6.1.jar;C:\Users\Jampana.Ramya\.m2\repository\com\zaxxer\SparseBitSet\1.2\SparseBitSet-1.2.jar;C:\Users\Jampana.Ramya\.m2\repository\org\apache\poi\poi-ooxml\5.2.3\poi-ooxml-5.2.3.jar;C:\Users\Jampana.Ramya\.m2\repository\org\apache\poi\poi-ooxml-lite\5.2.3\poi-ooxml-lite-5.2.3.jar;C:\Users\Jampana.Ramya\.m2\repository\org\apache\xmlbeans\xmlbeans\5.1.1\xmlbeans-5.1.1.jar;C:\Users\Jampana.Ramya\.m2\repository\com\github\virtuald\curvesapi\1.07\curvesapi-1.07.jar;C:\Users\Jampana.Ramya\.m2\repository\commons-io\commons-io\2.11.0\commons-io-2.11.0.jar;C:\Users\Jampana.Ramya\.m2\repository\junit\junit\4.13.2\junit-4.13.2.jar;C:\Users\Jampana.Ramya\.m2\repository\org\hamcrest\hamcrest-core\1.3\hamcrest-core-1.3.jar;C:\Users\Jampana.Ramya\.m2\repository\org\testng\testng\7.6.1\testng-7.6.1.jar;C:\Users\Jampana.Ramya\.m2\repository\com\google\code\findbugs\jsr305\3.0.2\jsr305-3.0.2.jar;C:\Users\Jampana.Ramya\.m2\repository\org\slf4j\slf4j-api\1.7.36\slf4j-api-1.7.36.jar;C:\Users\Jampana.Ramya\.m2\repository\com\beust\jcommander\1.82\jcommander-1.82.jar;C:\Users\Jampana.Ramya\.m2\repository\org\webjars\jquery\3.6.0\jquery-3.6.0.jar;C:\Users\Jampana.Ramya\.m2\repository\io\cucumber\cucumber-testng\7.17.0\cucumber-testng-7.17.0.jar;C:\Users\Jampana.Ramya\.m2\repository\io\github\bonigarcia\webdrivermanager\5.8.0\webdrivermanager-5.8.0.jar;C:\Users\Jampana.Ramya\.m2\repository\com\github\docker-java\docker-java\3.3.6\docker-java-3.3.6.jar;C:\Users\Jampana.Ramya\.m2\repository\com\github\docker-java\docker-java-core\3.3.6\docker-java-core-3.3.6.jar;C:\Users\Jampana.Ramya\.m2\repository\com\github\docker-java\docker-java-api\3.3.6\docker-java-api-3.3.6.jar;C:\Users\Jampana.Ramya\.m2\repository\org\bouncycastle\bcpkix-jdk18on\1.76\bcpkix-jdk18on-1.76.jar;C:\Users\Jampana.Ramya\.m2\repository\org\bouncycastle\bcprov-jdk18on\1.76\bcprov-jdk18on-1.76.jar;C:\Users\Jampana.Ramya\.m2\repository\org\bouncycastle\bcutil-jdk18on\1.76\bcutil-jdk18on-1.76.jar;C:\Users\Jampana.Ramya\.m2\repository\org\slf4j\jcl-over-slf4j\1.7.30\jcl-over-slf4j-1.7.30.jar;C:\Users\Jampana.Ramya\.m2\repository\com\github\docker-java\docker-java-transport-httpclient5\3.3.6\docker-java-transport-httpclient5-3.3.6.jar;C:\Users\Jampana.Ramya\.m2\repository\com\github\docker-java\docker-java-transport\3.3.6\docker-java-transport-3.3.6.jar;C:\Users\Jampana.Ramya\.m2\repository\net\java\dev\jna\jna\5.13.0\jna-5.13.0.jar;C:\Users\Jampana.Ramya\.m2\repository\org\brotli\dec\0.1.2\dec-0.1.2.jar;C:\Users\Jampana.Ramya\.m2\repository\org\apache\commons\commons-compress\1.26.1\commons-compress-1.26.1.jar;C:\Users\Jampana.Ramya\.m2\repository\commons-codec\commons-codec\1.16.1\commons-codec-1.16.1.jar;C:\Users\Jampana.Ramya\.m2\repository\org\apache\httpcomponents\client5\httpclient5\5.2.1\httpclient5-5.2.1.jar;C:\Users\Jampana.Ramya\.m2\repository\org\apache\httpcomponents\core5\httpcore5\5.2\httpcore5-5.2.jar;C:\Users\Jampana.Ramya\.m2\repository\org\apache\httpcomponents\core5\httpcore5-h2\5.2\httpcore5-h2-5.2.jar;C:\Users\Jampana.Ramya\.m2\repository\log4j\log4j\1.2.17\log4j-1.2.17.jar;C:\Users\Jampana.Ramya\.m2\repository\org\apache\logging\log4j\log4j-api\2.19.0\log4j-api-2.19.0.jar;C:\Users\Jampana.Ramya\.m2\repository\org\apache\logging\log4j\log4j-core\2.19.0\log4j-core-2.19.0.jar;C:\Users\Jampana.Ramya\.m2\repository\io\qameta\allure\allure-cucumber7-jvm\2.28.1\allure-cucumber7-jvm-2.28.1.jar;C:\Users\Jampana.Ramya\.m2\repository\io\qameta\allure\allure-java-commons\2.28.1\allure-java-commons-2.28.1.jar;C:\Users\Jampana.Ramya\.m2\repository\io\qameta\allure\allure-model\2.28.1\allure-model-2.28.1.jar;C:\Users\Jampana.Ramya\.m2\repository\io\cucumber\gherkin\26.2.0\gherkin-26.2.0.jar;"/>
     <property name="sun.cpu.endian" value="little"/>
-    <property name="user.home" value="C:\Users\upperla.sindhu"/>
+    <property name="user.home" value="C:\Users\Jampana.Ramya"/>
     <property name="user.language" value="en"/>
     <property name="java.specification.vendor" value="Oracle Corporation"/>
-    <property name="java.version.date" value="2024-04-16"/>
-    <property name="java.home" value="C:\Program Files\Java\jdk-11"/>
+    <property name="java.version.date" value="2024-01-16"/>
+    <property name="java.home" value="C:\Users\Jampana.Ramya\.p2\pool\plugins\org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_17.0.10.v20240120-1143\jre"/>
     <property name="file.separator" value="\"/>
     <property name="style.color" value="always"/>
-    <property name="basedir" value="C:\Users\upperla.sindhu\Desktop\20-08\QA-Automation"/>
+    <property name="basedir" value="C:\Users\Jampana.Ramya\eclipse-workspace\QA-Automation\QA-Automation"/>
     <property name="java.vm.compressedOopsMode" value="Zero based"/>
     <property name="line.separator" value="&#10;"/>
-    <property name="java.specification.name" value="Java Platform API Specification"/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
-    <property name="java.awt.graphicsenv" value="sun.awt.Win32GraphicsEnvironment"/>
-    <property name="surefire.real.class.path" value="C:\Users\upperla.sindhu\AppData\Local\Temp\surefire3382234011267658516\surefirebooter-20240821190925035_3.jar"/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="surefire.real.class.path" value="C:\Users\Jampana.Ramya\AppData\Local\Temp\surefire8332716093315646120\surefirebooter-20240906155117088_3.jar"/>
     <property name="user.script" value=""/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
-    <property name="java.runtime.version" value="11.0.23+7-LTS-222"/>
-    <property name="user.name" value="Upperla.Sindhu"/>
+    <property name="java.runtime.version" value="17.0.10+7"/>
+    <property name="user.name" value="Jampana.Ramya"/>
     <property name="path.separator" value=";"/>
     <property name="os.version" value="10.0"/>
-    <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
+    <property name="java.runtime.name" value="OpenJDK Runtime Environment"/>
     <property name="file.encoding" value="Cp1252"/>
-    <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM"/>
-    <property name="java.vendor.version" value="18.9"/>
-    <property name="localRepository" value="C:\Users\upperla.sindhu\.m2\repository"/>
-    <property name="java.vendor.url.bug" value="https://bugreport.java.com/bugreport/"/>
-    <property name="java.io.tmpdir" value="C:\Users\UPPERL~1.SIN\AppData\Local\Temp\"/>
-    <property name="java.version" value="11.0.23"/>
-    <property name="user.dir" value="C:\Users\upperla.sindhu\Desktop\20-08\QA-Automation"/>
+    <property name="java.vm.name" value="OpenJDK 64-Bit Server VM"/>
+    <property name="java.vendor.version" value="Temurin-17.0.10+7"/>
+    <property name="localRepository" value="C:\Users\Jampana.Ramya\.m2\repository"/>
+    <property name="java.vendor.url.bug" value="https://github.com/adoptium/adoptium-support/issues"/>
+    <property name="java.io.tmpdir" value="C:\Users\JAMPAN~1.RAM\AppData\Local\Temp\"/>
+    <property name="java.version" value="17.0.10"/>
+    <property name="user.dir" value="C:\Users\Jampana.Ramya\eclipse-workspace\QA-Automation\QA-Automation"/>
     <property name="os.arch" value="amd64"/>
     <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
-    <property name="java.awt.printerjob" value="sun.awt.windows.WPrinterJob"/>
     <property name="sun.os.patch.level" value=""/>
-    <property name="java.library.path" value="C:\Program Files\Java\jdk-11\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:/Users/upperla.sindhu/.p2/pool/plugins/org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_22.0.2.v20240802-1626/jre/bin/server;C:/Users/upperla.sindhu/.p2/pool/plugins/org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_22.0.2.v20240802-1626/jre/bin;C:/Users/UPPERL~1.SIN/AppData/Local/Temp/eoi75D5.tmp//plugins/org.eclipse.justj.openjdk.hotspot.jre.minimal.stripped.win32.x86_64_17.0.11.v20240426-2108/jre/bin/server;C:/Users/UPPERL~1.SIN/AppData/Local/Temp/eoi75D5.tmp//plugins/org.eclipse.justj.openjdk.hotspot.jre.minimal.stripped.win32.x86_64_17.0.11.v20240426-2108/jre/bin;C:\Python312\Scripts\;C:\Python312\;C:\Program Files\Common Files\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\ProgramData\chocolatey\bin;C:\Program Files\Maven\apache-maven-3.9.8\bin;C:\Program Files\nodejs;C:\Program Files\Java\jre1.8.0_421\bin;C:\Program Files\Java\jdk-11\bin;C:\Users\upperla.sindhu\AppData\Local\Microsoft\WindowsApps;C:\Users\upperla.sindhu\AppData\Roaming\npm;C:\Users\upperla.sindhu\Downloads;;C:\Users\upperla.sindhu\Downloads;;."/>
-    <property name="java.vendor" value="Oracle Corporation"/>
+    <property name="native.encoding" value="Cp1252"/>
+    <property name="java.library.path" value="C:\Users\Jampana.Ramya\.p2\pool\plugins\org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_17.0.10.v20240120-1143\jre\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:/Users/Jampana.Ramya/.p2/pool/plugins/org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_22.0.2.v20240802-1626/jre/bin/server;C:/Users/Jampana.Ramya/.p2/pool/plugins/org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_22.0.2.v20240802-1626/jre/bin;C:\Program Files\Common Files\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files\allure-2.30.0\bin;C:\Program Files\Java\jdk-17\bin;C:\Program Files\Maven\apache-maven-3.9.8\bin;C:\Program Files\nodejs\;C:\Users\Jampana.Ramya\AppData\Local\Microsoft\WindowsApps;C:\Users\Jampana.Ramya\AppData\Roaming\npm;C:\Windows\system32;;."/>
     <property name="java.vm.info" value="mixed mode"/>
-    <property name="java.vm.version" value="11.0.23+7-LTS-222"/>
-    <property name="java.specification.maintenance.version" value="2"/>
+    <property name="java.vendor" value="Eclipse Adoptium"/>
+    <property name="java.vm.version" value="17.0.10+7"/>
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
-    <property name="java.class.version" value="55.0"/>
+    <property name="java.class.version" value="61.0"/>
     <property name="jacoco-agent.destfile" value="target/jacoco.exec"/>
   </properties>
-  <testcase name="runScenario[&quot;Navigate to Timesheet URL and Login as Admin&quot;, &quot;Login to Timesheet as Admin&quot;](1)" classname="com.TimeSheet.TestRunner.TestngRunner" time="107.933">
+  <testcase name="runScenario[&quot;Login as Employee Role&quot;, &quot;Login as Employee Role&quot;](1)" classname="com.TimeSheet.TestRunner.TestngRunner" time="37.144">
     <system-out><![CDATA[
-@admin1
-Scenario Outline: Navigate to Timesheet URL and Login as Admin       &amp#27;[90m# src/test/resources/AdminFeatureFiles/TC01_AdminLogin.feature:4&amp#27;[0m
+@employee
+Scenario Outline: Login as Employee Role                        &amp#27;[90m# src/test/resources/EmployeeViewFeatures/TC01_Employee_Login.feature:12&amp#27;[0m
 All cookies are cleared.
-  &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mLogin to Timesheet with Valid Credentials&amp#27;[0m                    &amp#27;[90m# com.AdminView.stepDefinitions.TC01_LoginSteps.i_am_on_the_login_page_of_the_website()&amp#27;[0m
+ INFO [main] (Logs.java:13)- *******TE01_LoginSteps TEST Execution START*******
+ INFO [main] (Logs.java:13)- *******PE01_LoginPage TEST Execution START*******
+Test03@bhavnacorp.com
+ INFO [main] (Logs.java:23)- Entered Username for Employee
+Welc0me@bh@vna24
+ INFO [main] (Logs.java:23)- Entered Password for Employee
+ INFO [main] (Logs.java:23)- Successfully logged into Employee View
+User Access to Employee View as WELCOME, TEST 03
+Page title matches the expected prefix: Automation
+  &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mEnter url and Click on Continue to Microsoft Account&amp#27;[0m    &amp#27;[90m# com.EmployeeView.stepDefinitions.TE01_LoginSteps.i_am_on_the_login_page_of_the_website()&amp#27;[0m
 
-    Embedding Navigate to Timesheet URL and Login as Admin [image/png 3789 bytes]
+    Embedding Login as Employee Role [image/png 42149 bytes]
 
-  &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mClick on &amp#27;[0m&amp#27;[32m&amp#27;[1m"Advanced"&amp#27;[0m&amp#27;[32m options for Admin View&amp#27;[0m                    &amp#27;[90m# com.AdminView.stepDefinitions.TC01_LoginSteps.click_on_option(java.lang.String)&amp#27;[0m
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mEnter the UserName,Password and click on SignIn button&amp#27;[0m    &amp#27;[90m# com.EmployeeView.stepDefinitions.TE01_LoginSteps.redirected_to_the_login_page_and_verify_title()&amp#27;[0m
 
-    Embedding Navigate to Timesheet URL and Login as Admin [image/png 3789 bytes]
+    Embedding Login as Employee Role [image/png 42149 bytes]
 
-  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mSelect the option to proceed to the unsafe URLs for Admin View&amp#27;[0m &amp#27;[90m# com.AdminView.stepDefinitions.TC01_LoginSteps.select_the_option_to_proceed_to_the_unsafe_url()&amp#27;[0m
+Page title matches the expected prefix: Automation
+ INFO [main] (Logs.java:19)- *******TE01_LoginSteps TEST END*********
+  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mValidate the page title of Employee View as &amp#27;[0m&amp#27;[32m&amp#27;[1m"Automation"&amp#27;[0m &amp#27;[90m# com.EmployeeView.stepDefinitions.TE01_LoginSteps.checkTitle(java.lang.String)&amp#27;[0m
 
-    Embedding Navigate to Timesheet URL and Login as Admin [image/png 3789 bytes]
+    Embedding Login as Employee Role [image/png 42149 bytes]
 
- INFO [main] (Logs.java:13)- *******TC01_LoginSteps TEST Execution START*******
- INFO [main] (Logs.java:23)- Entered username
- INFO [main] (Logs.java:23)- click on emailNext
- INFO [main] (Logs.java:23)- Entered password
- INFO [main] (Logs.java:23)- click on emailNext
- INFO [main] (Logs.java:23)- logIn successFully into admin view
-  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mAdmin Logged in Successfully&amp#27;[0m                                  &amp#27;[90m# com.AdminView.stepDefinitions.TC01_LoginSteps.redirected_to_the_login_page_and_verify_title()&amp#27;[0m
+User Access to Employee View as WELCOME, TEST 03
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mLogged in Successfully as an Employee&amp#27;[0m                     &amp#27;[90m# com.EmployeeView.stepDefinitions.TE01_LoginSteps.verify_User_Name_and_Access_of_Timesheet()&amp#27;[0m
 
-    Embedding Navigate to Timesheet URL and Login as Admin [image/png 3789 bytes]
+    Embedding Login as Employee Role [image/png 42149 bytes]
 
 ]]></system-out>
     <system-err><![CDATA[SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
 SLF4J: Defaulting to no-operation (NOP) logger implementation
 SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
-Aug 21, 2024 7:09:42 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
-WARNING: Unable to find CDP implementation matching 127
-Aug 21, 2024 7:09:42 PM org.openqa.selenium.chromium.ChromiumDriver lambda$new$5
-WARNING: Unable to find version of CDP to use for 127.0.6533.120. You may need to include a dependency on a specific version of the CDP using something similar to `org.seleniumhq.selenium:selenium-devtools-v86:4.18.1` where the version ("v86") matches the version of the chromium-based browser you're using and the version number of the artifact is the same as Selenium's.
+Sep 06, 2024 3:51:25 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find CDP implementation matching 128
+Sep 06, 2024 3:51:25 PM org.openqa.selenium.chromium.ChromiumDriver lambda$new$5
+WARNING: Unable to find version of CDP to use for 128.0.6613.119. You may need to include a dependency on a specific version of the CDP using something similar to `org.seleniumhq.selenium:selenium-devtools-v86:4.18.1` where the version ("v86") matches the version of the chromium-based browser you're using and the version number of the artifact is the same as Selenium's.
+log4j:WARN File option not set for appender [TTCC].
+log4j:WARN Are you using FileAppender instead of ConsoleAppender?
+log4j:ERROR No output stream or file set for the appender named [TTCC].
+log4j:WARN File option not set for appender [TTCC].
+log4j:WARN Are you using FileAppender instead of ConsoleAppender?
+log4j:ERROR No output stream or file set for the appender named [TTCC].
+]]></system-err>
+  </testcase>
+  <testcase name="runScenario[&quot;Login as Employee Role and Create Timesheet for Current Week&quot;, &quot;Login as Employee Role and Create Timesheet for Current Week&quot;](2)" classname="com.TimeSheet.TestRunner.TestngRunner" time="226.729">
+    <system-out><![CDATA[
+@employee
+Scenario Outline: Login as Employee Role and Create Timesheet for Current Week                                                                                   &amp#27;[90m# src/test/resources/EmployeeViewFeatures/TC02_EmployeeCurrentWeekTimesheet.feature:15&amp#27;[0m
+All cookies are cleared.
+ INFO [main] (Logs.java:13)- *******TE02_CreateTimeSheetSteps TEST Execution START*******
+ INFO [main] (Logs.java:13)- *******PE01_LoginPage TEST Execution START*******
+Test03@bhavnacorp.com
+ INFO [main] (Logs.java:23)- Entered Username for Employee
+Welc0me@bh@vna24
+ INFO [main] (Logs.java:23)- Entered Password for Employee
+ INFO [main] (Logs.java:23)- Successfully logged into Employee View
+User Access to Employee View as WELCOME, TEST 03
+Page title matches the expected prefix: Automation
+  &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mLogin As Employee Role&amp#27;[0m                                                                                                                                   &amp#27;[90m# com.EmployeeView.stepDefinitions.TE02_CreateTimeSheetSteps.Employeelogin()&amp#27;[0m
+
+    Embedding Login as Employee Role and Create Timesheet for Current Week [image/png 42149 bytes]
+
+ INFO [main] (Logs.java:23)- Clicked on TimesheetIcon
+  &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mClick on Create TimeSheetPage&amp#27;[0m                                                                                                                             &amp#27;[90m# com.EmployeeView.stepDefinitions.TE02_CreateTimeSheetSteps.CreateTimesheetIcon()&amp#27;[0m
+
+    Embedding Login as Employee Role and Create Timesheet for Current Week [image/png 42149 bytes]
+
+Mon Sep 02 15:52:20 IST 2024
+ INFO [main] (Logs.java:23)- Current week has been selected
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mSelect the current week date as an Employee&amp#27;[0m                                                                                                                &amp#27;[90m# com.EmployeeView.stepDefinitions.TE02_CreateTimeSheetSteps.selectWeek()&amp#27;[0m
+
+    Embedding Login as Employee Role and Create Timesheet for Current Week [image/png 42149 bytes]
+
+manager name is : Manager Name : Test 02
+approver name is : Approver Name : Cavungal Reema Simon John
+  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mVerify the manager name &amp#27;[0m&amp#27;[32m&amp#27;[1m"Manager Name : Test 02"&amp#27;[0m&amp#27;[32m and approver name &amp#27;[0m&amp#27;[32m&amp#27;[1m"Approver Name : Cavungal Reema Simon John"&amp#27;[0m&amp#27;[32m for employee view in create timesheet page&amp#27;[0m &amp#27;[90m# com.EmployeeView.stepDefinitions.TE02_CreateTimeSheetSteps.verify_the_manager_name_and_approver_name_for_employee_view_in_create_timesheet_page(java.lang.String,java.lang.String)&amp#27;[0m
+
+    Embedding Login as Employee Role and Create Timesheet for Current Week [image/png 42149 bytes]
+
+ INFO [main] (Logs.java:23)- Entered Task Description and Hours
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mEnter the Task Description,Category & SubCategory and Hours Details &amp#27;[0m&amp#27;[32m&amp#27;[1m"EmployeeCreateTimeSheet"&amp#27;[0m                                                              &amp#27;[90m# com.EmployeeView.stepDefinitions.TE02_CreateTimeSheetSteps.EnterTaskDiscriptionCategorySubcategory(java.lang.String)&amp#27;[0m
+
+    Embedding Login as Employee Role and Create Timesheet for Current Week [image/png 30434 bytes]
+
+ INFO [main] (Logs.java:23)- Clicked on save,submit and confirm button
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mClick On Save, Submit & confirm button to Create the Timesheet&amp#27;[0m                                                                                             &amp#27;[90m# com.EmployeeView.stepDefinitions.TE02_CreateTimeSheetSteps.ClickOnSaveSubmitConfirm()&amp#27;[0m
+
+    Embedding Login as Employee Role and Create Timesheet for Current Week [image/png 45096 bytes]
+
+ INFO [main] (Logs.java:23)- validation for Successfully submission of Timesheet
+ INFO [main] (Logs.java:19)- *******TE02_CreateTimeSheetSteps TEST END*********
+  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mValidate The TimeSheet Response As &amp#27;[0m&amp#27;[32m&amp#27;[1m"Timesheet already submitted!"&amp#27;[0m                                                                                         &amp#27;[90m# com.EmployeeView.stepDefinitions.TE02_CreateTimeSheetSteps.ValidateTimesheetResponse(java.lang.String)&amp#27;[0m
+
+    Embedding Login as Employee Role and Create Timesheet for Current Week [image/png 34797 bytes]
+
+]]></system-out>
+    <system-err><![CDATA[Sep 06, 2024 3:52:00 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find CDP implementation matching 128
+Sep 06, 2024 3:52:00 PM org.openqa.selenium.chromium.ChromiumDriver lambda$new$5
+WARNING: Unable to find version of CDP to use for 128.0.6613.119. You may need to include a dependency on a specific version of the CDP using something similar to `org.seleniumhq.selenium:selenium-devtools-v86:4.18.1` where the version ("v86") matches the version of the chromium-based browser you're using and the version number of the artifact is the same as Selenium's.
+log4j:WARN File option not set for appender [TTCC].
+log4j:WARN Are you using FileAppender instead of ConsoleAppender?
+log4j:ERROR No output stream or file set for the appender named [TTCC].
+log4j:WARN File option not set for appender [TTCC].
+log4j:WARN Are you using FileAppender instead of ConsoleAppender?
+log4j:ERROR No output stream or file set for the appender named [TTCC].
+]]></system-err>
+  </testcase>
+  <testcase name="runScenario[&quot;Login as Employee Role to verify the Pending status of Timesheet&quot;, &quot;Login as Employee Role to verify the Pending status of Timesheet&quot;](3)" classname="com.TimeSheet.TestRunner.TestngRunner" time="32.67">
+    <system-out><![CDATA[
+@employee
+Scenario Outline: Login as Employee Role to verify the Pending status of Timesheet                                                               &amp#27;[90m# src/test/resources/EmployeeViewFeatures/TC03_VerifyEmployeePendingTimesheet.feature:14&amp#27;[0m
+All cookies are cleared.
+ INFO [main] (Logs.java:13)- *******TE03_PendingTimeSheetSteps TEST Execution START*******
+ INFO [main] (Logs.java:13)- *******PE01_LoginPage TEST Execution START*******
+Test03@bhavnacorp.com
+ INFO [main] (Logs.java:23)- Entered Username for Employee
+Welc0me@bh@vna24
+ INFO [main] (Logs.java:23)- Entered Password for Employee
+ INFO [main] (Logs.java:23)- Successfully logged into Employee View
+User Access to Employee View as WELCOME, TEST 03
+Page title matches the expected prefix: Automation
+  &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mLogin as the Employee Role&amp#27;[0m                                                                                                               &amp#27;[90m# com.EmployeeView.stepDefinitions.TE03_PendingTimeSheetSteps.user_login_timesheet_page_with_valid_credentials()&amp#27;[0m
+
+    Embedding Login as Employee Role to verify the Pending status of Timesheet [image/png 36489 bytes]
+
+ INFO [main] (Logs.java:23)- clicked on pending icon
+  &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mClick on Pending Icon&amp#27;[0m                                                                                                                     &amp#27;[90m# com.EmployeeView.stepDefinitions.TE03_PendingTimeSheetSteps.click_on_pending_icon()&amp#27;[0m
+
+    Embedding Login as Employee Role to verify the Pending status of Timesheet [image/png 33625 bytes]
+
+ INFO [main] (Logs.java:23)- SuccessFully done validation of pending Timesheet
+ INFO [main] (Logs.java:19)- *******TE03_PendingTimeSheetSteps TEST END*********
+  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mClick on Expand Icon to Verify the pending Status &amp#27;[0m&amp#27;[32m&amp#27;[1m"Pending"&amp#27;[0m                                                                               &amp#27;[90m# com.EmployeeView.stepDefinitions.TE03_PendingTimeSheetSteps.verify_the_pending_status(java.lang.String)&amp#27;[0m
+
+    Embedding Login as Employee Role to verify the Pending status of Timesheet [image/png 45562 bytes]
+
+manager name is : Manager Name :Test 02
+approver name is : Approver Name :Cavungal Reema Simon John
+  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mVerify the manager name &amp#27;[0m&amp#27;[32m&amp#27;[1m"Manager Name :Test 02"&amp#27;[0m&amp#27;[32m and approver name &amp#27;[0m&amp#27;[32m&amp#27;[1m"Approver Name :Cavungal Reema Simon John"&amp#27;[0m&amp#27;[32m for employee in pending page&amp#27;[0m &amp#27;[90m# com.EmployeeView.stepDefinitions.TE03_PendingTimeSheetSteps.verify_the_manager_name_and_approver_name_for_employee_in_pending_page(java.lang.String,java.lang.String)&amp#27;[0m
+
+    Embedding Login as Employee Role to verify the Pending status of Timesheet [image/png 45562 bytes]
+
+]]></system-out>
+    <system-err><![CDATA[Sep 06, 2024 3:55:46 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find CDP implementation matching 128
+Sep 06, 2024 3:55:46 PM org.openqa.selenium.chromium.ChromiumDriver lambda$new$5
+WARNING: Unable to find version of CDP to use for 128.0.6613.119. You may need to include a dependency on a specific version of the CDP using something similar to `org.seleniumhq.selenium:selenium-devtools-v86:4.18.1` where the version ("v86") matches the version of the chromium-based browser you're using and the version number of the artifact is the same as Selenium's.
+log4j:WARN File option not set for appender [TTCC].
+log4j:WARN Are you using FileAppender instead of ConsoleAppender?
+log4j:ERROR No output stream or file set for the appender named [TTCC].
+log4j:WARN File option not set for appender [TTCC].
+log4j:WARN Are you using FileAppender instead of ConsoleAppender?
+log4j:ERROR No output stream or file set for the appender named [TTCC].
+]]></system-err>
+  </testcase>
+  <testcase name="runScenario[&quot;Manager Approve Timesheet For Employee Role&quot;, &quot;Manager Approve Timesheet For Employee Role&quot;](4)" classname="com.TimeSheet.TestRunner.TestngRunner" time="52.069">
+    <system-out><![CDATA[
+@employee
+Scenario Outline: Manager Approve Timesheet For Employee Role                                                      &amp#27;[90m# src/test/resources/EmployeeViewFeatures/TC04_ManagerApproveTimesheetForEmployee.feature:13&amp#27;[0m
+All cookies are cleared.
+ INFO [main] (Logs.java:13)- *******TE04_ManagerLogInForApprovalSteps TEST Execution START*******
+  &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mLogin as Manager Role&amp#27;[0m                                                                                      &amp#27;[90m# com.EmployeeView.stepDefinitions.TE04_ManagerLogInForApprovalSteps.login_as_manager_credentials()&amp#27;[0m
+
+    Embedding Manager Approve Timesheet For Employee Role [image/png 37900 bytes]
+
+ INFO [main] (Logs.java:23)- Clicked on Timesheet management page
+  &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mClick on TimeSheet Management Page in Manager View&amp#27;[0m                                                          &amp#27;[90m# com.EmployeeView.stepDefinitions.TE04_ManagerLogInForApprovalSteps.click_on_time_sheet_management_page_in_manager_view_and()&amp#27;[0m
+
+    Embedding Manager Approve Timesheet For Employee Role [image/png 37900 bytes]
+
+Mon Sep 02 15:56:34 IST 2024
+ INFO [main] (Logs.java:23)- Selected the current week
+ INFO [main] (Logs.java:23)- Selected the CurrentWeek
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mSelect the week to approve the Timesheet&amp#27;[0m                                                                     &amp#27;[90m# com.EmployeeView.stepDefinitions.TE04_ManagerLogInForApprovalSteps.timesheet_records_are_listed_to_that_respective_week()&amp#27;[0m
+
+    Embedding Manager Approve Timesheet For Employee Role [image/png 37880 bytes]
+
+ INFO [main] (Logs.java:23)- Approved the Timesheet
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mApproved the timesheet for employee for the selected week&amp#27;[0m                                                    &amp#27;[90m# com.EmployeeView.stepDefinitions.TE04_ManagerLogInForApprovalSteps.verify_manager_view_allows_to_approve_the_timesheet_and_approve_the_selected_timesheet()&amp#27;[0m
+
+    Embedding Manager Approve Timesheet For Employee Role [image/png 38506 bytes]
+
+ INFO [main] (Logs.java:23)- Clicked on approved Page
+Mon Sep 02 15:56:47 IST 2024
+ INFO [main] (Logs.java:23)- Selected the current week
+ INFO [main] (Logs.java:23)- Clicked on ExpandArrow in approved Page
+ INFO [main] (Logs.java:23)- successfully done the validation of Approval Timesheet
+ INFO [main] (Logs.java:19)- *******TE04_ManagerLogInForApprovalSteps TEST END*********
+  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mClick on Approved Timesheet Icon in Manager View and Verify the status, Approved date &amp#27;[0m&amp#27;[32m&amp#27;[1m"123456"&amp#27;[0m&amp#27;[32m , &amp#27;[0m&amp#27;[32m&amp#27;[1m"Approved"&amp#27;[0m &amp#27;[90m# com.EmployeeView.stepDefinitions.TE04_ManagerLogInForApprovalSteps.VerifyApprovedDate(java.lang.String,java.lang.String)&amp#27;[0m
+
+    Embedding Manager Approve Timesheet For Employee Role [image/png 45664 bytes]
+
+]]></system-out>
+    <system-err><![CDATA[Sep 06, 2024 3:56:19 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find CDP implementation matching 128
+Sep 06, 2024 3:56:19 PM org.openqa.selenium.chromium.ChromiumDriver lambda$new$5
+WARNING: Unable to find version of CDP to use for 128.0.6613.119. You may need to include a dependency on a specific version of the CDP using something similar to `org.seleniumhq.selenium:selenium-devtools-v86:4.18.1` where the version ("v86") matches the version of the chromium-based browser you're using and the version number of the artifact is the same as Selenium's.
+log4j:WARN File option not set for appender [TTCC].
+log4j:WARN Are you using FileAppender instead of ConsoleAppender?
+log4j:ERROR No output stream or file set for the appender named [TTCC].
+]]></system-err>
+  </testcase>
+  <testcase name="runScenario[&quot;Login as Employee Role to verify the Approved status of Timesheet&quot;, &quot;Login as Employee Role to verify the Approved status of Timesheet&quot;](5)" classname="com.TimeSheet.TestRunner.TestngRunner" time="32.085">
+    <system-out><![CDATA[
+@employee
+Scenario Outline: Login as Employee Role to verify the Approved status of Timesheet &amp#27;[90m# src/test/resources/EmployeeViewFeatures/TC05_VerifyEmployeeApprovedTimesheet.feature:14&amp#27;[0m
+All cookies are cleared.
+ INFO [main] (Logs.java:13)- *******TE05_EmployeeApproveTimeSheetSteps TEST Execution START*******
+ INFO [main] (Logs.java:13)- *******PE01_LoginPage TEST Execution START*******
+Test03@bhavnacorp.com
+ INFO [main] (Logs.java:23)- Entered Username for Employee
+Welc0me@bh@vna24
+ INFO [main] (Logs.java:23)- Entered Password for Employee
+ INFO [main] (Logs.java:23)- Successfully logged into Employee View
+User Access to Employee View as WELCOME, TEST 03
+Page title matches the expected prefix: Automation
+  &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mLogin as the Employee's Role&amp#27;[0m                                                &amp#27;[90m# com.EmployeeView.stepDefinitions.TE05_EmployeeApproveTimeSheetSteps.user_login_timesheet_page_with_username_and_password()&amp#27;[0m
+
+    Embedding Login as Employee Role to verify the Approved status of Timesheet [image/png 36489 bytes]
+
+ INFO [main] (Logs.java:23)- clicked on Approved page
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mClick on Approved Timesheet Icon&amp#27;[0m                                              &amp#27;[90m# com.EmployeeView.stepDefinitions.TE05_EmployeeApproveTimeSheetSteps.click_on_approved_timesheet_icon()&amp#27;[0m
+
+    Embedding Login as Employee Role to verify the Approved status of Timesheet [image/png 32727 bytes]
+
+ INFO [main] (Logs.java:23)- sucessFully done the validation of approved Timesheet
+ INFO [main] (Logs.java:19)- *******TE05_EmployeeApproveTimeSheetSteps TEST END*********
+  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mClick on Expand Icon to Verify the Approved Status &amp#27;[0m&amp#27;[32m&amp#27;[1m"Approved"&amp#27;[0m                &amp#27;[90m# com.EmployeeView.stepDefinitions.TE05_EmployeeApproveTimeSheetSteps.verify_the_approved_status_and_approved_on_date(java.lang.String)&amp#27;[0m
+
+    Embedding Login as Employee Role to verify the Approved status of Timesheet [image/png 37067 bytes]
+
+]]></system-out>
+    <system-err><![CDATA[Sep 06, 2024 3:57:11 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find CDP implementation matching 128
+Sep 06, 2024 3:57:11 PM org.openqa.selenium.chromium.ChromiumDriver lambda$new$5
+WARNING: Unable to find version of CDP to use for 128.0.6613.119. You may need to include a dependency on a specific version of the CDP using something similar to `org.seleniumhq.selenium:selenium-devtools-v86:4.18.1` where the version ("v86") matches the version of the chromium-based browser you're using and the version number of the artifact is the same as Selenium's.
+log4j:WARN File option not set for appender [TTCC].
+log4j:WARN Are you using FileAppender instead of ConsoleAppender?
+log4j:ERROR No output stream or file set for the appender named [TTCC].
+log4j:WARN File option not set for appender [TTCC].
+log4j:WARN Are you using FileAppender instead of ConsoleAppender?
+log4j:ERROR No output stream or file set for the appender named [TTCC].
+]]></system-err>
+  </testcase>
+  <testcase name="runScenario[&quot;Login as Employee Role and Create Timesheet for Past Week&quot;, &quot;Login as Employee Role and Create Timesheet for Past Week&quot;](6)" classname="com.TimeSheet.TestRunner.TestngRunner" time="239.296">
+    <system-out><![CDATA[
+@employee
+Scenario Outline: Login as Employee Role and Create Timesheet for Past Week                         &amp#27;[90m# src/test/resources/EmployeeViewFeatures/TC06_EmployeePastWeekTimeSheet.feature:14&amp#27;[0m
+All cookies are cleared.
+ INFO [main] (Logs.java:13)- *******TE02_CreateTimeSheetSteps TEST Execution START*******
+ INFO [main] (Logs.java:13)- *******PE01_LoginPage TEST Execution START*******
+Test03@bhavnacorp.com
+ INFO [main] (Logs.java:23)- Entered Username for Employee
+Welc0me@bh@vna24
+ INFO [main] (Logs.java:23)- Entered Password for Employee
+ INFO [main] (Logs.java:23)- Successfully logged into Employee View
+User Access to Employee View as WELCOME, TEST 03
+Page title matches the expected prefix: Automation
+  &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mLogin As Employee Role&amp#27;[0m                                                                      &amp#27;[90m# com.EmployeeView.stepDefinitions.TE02_CreateTimeSheetSteps.Employeelogin()&amp#27;[0m
+
+    Embedding Login as Employee Role and Create Timesheet for Past Week [image/png 36489 bytes]
+
+ INFO [main] (Logs.java:23)- Clicked on TimesheetIcon
+  &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mClick on Create TimeSheetPage&amp#27;[0m                                                                &amp#27;[90m# com.EmployeeView.stepDefinitions.TE02_CreateTimeSheetSteps.CreateTimesheetIcon()&amp#27;[0m
+
+    Embedding Login as Employee Role and Create Timesheet for Past Week [image/png 36489 bytes]
+
+ INFO [main] (Logs.java:23)- Clicked on previous month arrow and selected the past week date from calendar
+past weekSun Aug 25 15:58:03 IST 2024
+clicked on prev monthn arrow selected the date
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mSelect the Previous week Date from Calender Icon&amp#27;[0m                                              &amp#27;[90m# com.EmployeeView.stepDefinitions.TE02_CreateTimeSheetSteps.SeletionOfPreviousDate()&amp#27;[0m
+
+    Embedding Login as Employee Role and Create Timesheet for Past Week [image/png 41931 bytes]
+
+ INFO [main] (Logs.java:23)- Entered Task Description and Hours
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mEnter the Task Description,Category & SubCategory and Hours Details &amp#27;[0m&amp#27;[32m&amp#27;[1m"EmployeeCreateTimeSheet"&amp#27;[0m &amp#27;[90m# com.EmployeeView.stepDefinitions.TE02_CreateTimeSheetSteps.EnterTaskDiscriptionCategorySubcategory(java.lang.String)&amp#27;[0m
+
+    Embedding Login as Employee Role and Create Timesheet for Past Week [image/png 30437 bytes]
+
+ INFO [main] (Logs.java:23)- Clicked on save,submit and confirm button
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mClick On Save, Submit & confirm button to Create the Timesheet&amp#27;[0m                                &amp#27;[90m# com.EmployeeView.stepDefinitions.TE02_CreateTimeSheetSteps.ClickOnSaveSubmitConfirm()&amp#27;[0m
+
+    Embedding Login as Employee Role and Create Timesheet for Past Week [image/png 44993 bytes]
+
+ INFO [main] (Logs.java:23)- validation for Successfully submission of Timesheet
+ INFO [main] (Logs.java:19)- *******TE02_CreateTimeSheetSteps TEST END*********
+  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mValidate The TimeSheet Response As &amp#27;[0m&amp#27;[32m&amp#27;[1m"Timesheet already submitted!"&amp#27;[0m                            &amp#27;[90m# com.EmployeeView.stepDefinitions.TE02_CreateTimeSheetSteps.ValidateTimesheetResponse(java.lang.String)&amp#27;[0m
+
+    Embedding Login as Employee Role and Create Timesheet for Past Week [image/png 34515 bytes]
+
+]]></system-out>
+    <system-err><![CDATA[Sep 06, 2024 3:57:43 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find CDP implementation matching 128
+Sep 06, 2024 3:57:43 PM org.openqa.selenium.chromium.ChromiumDriver lambda$new$5
+WARNING: Unable to find version of CDP to use for 128.0.6613.119. You may need to include a dependency on a specific version of the CDP using something similar to `org.seleniumhq.selenium:selenium-devtools-v86:4.18.1` where the version ("v86") matches the version of the chromium-based browser you're using and the version number of the artifact is the same as Selenium's.
+log4j:WARN File option not set for appender [TTCC].
+log4j:WARN Are you using FileAppender instead of ConsoleAppender?
+log4j:ERROR No output stream or file set for the appender named [TTCC].
+log4j:WARN File option not set for appender [TTCC].
+log4j:WARN Are you using FileAppender instead of ConsoleAppender?
+log4j:ERROR No output stream or file set for the appender named [TTCC].
+]]></system-err>
+  </testcase>
+  <testcase name="runScenario[&quot;Manager Reject Timesheet For Employee Role&quot;, &quot;Manager Reject Timesheet For Employee Role&quot;](7)" classname="com.TimeSheet.TestRunner.TestngRunner" time="61.022">
+    <system-out><![CDATA[
+@employee
+Scenario Outline: Manager Reject Timesheet For Employee Role         &amp#27;[90m# src/test/resources/EmployeeViewFeatures/TC07_ManagerRejectedTimesheetForEmployee.feature:16&amp#27;[0m
+All cookies are cleared.
+ INFO [main] (Logs.java:13)- *******TE06_ManagerLogInForRejectedSteps TEST Execution START*******
+  &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mLogin as Manager's Role&amp#27;[0m                                      &amp#27;[90m# com.EmployeeView.stepDefinitions.TE06_ManagerLogInForRejectedSteps.login_as_manager_credentials()&amp#27;[0m
+
+    Embedding Manager Reject Timesheet For Employee Role [image/png 38110 bytes]
+
+ INFO [main] (Logs.java:23)- Clicked on TimesheetManagement Page
+  &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mClick on TimeSheet Management Page in Manager's View&amp#27;[0m          &amp#27;[90m# com.EmployeeView.stepDefinitions.TE06_ManagerLogInForRejectedSteps.click_on_time_sheet_management_page_in_manager_view_and()&amp#27;[0m
+
+    Embedding Manager Reject Timesheet For Employee Role [image/png 38110 bytes]
+
+ INFO [main] (Logs.java:23)- selected the past week date
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mSelect the week to Reject the Employee Timesheet&amp#27;[0m               &amp#27;[90m# com.EmployeeView.stepDefinitions.TE06_ManagerLogInForRejectedSteps.select_the_week_to_reject_the_timesheet_for_employee()&amp#27;[0m
+
+    Embedding Manager Reject Timesheet For Employee Role [image/png 45422 bytes]
+
+ INFO [main] (Logs.java:23)- selected the checkbox to Reject Timesheet
+ INFO [main] (Logs.java:23)- Entered Remarks for Rejection
+ INFO [main] (Logs.java:23)- clicked on confirm button for rejection
+ INFO [main] (Logs.java:23)- Rejected the timesheet successfully
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mReject the timesheet for employee for the selected week &amp#27;[0m&amp#27;[32m&amp#27;[1m"Test"&amp#27;[0m &amp#27;[90m# com.EmployeeView.stepDefinitions.TE06_ManagerLogInForRejectedSteps.rejectTheTimesheet(java.lang.String)&amp#27;[0m
+
+    Embedding Manager Reject Timesheet For Employee Role [image/png 40765 bytes]
+
+ INFO [main] (Logs.java:23)- Click On Reject TimesheetPage in manager view
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mClick on Reject Timesheet Icon in Manager View&amp#27;[0m                 &amp#27;[90m# com.EmployeeView.stepDefinitions.TE06_ManagerLogInForRejectedSteps.RejectTimesheetIcon()&amp#27;[0m
+
+    Embedding Manager Reject Timesheet For Employee Role [image/png 37921 bytes]
+
+ INFO [main] (Logs.java:23)- selected the past week date
+ INFO [main] (Logs.java:23)- clicked on Expand Arrow for Rejected Timesheet
+ INFO [main] (Logs.java:23)- successfully done the validation for Reject Timesheet
+ INFO [main] (Logs.java:19)- *******TE06_ManagerLogInForRejectedSteps TEST END*********
+  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mValidate the status Rejected date&amp#27;[0m                             &amp#27;[90m# com.EmployeeView.stepDefinitions.TE06_ManagerLogInForRejectedSteps.vadidatingTheStatus()&amp#27;[0m
+
+    Embedding Manager Reject Timesheet For Employee Role [image/png 50082 bytes]
+
+]]></system-out>
+    <system-err><![CDATA[Sep 06, 2024 4:01:42 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find CDP implementation matching 128
+Sep 06, 2024 4:01:42 PM org.openqa.selenium.chromium.ChromiumDriver lambda$new$5
+WARNING: Unable to find version of CDP to use for 128.0.6613.119. You may need to include a dependency on a specific version of the CDP using something similar to `org.seleniumhq.selenium:selenium-devtools-v86:4.18.1` where the version ("v86") matches the version of the chromium-based browser you're using and the version number of the artifact is the same as Selenium's.
+log4j:WARN File option not set for appender [TTCC].
+log4j:WARN Are you using FileAppender instead of ConsoleAppender?
+log4j:ERROR No output stream or file set for the appender named [TTCC].
+java.lang.NullPointerException: Cannot invoke "Object.getClass()" because "exceptionDriver" is null
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:85)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
+	at com.TimeSheet.utils.CommonUtils.explicitlyWaitForElementandClick(CommonUtils.java:62)
+	at com.TimeSheet.utils.CommonUtils.CalenderSelectWithDate(CommonUtils.java:96)
+	at com.EmployeeViewTimeSheet.page.PE07_ManagerLogInForRejectedPage.selectPastWeekDate(PE07_ManagerLogInForRejectedPage.java:101)
+	at com.EmployeeView.stepDefinitions.TE06_ManagerLogInForRejectedSteps.select_the_week_to_reject_the_timesheet_for_employee(TE06_ManagerLogInForRejectedSteps.java:34)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at io.cucumber.java.Invoker.doInvoke(Invoker.java:66)
+	at io.cucumber.java.Invoker.invoke(Invoker.java:24)
+	at io.cucumber.java.AbstractGlueDefinition.invokeMethod(AbstractGlueDefinition.java:47)
+	at io.cucumber.java.JavaStepDefinition.execute(JavaStepDefinition.java:29)
+	at io.cucumber.core.runner.CoreStepDefinition.execute(CoreStepDefinition.java:66)
+	at io.cucumber.core.runner.PickleStepDefinitionMatch.runStep(PickleStepDefinitionMatch.java:63)
+	at io.cucumber.core.runner.ExecutionMode$1.execute(ExecutionMode.java:10)
+	at io.cucumber.core.runner.TestStep.executeStep(TestStep.java:84)
+	at io.cucumber.core.runner.TestStep.run(TestStep.java:56)
+	at io.cucumber.core.runner.PickleStepTestStep.run(PickleStepTestStep.java:51)
+	at io.cucumber.core.runner.TestCase.run(TestCase.java:84)
+	at io.cucumber.core.runner.Runner.runPickle(Runner.java:75)
+	at io.cucumber.testng.TestNGCucumberRunner.lambda$runScenario$1(TestNGCucumberRunner.java:132)
+	at io.cucumber.core.runtime.CucumberExecutionContext.lambda$runTestCase$5(CucumberExecutionContext.java:137)
+	at io.cucumber.core.runtime.RethrowingThrowableCollector.executeAndThrow(RethrowingThrowableCollector.java:23)
+	at io.cucumber.core.runtime.CucumberExecutionContext.runTestCase(CucumberExecutionContext.java:137)
+	at io.cucumber.testng.TestNGCucumberRunner.runScenario(TestNGCucumberRunner.java:129)
+	at io.cucumber.testng.AbstractTestNGCucumberTests.runScenario(AbstractTestNGCucumberTests.java:35)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:962)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:806)
+	at org.testng.TestRunner.run(TestRunner.java:601)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:433)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:427)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:387)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:330)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
+	at org.testng.TestNG.runSuites(TestNG.java:1099)
+	at org.testng.TestNG.run(TestNG.java:1067)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:308)
+	at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:71)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:113)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
+	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
+java.lang.NullPointerException: Cannot invoke "Object.getClass()" because "exceptionDriver" is null
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:85)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
+	at com.TimeSheet.utils.CommonUtils.explicitlyWaitForElementandClick(CommonUtils.java:62)
+	at com.TimeSheet.utils.CommonUtils.CalenderSelectWithDate(CommonUtils.java:96)
+	at com.EmployeeViewTimeSheet.page.PE07_ManagerLogInForRejectedPage.selectPastWeekDate(PE07_ManagerLogInForRejectedPage.java:101)
+	at com.EmployeeViewTimeSheet.page.PE07_ManagerLogInForRejectedPage.rejectedTimesheetValidating(PE07_ManagerLogInForRejectedPage.java:121)
+	at com.EmployeeView.stepDefinitions.TE06_ManagerLogInForRejectedSteps.vadidatingTheStatus(TE06_ManagerLogInForRejectedSteps.java:48)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at io.cucumber.java.Invoker.doInvoke(Invoker.java:66)
+	at io.cucumber.java.Invoker.invoke(Invoker.java:24)
+	at io.cucumber.java.AbstractGlueDefinition.invokeMethod(AbstractGlueDefinition.java:47)
+	at io.cucumber.java.JavaStepDefinition.execute(JavaStepDefinition.java:29)
+	at io.cucumber.core.runner.CoreStepDefinition.execute(CoreStepDefinition.java:66)
+	at io.cucumber.core.runner.PickleStepDefinitionMatch.runStep(PickleStepDefinitionMatch.java:63)
+	at io.cucumber.core.runner.ExecutionMode$1.execute(ExecutionMode.java:10)
+	at io.cucumber.core.runner.TestStep.executeStep(TestStep.java:84)
+	at io.cucumber.core.runner.TestStep.run(TestStep.java:56)
+	at io.cucumber.core.runner.PickleStepTestStep.run(PickleStepTestStep.java:51)
+	at io.cucumber.core.runner.TestCase.run(TestCase.java:84)
+	at io.cucumber.core.runner.Runner.runPickle(Runner.java:75)
+	at io.cucumber.testng.TestNGCucumberRunner.lambda$runScenario$1(TestNGCucumberRunner.java:132)
+	at io.cucumber.core.runtime.CucumberExecutionContext.lambda$runTestCase$5(CucumberExecutionContext.java:137)
+	at io.cucumber.core.runtime.RethrowingThrowableCollector.executeAndThrow(RethrowingThrowableCollector.java:23)
+	at io.cucumber.core.runtime.CucumberExecutionContext.runTestCase(CucumberExecutionContext.java:137)
+	at io.cucumber.testng.TestNGCucumberRunner.runScenario(TestNGCucumberRunner.java:129)
+	at io.cucumber.testng.AbstractTestNGCucumberTests.runScenario(AbstractTestNGCucumberTests.java:35)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:962)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:806)
+	at org.testng.TestRunner.run(TestRunner.java:601)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:433)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:427)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:387)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:330)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
+	at org.testng.TestNG.runSuites(TestNG.java:1099)
+	at org.testng.TestNG.run(TestNG.java:1067)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:308)
+	at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:71)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:113)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
+	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
+]]></system-err>
+  </testcase>
+  <testcase name="runScenario[&quot;Login as Employee Role to verify the Draft Functionality&quot;, &quot;Login as Employee Role to verify the Draft Functionality&quot;](8)" classname="com.TimeSheet.TestRunner.TestngRunner" time="43.189">
+    <system-out><![CDATA[
+@employee
+Scenario Outline: Login as Employee Role to verify the Draft Functionality           &amp#27;[90m# src/test/resources/EmployeeViewFeatures/TC08_VerifyEmployeeDraftTimesheet.feature:12&amp#27;[0m
+All cookies are cleared.
+ INFO [main] (Logs.java:13)- *******TE09_EmployeeDraftTimesheetSteps TEST Execution START*******
+ INFO [main] (Logs.java:13)- *******PE01_LoginPage TEST Execution START*******
+Test03@bhavnacorp.com
+ INFO [main] (Logs.java:23)- Entered Username for Employee
+Welc0me@bh@vna24
+ INFO [main] (Logs.java:23)- Entered Password for Employee
+ INFO [main] (Logs.java:23)- Successfully logged into Employee View
+User Access to Employee View as WELCOME, TEST 03
+Page title matches the expected prefix: Automation
+  &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mLog In as the Employee Role&amp#27;[0m                                                  &amp#27;[90m# com.EmployeeView.stepDefinitions.TE09_EmployeeDraftTimesheetSteps.user_login_timesheet_page()&amp#27;[0m
+
+    Embedding Login as Employee Role to verify the Draft Functionality [image/png 36489 bytes]
+
+ INFO [main] (Logs.java:23)- Clicked on previous month arrow and selected the past week date from calendar
+past weekSun Aug 25 16:03:04 IST 2024
+clicked on prev monthn arrow selected the date
+  &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mSelect the Past week from calender icon&amp#27;[0m                                      &amp#27;[90m# com.EmployeeView.stepDefinitions.TE09_EmployeeDraftTimesheetSteps.create_timesheet_to_verify_draft_func()&amp#27;[0m
+
+    Embedding Login as Employee Role to verify the Draft Functionality [image/png 35024 bytes]
+
+ INFO [main] (Logs.java:23)- Successfully validation of DraftFunctionality
+ INFO [main] (Logs.java:19)- *******TE09_EmployeeDraftTimesheetSteps TEST END*********
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mVerify the Draft Functionlity by page Title as view Timesheet &amp#27;[0m&amp#27;[32m&amp#27;[1m"View Timesheet"&amp#27;[0m &amp#27;[90m# com.EmployeeView.stepDefinitions.TE09_EmployeeDraftTimesheetSteps.click_on_peding_icon_for_verify_the_draft_functionlity(java.lang.String)&amp#27;[0m
+
+    Embedding Login as Employee Role to verify the Draft Functionality [image/png 35024 bytes]
+
+]]></system-out>
+    <system-err><![CDATA[Sep 06, 2024 4:02:43 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find CDP implementation matching 128
+Sep 06, 2024 4:02:43 PM org.openqa.selenium.chromium.ChromiumDriver lambda$new$5
+WARNING: Unable to find version of CDP to use for 128.0.6613.119. You may need to include a dependency on a specific version of the CDP using something similar to `org.seleniumhq.selenium:selenium-devtools-v86:4.18.1` where the version ("v86") matches the version of the chromium-based browser you're using and the version number of the artifact is the same as Selenium's.
+log4j:WARN File option not set for appender [TTCC].
+log4j:WARN Are you using FileAppender instead of ConsoleAppender?
+log4j:ERROR No output stream or file set for the appender named [TTCC].
+log4j:WARN File option not set for appender [TTCC].
+log4j:WARN Are you using FileAppender instead of ConsoleAppender?
+log4j:ERROR No output stream or file set for the appender named [TTCC].
+]]></system-err>
+  </testcase>
+  <testcase name="runScenario[&quot;Login as Employee Role to verify the Edit Functionality&quot;, &quot;Login as Employee Role to verify the Edit Functionality&quot;](9)" classname="com.TimeSheet.TestRunner.TestngRunner" time="108.831">
+    <system-out><![CDATA[
+@employee
+Scenario Outline: Login as Employee Role to verify the Edit Functionality &amp#27;[90m# src/test/resources/EmployeeViewFeatures/TC09_VerifyEmployeeEditTimeSheet.feature:16&amp#27;[0m
+All cookies are cleared.
+ INFO [main] (Logs.java:13)- *******TE08_EditTimeSheetSteps TEST Execution START*******
+ INFO [main] (Logs.java:13)- *******PE01_LoginPage TEST Execution START*******
+Test03@bhavnacorp.com
+ INFO [main] (Logs.java:23)- Entered Username for Employee
+Welc0me@bh@vna24
+ INFO [main] (Logs.java:23)- Entered Password for Employee
+ INFO [main] (Logs.java:23)- Successfully logged into Employee View
+User Access to Employee View as WELCOME, TEST 03
+Page title matches the expected prefix: Automation
+  &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mLog In as Employee Role&amp#27;[0m                                           &amp#27;[90m# com.EmployeeView.stepDefinitions.TE08_EditTimeSheetSteps.user_login_timesheet_page()&amp#27;[0m
+
+    Embedding Login as Employee Role to verify the Edit Functionality [image/png 36489 bytes]
+
+ INFO [main] (Logs.java:23)- Clicked on TimesheetIcon
+  &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mClick on Create TimeSheet Icon&amp#27;[0m                                     &amp#27;[90m# com.EmployeeView.stepDefinitions.TE08_EditTimeSheetSteps.createTimesheetIcon()&amp#27;[0m
+
+    Embedding Login as Employee Role to verify the Edit Functionality [image/png 36489 bytes]
+
+ INFO [main] (Logs.java:23)- Clicked on previous month arrow and selected the past week date from calendar
+past weekSun Aug 25 16:03:47 IST 2024
+clicked on prev monthn arrow selected the date
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mSelect the Week for draft Timesheet&amp#27;[0m                                 &amp#27;[90m# com.EmployeeView.stepDefinitions.TE08_EditTimeSheetSteps.weekSelection()&amp#27;[0m
+
+    Embedding Login as Employee Role to verify the Edit Functionality [image/png 35024 bytes]
+
+ INFO [main] (Logs.java:23)- Clicked On EditIcon 
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mClick on edit icon&amp#27;[0m                                                  &amp#27;[90m# com.EmployeeView.stepDefinitions.TE08_EditTimeSheetSteps.select_the_edit_icon()&amp#27;[0m
+
+    Embedding Login as Employee Role to verify the Edit Functionality [image/png 43739 bytes]
+
+ INFO [main] (Logs.java:23)- Clicked on save button
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mEdit the TimeSheet Details and Submit &amp#27;[0m&amp#27;[32m&amp#27;[1m"EmployeeView_Edit_Hours"&amp#27;[0m     &amp#27;[90m# com.EmployeeView.stepDefinitions.TE08_EditTimeSheetSteps.enter_the_edit_task_description_and_hours(java.lang.String)&amp#27;[0m
+
+    Embedding Login as Employee Role to verify the Edit Functionality [image/png 44482 bytes]
+
+]]></system-out>
+    <system-err><![CDATA[Sep 06, 2024 4:03:26 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find CDP implementation matching 128
+Sep 06, 2024 4:03:26 PM org.openqa.selenium.chromium.ChromiumDriver lambda$new$5
+WARNING: Unable to find version of CDP to use for 128.0.6613.119. You may need to include a dependency on a specific version of the CDP using something similar to `org.seleniumhq.selenium:selenium-devtools-v86:4.18.1` where the version ("v86") matches the version of the chromium-based browser you're using and the version number of the artifact is the same as Selenium's.
+log4j:WARN File option not set for appender [TTCC].
+log4j:WARN Are you using FileAppender instead of ConsoleAppender?
+log4j:ERROR No output stream or file set for the appender named [TTCC].
+log4j:WARN File option not set for appender [TTCC].
+log4j:WARN Are you using FileAppender instead of ConsoleAppender?
+log4j:ERROR No output stream or file set for the appender named [TTCC].
+]]></system-err>
+  </testcase>
+  <testcase name="runScenario[&quot;Login as Employee Role to verify the Already Submitted Timesheet Functionality&quot;, &quot;Login as Employee Role to verify the Already Submitted Timesheet Functionality&quot;](10)" classname="com.TimeSheet.TestRunner.TestngRunner" time="29.117">
+    <system-out><![CDATA[
+@employee
+Scenario Outline: Login as Employee Role to verify the Already Submitted Timesheet Functionality &amp#27;[90m# src/test/resources/EmployeeViewFeatures/TC10_VerifyEmployee_AlreadySubmittedTimesheet.feature:13&amp#27;[0m
+All cookies are cleared.
+ INFO [main] (Logs.java:13)- *******TE10_AlreadySubmittedTimesheetSteps TEST Execution START*******
+ INFO [main] (Logs.java:13)- *******PE01_LoginPage TEST Execution START*******
+Test03@bhavnacorp.com
+ INFO [main] (Logs.java:23)- Entered Username for Employee
+Welc0me@bh@vna24
+ INFO [main] (Logs.java:23)- Entered Password for Employee
+ INFO [main] (Logs.java:23)- Successfully logged into Employee View
+User Access to Employee View as WELCOME, TEST 03
+Page title matches the expected prefix: Automation
+  &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mLog in as Employee Role&amp#27;[0m                                                                  &amp#27;[90m# com.EmployeeView.stepDefinitions.TE10_AlreadySubmittedTimesheetSteps.user_login_timesheet_page()&amp#27;[0m
+
+    Embedding Login as Employee Role to verify the Already Submitted Timesheet Functionality [image/png 36489 bytes]
+
+Mon Sep 02 16:05:37 IST 2024
+ INFO [main] (Logs.java:23)- Current week has been selected
+  &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mSelect Calender for current week to verify already submitted Functionality&amp#27;[0m                &amp#27;[90m# com.EmployeeView.stepDefinitions.TE10_AlreadySubmittedTimesheetSteps.select_calender_to_verify_already_submitted_functionality()&amp#27;[0m
+
+    Embedding Login as Employee Role to verify the Already Submitted Timesheet Functionality [image/png 36489 bytes]
+
+ INFO [main] (Logs.java:23)- validation for Successfully submission of Timesheet
+ INFO [main] (Logs.java:19)- *******TE10_AlreadySubmittedTimesheetSteps TEST END*********
+  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mValidate the timesheet Response As &amp#27;[0m&amp#27;[32m&amp#27;[1m"Timesheet already submitted!"&amp#27;[0m                         &amp#27;[90m# com.EmployeeView.stepDefinitions.TE10_AlreadySubmittedTimesheetSteps.i_validate_the_outcomes(java.lang.String)&amp#27;[0m
+
+    Embedding Login as Employee Role to verify the Already Submitted Timesheet Functionality [image/png 36489 bytes]
+
+]]></system-out>
+    <system-err><![CDATA[Sep 06, 2024 4:05:16 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find CDP implementation matching 128
+Sep 06, 2024 4:05:16 PM org.openqa.selenium.chromium.ChromiumDriver lambda$new$5
+WARNING: Unable to find version of CDP to use for 128.0.6613.119. You may need to include a dependency on a specific version of the CDP using something similar to `org.seleniumhq.selenium:selenium-devtools-v86:4.18.1` where the version ("v86") matches the version of the chromium-based browser you're using and the version number of the artifact is the same as Selenium's.
+log4j:WARN File option not set for appender [TTCC].
+log4j:WARN Are you using FileAppender instead of ConsoleAppender?
+log4j:ERROR No output stream or file set for the appender named [TTCC].
+log4j:WARN File option not set for appender [TTCC].
+log4j:WARN Are you using FileAppender instead of ConsoleAppender?
+log4j:ERROR No output stream or file set for the appender named [TTCC].
+]]></system-err>
+  </testcase>
+  <testcase name="runScenario[&quot;Login as Employee Role and Create Timesheet for Future Week&quot;, &quot;Login as Employee Role and Create Timesheet for Future Week&quot;](11)" classname="com.TimeSheet.TestRunner.TestngRunner" time="92.029">
+    <system-out><![CDATA[
+@employee
+Scenario Outline: Login as Employee Role and Create Timesheet for Future Week                              &amp#27;[90m# src/test/resources/EmployeeViewFeatures/TC11_EmployeeFutureWeekDuplicateTask.feature:14&amp#27;[0m
+All cookies are cleared.
+ INFO [main] (Logs.java:13)- *******TE02_CreateTimeSheetSteps TEST Execution START*******
+ INFO [main] (Logs.java:13)- *******PE01_LoginPage TEST Execution START*******
+Test03@bhavnacorp.com
+ INFO [main] (Logs.java:23)- Entered Username for Employee
+Welc0me@bh@vna24
+ INFO [main] (Logs.java:23)- Entered Password for Employee
+ INFO [main] (Logs.java:23)- Successfully logged into Employee View
+User Access to Employee View as WELCOME, TEST 03
+Page title matches the expected prefix: Automation
+  &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mLogin As Employee Role&amp#27;[0m                                                                             &amp#27;[90m# com.EmployeeView.stepDefinitions.TE02_CreateTimeSheetSteps.Employeelogin()&amp#27;[0m
+
+    Embedding Login as Employee Role and Create Timesheet for Future Week [image/png 36489 bytes]
+
+ INFO [main] (Logs.java:23)- Clicked on TimesheetIcon
+  &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mClick on Create TimeSheetPage&amp#27;[0m                                                                       &amp#27;[90m# com.EmployeeView.stepDefinitions.TE02_CreateTimeSheetSteps.CreateTimesheetIcon()&amp#27;[0m
+
+    Embedding Login as Employee Role and Create Timesheet for Future Week [image/png 36489 bytes]
+
+Sun Sep 08 16:06:04 IST 2024
+ INFO [main] (Logs.java:23)- Future date has been selected
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mSelect the Future week Date from Calender Icon&amp#27;[0m                                                       &amp#27;[90m# com.EmployeeView.stepDefinitions.TE02_CreateTimeSheetSteps.SeletionOfFutureDate()&amp#27;[0m
+
+    Embedding Login as Employee Role and Create Timesheet for Future Week [image/png 42132 bytes]
+
+ INFO [main] (Logs.java:23)- Entered Task Description and Hours
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mEnter the Task Description,Category & SubCategory and Hours Details &amp#27;[0m&amp#27;[32m&amp#27;[1m"EmployeeView_DuplicateTaskDisc"&amp#27;[0m &amp#27;[90m# com.EmployeeView.stepDefinitions.TE02_CreateTimeSheetSteps.EnterTaskDiscriptionCategorySubcategory(java.lang.String)&amp#27;[0m
+
+    Embedding Login as Employee Role and Create Timesheet for Future Week [image/png 54143 bytes]
+
+ WARN [main] (Logs.java:26)- Duplicate Task Description
+Cant able to save Because Duplicate Task Discription
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mClick On Save, Submit & confirm button to Create the Timesheet&amp#27;[0m                                       &amp#27;[90m# com.EmployeeView.stepDefinitions.TE02_CreateTimeSheetSteps.ClickOnSaveSubmitConfirm()&amp#27;[0m
+
+    Embedding Login as Employee Role and Create Timesheet for Future Week [image/png 55188 bytes]
+
+]]></system-out>
+    <system-err><![CDATA[Sep 06, 2024 4:05:44 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find CDP implementation matching 128
+Sep 06, 2024 4:05:44 PM org.openqa.selenium.chromium.ChromiumDriver lambda$new$5
+WARNING: Unable to find version of CDP to use for 128.0.6613.119. You may need to include a dependency on a specific version of the CDP using something similar to `org.seleniumhq.selenium:selenium-devtools-v86:4.18.1` where the version ("v86") matches the version of the chromium-based browser you're using and the version number of the artifact is the same as Selenium's.
+log4j:WARN File option not set for appender [TTCC].
+log4j:WARN Are you using FileAppender instead of ConsoleAppender?
+log4j:ERROR No output stream or file set for the appender named [TTCC].
+log4j:WARN File option not set for appender [TTCC].
+log4j:WARN Are you using FileAppender instead of ConsoleAppender?
+log4j:ERROR No output stream or file set for the appender named [TTCC].
+]]></system-err>
+  </testcase>
+  <testcase name="runScenario[&quot;Verify Employee Timesheet having more than 12 hours per day&quot;, &quot;Verify Employee Timesheet having more than 12 hours per day&quot;](12)" classname="com.TimeSheet.TestRunner.TestngRunner" time="81.011">
+    <system-out><![CDATA[
+@employee
+Scenario Outline: Verify Employee Timesheet having more than 12 hours per day                                                 &amp#27;[90m# src/test/resources/EmployeeViewFeatures/TC12_EmloyeeExceedHoursPerDay.feature:15&amp#27;[0m
+All cookies are cleared.
+ INFO [main] (Logs.java:13)- *******TE11_ExceedTimesheetValidationSteps TEST Execution START*******
+ INFO [main] (Logs.java:13)- *******PE01_LoginPage TEST Execution START*******
+Test03@bhavnacorp.com
+ INFO [main] (Logs.java:23)- Entered Username for Employee
+Welc0me@bh@vna24
+ INFO [main] (Logs.java:23)- Entered Password for Employee
+ INFO [main] (Logs.java:23)- Successfully logged into Employee View
+User Access to Employee View as WELCOME, TEST 03
+Page title matches the expected prefix: Automation
+  &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mLogin As Employee role&amp#27;[0m                                                                                                &amp#27;[90m# com.EmployeeView.stepDefinitions.TE11_ExceedTimesheetValidationSteps.user_login_timesheet_page()&amp#27;[0m
+
+    Embedding Verify Employee Timesheet having more than 12 hours per day [image/png 36489 bytes]
+
+ INFO [main] (Logs.java:23)- clicked on createTimesheet page
+  &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mClick on create TimeSheetPage&amp#27;[0m                                                                                          &amp#27;[90m# com.EmployeeView.stepDefinitions.TE11_ExceedTimesheetValidationSteps.createTimesheetPage()&amp#27;[0m
+
+    Embedding Verify Employee Timesheet having more than 12 hours per day [image/png 36489 bytes]
+
+Sun Sep 08 16:07:38 IST 2024
+ INFO [main] (Logs.java:23)- selected the future week date
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mSelect the Future Week Date from Calender Icon&amp#27;[0m                                                                          &amp#27;[90m# com.EmployeeView.stepDefinitions.TE11_ExceedTimesheetValidationSteps.selectTheFutureDate()&amp#27;[0m
+
+    Embedding Verify Employee Timesheet having more than 12 hours per day [image/png 42132 bytes]
+
+ INFO [main] (Logs.java:23)- Entered task Description and hours
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mEnter task desc and hours &amp#27;[0m&amp#27;[32m&amp#27;[1m"EmployeeView_24HoursPerDay"&amp#27;[0m                                                                  &amp#27;[90m# com.EmployeeView.stepDefinitions.TE11_ExceedTimesheetValidationSteps.EnterTaskDisc(java.lang.String)&amp#27;[0m
+
+    Embedding Verify Employee Timesheet having more than 12 hours per day [image/png 54276 bytes]
+
+ INFO [main] (Logs.java:23)- click on saveAll button
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mClick On save button in employeeView&amp#27;[0m                                                                                    &amp#27;[90m# com.EmployeeView.stepDefinitions.TE11_ExceedTimesheetValidationSteps.SaveSubmitButton()&amp#27;[0m
+
+    Embedding Verify Employee Timesheet having more than 12 hours per day [image/png 47545 bytes]
+
+ INFO [main] (Logs.java:23)- Successfully done the validation of PerDay exceeding Hours
+ INFO [main] (Logs.java:19)- *******TE11_ExceedTimesheetValidationSteps TEST END*********
+  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mValidate error is displaying for more then 24 hours per day &amp#27;[0m&amp#27;[32m&amp#27;[1m"Summation of hours in mon tue wed thu fri exceeded 24!!!"&amp#27;[0m &amp#27;[90m# com.EmployeeView.stepDefinitions.TE11_ExceedTimesheetValidationSteps.MoreThen24Hoursvalidation(java.lang.String)&amp#27;[0m
+
+    Embedding Verify Employee Timesheet having more than 12 hours per day [image/png 48801 bytes]
+
+]]></system-out>
+    <system-err><![CDATA[Sep 06, 2024 4:07:17 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find CDP implementation matching 128
+Sep 06, 2024 4:07:17 PM org.openqa.selenium.chromium.ChromiumDriver lambda$new$5
+WARNING: Unable to find version of CDP to use for 128.0.6613.119. You may need to include a dependency on a specific version of the CDP using something similar to `org.seleniumhq.selenium:selenium-devtools-v86:4.18.1` where the version ("v86") matches the version of the chromium-based browser you're using and the version number of the artifact is the same as Selenium's.
+log4j:WARN File option not set for appender [TTCC].
+log4j:WARN Are you using FileAppender instead of ConsoleAppender?
+log4j:ERROR No output stream or file set for the appender named [TTCC].
+log4j:WARN File option not set for appender [TTCC].
+log4j:WARN Are you using FileAppender instead of ConsoleAppender?
+log4j:ERROR No output stream or file set for the appender named [TTCC].
+]]></system-err>
+  </testcase>
+  <testcase name="runScenario[&quot;Manager Reject Timesheet For Employee Role&quot;, &quot;Manager Reject Timesheet For Employee Role&quot;](13)" classname="com.TimeSheet.TestRunner.TestngRunner" time="36.988">
+    <system-out><![CDATA[
+@employee
+Scenario Outline: Manager Reject Timesheet For Employee Role                          &amp#27;[90m# src/test/resources/EmployeeViewFeatures/TC15_ManagerRejectedTimesheetForDelete.feature:10&amp#27;[0m
+All cookies are cleared.
+ INFO [main] (Logs.java:13)- *******TE04_ManagerLogInForApprovalSteps TEST Execution START*******
+  &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mLogin as Manager Role&amp#27;[0m                                                         &amp#27;[90m# com.EmployeeView.stepDefinitions.TE04_ManagerLogInForApprovalSteps.login_as_manager_credentials()&amp#27;[0m
+
+    Embedding Manager Reject Timesheet For Employee Role [image/png 33914 bytes]
+
+ INFO [main] (Logs.java:23)- Clicked on approved Page
+Mon Sep 02 16:08:51 IST 2024
+ INFO [main] (Logs.java:23)- Selected the current week
+ INFO [main] (Logs.java:23)- Reject the Timesheet
+ INFO [main] (Logs.java:23)- Entered Text for Rejection 
+ INFO [main] (Logs.java:23)- Clicked on Confirm Button
+ INFO [main] (Logs.java:23)- Successfully Reject the Timesheet
+ INFO [main] (Logs.java:19)- *******TE04_ManagerLogInForApprovalSteps TEST END*********
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mReject the timesheet &amp#27;[0m&amp#27;[32m&amp#27;[1m"123456"&amp#27;[0m&amp#27;[32m for employeeDeletion for the selected week &amp#27;[0m&amp#27;[32m&amp#27;[1m"Test"&amp#27;[0m &amp#27;[90m# com.EmployeeView.stepDefinitions.TE04_ManagerLogInForApprovalSteps.RejectTimeSheet(java.lang.String,java.lang.String)&amp#27;[0m
+
+    Embedding Manager Reject Timesheet For Employee Role [image/png 34220 bytes]
+
+]]></system-out>
+    <system-err><![CDATA[Sep 06, 2024 4:08:37 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find CDP implementation matching 128
+Sep 06, 2024 4:08:37 PM org.openqa.selenium.chromium.ChromiumDriver lambda$new$5
+WARNING: Unable to find version of CDP to use for 128.0.6613.119. You may need to include a dependency on a specific version of the CDP using something similar to `org.seleniumhq.selenium:selenium-devtools-v86:4.18.1` where the version ("v86") matches the version of the chromium-based browser you're using and the version number of the artifact is the same as Selenium's.
 log4j:WARN File option not set for appender [TTCC].
 log4j:WARN Are you using FileAppender instead of ConsoleAppender?
 log4j:ERROR No output stream or file set for the appender named [TTCC].

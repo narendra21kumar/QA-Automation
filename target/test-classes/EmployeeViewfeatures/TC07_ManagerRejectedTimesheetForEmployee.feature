@@ -12,5 +12,5 @@ Feature: Manager Reject Timesheet For Employee Role
     Then Validate the status Rejected date
     
     Examples: 
-      | EmployeeId     |Remarks     |
-      | 1088           |Test        |
+      | EmployeeId       |Remarks     |
+      | 123456           |Test        |

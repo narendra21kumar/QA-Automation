@@ -1,5 +1,5 @@
 Feature: Admin Draft Timesheet Functionality
-@admin
+@code
   Scenario: Admin Record is in Draft after being self rejected
   Given Login as Admin for Draft Functionality
   When  Click on Create timesheet icon for draft functionality

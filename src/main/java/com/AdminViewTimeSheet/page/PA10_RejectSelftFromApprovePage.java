@@ -42,7 +42,7 @@ public class PA10_RejectSelftFromApprovePage {
 
 	public void enableToggle() {
 		CommonUtils.waitFor(3);
-		CommonUtils.explicitlyWaitForElementandClick(enableToggle,10);
+		enableToggle.click();
 		Logs.info("clicked on enable Toggle icon");
 
 	}
