@@ -1172,3 +1172,18 @@
 2024-09-06 16:09:06,966 - com.EmployeeView.stepDefinitions.TE04_ManagerLogInForApprovalSteps -INFO - Clicked on Confirm Button
 2024-09-06 16:09:08,967 - com.EmployeeView.stepDefinitions.TE04_ManagerLogInForApprovalSteps -INFO - Successfully Reject the Timesheet
 2024-09-06 16:09:08,967 - com.EmployeeView.stepDefinitions.TE04_ManagerLogInForApprovalSteps -INFO - *******TE04_ManagerLogInForApprovalSteps TEST END*********
+2024-12-09 11:26:07,800 - com.EmployeeView.stepDefinitions.TE01_LoginSteps -INFO - *******TE01_LoginSteps TEST Execution START*******
+2024-12-09 11:26:07,847 - com.EmployeeViewTimeSheet.page.PE01_LoginPage -INFO - *******PE01_LoginPage TEST Execution START*******
+2024-12-09 11:26:12,424 - com.EmployeeViewTimeSheet.page.PE01_LoginPage -INFO - Entered Username for Employee
+2024-12-09 11:26:14,010 - com.EmployeeViewTimeSheet.page.PE01_LoginPage -INFO - Entered Password for Employee
+2024-12-09 11:26:18,163 - com.EmployeeViewTimeSheet.page.PE01_LoginPage -INFO - Successfully logged into Employee View
+2024-12-09 12:01:21,209 - com.EmployeeView.stepDefinitions.TE01_LoginSteps -INFO - *******TE01_LoginSteps TEST Execution START*******
+2024-12-09 12:01:21,258 - com.EmployeeViewTimeSheet.page.PE01_LoginPage -INFO - *******PE01_LoginPage TEST Execution START*******
+2024-12-09 12:01:24,773 - com.EmployeeViewTimeSheet.page.PE01_LoginPage -INFO - Entered Username for Employee
+2024-12-09 12:01:26,570 - com.EmployeeViewTimeSheet.page.PE01_LoginPage -INFO - Entered Password for Employee
+2024-12-09 12:01:32,488 - com.EmployeeViewTimeSheet.page.PE01_LoginPage -INFO - Successfully logged into Employee View
+2024-12-09 12:07:48,984 - com.EmployeeView.stepDefinitions.TE01_LoginSteps -INFO - *******TE01_LoginSteps TEST Execution START*******
+2024-12-09 12:07:49,029 - com.EmployeeViewTimeSheet.page.PE01_LoginPage -INFO - *******PE01_LoginPage TEST Execution START*******
+2024-12-09 12:07:52,665 - com.EmployeeViewTimeSheet.page.PE01_LoginPage -INFO - Entered Username for Employee
+2024-12-09 12:07:54,352 - com.EmployeeViewTimeSheet.page.PE01_LoginPage -INFO - Entered Password for Employee
+2024-12-09 12:07:58,395 - com.EmployeeViewTimeSheet.page.PE01_LoginPage -INFO - Successfully logged into Employee View
