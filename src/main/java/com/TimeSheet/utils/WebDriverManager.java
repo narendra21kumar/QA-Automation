@@ -1,11 +1,11 @@
 package com.TimeSheet.utils;
-
 import com.epam.healenium.SelfHealingDriver;
 import java.time.Duration;
-
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
+
+
 
 public class WebDriverManager {
    // private static WebDriver driver;
@@ -16,6 +16,10 @@ public class WebDriverManager {
         	
         	
             ChromeOptions options=new ChromeOptions();
+            options.addArguments("--no-sandbox");
+            options.addArguments("--disable-dev-shm-usage");
+            options.addArguments("--headless");
+
             String chromeArguments = ConfigReader.getChromeArguments();
             if(chromeArguments !=null && !chromeArguments.isEmpty())
             {
