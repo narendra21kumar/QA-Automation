@@ -16,9 +16,9 @@ public class WebDriverManager {
         	
         	
             ChromeOptions options=new ChromeOptions();
-            options.addArguments("--no-sandbox");
-            options.addArguments("--disable-dev-shm-usage");
-            options.addArguments("--headless");
+//            options.addArguments("--no-sandbox");
+//            options.addArguments("--disable-dev-shm-usage");
+//            options.addArguments("--headless");
 
             String chromeArguments = ConfigReader.getChromeArguments();
             if(chromeArguments !=null && !chromeArguments.isEmpty())

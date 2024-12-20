@@ -1217,28 +1217,23 @@
 2024-12-20 12:12:52,648 - com.EmployeeViewTimeSheet.page.PE01_LoginPage -INFO - Entered Username for Employee
 2024-12-20 12:12:54,392 - com.EmployeeViewTimeSheet.page.PE01_LoginPage -INFO - Entered Password for Employee
 2024-12-20 12:12:58,674 - com.EmployeeViewTimeSheet.page.PE01_LoginPage -INFO - Successfully logged into Employee View
-2024-12-20 12:26:12,559 - com.EmployeeView.stepDefinitions.TE01_LoginSteps -INFO - *******TE01_LoginSteps TEST Execution START*******
-2024-12-20 12:26:12,621 - com.EmployeeViewTimeSheet.page.PE01_LoginPage -INFO - *******PE01_LoginPage TEST Execution START*******
-2024-12-20 12:26:16,172 - com.EmployeeViewTimeSheet.page.PE01_LoginPage -INFO - Entered Username for Employee
-2024-12-20 12:26:18,074 - com.EmployeeViewTimeSheet.page.PE01_LoginPage -INFO - Entered Password for Employee
-2024-12-20 12:26:22,293 - com.EmployeeViewTimeSheet.page.PE01_LoginPage -INFO - Successfully logged into Employee View
-2024-12-20 12:30:21,798 - com.EmployeeView.stepDefinitions.TE01_LoginSteps -INFO - *******TE01_LoginSteps TEST Execution START*******
-2024-12-20 12:30:21,867 - com.EmployeeViewTimeSheet.page.PE01_LoginPage -INFO - *******PE01_LoginPage TEST Execution START*******
-2024-12-20 12:30:25,393 - com.EmployeeViewTimeSheet.page.PE01_LoginPage -INFO - Entered Username for Employee
-2024-12-20 12:30:27,429 - com.EmployeeViewTimeSheet.page.PE01_LoginPage -INFO - Entered Password for Employee
-2024-12-20 12:30:32,694 - com.EmployeeViewTimeSheet.page.PE01_LoginPage -INFO - Successfully logged into Employee View
-2024-12-20 12:33:54,794 - com.EmployeeView.stepDefinitions.TE01_LoginSteps -INFO - *******TE01_LoginSteps TEST Execution START*******
-2024-12-20 12:33:54,848 - com.EmployeeViewTimeSheet.page.PE01_LoginPage -INFO - *******PE01_LoginPage TEST Execution START*******
-2024-12-20 12:33:58,193 - com.EmployeeViewTimeSheet.page.PE01_LoginPage -INFO - Entered Username for Employee
-2024-12-20 12:33:59,857 - com.EmployeeViewTimeSheet.page.PE01_LoginPage -INFO - Entered Password for Employee
-2024-12-20 12:34:04,072 - com.EmployeeViewTimeSheet.page.PE01_LoginPage -INFO - Successfully logged into Employee View
-2024-12-20 12:34:35,483 - com.EmployeeView.stepDefinitions.TE01_LoginSteps -INFO - *******TE01_LoginSteps TEST Execution START*******
-2024-12-20 12:34:35,545 - com.EmployeeViewTimeSheet.page.PE01_LoginPage -INFO - *******PE01_LoginPage TEST Execution START*******
-2024-12-20 12:34:38,959 - com.EmployeeViewTimeSheet.page.PE01_LoginPage -INFO - Entered Username for Employee
-2024-12-20 12:34:40,884 - com.EmployeeViewTimeSheet.page.PE01_LoginPage -INFO - Entered Password for Employee
-2024-12-20 12:34:44,975 - com.EmployeeViewTimeSheet.page.PE01_LoginPage -INFO - Successfully logged into Employee View
-2024-12-20 12:54:58,789 - com.EmployeeView.stepDefinitions.TE01_LoginSteps -INFO - *******TE01_LoginSteps TEST Execution START*******
-2024-12-20 12:54:58,842 - com.EmployeeViewTimeSheet.page.PE01_LoginPage -INFO - *******PE01_LoginPage TEST Execution START*******
-2024-12-20 12:55:02,657 - com.EmployeeViewTimeSheet.page.PE01_LoginPage -INFO - Entered Username for Employee
-2024-12-20 12:55:04,524 - com.EmployeeViewTimeSheet.page.PE01_LoginPage -INFO - Entered Password for Employee
-2024-12-20 12:55:08,857 - com.EmployeeViewTimeSheet.page.PE01_LoginPage -INFO - Successfully logged into Employee View
+2024-12-20 12:26:12,559 [main] INFO com.EmployeeView.stepDefinitions.TE01_LoginSteps - *******TE01_LoginSteps TEST Execution START*******
+2024-12-20 12:26:12,621 [main] INFO com.EmployeeViewTimeSheet.page.PE01_LoginPage - *******PE01_LoginPage TEST Execution START*******
+2024-12-20 12:26:16,172 [main] INFO com.EmployeeViewTimeSheet.page.PE01_LoginPage - Entered Username for Employee
+2024-12-20 12:26:18,074 [main] INFO com.EmployeeViewTimeSheet.page.PE01_LoginPage - Entered Password for Employee
+2024-12-20 12:26:22,293 [main] INFO com.EmployeeViewTimeSheet.page.PE01_LoginPage - Successfully logged into Employee View
+2024-12-20 12:30:21,798 [main] INFO com.EmployeeView.stepDefinitions.TE01_LoginSteps - *******TE01_LoginSteps TEST Execution START*******
+2024-12-20 12:30:21,867 [main] INFO com.EmployeeViewTimeSheet.page.PE01_LoginPage - *******PE01_LoginPage TEST Execution START*******
+2024-12-20 12:30:25,393 [main] INFO com.EmployeeViewTimeSheet.page.PE01_LoginPage - Entered Username for Employee
+2024-12-20 12:30:27,429 [main] INFO com.EmployeeViewTimeSheet.page.PE01_LoginPage - Entered Password for Employee
+2024-12-20 12:30:32,694 [main] INFO com.EmployeeViewTimeSheet.page.PE01_LoginPage - Successfully logged into Employee View
+2024-12-20 12:34:35,483 [main] INFO com.EmployeeView.stepDefinitions.TE01_LoginSteps - *******TE01_LoginSteps TEST Execution START*******
+2024-12-20 12:34:35,545 [main] INFO com.EmployeeViewTimeSheet.page.PE01_LoginPage - *******PE01_LoginPage TEST Execution START*******
+2024-12-20 12:34:38,959 [main] INFO com.EmployeeViewTimeSheet.page.PE01_LoginPage - Entered Username for Employee
+2024-12-20 12:34:40,884 [main] INFO com.EmployeeViewTimeSheet.page.PE01_LoginPage - Entered Password for Employee
+2024-12-20 12:34:44,975 [main] INFO com.EmployeeViewTimeSheet.page.PE01_LoginPage - Successfully logged into Employee View
+2024-12-20 12:54:58,789 [main] INFO com.EmployeeView.stepDefinitions.TE01_LoginSteps - *******TE01_LoginSteps TEST Execution START*******
+2024-12-20 12:54:58,842 [main] INFO com.EmployeeViewTimeSheet.page.PE01_LoginPage - *******PE01_LoginPage TEST Execution START*******
+2024-12-20 12:55:02,657 [main] INFO com.EmployeeViewTimeSheet.page.PE01_LoginPage - Entered Username for Employee
+2024-12-20 12:55:04,524 [main] INFO com.EmployeeViewTimeSheet.page.PE01_LoginPage - Entered Password for Employee
+2024-12-20 12:55:08,857 [main] INFO com.EmployeeViewTimeSheet.page.PE01_LoginPage - Successfully logged into Employee View
